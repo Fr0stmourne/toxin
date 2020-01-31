@@ -101,7 +101,7 @@ module.exports = {
           'style-loader',
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: 'css-loader?url=false',
             options: {
               sourceMap: true,
             },
@@ -147,6 +147,14 @@ module.exports = {
         from: `${PATHS.src}/fonts`,
         to: `${PATHS.assets}fonts`,
       },
+      {
+        from: `${PATHS.src}/pug/components`,
+        to: `${PATHS.assets}components`,
+      },
+      // {
+      //   test: /.+\.(png|svg|jpg)/,
+      //   to: `${PATHS.assets}img`,
+      // },
     ]),
     ...PAGES.map(
       page =>

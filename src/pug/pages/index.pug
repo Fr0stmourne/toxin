@@ -1,3 +1,5 @@
+include ../components/form-elements/checkbox-buttons/checkbox.pug
+
 doctype html
 html(lang="en")
   head
@@ -7,4 +9,7 @@ html(lang="en")
     title Index Pug page
   body
     include ../components/form-elements/text-field/text-field.pug
+    +checkbox('Можно курить')
+    +checkbox('Можно с питомцами')
+    +checkbox('Можно пригласить гостей (до 10 человек)')
     

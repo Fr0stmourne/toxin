@@ -1,0 +1,5 @@
+mixin checkbox(labelText, inputName)
+  label.checkbox
+    input.checkbox__input.visually-hidden(type="checkbox", name=inputName)
+    .checkbox__checkmark
+    =labelText
