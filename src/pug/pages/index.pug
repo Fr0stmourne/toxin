@@ -1,6 +1,7 @@
 include ../components/form-elements/checkbox-buttons/checkbox.pug
 include ../components/form-elements/text-field/text-field.pug
 include ../components/form-elements/radio-buttons/radio-buttons.pug
+include ../components/form-elements/subscription/subscription.pug
 
 doctype html
 html(lang="en")
@@ -16,4 +17,5 @@ html(lang="en")
     +checkbox({labelText:'Можно пригласить гостей (до 10 человек)'})
     +radio-btn({labelText: 'Мужчина', name: 'gender'})
     +radio-btn({labelText: 'Мужчина', name: 'gender'})
+    +subscription({placeholder: 'Email'})
     
