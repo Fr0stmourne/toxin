@@ -1,4 +1,6 @@
 include ../components/form-elements/checkbox-buttons/checkbox.pug
+include ../components/form-elements/text-field/text-field.pug
+include ../components/form-elements/radio-buttons/radio-buttons.pug
 
 doctype html
 html(lang="en")
@@ -8,8 +10,10 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Index Pug page
   body
-    include ../components/form-elements/text-field/text-field.pug
-    +checkbox('Можно курить')
-    +checkbox('Можно с питомцами')
-    +checkbox('Можно пригласить гостей (до 10 человек)')
+    +text-field({placeholder: 'Email', name: 'test'})
+    +checkbox({labelText: 'Можно курить'})
+    +checkbox({labelText:'Можно с питомцами'})
+    +checkbox({labelText:'Можно пригласить гостей (до 10 человек)'})
+    +radio-btn({labelText: 'Мужчина', name: 'gender'})
+    +radio-btn({labelText: 'Мужчина', name: 'gender'})
     
