@@ -2,6 +2,7 @@ include ../components/form-elements/checkbox-buttons/checkbox.pug
 include ../components/form-elements/text-field/text-field.pug
 include ../components/form-elements/radio-buttons/radio-buttons.pug
 include ../components/form-elements/subscription/subscription.pug
+include ../components/form-elements/buttons/buttons.pug
 
 doctype html
 html(lang="en")
@@ -18,4 +19,6 @@ html(lang="en")
     +radio-btn({labelText: 'Мужчина', name: 'gender'})
     +radio-btn({labelText: 'Мужчина', name: 'gender'})
     +subscription({placeholder: 'Email'})
+    +button({type: 'primary', btnText: 'Primary'})
+    +button({type: 'secondary', btnText: 'Secondary'})
     
