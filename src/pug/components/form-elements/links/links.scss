@@ -1,0 +1,18 @@
+.link {
+  font: $btn-font;
+  color: $purple;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $dark-50;
+  }
+
+  &:visited {
+    color: $dark-25;
+  }
+
+  &:active {
+    color: $dark-75
+  }
+}

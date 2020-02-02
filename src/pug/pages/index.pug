@@ -3,6 +3,8 @@ include ../components/form-elements/text-field/text-field.pug
 include ../components/form-elements/radio-buttons/radio-buttons.pug
 include ../components/form-elements/subscription/subscription.pug
 include ../components/form-elements/buttons/buttons.pug
+include ../components/form-elements/links/links.pug
+include ../components/form-elements/like-btn/like-btn.pug
 
 doctype html
 html(lang="en")
@@ -21,4 +23,7 @@ html(lang="en")
     +subscription({placeholder: 'Email'})
     +button({type: 'primary', btnText: 'Primary'})
     +button({type: 'secondary', btnText: 'Secondary'})
+    +link({link: "#", linkText: "Click me"})
+    +like-btn({likes: 27})
+    +like-btn({likes: 5, active: true})
     
