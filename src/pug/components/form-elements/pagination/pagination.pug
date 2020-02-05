@@ -1,0 +1,16 @@
+mixin pagination(options)
+  - var num = 0
+  ul.pagination
+    if options.num > 4
+      while num < 3
+        li.pagination__page
+          a(href=num)=num++
+      li ...
+      li.pagination__page
+        a(href=options.num)=options.num
+    else
+      while num < options.num
+        li.pagination__page
+          a(href=num)=num++
+
+

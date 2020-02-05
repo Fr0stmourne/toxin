@@ -8,6 +8,7 @@ include ../components/form-elements/like-btn/like-btn.pug
 include ../components/form-elements/rate-btn/rate-btn.pug
 include ../components/form-elements/rate-btn/rate-btn.pug
 include ../components/form-elements/toggle/toggle.pug
+include ../components/form-elements/pagination/pagination.pug
 
 
 doctype html
@@ -36,4 +37,6 @@ html(lang="en")
     +rate-btn({name: 'test'})
     p
     +toggle({btnText: 'Получать предложения'})
+    p
+    +pagination({num: 15})
     
