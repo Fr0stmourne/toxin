@@ -6,6 +6,9 @@ include ../components/form-elements/buttons/buttons.pug
 include ../components/form-elements/links/links.pug
 include ../components/form-elements/like-btn/like-btn.pug
 include ../components/form-elements/rate-btn/rate-btn.pug
+include ../components/form-elements/rate-btn/rate-btn.pug
+include ../components/form-elements/toggle/toggle.pug
+
 
 doctype html
 html(lang="en")
@@ -31,4 +34,6 @@ html(lang="en")
     +button({type: 'proceed', btnText: 'Оплатить'})
     p
     +rate-btn({name: 'test'})
+    p
+    +toggle({btnText: 'Получать предложения'})
     
