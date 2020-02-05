@@ -5,6 +5,7 @@ include ../components/form-elements/subscription/subscription.pug
 include ../components/form-elements/buttons/buttons.pug
 include ../components/form-elements/links/links.pug
 include ../components/form-elements/like-btn/like-btn.pug
+include ../components/form-elements/rate-btn/rate-btn.pug
 
 doctype html
 html(lang="en")
@@ -28,4 +29,6 @@ html(lang="en")
     +like-btn({likes: 5, active: true})
     p
     +button({type: 'proceed', btnText: 'Оплатить'})
+    p
+    +rate-btn({name: 'test'})
     
