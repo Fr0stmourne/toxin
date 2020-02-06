@@ -1,0 +1,46 @@
+.pagination {
+  display: flex;
+  font: $default-font;
+
+  &__page {
+
+    &-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      margin-right: 10px;
+      color: $dark-50;
+      min-width: 40px;
+      height: 40px;
+      padding: 0 5px;
+      font: inherit;
+      text-decoration: none;
+      color: inherit;
+      transition: $transition;
+      border-radius: 50%;
+
+      &:hover,
+      &:focus {
+        background-color: $dark-25;
+      }
+
+      &:active {
+        background-color: $dark-50;
+      }
+    }
+
+    &--active &-link {
+      background-image: $btn-gradient;
+      color: $white;
+    }
+  }
+
+  &__hidden-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-right: 10px;
+  }
+}

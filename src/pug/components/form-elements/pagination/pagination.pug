@@ -1,16 +1,13 @@
+mixin page(options)
+  li.pagination__page(class=options.active? 'pagination__page--active' : '' )
+    a.pagination__page-link(href=options.link)=options.linkText
+
 mixin pagination(options)
-  - var num = 0
   ul.pagination
-    if options.num > 4
-      while num < 3
-        li.pagination__page
-          a(href=num)=num++
-      li ...
-      li.pagination__page
-        a(href=options.num)=options.num
-    else
-      while num < options.num
-        li.pagination__page
-          a(href=num)=num++
+    +page({active: true , link: 1, linkText: 1})
+    +page({active: false , link: 2, linkText: 2})
+    +page({active: false , link: 3, linkText: 3})
+    li.pagination__hidden-pages ... 
+    +page({active: false , link: options.num, linkText: options.num})
 
 
