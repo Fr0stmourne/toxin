@@ -9,6 +9,7 @@ include ../components/form-elements/rate-btn/rate-btn.pug
 include ../components/form-elements/rate-btn/rate-btn.pug
 include ../components/form-elements/toggle/toggle.pug
 include ../components/form-elements/pagination/pagination.pug
+include ../components/form-elements/comment/comment.pug
 
 
 doctype html
@@ -19,24 +20,25 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Index Pug page
   body
-    +text-field({placeholder: 'Email', name: 'test'})
-    +checkbox({labelText: 'Можно курить'})
-    +checkbox({labelText:'Можно с питомцами'})
-    +checkbox({labelText:'Можно пригласить гостей (до 10 человек)'})
-    +radio-btn({labelText: 'Мужчина', name: 'gender'})
-    +radio-btn({labelText: 'Мужчина', name: 'gender'})
-    +subscription({placeholder: 'Email'})
-    +button({type: 'primary', btnText: 'Primary'})
-    +button({type: 'secondary', btnText: 'Secondary'})
+    +text-field({placeholder: "Email", name: "test"})
+    +checkbox({labelText: "Можно курить"})
+    +checkbox({labelText:"Можно с питомцами"})
+    +checkbox({labelText:"Можно пригласить гостей (до 10 человек)"})
+    +radio-btn({labelText: "Мужчина", name: "gender"})
+    +radio-btn({labelText: "Мужчина", name: "gender"})
+    +subscription({placeholder: "Email"})
+    +button({type: "primary", btnText: "Primary"})
+    +button({type: "secondary", btnText: "Secondary"})
     +link({link: "#", linkText: "Click me"})
     +like-btn({likes: 27})
     +like-btn({likes: 5, active: true})
     p
-    +button({type: 'proceed', btnText: 'Оплатить'})
+    +button({type: "proceed", btnText: "Оплатить"})
     p
-    +rate-btn({name: 'test'})
+    +rate-btn({name: "test"})
     p
-    +toggle({btnText: 'Получать предложения'})
+    +toggle({btnText: "Получать предложения"})
     p
-    +pagination({num: 15, description: '1 – 12 из 100+ вариантов аренды'})
-    
+    +pagination({num: 15, description: "1 – 12 из 100+ вариантов аренды"})
+    p
+    +comment({src: "/assets/components/form-elements/comment/photo.jpg", author: "Мурад Сарафанов", date: "5 дней назад", comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
