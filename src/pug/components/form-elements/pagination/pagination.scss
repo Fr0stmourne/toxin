@@ -1,6 +1,11 @@
 .pagination {
   display: flex;
-  font: $default-font;
+
+  &__container {
+    font: $default-font;
+    display: flex;
+    flex-direction: column;
+  }
 
   &__page {
 
@@ -42,5 +47,9 @@
     align-items: center;
     box-sizing: border-box;
     margin-right: 10px;
+  }
+
+  &__description {
+    font: inherit;
   }
 }
