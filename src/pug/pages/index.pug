@@ -10,6 +10,7 @@ include ../components/form-elements/rate-btn/rate-btn.pug
 include ../components/form-elements/toggle/toggle.pug
 include ../components/form-elements/pagination/pagination.pug
 include ../components/form-elements/comment/comment.pug
+include ../components/form-elements/advantage/advantage.pug
 
 
 doctype html
@@ -41,4 +42,7 @@ html(lang="en")
     p
     +pagination({num: 15, description: "1 – 12 из 100+ вариантов аренды"})
     p
-    +comment({src: "/assets/components/form-elements/comment/photo.jpg", author: "Мурад Сарафанов", date: "5 дней назад", comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+    +comment({src: "/assets/components/form-elements/comment/photo.jpg", likes: 12, author: "Мурад Сарафанов", date: "5 дней назад", comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+    p
+    +advantage({title: 'Комфорт', description: 'Шумопоглощающие стены', imgLink: "/assets/components/form-elements/advantage/emoji.svg"})
+    +advantage({title: 'Удобство', description: 'Окно в каждой из спален', imgLink: "/assets/components/form-elements/advantage/city.svg"})
