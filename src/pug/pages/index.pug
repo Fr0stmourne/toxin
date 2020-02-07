@@ -11,6 +11,7 @@ include ../components/form-elements/toggle/toggle.pug
 include ../components/form-elements/pagination/pagination.pug
 include ../components/form-elements/comment/comment.pug
 include ../components/form-elements/advantage/advantage.pug
+include ../components/form-elements/bullet-list/bullet-list.pug
 
 
 doctype html
@@ -46,3 +47,5 @@ html(lang="en")
     p
     +advantage({title: 'Комфорт', description: 'Шумопоглощающие стены', imgLink: "/assets/components/form-elements/advantage/emoji.svg"})
     +advantage({title: 'Удобство', description: 'Окно в каждой из спален', imgLink: "/assets/components/form-elements/advantage/city.svg"})
+    p
+    +bullet-list({items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
