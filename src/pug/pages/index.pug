@@ -12,6 +12,7 @@ include ../components/form-elements/pagination/pagination.pug
 include ../components/form-elements/comment/comment.pug
 include ../components/form-elements/advantage/advantage.pug
 include ../components/form-elements/bullet-list/bullet-list.pug
+include ../components/form-elements/rich-checkbox/rich-checkbox.pug
 
 
 doctype html
@@ -49,3 +50,7 @@ html(lang="en")
     +advantage({title: 'Удобство', description: 'Окно в каждой из спален', imgLink: "/assets/components/form-elements/advantage/city.svg"})
     p
     +bullet-list({items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
+    p
+    +rich-checkbox({labelText: 'Широкий коридор', description: 'Ширина коридоров в номере не менее 91 см.'})
+    p
+    +rich-checkbox({labelText: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
