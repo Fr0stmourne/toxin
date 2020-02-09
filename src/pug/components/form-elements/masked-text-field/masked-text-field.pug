@@ -1,0 +1,5 @@
+include ../text-field/text-field.pug
+
+mixin masked-text-field(options)
+  //- +text-field(options)
+  input.text-field.js-date(type="text", name=options.name, placeholder=options.placeholder, data-mask=options.mask)

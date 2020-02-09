@@ -141,8 +141,9 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
+      jquery: 'jquery',
       jQuery: 'jquery',
-      'window.jQuery': "jquery'",
+      'window.jQuery': 'jquery',
       'window.$': 'jquery',
     }),
     new CopyWebpackPlugin([

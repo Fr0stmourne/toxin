@@ -14,6 +14,7 @@ include ../components/form-elements/advantage/advantage.pug
 include ../components/form-elements/bullet-list/bullet-list.pug
 include ../components/form-elements/rich-checkbox/rich-checkbox.pug
 include ../components/form-elements/range-slider/range-slider.pug
+include ../components/form-elements/masked-text-field/masked-text-field.pug
 
 
 doctype html
@@ -22,7 +23,8 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    link(rel="stylesheet", href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css")
+    //- link(rel="stylesheet", href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css")
+    //- script(src="https://code.jquery.com/jquery-3.4.1.min.js")
     title Index Pug page
   body
     +text-field({placeholder: "Email", name: "test"})
@@ -58,5 +60,7 @@ html(lang="en")
     +rich-checkbox({labelText: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
     p
     //- #slider-range
-    +range-slider({})
-    
+    .range-slider
+      +range-slider({})
+    p
+    +masked-text-field({placeholder: 'ДД.ММ.ГГГГ', mask: '00.00.0000'})
