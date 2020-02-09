@@ -5,7 +5,7 @@ function addSlider(options) {
     max: options.max,
     values: options.values,
     slide(event, ui) {
-      $(options.textSelector).val(`${ui.values[0]} - ${ui.values[1]}`);
+      $(options.textSelector).val(`${ui.values[0]}₽ - ${ui.values[1]}₽`);
     },
   });
 

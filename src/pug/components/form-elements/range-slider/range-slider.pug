@@ -1,6 +1,5 @@
 mixin range-slider(options)
   .slider
-    p
-      label(for="amount") Price range
-      input(type="text" id="amount" readonly)
+    label(for="amount")=options.label
+    input.slider__input(type="text" id="amount" readonly)
     #slider-range
