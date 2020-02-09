@@ -13,6 +13,7 @@ include ../components/form-elements/comment/comment.pug
 include ../components/form-elements/advantage/advantage.pug
 include ../components/form-elements/bullet-list/bullet-list.pug
 include ../components/form-elements/rich-checkbox/rich-checkbox.pug
+include ../components/form-elements/range-slider/range-slider.pug
 
 
 doctype html
@@ -56,5 +57,6 @@ html(lang="en")
     p
     +rich-checkbox({labelText: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
     p
-    #slider-range
+    //- #slider-range
+    +range-slider()
     
