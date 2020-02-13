@@ -1,0 +1,8 @@
+include ../checkbox-buttons/checkbox.pug
+
+mixin expandable-list(options)
+  .expandable-list=options.title
+    button.expandable-list__expand-btn(id=options.btnId)
+    ul.expandable-list__list(id=options.id)
+      each val in options.list ? options.list : ['There are no values']
+        +checkbox({labelText: val.labelText, checked: val.checked})

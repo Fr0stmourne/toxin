@@ -1,0 +1,19 @@
+.expandable-list {
+  position: relative;
+
+  &__expand-btn {
+    position: absolute;
+    border: 0;
+    width: 22px;
+    height: 22px;
+    right: 0;
+    background-color: transparent;
+    background-image: url('/assets/components/form-elements/expandable-list/opened.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--hidden {
+      background-image: url('/assets/components/form-elements/expandable-list/hidden.svg');
+    }
+  }
+}

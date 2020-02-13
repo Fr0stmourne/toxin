@@ -1,5 +1,5 @@
 mixin checkbox(options)
   label.checkbox
-    input.checkbox__input.visually-hidden(type="checkbox", name=options.inputName)
+    input.checkbox__input.visually-hidden(type="checkbox", name=options.inputName, checked=options.checked)
     .checkbox__checkmark
     =options.labelText
