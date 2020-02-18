@@ -1,0 +1,10 @@
+mixin plus-minus(options)
+  .plus-minus(min=options.min max=options.max id=options.id name=options.name)
+
+mixin dropdown(options)
+  .dropdown
+    label.dropdown__label(for=options.id)=options.label
+    select.dropdown__select(id=options.id name=options.name)
+      each option in options.optionsList.length ? options.optionsList : ['There are no values']
+        option.dropdown__option(selected=option.selected)=option.text
+          +plus-minus({min: 0, max: 5, id: 'test', value: 5})

@@ -16,6 +16,7 @@ include ../components/form-elements/rich-checkbox/rich-checkbox.pug
 include ../components/form-elements/range-slider/range-slider.pug
 include ../components/form-elements/masked-text-field/masked-text-field.pug
 include ../components/form-elements/expandable-list/expandable-list.pug
+include ../components/form-elements/dropdown/dropdown.pug
 
 
 doctype html
@@ -64,3 +65,7 @@ html(lang="en")
     +masked-text-field({placeholder: 'ДД.ММ.ГГГГ', mask: '00.00.0000'})
     p
     +expandable-list({id: 'expandable', btnId: 'expandable-btn', title: 'expandable checkbox list',list: [{labelText: 'Завтрак'}, {labelText: 'Письменный стол', checked: true},{labelText: 'Стул для кормления', checked: true},{labelText: 'Кроватка', checked: true},{labelText: 'Телевизор'},{labelText: 'Шампунь'},{labelText: 'Телевизор'},{labelText: 'Шампунь'}]})
+    p
+    +plus-minus({min: 0, max: 5, id: 'example', value: 3})
+    +plus-minus({min: 0, max: 5, id: 'test', value: 5})
+    +dropdown({optionsList: [{text: 'Спальни'},{text: 'Кровати'},{text: 'Ванные комнаты', checked: true}]})

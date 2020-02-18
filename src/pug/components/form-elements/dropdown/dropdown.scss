@@ -1,0 +1,21 @@
+.plus-minus {
+  display: flex;
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $dark-50;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  &__input {
+    border: 0;
+    font: $btn-font;
+    text-align: center;
+  }
+}
