@@ -3,8 +3,9 @@ mixin plus-minus(options)
 
 mixin dropdown(options)
   .dropdown
-    label.dropdown__label(for=options.id)=options.label
-    select.dropdown__select(id=options.id name=options.name)
+    .dropdown__result(id=options.id)=options.placeholder
+    ul.dropdown__list
       each option in options.optionsList.length ? options.optionsList : ['There are no values']
-        option.dropdown__option(selected=option.selected)=option.text
-          +plus-minus({min: 0, max: 5, id: 'test', value: 5})
+        li.dropdown__item
+          option.dropdown__option(selected=option.selected)=option.text
+          +plus-minus({min: 0, max: 5, id: option.id, name: option.name})

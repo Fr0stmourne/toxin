@@ -27,6 +27,10 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Index Pug page
   body
+    p -
+    p -
+    +dropdown({id: 'guest', placeholder: 'Сколько гостей...', optionsList: [{text: 'Спальни', id: 'bedroom'},{text: 'Кровати', id: 'bed'},{text: 'Ванные комнаты', id: 'bathroom', checked: true}]})
+    p
     +text-field({placeholder: "Email", name: "test"})
     +checkbox({labelText: "Можно курить"})
     +checkbox({labelText:"Можно с питомцами", checked: true})
@@ -67,5 +71,3 @@ html(lang="en")
     +expandable-list({id: 'expandable', btnId: 'expandable-btn', title: 'expandable checkbox list',list: [{labelText: 'Завтрак'}, {labelText: 'Письменный стол', checked: true},{labelText: 'Стул для кормления', checked: true},{labelText: 'Кроватка', checked: true},{labelText: 'Телевизор'},{labelText: 'Шампунь'},{labelText: 'Телевизор'},{labelText: 'Шампунь'}]})
     p
     +plus-minus({min: 0, max: 5, id: 'example', value: 3})
-    +plus-minus({min: 0, max: 5, id: 'test', value: 5})
-    +dropdown({optionsList: [{text: 'Спальни'},{text: 'Кровати'},{text: 'Ванные комнаты', checked: true}]})

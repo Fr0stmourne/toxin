@@ -139,11 +139,29 @@
   };
 })(jQuery);
 
+function addPlusMinus(id) {
+  $(id).htmlNumberSpinner();
+}
 
-$(function(){
-
-    $("#example").htmlNumberSpinner();
-    $("#test").htmlNumberSpinner();
+function addDropdown(options) {
+  console.log('id', options.id);
   
+  $(`#${options.id}`).click(() => {
+
+    console.log(13545313454);
+    
+    $(this).next().toggle();
   });
+
+  options.inputIdList.forEach(inputId => {
+    addPlusMinus(inputId);
+  })
+}
+
+$(() => {
+  addDropdown({
+    id: 'guest',
+    inputIdList: ['#bathroom','#bed', '#bedroom']
+  })
+})
 

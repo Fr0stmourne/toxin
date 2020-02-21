@@ -18,4 +18,51 @@
     font: $btn-font;
     text-align: center;
   }
+
+}
+
+.dropdown {
+
+  &__result {
+    border: 2px solid $dark-25;
+    border-radius: 4px 4px 0 0;
+    font: $default-font;
+    color: $dark-25;
+    padding: 13px 15px;
+    transition: $transition;
+
+    background-image: url('/assets/components/form-elements/dropdown/hidden.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100%-20px);
+
+    &:hover,
+    &:focus {
+      outline: none;
+      border-color: $dark-50;
+      color: $dark-75;
+    }
+  }
+
+  &__list {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+    border: 2px solid $dark-50;
+    border-top: 0;
+
+    font: $btn-font;
+  }
+
+  &__item {
+    padding: 13px 7px 15px 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    font: inherit;
+    text-transform: uppercase;
+  }
 }
