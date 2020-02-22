@@ -1,0 +1,15 @@
+.daterangepicker {
+
+
+
+  & .drp-calendar {
+    &.right {
+      display: none;
+    }
+
+    &.left {
+      float: none;
+    }
+  }
+
+}

@@ -17,6 +17,7 @@ include ../components/form-elements/range-slider/range-slider.pug
 include ../components/form-elements/masked-text-field/masked-text-field.pug
 include ../components/form-elements/expandable-list/expandable-list.pug
 include ../components/form-elements/dropdown/dropdown.pug
+include ../components/form-elements/datepicker/datepicker.pug
 
 
 doctype html
@@ -28,8 +29,9 @@ html(lang="en")
     title Index Pug page
   body
     p -
-    p -
     +dropdown({id: 'guest', placeholder: 'Сколько гостей...', optionsList: [{text: 'Спальни', id: 'bedroom'},{text: 'Кровати', id: 'bed'},{text: 'Ванные комнаты', id: 'bathroom', checked: true}]})
+    p
+    +datepicker({})
     p
     +text-field({placeholder: "Email", name: "test"})
     +checkbox({labelText: "Можно курить"})
