@@ -143,19 +143,21 @@ function addPlusMinus(id) {
   $(id).htmlNumberSpinner();
 }
 
+
 function addDropdown(options) {
   console.log('id', options.id);
   
-  $(`#${options.id}`).click(() => {
-
-    console.log(13545313454);
-    
-    $(this).next().toggle();
-  });
-
   options.inputIdList.forEach(inputId => {
     addPlusMinus(inputId);
   })
+
+  const dropdownSelector = `#${options.id}`;
+
+  $(dropdownSelector).click(() => {
+
+    $(dropdownSelector).next().slideToggle();
+  });
+
 }
 
 $(() => {
