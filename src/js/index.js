@@ -1,5 +1,6 @@
 import 'webpack-jquery-ui';
 import 'bootstrap-datepicker/dist/js/bootstrap-datepicker';
+import 'bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min';
 import 'bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css';
 import 'bootstrap-datepicker/dist/css/bootstrap-datepicker3.standalone.css';
 import 'daterangepicker/daterangepicker';

@@ -8,12 +8,17 @@ $purple: rgba(#BC9CFF, 1);
 $green: rgba(#6FCF97, 1);
 $white: rgba(#ffffff, 1);
 
-$btn-gradient-light: linear-gradient(180deg, rgba(#BC9CFF, 0.5) 0%, #8BA4F9 100%);
+$btn-gradient-light: linear-gradient(180deg, rgba(#BC9CFF, 0.5) 0%, rgba(#8BA4F9, 0.5) 100%);
+$btn-gradient-ultralight: linear-gradient(180deg, rgba(#BC9CFF, 0.25) 0%, rgba(#8BA4F9, 0.25) 100%);
 $btn-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+$datepicker-today: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
 $default-font: 400 14px "Montserrat",
 sans-serif;
 $btn-font: 700 12px "Montserrat",
+sans-serif;
+$datepicker-switch: 700 19px "Quicksand",
 sans-serif;
 
 $transition: 0.3s;

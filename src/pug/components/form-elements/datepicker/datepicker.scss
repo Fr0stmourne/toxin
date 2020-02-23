@@ -2,14 +2,134 @@
 
 
 
-  & .drp-calendar {
-    &.right {
-      display: none;
+  // .drp-calendar {
+  //   &.right {
+  //     display: none;
+  //   }
+
+  //   &.left {
+  //     float: none;
+  //   }
+  // }
+
+
+
+  // .cancelBtn {
+  //   background-image: none;
+  //   background-color: transparent;
+  // }
+
+  // .applyBtn {
+  //   background-image: none;
+  //   background-color: transparent;
+  // }
+
+
+
+}
+
+.datepicker {
+  font: $default-font;
+
+  table {
+    border-collapse: collapse;
+  }
+
+  &-switch {
+    font: $datepicker-switch;
+    color: $dark-100;
+  }
+
+  .prev {
+    font-size: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url('/assets/components/form-elements/datepicker/arrow_back.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .next {
+    font-size: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url('/assets/components/form-elements/datepicker/arrow_forward.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .dow {
+    color: $purple;
+  }
+
+  .day {
+    color: $dark-50 !important;
+  }
+
+  .old,
+  .new {
+    color: $dark-25 !important;
+  }
+
+  .today {
+    color: $white !important;
+    background: $datepicker-today;
+    border-radius: 50%;
+    font-weight: 700;
+  }
+
+  td {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    margin: 0 5px !important;
+  }
+
+  .range {
+
+    background: $btn-gradient-ultralight !important;
+
+    &-start {
+      position: relative;
+      border-radius: 50% !important;
+      background-image: $btn-gradient;
+      background-color: transparent !important;
+      color: $white !important;
+      font-weight: 700;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        width: 40px;
+        height: 40px;
+        background: $btn-gradient-ultralight !important;
+        border-radius: 50% 0 0 50%;
+      }
     }
 
-    &.left {
-      float: none;
+    &-end {
+      position: relative;
+      background-image: $btn-gradient;
+      background-color: transparent !important;
+      color: $white !important;
+      border-radius: 50%;
+      font-weight: 700;
+
+      &::before {
+        content: '';
+        background: $btn-gradient-ultralight !important;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 0 50% 50% 0;
+      }
     }
+
   }
 
 }
