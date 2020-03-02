@@ -18,6 +18,7 @@ include ../components/form-elements/masked-text-field/masked-text-field.pug
 include ../components/form-elements/expandable-list/expandable-list.pug
 include ../components/form-elements/dropdown/dropdown.pug
 include ../components/form-elements/datepicker/datepicker.pug
+include ../components/cards/find-room/find-room.pug
 
 
 doctype html
@@ -29,9 +30,9 @@ html(lang="en")
     title Index Pug page
   body
     p -
-    +dropdown({id: 'guest', placeholder: 'Сколько гостей...', optionsList: [{text: 'Спальни', id: 'bedroom'},{text: 'Кровати', id: 'bed'},{text: 'Ванные комнаты', id: 'bathroom', checked: true}]})
+    +dropdown({id: 'guest',placeholder: 'Сколько гостей...', optionsList: [{text: 'Спальни', id: 'bedroom'},{text: 'Кровати', id: 'bed'},{text: 'Ванные комнаты', id: 'bathroom', checked: true}]})
     p
-    +datepicker({})
+    +find-room({title: 'Найдём номера под ваши пожелания'})
     p
     +text-field({placeholder: "Email", name: "test"})
     +checkbox({labelText: "Можно курить"})

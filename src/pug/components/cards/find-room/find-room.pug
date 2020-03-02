@@ -1,0 +1,12 @@
+include ../../form-elements/datepicker/datepicker.pug
+include ../../form-elements/dropdown/dropdown.pug
+include ../../form-elements/buttons/buttons.pug
+
+mixin find-room(options)
+  .find-room
+    .find-room__title=options.title
+    .find-room__datepicker
+      +datepicker({ startLabel: 'Прибытие', endLabel: 'Выезд', })
+    .find-room__dropdown
+      +dropdown({id: 'find-room',placeholder: 'Сколько гостей...', optionsList: [{text: 'Взрослые', id: 'adult'},{text: 'Дети', id: 'child'}]})
+    +button({btnText: 'подобрать номер'})

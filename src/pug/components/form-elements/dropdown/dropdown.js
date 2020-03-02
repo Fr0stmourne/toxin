@@ -158,12 +158,18 @@ function addDropdown(options) {
     $(dropdownSelector).next().slideToggle();
   });
 
+  $(dropdownSelector).click();
+
 }
 
 $(() => {
   addDropdown({
     id: 'guest',
     inputIdList: ['#bathroom','#bed', '#bedroom']
+  })
+  addDropdown({
+    id: 'find-room',
+    inputIdList: ['#adult','#child']
   })
 })
 

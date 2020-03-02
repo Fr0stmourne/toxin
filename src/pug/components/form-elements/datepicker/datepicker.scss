@@ -1,37 +1,53 @@
-.daterangepicker {
-
-
-
-  // .drp-calendar {
-  //   &.right {
-  //     display: none;
-  //   }
-
-  //   &.left {
-  //     float: none;
-  //   }
-  // }
-
-
-
-  // .cancelBtn {
-  //   background-image: none;
-  //   background-color: transparent;
-  // }
-
-  // .applyBtn {
-  //   background-image: none;
-  //   background-color: transparent;
-  // }
-
-
-
+.input-group {
+  display: flex;
 }
+
 
 .datepicker {
   font: $default-font;
   padding-bottom: 55px;
   position: relative;
+
+  &__input {
+    max-width: 150px;
+    height: 44px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px !important;
+
+
+    &-box {
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 44px;
+        height: 44px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-image: url('/assets/components/form-elements/datepicker/arrow_down.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        pointer-events: none;
+      }
+    }
+
+    &::placeholder {
+      text-align: left;
+      padding-left: 15px;
+    }
+  }
+
+  &__start {
+    margin-right: 20px;
+  }
+
+  &__label {
+    font: $btn-font;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
 
   table {
     border-collapse: collapse;

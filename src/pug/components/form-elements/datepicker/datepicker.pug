@@ -1,7 +1,11 @@
 mixin datepicker(options)
   #datepicker.input-daterange.input-group
-    input.input-sm.form-control(type='text', name='start' )
-    //- span.input-group-addon(style={'display': 'none'}) to
-    input.input-sm.form-control(type='text', name='end')
-  //- input.datepicker(type="text" name="datetimes")
+    .datepicker__start
+      .datepicker__label=options.startLabel
+      .datepicker__input-box
+        input.input-sm.form-control.datepicker__input(type='text', name='start' placeholder="ДД.ММ.ГГГГ")
+    .datepicker__end
+      .datepicker__label=options.endLabel
+      .datepicker__input-box
+        input.input-sm.form-control.datepicker__input(type='text', name='end' placeholder="ДД.ММ.ГГГГ")
 
