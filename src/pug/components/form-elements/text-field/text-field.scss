@@ -1,4 +1,6 @@
 .text-field {
+  width: 100%;
+  box-sizing: border-box;
   border: 2px solid $dark-25;
   border-radius: 4px;
   font: $default-font;
@@ -11,5 +13,11 @@
     outline: none;
     border-color: $dark-50;
     color: $dark-75;
+  }
+
+  &__title {
+    font: $btn-font;
+    text-transform: uppercase;
+    margin-bottom: 5px;
   }
 }
