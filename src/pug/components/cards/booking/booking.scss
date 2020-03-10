@@ -4,4 +4,110 @@
   padding: 40px 30px 30px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+
+  &__room {
+    font: $h1-font;
+    font-size: 14px;
+  }
+
+  &__room-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__type {
+    color: $purple;
+    font: $btn-font;
+    text-transform: uppercase;
+  }
+
+  &__per-day {
+    color: $dark-50;
+    font: $btn-font;
+    font-size: 14px;
+  }
+
+  &__measurement {
+    font-weight: 400;
+    font-size: 12px;
+
+  }
+
+  &__num {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+
+  &__datepicker {
+    margin-bottom: 20px;
+  }
+
+  &__dropdown {
+    margin-bottom: 20px;
+  }
+
+  &__calc {
+    margin-bottom: 30px;
+  }
+
+  &__result {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    margin-bottom: 25px;
+    font: $h2-font;
+  }
+
+  &__dots {
+    position: relative;
+    top: -5px;
+    border-bottom: 1px dotted $dark-25;
+    margin: 0 5px;
+  }
+}
+
+.calc {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+
+    font: $default-font;
+    color: $dark-75;
+    margin-bottom: 10px;
+  }
+
+  &__position {
+    display: flex;
+  }
+
+  &__btn {
+
+    width: 20px;
+    height: 20px;
+    background-image: url('/assets/components/cards/booking/info.svg');
+    cursor: pointer;
+
+
+    &-box {
+      position: relative;
+      margin-left: 5px;
+    }
+
+    &:hover~.calc__tooltip {
+
+      display: block;
+      position: absolute;
+      left: 25px;
+      top: 0;
+
+
+    }
+  }
+
+  &__tooltip {
+    display: none;
+  }
+
 }

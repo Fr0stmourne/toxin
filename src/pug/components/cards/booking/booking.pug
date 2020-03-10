@@ -1,14 +1,36 @@
 include ../../form-elements/datepicker/datepicker.pug
 include ../../form-elements/dropdown/dropdown.pug
+include ../../form-elements/buttons/buttons.pug
 
 mixin booking(options)
   .booking
-    span.booking__num #
-      =options.num
-    span.booking__type=options.type
-    span.booking__price=options.price
+    .booking__room-info
+      .booking__room
+        span №
+          span.booking__num=options.num
+        span.booking__type=options.type
+      .booking__per-day
+        span.booking__price=options.price
+        span.booking__measurement  в сутки
     .booking__datepicker
       +datepicker({ startLabel: 'Прибытие', endLabel: 'Выезд', id: 'booking-datepicker'})
     .booking__dropdown
       +dropdown({id: 'booking-dropdown',placeholder: 'Сколько гостей...', optionsList: [{text: 'Взрослые', id: 'adult-booking'},{text: 'Дети', id: 'child-booking'}]})
+    .booking__calc.calc
+      each val in options.calc.length ? options.calc : ['There are no values']
+        .calc__item
+          .calc__position=val[0]
+            if val[2]
+              .calc__btn-box
+                .calc__btn
+                .calc__tooltip=val[2]
+          .calc__price=val[1]
+    .booking__result Итого
+      .booking__dots
+      .booking__price=options.fullPrice
+    +button({btnText: 'подобрать номер'})
+      
+
+    
+      
     
