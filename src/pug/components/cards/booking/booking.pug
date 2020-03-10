@@ -1,0 +1,14 @@
+include ../../form-elements/datepicker/datepicker.pug
+include ../../form-elements/dropdown/dropdown.pug
+
+mixin booking(options)
+  .booking
+    span.booking__num #
+      =options.num
+    span.booking__type=options.type
+    span.booking__price=options.price
+    .booking__datepicker
+      +datepicker({ startLabel: 'Прибытие', endLabel: 'Выезд', id: 'booking-datepicker'})
+    .booking__dropdown
+      +dropdown({id: 'booking-dropdown',placeholder: 'Сколько гостей...', optionsList: [{text: 'Взрослые', id: 'adult-booking'},{text: 'Дети', id: 'child-booking'}]})
+    

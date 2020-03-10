@@ -168,8 +168,12 @@ $(() => {
     inputIdList: ['#bathroom','#bed', '#bedroom']
   })
   addDropdown({
-    id: 'find-room',
+    id: 'find-room-dropdown',
     inputIdList: ['#adult','#child']
+  })
+  addDropdown({
+    id: 'booking-dropdown',
+    inputIdList: ['#adult-booking','#child-booking']
   })
 })
 

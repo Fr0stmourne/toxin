@@ -1,5 +1,6 @@
 include ../components/cards/find-room/find-room.pug
 include ../components/cards/registration/registration.pug
+include ../components/cards/booking/booking.pug
 
 <!DOCTYPE html>
 html(lang="en")
@@ -14,5 +15,7 @@ html(lang="en")
     p
     .cards__registration
       +registration({title: 'Регистрация аккаунта', noteText: 'Уже есть аккаунт на Toxin'})
+    .cards__booking
+      +booking({num: '888', type: 'люкс'})
 
 
