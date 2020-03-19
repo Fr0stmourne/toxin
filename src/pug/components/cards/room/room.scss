@@ -1,0 +1,115 @@
+.room {
+  box-sizing: border-box;
+  max-width: 270px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+
+
+  &__room {
+    font: $h1-font;
+    font-size: 14px;
+  }
+
+  &__info {
+    padding: 20px 15px 20px 20px;
+  }
+
+  &__room-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba($dark-100, 0.1);
+  }
+
+  &__type {
+    color: $purple;
+    font: $btn-font;
+    text-transform: uppercase;
+  }
+
+  &__per-day {
+    color: $dark-50;
+    font: $btn-font;
+    font-size: 14px;
+    text-decoration: none;
+
+  }
+
+  &__num {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+  }
+
+  &__measurement {
+    font-weight: 400;
+  }
+
+  &__slider-item {}
+
+}
+
+.bx-wrapper {
+  margin: 0;
+  border: 0;
+
+  .bx-controls-direction a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+    height: 32px;
+    width: 32px;
+  }
+
+  .bx-next {
+
+    background: url('/assets/components/cards/room/right.svg') no-repeat;
+
+    background-position: center;
+
+    &:hover,
+    &:focus {
+      background-position: center !important;
+    }
+  }
+
+  .bx-prev {
+    background: url('/assets/components/cards/room/left.svg') 50% no-repeat;
+
+    &:hover,
+    &:focus {
+      background-position: center !important;
+    }
+  }
+
+  .bx-pager {
+    bottom: 15px;
+    text-align: right;
+    padding-right: 15px;
+    box-sizing: border-box;
+
+    &-item {}
+
+    &-link {
+      background-color: transparent !important;
+      border: 1px solid $white;
+      border-radius: 50% !important;
+
+
+      &.active {
+        background-color: $white !important;
+      }
+    }
+  }
+
+}

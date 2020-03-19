@@ -1,6 +1,7 @@
 include ../components/cards/find-room/find-room.pug
 include ../components/cards/registration/registration.pug
 include ../components/cards/booking/booking.pug
+include ../components/cards/room/room.pug
 
 <!DOCTYPE html>
 html(lang="en")
@@ -17,5 +18,8 @@ html(lang="en")
       +registration({title: 'Регистрация аккаунта', noteText: 'Уже есть аккаунт на Toxin'})
     .cards__booking
       +booking({num: '888', type: 'люкс', fullPrice: '38 081₽', price: '9 990₽', calc: [['9 990₽ х 4 суток', '39 960₽'], ['Сбор за услуги: скидка 2 179₽', '0₽', 'Инфо'], ['Сбор за дополнительные услуги', '300₽', 'Информация']]})
+    .cards__room
+      +room({num: '888', sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#', sliderId: 'room-slider', reviewNum: 65,  type: 'люкс', fullPrice: '38 081₽', price: '9 990₽', calc: [['9 990₽ х 4 суток', '39 960₽'], ['Сбор за услуги: скидка 2 179₽', '0₽', 'Инфо'], ['Сбор за дополнительные услуги', '300₽', 'Информация']]})
+
 
 

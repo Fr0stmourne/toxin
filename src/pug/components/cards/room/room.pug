@@ -1,0 +1,22 @@
+include ../../form-elements/rate-btn/rate-btn.pug
+
+mixin room(options)
+  .room
+    ul.room__slider(id=options.sliderId)
+      each link in options.sliderImgs.length ? options.sliderImgs : ['There are no values']
+        li.room__slider-item
+          img(src=link, alt="slider image")
+    .room__info
+      .room__room-info
+        .room__room
+          span №
+            span.room__num=options.num
+          span.room__type=options.type
+        .room__per-day
+          span.room__price=options.price
+          span.room__measurement  в сутки
+      .room__rating
+        +rate-btn({name: options.name})
+        a.room__per-day(href=options.link)
+          =options.reviewNum
+          span.room__measurement  Отзывов

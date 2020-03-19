@@ -59,6 +59,7 @@
   },
   "dependencies": {
     "bootstrap-datepicker": "^1.9.0",
+    "bxslider": "^4.2.14",
     "classnames": "^2.2.6",
     "core-js": "^3.4.5",
     "daterangepicker": "^3.0.5",
