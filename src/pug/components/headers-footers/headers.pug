@@ -1,0 +1,24 @@
+include ../form-elements/buttons/buttons.pug
+
+mixin header(options)
+  header.main-header
+    a(href="#").main-header__logo-link
+      .main-header__logo
+        img(src="/assets/img/logo.svg", alt="Logo")
+      .main-header__name
+        img(src="/assets/img/toxin.svg", alt="Company TOXIN")
+    div.main-header__menu
+      nav.main-logo__nav.nav
+        ul.main-logo__nav-list.nav__list
+          each val in options.items.length ? options.items : ['There are no values']
+            a.nav__link(href=val.link class=val.active ? 'nav__link--active' : '')
+              li.nav__item=val.text
+      if options.logged
+        .login-menu.main-logo__login
+          .login-menu__login
+            +button({btnText: options.loginText, type: 'secondary'})
+          .login-menu__register
+            +button({btnText: options.regText})
+      else
+        .main-logo__login.login-menu.login-menu--logged
+          =options.username

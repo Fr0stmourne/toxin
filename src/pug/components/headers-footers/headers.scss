@@ -1,0 +1,57 @@
+.main-header {
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 140px;
+
+  &__logo {
+    margin-right: 13px;
+  }
+
+  &__logo-link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  &__list {
+
+    display: flex;
+    font: $default-font;
+  }
+
+  &__link {
+    text-decoration: none;
+    margin-right: 30px;
+
+    &--active {
+      font-weight: 700;
+    }
+  }
+}
+
+.login-menu {
+  display: flex;
+  padding-left: 30px;
+
+  &--logged {
+    border-left: 1px solid rgba($dark-100, 0.1);
+    font: $default-font;
+  }
+
+  &__login {
+    margin-right: 20px;
+  }
+}
