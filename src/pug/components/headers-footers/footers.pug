@@ -35,3 +35,19 @@ mixin footer(options)
                 a.bottom__social-link(href=social.link)
                   img(src=social.imgLink, alt=social.name)
                   span.visually-hidden=social.name
+    else
+      .container
+        .main-footer__main.main-footer__main--small
+          .company__logos
+              .company__logo
+                img(src="/assets/img/logo.svg", alt="Logo")
+              .company__name
+                img(src="/assets/img/toxin.svg", alt="Company TOXIN")
+          .company__text=options.companyText
+          ul.bottom__social
+            each social in options.socialList.length ? options.socialList : ['None']
+              li.bottom__social-item
+                a.bottom__social-link(href=social.link)
+                  img(src=social.imgLink, alt=social.name)
+                  span.visually-hidden=social.name
+
