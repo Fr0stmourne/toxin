@@ -18,6 +18,7 @@ include ../components/form-elements/masked-text-field/masked-text-field.pug
 include ../components/form-elements/expandable-list/expandable-list.pug
 include ../components/form-elements/dropdown/dropdown.pug
 include ../components/form-elements/datepicker/datepicker.pug
+include ../components/form-elements/date-filter/date-filter.pug
 include ../components/cards/find-room/find-room.pug
 
 
@@ -29,7 +30,8 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Index Pug page
   body
-    p -
+    +date-filter({})
+    +date-filter({})
     +dropdown({id: 'guest',placeholder: 'Сколько гостей...', optionsList: [{text: 'Спальни', id: 'bedroom'},{text: 'Кровати', id: 'bed'},{text: 'Ванные комнаты', id: 'bathroom', checked: true}]})
     p
     +find-room({title: 'Найдём номера под ваши пожелания'})

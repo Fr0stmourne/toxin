@@ -1,0 +1,31 @@
+.date-filter {
+  position: relative;
+
+
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid $dark-25;
+    padding: 12px 30px 8px 15px;
+    text-transform: lowercase;
+    font: $default-font;
+    color: $dark-75;
+    border-radius: 4px;
+
+  }
+
+  &::before {
+    content: '';
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url('/assets/components/form-elements/date-filter/arrow_down.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+  }
+
+
+}

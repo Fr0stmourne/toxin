@@ -58,6 +58,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "air-datepicker": "^2.2.3",
     "bootstrap-datepicker": "^1.9.0",
     "bxslider": "^4.2.14",
     "classnames": "^2.2.6",
