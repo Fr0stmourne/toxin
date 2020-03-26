@@ -1,0 +1,55 @@
+main {
+  .container {
+    display: grid;
+    grid-template-columns: 270px max-content;
+    grid-column-gap: 50px;
+  }
+}
+
+.rooms {
+
+  &__title {
+    font: $h1-font;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 12px 20px;
+  }
+}
+
+.filter {
+
+
+  &__slider-hint {
+    font: $default-font;
+    font-size: 12px;
+  }
+
+  &__slider {
+    margin-bottom: 30px;
+
+    .slider {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__checkbox {
+    margin-bottom: 30px;
+  }
+
+  &__ally {
+    margin-bottom: 30px;
+  }
+
+  &__comfort {
+    margin-bottom: 30px;
+  }
+
+}
+
+.form-element__title {
+  @include form-element;
+  margin-bottom: 16px;
+}

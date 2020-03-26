@@ -21,14 +21,25 @@
 }
 
 .slider {
+  display: flex;
+  flex-direction: column;
   padding-top: 35px;
   position: relative;
 
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font: $btn-font;
+    text-transform: uppercase;
+  }
+
   &__input {
-    position: absolute;
-    top: 0;
-    right: 0;
     text-align: right;
+    align-self: flex-end;
     border: 0;
     font: $default-font;
     font-size: 12px;

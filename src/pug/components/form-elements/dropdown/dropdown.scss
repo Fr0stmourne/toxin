@@ -22,6 +22,7 @@
 }
 
 .dropdown {
+  position: relative;
 
   &__result {
     border: 2px solid $dark-25;
@@ -45,12 +46,15 @@
   }
 
   &__list {
+    position: absolute;
+    z-index: 5;
     box-sizing: border-box;
     width: 100%;
     border-radius: 0 0 4px 4px;
     border: 2px solid $dark-50;
     border-top: 0;
 
+    background-color: $white;
     font: $btn-font;
   }
 

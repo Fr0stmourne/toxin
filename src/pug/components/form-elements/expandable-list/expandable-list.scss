@@ -1,12 +1,17 @@
 .expandable-list {
   position: relative;
 
+  &__title {
+    @include form-element
+  }
+
   &__expand-btn {
     position: absolute;
     border: 0;
     width: 22px;
     height: 22px;
     right: 0;
+    top: -3px;
     background-color: transparent;
     background-image: url('/assets/components/form-elements/expandable-list/opened.svg');
     background-repeat: no-repeat;

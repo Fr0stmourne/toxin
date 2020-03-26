@@ -14,13 +14,12 @@ html(lang="en")
       {text: 'Вакансии', link: '#'},{text: 'Новости', link: '#'},
       {text: 'Соглашения', link: '#', dropdown: [{text: 'Услуга', link: '#'},{text: 'Услуга 2', link: '#'},{text: 'Услуга 2', link: '#'}]}]})
     main
-        section.room-booking
-          .container
-            h2.room-booking__title.visually-hidden Бронирование комнат
-            //- img(src="", alt="").room-booking__room-img
-            .room-booking__form
-              +find-room({title: 'Найдём номера под ваши пожелания', dropdownLabel: 'Гости'})
-            .room-booking__note Лучшие номера для вашей работы, отдыха и просто вдохновения
+      section.room-booking
+        .container
+          h2.room-booking__title.visually-hidden Бронирование комнат
+          .room-booking__form
+            +find-room({title: 'Найдём номера под ваши пожелания', dropdownLabel: 'Гости'})
+          .room-booking__note Лучшие номера для вашей работы, отдыха и просто вдохновения
     +footer({extended: true,
      copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
       socialList: [{name: 'Insta', link: '#', imgLink: '/assets/img/insta.svg'},

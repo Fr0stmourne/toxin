@@ -154,6 +154,7 @@ function addDropdown(options) {
   const dropdownSelector = `#${options.id}`;
 
   $(dropdownSelector).click(() => {
+    $('.plus-minus__btn').click(e => e.preventDefault())
 
     $(dropdownSelector).next().slideToggle();
   });
