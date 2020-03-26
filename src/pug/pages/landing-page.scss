@@ -1,0 +1,26 @@
+.room-booking {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 830px;
+  background-image: url("/assets/img/landing.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+
+  padding-top: 72px;
+
+  .container {
+    display: grid;
+  }
+
+  &__form {
+    margin-bottom: 320px;
+  }
+
+  &__note {
+    max-width: 300px;
+    justify-self: end;
+    font: $default-font;
+  }
+}

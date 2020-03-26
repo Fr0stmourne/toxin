@@ -8,5 +8,6 @@ mixin find-room(options)
     .find-room__datepicker
       +datepicker({ startLabel: 'Прибытие', endLabel: 'Выезд', id: 'find-room-datepicker'})
     .find-room__dropdown
+      .find-room__label=options.dropdownLabel
       +dropdown({id: 'find-room-dropdown',placeholder: 'Сколько гостей...', optionsList: [{text: 'Взрослые', id: 'adult'},{text: 'Дети', id: 'child'}]})
     +button({btnText: 'подобрать номер'})
