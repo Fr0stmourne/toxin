@@ -1,0 +1,158 @@
+.colors-type .container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 145px;
+}
+
+.colors {
+  font: $datepicker-switch;
+
+  &__list {
+
+    margin-left: 10px;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.5;
+  }
+
+  &__title {
+
+    font-weight: 700;
+
+  }
+
+  &__text {
+    font-weight: 400;
+
+  }
+
+  &__sample {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px;
+  }
+}
+
+.type {
+  margin-right: 48px;
+
+  &__list {
+    display: table;
+    // border-spacing: 30px 50px;
+  }
+
+  &__item {
+    display: table-row;
+
+
+
+    &:not(:last-child) .type__text {
+      padding-bottom: 50px;
+    }
+
+    &--h1 {
+      font: $h1-font;
+
+
+      .type__type {
+        text-transform: uppercase;
+        font: inherit;
+        font-family: "Montserrat";
+        font-weight: 400;
+      }
+    }
+
+    &--h2 {
+
+      font: $h2-font;
+
+      .type__type {
+        font: inherit;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+    }
+
+    &--h3 {
+      font: $btn-font;
+      text-transform: uppercase;
+
+      .type__type {
+        font: inherit;
+        font-weight: 400;
+      }
+
+      &:not(:last-child) .type__text {
+        padding-bottom: 48px;
+      }
+    }
+
+    &--body {
+      font: $default-font;
+
+      .type__type {
+        text-transform: capitalize;
+      }
+
+      .type__text {
+        box-sizing: border-box;
+        padding-right: 39px;
+        line-height: 24px;
+      }
+
+    }
+  }
+
+  &__type {
+    display: table-cell;
+    color: $dark-25;
+    font: $default-font;
+    text-align: right;
+    padding-right: 30px;
+
+  }
+
+  &__text {
+    max-width: 340px;
+    display: table-cell;
+
+  }
+}
+
+.dark-100 {
+  background-color: $dark-100;
+}
+
+.dark-75 {
+  background-color: $dark-75;
+}
+
+.dark-50 {
+  background-color: $dark-50;
+}
+
+.dark-25 {
+  background-color: $dark-25;
+}
+
+.dark-5 {
+  background-color: $dark-5;
+}
+
+.purple {
+  background-color: $purple;
+}
+
+.green {
+  background-color: $green;
+}

@@ -31,7 +31,7 @@ html(lang="en")
     title Index Pug page
   body
     +date-filter({})
-    //- +date-filter({})
+    +date-filter({})
     +dropdown({id: 'guest',placeholder: 'Сколько гостей...', optionsList: [{text: 'Спальни', id: 'bedroom'},{text: 'Кровати', id: 'bed'},{text: 'Ванные комнаты', id: 'bathroom', checked: true}]})
     p
     +find-room({title: 'Найдём номера под ваши пожелания'})
