@@ -1,0 +1,21 @@
+.ui-kit .container {
+  padding-left: 141px;
+  padding-right: 141px;
+  padding-top: 143px;
+}
+
+.inputs {
+  max-width: 320px;
+
+  &__text-field {
+    margin-bottom: 20px;
+
+    *::placeholder {
+      letter-spacing: -0.01em;
+    }
+  }
+
+  &__dropdown {
+    margin-bottom: 23px;
+  }
+}

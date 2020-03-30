@@ -1,11 +1,11 @@
 .text-field {
   width: 100%;
   box-sizing: border-box;
-  border: 2px solid $dark-25;
+  border: 1px solid $dark-25;
   border-radius: 4px;
   font: $default-font;
   color: $dark-25;
-  padding: 13px 15px;
+  padding: 12px 15px;
   transition: $transition;
 
   &:hover,

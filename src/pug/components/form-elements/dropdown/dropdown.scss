@@ -25,17 +25,17 @@
   position: relative;
 
   &__result {
-    border: 2px solid $dark-25;
+    border: 1px solid $dark-25;
     border-radius: 4px;
     font: $default-font;
     color: $dark-75;
-    padding: 13px 15px;
+    padding: 12px 15px;
     transition: $transition;
     cursor: pointer;
 
     background-image: url('/assets/components/form-elements/dropdown/hidden.svg');
     background-repeat: no-repeat;
-    background-position: calc(100%-20px);
+    background-position: calc(100%-16px);
 
     &:hover,
     &:focus {
