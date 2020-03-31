@@ -1,4 +1,4 @@
-.date-filter {
+.datepicker-single {
   position: relative;
 
 
@@ -7,10 +7,13 @@
     width: 100%;
     border: 1px solid $dark-25;
     padding: 12px 30px 12px 15px;
-    text-transform: lowercase;
     font: $default-font;
     color: $dark-75;
     border-radius: 4px;
+
+    &::placeholder {
+      text-transform: none;
+    }
 
   }
 
@@ -39,10 +42,6 @@
   &--cells {
     width: 280px !important;
     margin: 0 auto;
-  }
-
-  &--cell {
-    border: 0 !important;
   }
 
   &--days-names {
@@ -93,20 +92,13 @@
     font-weight: 700;
   }
 
-  .-selected- {
+  .-range-from- {
     position: relative;
     border-radius: 50% !important;
     background-image: $btn-gradient !important;
     background-color: transparent !important;
     color: $white !important;
     font-weight: 700;
-
-    &:hover {
-      background-image: $btn-gradient !important;
-    }
-  }
-
-  .-range-from- {
 
     &::before {
       content: "";
@@ -120,10 +112,18 @@
       border-radius: 50% 0 0 50%;
     }
 
-
+    &:hover {
+      background-image: $btn-gradient !important;
+    }
   }
 
   .-range-to- {
+    position: relative;
+    background-image: $btn-gradient !important;
+    background-color: transparent !important;
+    color: $white !important;
+    border-radius: 50% !important;
+    font-weight: 700;
 
     &::before {
       content: '';
@@ -136,14 +136,13 @@
       border-radius: 0 50% 50% 0;
     }
 
+    &:hover {
+      background-image: $btn-gradient !important;
+    }
   }
 
   .-in-range- {
     background: $btn-gradient-ultralight !important;
-  }
-
-  .-focus- {
-    border-radius: 50%;
   }
 
   &--cell-day {

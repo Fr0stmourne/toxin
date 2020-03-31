@@ -8,17 +8,18 @@
 
   &__checkmark {
     position: absolute;
+    top: 2px;
     left: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid $dark-25;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $dark-25;
     background-image: none;
     border-radius: 50%;
   }
 
 
   input:checked~&__checkmark {
-    border: 2px solid $purple;
+    border: 1px solid $purple;
     background-image: url("/assets/components/form-elements/radio-buttons/pin.svg");
     background-position: center;
     background-repeat: no-repeat;

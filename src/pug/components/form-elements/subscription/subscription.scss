@@ -1,12 +1,11 @@
 .subscription {
   position: relative;
-  display: flex;
-  height: 44px;
+  width: 100%;
 
   &__input {
     box-sizing: border-box;
     width: 100%;
-    border: 2px solid $dark-25;
+    border: 1px solid $dark-25;
     border-radius: 4px;
     font: $default-font;
     color: $dark-25;
@@ -24,8 +23,8 @@
   &__submit-btn {
     position: absolute;
     right: 0;
-    top: 0;
-    height: 100%;
+    bottom: 0;
+    height: 44px;
     box-sizing: border-box;
     min-width: 44px;
     border: 0;

@@ -1,4 +1,6 @@
 mixin checkbox(options)
+  if options.title
+    .masked-field__title=options.title
   label.checkbox
     input.checkbox__input.visually-hidden(type="checkbox", name=options.inputName, checked=options.checked)
     .checkbox__checkmark

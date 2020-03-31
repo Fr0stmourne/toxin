@@ -40,19 +40,49 @@ html(lang="en")
           +dropdown({title: 'dropdown',id: 'guest',placeholder: 'Сколько гостей', optionsList: [{text: 'Спальни', id: 'bedroom'},{text: 'Кровати', id: 'bed'},{text: 'Ванные комнаты', id: 'bathroom', checked: true}]})
         .inputs__masked-field
           +masked-text-field({placeholder: 'ДД.ММ.ГГГГ', mask: '00.00.0000', title: 'masked text field'})
-          
+        .inputs__date-dropdowns
+          .inputs__date-dropdown
+            +datepicker({title: 'date dropdown', id: 'date-dropdown'})
+          .inputs__date-dropdown
+            +datepicker({title: 'date dropdown', id: 'date-dropdown-1'})
+        .inputs__date-filter
+          +date-filter({title: 'filter date dropdown'})
+        .inputs__sub
+          +subscription({placeholder: "Email", title: 'subscription text field'})
+      .checkers
+        .checkboxes
+          .checkboxes__checkbox
+            .masked-field__title Checkbox Buttons
+            +checkbox({labelText: "Можно курить"})
+          .checkboxes__checkbox
+            +checkbox({labelText:"Можно с питомцами", checked: true})
+          .checkboxes__checkbox
+            +checkbox({labelText:"Можно пригласить гостей (до 10 человек)", checked: true})
+        .radio
+          .masked-field__title Radio Buttons
+          .radio__buttons
+            .radio__button
+              +radio-btn({labelText: "Мужчина", name: "gender"})
+            .radio__button
+              +radio-btn({labelText: "Женщина", name: "gender"})
+        .togglers
+          .masked-field__title Toggle
+          .togglers__toggle
+            +toggle({btnText: "Получать предложения"})
+          //- .togglers__toggle
+          //-   +toggle({btnText: "Получать предложения"})
 
-    +date-filter({})
+    
+    
+    
+    
+      
+
     +date-filter({})
     p
     +find-room({title: 'Найдём номера под ваши пожелания'})
     p
-    +checkbox({labelText: "Можно курить"})
-    +checkbox({labelText:"Можно с питомцами", checked: true})
-    +checkbox({labelText:"Можно пригласить гостей (до 10 человек)", checked: true})
-    +radio-btn({labelText: "Мужчина", name: "gender"})
-    +radio-btn({labelText: "Мужчина", name: "gender"})
-    +subscription({placeholder: "Email"})
+    
     +button({type: "primary", btnText: "Primary"})
     +button({type: "secondary", btnText: "Secondary"})
     +link({link: "#", linkText: "Click me"})
