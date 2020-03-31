@@ -1,5 +1,6 @@
 .pagination {
   display: flex;
+  margin-bottom: 8px;
 
   &__container {
     font: $default-font;
@@ -7,14 +8,37 @@
     flex-direction: column;
   }
 
+  &__next-page {
+    border-radius: 50%;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-image: $datepicker-today;
+
+    &::before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url("/assets/components/form-elements/pagination/arrow_forward.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      z-index: 1;
+    }
+  }
+
   &__page {
+    font-size: 12px;
+    color: $dark-50;
 
     &-link {
       display: flex;
       justify-content: center;
       align-items: center;
       box-sizing: border-box;
-      margin-right: 10px;
       color: $dark-50;
       min-width: 40px;
       height: 40px;
@@ -38,6 +62,7 @@
     &--active &-link {
       background-image: $btn-gradient;
       color: $white;
+      font-weight: 700;
     }
   }
 
@@ -46,10 +71,15 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    margin-right: 10px;
+    min-width: 40px;
+    height: 40px;
   }
 
   &__description {
+    margin: 0;
+    padding-left: 5px;
     font: inherit;
+    color: $dark-75;
+    line-height: 24px;
   }
 }

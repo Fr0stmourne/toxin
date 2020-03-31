@@ -1,3 +1,19 @@
+function formatNumber(num) {
+  return String(num)
+    .split('')
+    .reverse()
+    .join('')
+    .match(/.{1,3}/g)
+    .reverse()
+    .map(el =>
+      el
+        .split('')
+        .reverse()
+        .join(''),
+    )
+    .join(' ');
+}
+
 function addSlider(options) {
   $(options.inputSelector).slider({
     range: true,
@@ -5,12 +21,14 @@ function addSlider(options) {
     max: options.max,
     values: options.values,
     slide(event, ui) {
-      $(options.textSelector).val(`${ui.values[0]}₽ - ${ui.values[1]}₽`);
+      $(options.textSelector).val(`${formatNumber(ui.values[0])}₽ - ${formatNumber(ui.values[1])}₽`);
     },
   });
 
   $(options.textSelector).val(
-    `${$(options.inputSelector).slider('values', 0)}₽ - ${$(options.inputSelector).slider('values', 1)}₽`,
+    `${formatNumber($(options.inputSelector).slider('values', 0))}₽ - ${formatNumber(
+      $(options.inputSelector).slider('values', 1),
+    )}₽`,
   );
 }
 

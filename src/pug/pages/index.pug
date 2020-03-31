@@ -68,9 +68,43 @@ html(lang="en")
         .togglers
           .masked-field__title Toggle
           .togglers__toggle
-            +toggle({btnText: "Получать предложения"})
-          //- .togglers__toggle
-          //-   +toggle({btnText: "Получать предложения"})
+            +toggle({btnText: "Получать спецпредложения"})
+          .togglers__toggle
+            +toggle({btnText: "Получать спецпредложения"})
+        .like
+          .masked-field__title Like button
+          .like__buttons
+            .like__button
+              +like-btn({likes: 2})
+            .like__button
+              +like-btn({likes: 12, active: true})
+        .rate
+          .masked-field__title Rate button
+          .rate__buttons
+            .rate__button
+              +rate-btn({name: "test"})
+            .rate__button
+              +rate-btn({name: "test1"})
+      .buttons
+        .buttons__slider-range
+          +range-slider({title: 'range slider'})
+        .buttons__buttons
+          .masked-field__title Buttons
+          .buttons__list
+            +button({type: "primary", btnText: "click me"})
+            +button({type: "primary", btnText: "click me"})
+            +button({type: "secondary", btnText: "click me"})
+            +button({type: "secondary", btnText: "click me"})
+          .buttons__links
+            .buttons__link
+              +link({link: "#", linkText: "Click me"})
+            .buttons__link
+              +link({link: "#", linkText: "Click me"})
+          .buttons__proceed
+            +button({type: "proceed", btnText: "перейти к оплате"})
+          .buttons__pagination
+            +pagination({num: 15, title: 'pagination', description: "1 – 12 из 100+ вариантов аренды"})
+          
 
     
     

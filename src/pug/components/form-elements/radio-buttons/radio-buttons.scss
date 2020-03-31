@@ -10,8 +10,9 @@
     position: absolute;
     top: 2px;
     left: 0;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
     border: 1px solid $dark-25;
     background-image: none;
     border-radius: 50%;
