@@ -1,15 +1,20 @@
 const listClass = 'expandable-list__expand-btn--hidden';
+const list = '.js-expandable';
+const btn = '.js-expandable-btn';
 
-function addExpandableList(options) {
-  $(options.btnSelector).click(() => {
-    $(options.listSelector).slideToggle();
-    $(options.btnSelector).toggleClass(listClass);
-  });
+function addExpandableList() {
+  $(btn)
+    .unbind('click')
+    .click(e => {
+      $(e.target)
+        .toggleClass(listClass)
+        .parent()
+        .find(list)
+        .slideToggle();
+    });
+  $(btn).click();
 }
 
 $(() => {
-  addExpandableList({
-    btnSelector: '#expandable-btn',
-    listSelector: '#expandable',
-  });
+  addExpandableList();
 });

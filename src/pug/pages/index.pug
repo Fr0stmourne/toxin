@@ -31,87 +31,97 @@ html(lang="en")
     title UI Kit
   body.ui-kit
     .container
-      .inputs
-        .inputs__text-field
-          +text-field({placeholder: "Email", name: "test", title: 'text field'})
-        .inputs__text-field
-          +text-field({placeholder: "This is pretty awesome", name: "test", title: 'text field'})
-        .inputs__dropdown
-          +dropdown({title: 'dropdown',id: 'guest',placeholder: 'Сколько гостей', optionsList: [{text: 'Спальни', id: 'bedroom'},{text: 'Кровати', id: 'bed'},{text: 'Ванные комнаты', id: 'bathroom', checked: true}]})
-        .inputs__masked-field
-          +masked-text-field({placeholder: 'ДД.ММ.ГГГГ', mask: '00.00.0000', title: 'masked text field'})
-        .inputs__date-dropdowns
-          .inputs__date-dropdown
-            +datepicker({title: 'date dropdown', id: 'date-dropdown'})
-          .inputs__date-dropdown
-            +datepicker({title: 'date dropdown', id: 'date-dropdown-1'})
-        .inputs__date-filter
-          +date-filter({title: 'filter date dropdown'})
-        .inputs__sub
-          +subscription({placeholder: "Email", title: 'subscription text field'})
-      .checkers
-        .checkboxes
-          .checkboxes__checkbox
-            .masked-field__title Checkbox Buttons
-            +checkbox({labelText: "Можно курить"})
-          .checkboxes__checkbox
-            +checkbox({labelText:"Можно с питомцами", checked: true})
-          .checkboxes__checkbox
-            +checkbox({labelText:"Можно пригласить гостей (до 10 человек)", checked: true})
-        .radio
-          .masked-field__title Radio Buttons
-          .radio__buttons
-            .radio__button
-              +radio-btn({labelText: "Мужчина", name: "gender"})
-            .radio__button
-              +radio-btn({labelText: "Женщина", name: "gender"})
-        .togglers
-          .masked-field__title Toggle
-          .togglers__toggle
-            +toggle({btnText: "Получать спецпредложения"})
-          .togglers__toggle
-            +toggle({btnText: "Получать спецпредложения"})
-        .like
-          .masked-field__title Like button
-          .like__buttons
-            .like__button
-              +like-btn({likes: 2})
-            .like__button
-              +like-btn({likes: 12, active: true})
-        .rate
-          .masked-field__title Rate button
-          .rate__buttons
-            .rate__button
-              +rate-btn({name: "test"})
-            .rate__button
-              +rate-btn({name: "test1"})
-      .buttons
-        .buttons__slider-range
-          +range-slider({title: 'range slider'})
-        .buttons__buttons
-          .masked-field__title Buttons
-          .buttons__list
-            +button({type: "primary", btnText: "click me"})
-            +button({type: "primary", btnText: "click me"})
-            +button({type: "secondary", btnText: "click me"})
-            +button({type: "secondary", btnText: "click me"})
-          .buttons__links
-            .buttons__link
-              +link({link: "#", linkText: "Click me"})
-            .buttons__link
-              +link({link: "#", linkText: "Click me"})
-          .buttons__proceed
-            +button({type: "proceed", btnText: "перейти к оплате"})
-          .buttons__pagination
-            +pagination({num: 15, title: 'pagination', description: "1 – 12 из 100+ вариантов аренды"})
-          
-
-    
-    
-    
-    
-      
-
+      .set-1
+        .inputs
+          .inputs__text-field
+            +text-field({placeholder: "Email", name: "test", title: 'text field'})
+          .inputs__text-field
+            +text-field({placeholder: "This is pretty awesome", name: "test", title: 'text field'})
+          .inputs__dropdown
+            +dropdown({title: 'dropdown',id: 'guest',placeholder: 'Сколько гостей', optionsList: [{text: 'Спальни', id: 'bedroom'},{text: 'Кровати', id: 'bed'},{text: 'Ванные комнаты', id: 'bathroom', checked: true}]})
+          .inputs__masked-field
+            +masked-text-field({placeholder: 'ДД.ММ.ГГГГ', mask: '00.00.0000', title: 'masked text field'})
+          .inputs__date-dropdowns
+            .inputs__date-dropdown
+              +datepicker({title: 'date dropdown', id: 'date-dropdown'})
+            .inputs__date-dropdown
+              +datepicker({title: 'date dropdown', id: 'date-dropdown-1'})
+          .inputs__date-filter
+            +date-filter({title: 'filter date dropdown'})
+          .inputs__sub
+            +subscription({placeholder: "Email", title: 'subscription text field'})
+        .checkers
+          .checkboxes
+            .checkboxes__checkbox
+              .masked-field__title Checkbox Buttons
+              +checkbox({labelText: "Можно курить"})
+            .checkboxes__checkbox
+              +checkbox({labelText:"Можно с питомцами", checked: true})
+            .checkboxes__checkbox
+              +checkbox({labelText:"Можно пригласить гостей (до 10 человек)", checked: true})
+          .radio
+            .masked-field__title Radio Buttons
+            .radio__buttons
+              .radio__button
+                +radio-btn({labelText: "Мужчина", name: "gender"})
+              .radio__button
+                +radio-btn({labelText: "Женщина", name: "gender"})
+          .togglers
+            .masked-field__title Toggle
+            .togglers__toggle
+              +toggle({btnText: "Получать спецпредложения"})
+            .togglers__toggle
+              +toggle({btnText: "Получать спецпредложения"})
+          .like
+            .masked-field__title Like button
+            .like__buttons
+              .like__button
+                +like-btn({likes: 2})
+              .like__button
+                +like-btn({likes: 12, active: true})
+          .rate
+            .masked-field__title Rate button
+            .rate__buttons
+              .rate__button
+                +rate-btn({name: "test"})
+              .rate__button
+                +rate-btn({name: "test1"})
+        .buttons
+          .buttons__slider-range
+            +range-slider({title: 'range slider'})
+          .buttons__buttons
+            .masked-field__title Buttons
+            .buttons__list
+              +button({type: "primary", btnText: "click me"})
+              +button({type: "primary", btnText: "click me"})
+              +button({type: "secondary", btnText: "click me"})
+              +button({type: "secondary", btnText: "click me"})
+            .buttons__links
+              .buttons__link
+                +link({link: "#", linkText: "Click me"})
+              .buttons__link
+                +link({link: "#", linkText: "Click me"})
+            .buttons__proceed
+              +button({type: "proceed", btnText: "перейти к оплате"})
+            .buttons__pagination
+              +pagination({num: 15, title: 'pagination', description: "1 – 12 из 100+ вариантов аренды"})
+      .set-2
+        .set-2__col-1.col-1
+          .col-1__dropdowns
+            .col-1__dropdown
+              +dropdown({title: 'dropdown',id: 'guest-1',placeholder: 'Комнаты', optionsList: [{text: 'Спальни', id: 'bedroom-1'},{text: 'Кровати', id: 'bed-1'},{text: 'Ванные комнаты', id: 'bathroom-1', checked: true}]})
+            .col-1__dropdown
+              +dropdown({title: 'dropdown',id: 'guest-2',placeholder: 'Комнаты', optionsList: [{text: 'Спальни', id: 'bedroom-2'},{text: 'Кровати', id: 'bed-2'},{text: 'Ванные комнаты', id: 'bathroom-2', checked: true}]})
+          .col-1__expand-lists
+            .col-1__expand-list
+              +expandable-list({title: 'expandable checkbox list',list: [{labelText: 'Завтрак'}, {labelText: 'Письменный стол', checked: true},{labelText: 'Стул для кормления', checked: true},{labelText: 'Кроватка', checked: true},{labelText: 'Телевизор'},{labelText: 'Шампунь'},{labelText: 'Телевизор'},{labelText: 'Шампунь'}]})
+            .col-1__expand-list
+              +expandable-list({title: 'expandable checkbox list',list: [{labelText: 'Завтрак'}, {labelText: 'Письменный стол', checked: true},{labelText: 'Стул для кормления', checked: true},{labelText: 'Кроватка', checked: true},{labelText: 'Телевизор'},{labelText: 'Шампунь'},{labelText: 'Телевизор'},{labelText: 'Шампунь'}]})
+          .col-1__advantages
+            .col-1__advantage
+              +advantage({title: 'Комфорт', description: 'Шумопоглощающие стены', imgLink: "/assets/components/form-elements/advantage/emoji.svg"})
+            .col-1__advantage
+              +advantage({title: 'Удобство', description: 'Окно в каждой из спален', imgLink: "/assets/components/form-elements/advantage/city.svg"})
     +date-filter({})
     p
     +find-room({title: 'Найдём номера под ваши пожелания'})
@@ -133,8 +143,7 @@ html(lang="en")
     p
     +comment({src: "/assets/components/form-elements/comment/photo.jpg", likes: 12, author: "Мурад Сарафанов", date: "5 дней назад", comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
     p
-    +advantage({title: 'Комфорт', description: 'Шумопоглощающие стены', imgLink: "/assets/components/form-elements/advantage/emoji.svg"})
-    +advantage({title: 'Удобство', description: 'Окно в каждой из спален', imgLink: "/assets/components/form-elements/advantage/city.svg"})
+    
     p
     +bullet-list({items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
     p
@@ -147,6 +156,6 @@ html(lang="en")
     p
     
     p
-    +expandable-list({id: 'expandable', btnId: 'expandable-btn', title: 'expandable checkbox list',list: [{labelText: 'Завтрак'}, {labelText: 'Письменный стол', checked: true},{labelText: 'Стул для кормления', checked: true},{labelText: 'Кроватка', checked: true},{labelText: 'Телевизор'},{labelText: 'Шампунь'},{labelText: 'Телевизор'},{labelText: 'Шампунь'}]})
+    
     p
     +plus-minus({min: 0, max: 5, id: 'example', value: 3})
