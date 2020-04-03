@@ -6,8 +6,13 @@ mixin dropdown(options)
     if options.title
       .text-field__title=options.title
     .dropdown__result(id=options.id)=options.placeholder
-    ul.dropdown__list
-      each option in options.optionsList.length ? options.optionsList : ['There are no values']
-        li.dropdown__item
-          option.dropdown__option(selected=option.selected)=option.text
-          +plus-minus({min: 0, max: 5, id: option.id, name: option.name})
+    .dropdown__content
+      ul.dropdown__list
+        each option in options.optionsList.length ? options.optionsList : ['There are no values']
+          li.dropdown__item
+            option.dropdown__option(selected=option.selected)=option.text
+            +plus-minus({min: 0, max: 5, id: option.id, name: option.name})
+      if options.controls
+        .dropdown__controls
+          button.dropdown__reset Очистить
+          button.dropdown__apply Применить

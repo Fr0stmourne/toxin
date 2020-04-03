@@ -109,9 +109,9 @@ html(lang="en")
         .set-2__col-1.col-1
           .col-1__dropdowns
             .col-1__dropdown
-              +dropdown({title: 'dropdown',id: 'guest-1',placeholder: 'Комнаты', optionsList: [{text: 'Спальни', id: 'bedroom-1'},{text: 'Кровати', id: 'bed-1'},{text: 'Ванные комнаты', id: 'bathroom-1', checked: true}]})
+              +dropdown({title: 'dropdown',id: 'room-1',placeholder: 'Комнаты', optionsList: [{text: 'Спальни', id: 'bedroom-1'},{text: 'Кровати', id: 'bed-1'},{text: 'Ванные комнаты', id: 'bathroom-1', checked: true}]})
             .col-1__dropdown
-              +dropdown({title: 'dropdown',id: 'guest-2',placeholder: 'Комнаты', optionsList: [{text: 'Спальни', id: 'bedroom-2'},{text: 'Кровати', id: 'bed-2'},{text: 'Ванные комнаты', id: 'bathroom-2', checked: true}]})
+              +dropdown({title: 'dropdown',id: 'room-2',placeholder: 'Комнаты', optionsList: [{text: 'Спальни', id: 'bedroom-2'},{text: 'Кровати', id: 'bed-2'},{text: 'Ванные комнаты', id: 'bathroom-2', checked: true}]})
           .col-1__expand-lists
             .col-1__expand-list
               +expandable-list({title: 'expandable checkbox list',list: [{labelText: 'Завтрак'}, {labelText: 'Письменный стол', checked: true},{labelText: 'Стул для кормления', checked: true},{labelText: 'Кроватка', checked: true},{labelText: 'Телевизор'},{labelText: 'Шампунь'},{labelText: 'Телевизор'},{labelText: 'Шампунь'}]})
@@ -122,40 +122,21 @@ html(lang="en")
               +advantage({title: 'Комфорт', description: 'Шумопоглощающие стены', imgLink: "/assets/components/form-elements/advantage/emoji.svg"})
             .col-1__advantage
               +advantage({title: 'Удобство', description: 'Окно в каждой из спален', imgLink: "/assets/components/form-elements/advantage/city.svg"})
-    +date-filter({})
-    p
-    +find-room({title: 'Найдём номера под ваши пожелания'})
-    p
-    
-    +button({type: "primary", btnText: "Primary"})
-    +button({type: "secondary", btnText: "Secondary"})
-    +link({link: "#", linkText: "Click me"})
-    +like-btn({likes: 27})
-    +like-btn({likes: 5, active: true})
-    p
-    +button({type: "proceed", btnText: "Оплатить"})
-    p
-    +rate-btn({name: "test"})
-    p
-    +toggle({btnText: "Получать предложения"})
-    p
-    +pagination({num: 15, description: "1 – 12 из 100+ вариантов аренды"})
-    p
-    +comment({src: "/assets/components/form-elements/comment/photo.jpg", likes: 12, author: "Мурад Сарафанов", date: "5 дней назад", comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
-    p
-    
-    p
-    +bullet-list({items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
-    p
-    +rich-checkbox({labelText: 'Широкий коридор', description: 'Ширина коридоров в номере не менее 91 см.'})
-    p
-    +rich-checkbox({labelText: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
-    p
-    .range-slider
-      +range-slider({})
-    p
-    
-    p
-    
-    p
-    +plus-minus({min: 0, max: 5, id: 'example', value: 3})
+        .set-2__col-2.col-2
+          .col-2__dropdowns
+            .col-2__dropdown
+              +dropdown({title: 'dropdown',controls:true, id: 'guest-2',placeholder: 'Сколько гостей', optionsList: [{text: 'Взрослые', id: 'adult-1'},{text: 'Дети', id: 'children-1'},{text: 'Младенцы', id: 'baby-1', checked: true}]})
+            .col-2__dropdown
+              +dropdown({title: 'dropdown',controls:true, id: 'guest-3',placeholder: 'Сколько гостей', optionsList: [{text: 'Взрослые', id: 'adult-1'},{text: 'Дети', id: 'children-1'},{text: 'Младенцы', id: 'baby-1', checked: true}]})
+          .col-2__checkboxes-bullet
+            .col-2__rich-checkboxes
+              .masked-field__title rich Checkbox Buttons
+              .col-2__rich-checkbox.col-2__rich-checkbox-1
+                +rich-checkbox({labelText: 'Широкий коридор', description: 'Ширина коридоров в номере не менее 91 см.'})
+              .col-2__rich-checkbox.col-2__rich-checkbox-2
+                +rich-checkbox({labelText: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
+            .col-2__bullet
+              +bullet-list({title: 'bullet list', items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
+          .col-2__comment
+            +comment({src: "/assets/img/comment.jpg", likes: 12, author: "Мурад Сарафанов", date: "5 дней назад", comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+  

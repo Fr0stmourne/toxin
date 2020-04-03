@@ -165,7 +165,11 @@
 
   .set-2 {
 
+    display: flex;
+
     .col-1 {
+      margin-right: 170px;
+
       &__dropdown {
         max-width: 266px;
         margin-bottom: 20px;
@@ -186,6 +190,63 @@
 
       &__advantages {
         max-width: 280px;
+      }
+    }
+
+    .col-2 {
+      width: 100%;
+      max-width: 712px;
+
+      &__dropdowns {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &__dropdown {
+        width: 100%;
+        max-width: 320px;
+        margin-bottom: 256px;
+      }
+
+      &__rich-checkboxes {
+        .masked-field__title {
+          margin-bottom: 15px;
+        }
+      }
+
+      &__rich-checkbox {
+
+        &-1 {
+          margin-bottom: 10px;
+
+          .rich-checkbox__description {
+            max-width: 205px;
+          }
+        }
+
+        &-2 {
+          .rich-checkbox__description {
+            max-width: 230px;
+          }
+        }
+
+      }
+
+      &__checkboxes-bullet {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 222px;
+      }
+
+      &__bullet {
+        max-width: 260px;
+        margin-right: 60px;
+      }
+
+      &__comment {
+        .comment__text {
+          max-width: 655px;
+        }
       }
     }
   }

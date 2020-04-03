@@ -140,49 +140,30 @@
 })(jQuery);
 
 function addPlusMinus(id) {
-  $(id).htmlNumberSpinner();
+  $(id).parent().find(' .plus-minus').htmlNumberSpinner();
 }
 
 
 function addDropdown(options) {
-  console.log('id', options.id);
+  options.ids.forEach(id => {
+    const dropdownSelector = `#${id}`;
+    addPlusMinus(dropdownSelector)
+    
+    $(dropdownSelector).click(() => {
+      $('.plus-minus__btn').click(e => e.preventDefault())
   
-  options.inputIdList.forEach(inputId => {
-    addPlusMinus(inputId);
+      $(dropdownSelector).next().slideToggle();
+    });
+  
+    $(dropdownSelector).click();
   })
-
-  const dropdownSelector = `#${options.id}`;
-
-  $(dropdownSelector).click(() => {
-    $('.plus-minus__btn').click(e => e.preventDefault())
-
-    $(dropdownSelector).next().slideToggle();
-  });
-
-  $(dropdownSelector).click();
+    
+  
 
 }
 
 $(() => {
   addDropdown({
-    id: 'guest',
-    inputIdList: ['#bathroom','#bed', '#bedroom']
-  })
-  addDropdown({
-    id: 'guest-1',
-    inputIdList: ['#bathroom-1','#bed-1', '#bedroom-1']
-  })
-  addDropdown({
-    id: 'guest-2',
-    inputIdList: ['#bathroom-2','#bed-2', '#bedroom-2']
-  })
-  addDropdown({
-    id: 'find-room-dropdown',
-    inputIdList: ['#adult','#child']
-  })
-  addDropdown({
-    id: 'booking-dropdown',
-    inputIdList: ['#adult-booking','#child-booking']
+    ids: ['booking-dropdown','guest', 'guest-1','guest-2','guest-3','room-1','room-2','find-room-dropdown','booking-dropdown',]
   })
 })
-

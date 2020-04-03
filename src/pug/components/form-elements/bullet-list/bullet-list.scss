@@ -7,18 +7,22 @@
     position: relative;
     padding-left: 20px;
     color: $dark-75;
+    margin-bottom: 10px;
 
     &::before {
       content: "";
       position: absolute;
       left: 0;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 6px;
       width: 10px;
       height: 10px;
       border-radius: 50%;
       background-color: $dark-25;
     }
+  }
+
+  .masked-field__title {
+    margin-bottom: 14px;
   }
 
 }
