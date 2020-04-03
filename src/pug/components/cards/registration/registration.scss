@@ -9,6 +9,8 @@
     max-width: 320px;
     font: $h2-font;
     margin-bottom: 20px;
+    font-size: 24px;
+    letter-spacing: 0.05em;
   }
 
   &__name {
@@ -16,12 +18,12 @@
   }
 
   &__surname {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   &__sex {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 
   &__birthday {
@@ -29,11 +31,11 @@
   }
 
   &__offers-btn {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
   &__proceed {
-    margin-bottom: 30px;
+    margin-bottom: 29px;
   }
 }
 

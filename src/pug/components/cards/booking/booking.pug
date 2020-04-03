@@ -13,9 +13,9 @@ mixin booking(options)
         span.booking__price=options.price
         span.booking__measurement  в сутки
     .booking__datepicker
-      +datepicker({ startLabel: 'Прибытие', endLabel: 'Выезд', id: 'booking-datepicker'})
+      +datepicker-double({ start: {label: 'Прибытие', id: options.start.id}, end: {label: 'Выезд', id: options.end.id} })
     .booking__dropdown
-      +dropdown({id: 'booking-dropdown',placeholder: 'Сколько гостей...', optionsList: [{text: 'Взрослые', id: 'adult-booking'},{text: 'Дети', id: 'child-booking'}]})
+      +dropdown({title: 'гости', id: 'guest-3',placeholder: 'Сколько гостей', optionsList: [{text: 'Взрослые', id: 'adult-1'},{text: 'Дети', id: 'children-1'},{text: 'Младенцы', id: 'baby-1', checked: true}]})
     .booking__calc.calc
       each val in options.calc.length ? options.calc : ['There are no values']
         .calc__item
@@ -28,7 +28,7 @@ mixin booking(options)
     .booking__result Итого
       .booking__dots
       .booking__price=options.fullPrice
-    +button({btnText: 'подобрать номер'})
+    +button({btnText: 'забронировать', type: 'proceed'})
       
 
     

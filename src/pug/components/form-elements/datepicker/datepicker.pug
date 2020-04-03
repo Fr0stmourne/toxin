@@ -8,9 +8,11 @@ mixin datepicker-double(options)
   .datepicker-double
     .datepicker-double__start
       label.datepicker-double__label(for=options.start.id)=options.start.label
-      input.datepicker-double__input(type="text" id=options.start.id data-range="true" data-multiple-dates-separator=" - " class="datepicker-here")
+      .datepicker-double__box
+        input.datepicker-double__input.js-range-datepicker-start(type="text" id=options.start.id data-range="true" name=options.name data-multiple-dates-separator=" - " class="datepicker-here" placeholder="ДД.ММ.ГГГГ")
     .datepicker-double__end
       label.datepicker-double__label(for=options.end.id)=options.end.label
-      input.datepicker-double__input(type="text" id=options.end.id data-range="true" data-multiple-dates-separator=" - " class="datepicker-here")
+      .datepicker-double__box
+        input.datepicker-double__input.js-range-datepicker-end(type="text" id=options.end.id data-range="true" name=options.name data-multiple-dates-separator=" - " class="datepicker-here" placeholder="ДД.ММ.ГГГГ")
   
 

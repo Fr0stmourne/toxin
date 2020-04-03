@@ -14,7 +14,7 @@
   &__room-info {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     margin-bottom: 20px;
   }
 
@@ -38,7 +38,12 @@
 
   &__num {
     font-size: 24px;
-    margin-right: 5px;
+    margin: 0 5px;
+  }
+
+  &__price {
+    display: inline-block;
+    margin-bottom: 2px;
   }
 
   &__datepicker {
@@ -46,25 +51,32 @@
   }
 
   &__dropdown {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
   }
 
   &__calc {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
 
   &__result {
     display: grid;
     grid-template-columns: max-content 1fr max-content;
-    margin-bottom: 25px;
+    margin: 0 0 17px 2px;
     font: $h2-font;
+    letter-spacing: 0.05em;
   }
 
   &__dots {
+    width: calc(100%-5px);
     position: relative;
-    top: -5px;
+    top: -7px;
     border-bottom: 1px dotted $dark-25;
     margin: 0 5px;
+  }
+
+  &__price {
+    padding-left: 5px;
+    letter-spacing: normal;
   }
 }
 
@@ -75,11 +87,12 @@
 
     font: $default-font;
     color: $dark-75;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
   }
 
   &__position {
     display: flex;
+    max-width: 240px;
   }
 
   &__btn {

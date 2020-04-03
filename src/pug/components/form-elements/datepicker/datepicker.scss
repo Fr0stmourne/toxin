@@ -12,6 +12,23 @@
     margin-bottom: 5px;
   }
 
+  &__box {
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 44px;
+      height: 44px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-image: url('/assets/components/form-elements/datepicker/arrow_down.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      pointer-events: none;
+    }
+  }
+
   &__input {
     box-sizing: border-box;
     width: 100%;
@@ -26,6 +43,10 @@
     }
 
   }
+
+
+
+
 
   &__start {
     margin-right: 20px;
