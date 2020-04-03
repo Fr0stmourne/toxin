@@ -19,6 +19,13 @@ $('#booking-datepicker').datepicker({
   language: 'ru-RU',
 });
 
+$('#cards__start').datepicker({ 
+  onSelect: function (fd, d, picker) { 
+    $("#cards__start").val(fd.split("-")[0]);
+    $("#cards__end").val(fd.split("-")[1]);
+  }
+});
+
 // $(() => {
 //   $('.datepicker').daterangepicker({ linkedCalendars: false });
 // });

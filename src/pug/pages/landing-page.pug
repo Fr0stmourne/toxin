@@ -18,7 +18,7 @@ html(lang="en")
         .container
           h2.room-booking__title.visually-hidden Бронирование комнат
           .room-booking__form
-            +find-room({title: 'Найдём номера под ваши пожелания', dropdownLabel: 'Гости'})
+            +find-room({title: 'Найдём номера под ваши пожелания', start: {id: 'cards__start'}, end: {id: 'cards__end'}})
           .room-booking__note Лучшие номера для вашей работы, отдыха и просто вдохновения
     +footer({extended: true,
      copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',

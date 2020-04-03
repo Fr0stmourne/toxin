@@ -2,181 +2,209 @@
   display: flex;
 }
 
+.datepicker-double {
+  display: flex;
 
-.datepicker {
-  font: $default-font;
-  padding-bottom: 55px;
-  position: relative;
+  &__label {
+    display: block;
+    font: $btn-font;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
 
   &__input {
-    max-width: 150px;
-    height: 44px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
-    border-radius: 4px !important;
-
-
-    &-box {
-      position: relative;
-
-      &::before {
-        content: '';
-        width: 44px;
-        height: 44px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        background-image: url('/assets/components/form-elements/datepicker/arrow_down.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        pointer-events: none;
-      }
-    }
+    width: 100%;
+    border: 1px solid $dark-25;
+    padding: 12px 30px 12px 15px;
+    font: $default-font;
+    color: $dark-75;
+    border-radius: 4px;
 
     &::placeholder {
-      text-align: left;
-      padding-left: 15px;
+      text-transform: none;
     }
+
   }
 
   &__start {
     margin-right: 20px;
   }
 
-  &__label {
-    font: $btn-font;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-  }
-
-  table {
-    border-collapse: collapse;
-  }
-
-  &-controls {
-    width: 100%;
-    position: absolute;
-    bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    font: $btn-font;
-    text-transform: uppercase;
-
-    .clear {
-      width: auto;
-    }
-
-    .close {
-      position: relative;
-      right: 20px;
-      width: auto;
-      color: $purple;
-    }
-  }
-
-  &-switch {
-    font: $datepicker-switch;
-    color: $dark-100;
-  }
-
-  .prev {
-    font-size: 0;
-    width: 24px;
-    height: 24px;
-    background-image: url('/assets/components/form-elements/datepicker/arrow_back.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .next {
-    font-size: 0;
-    width: 24px;
-    height: 24px;
-    background-image: url('/assets/components/form-elements/datepicker/arrow_forward.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .dow {
-    color: $purple;
-  }
-
-  .day {
-    color: $dark-50 !important;
-  }
-
-  .old,
-  .new {
-    color: $dark-25 !important;
-  }
-
-  .today {
-    color: $white !important;
-    background: $datepicker-today;
-    border-radius: 50%;
-    font-weight: 700;
-  }
-
-  td {
-    width: 40px !important;
-    height: 40px !important;
-    padding: 0 !important;
-    margin: 0 5px !important;
-  }
-
-  .range {
-
-    background: $btn-gradient-ultralight !important;
-
-    &-start {
-      position: relative;
-      border-radius: 50% !important;
-      background-image: $btn-gradient;
-      background-color: transparent !important;
-      color: $white !important;
-      font-weight: 700;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 5;
-        width: 40px;
-        height: 40px;
-        background: $btn-gradient-ultralight !important;
-        border-radius: 50% 0 0 50%;
-      }
-
-      &:hover {
-        background-image: $btn-gradient !important;
-      }
-    }
-
-    &-end {
-      position: relative;
-      background-image: $btn-gradient;
-      background-color: transparent !important;
-      color: $white !important;
-      border-radius: 50%;
-      font-weight: 700;
-
-      &::before {
-        content: '';
-        background: $btn-gradient-ultralight !important;
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 0 50% 50% 0;
-      }
-
-      &:hover {
-        background-image: $btn-gradient !important;
-      }
-    }
-
-  }
-
 }
+
+
+// .datepicker {
+//   font: $default-font;
+//   padding-bottom: 55px;
+//   position: relative;
+
+//   &__label {}
+
+//   &__input {
+//     max-width: 150px;
+//     height: 44px;
+//     border: 1px solid rgba(31, 32, 65, 0.25);
+//     box-sizing: border-box;
+//     border-radius: 4px !important;
+
+
+//     &-box {
+//       position: relative;
+
+//       &::before {
+//         content: '';
+//         width: 44px;
+//         height: 44px;
+//         position: absolute;
+//         right: 0;
+//         top: 0;
+//         background-image: url('/assets/components/form-elements/datepicker/arrow_down.svg');
+//         background-repeat: no-repeat;
+//         background-position: center;
+//         pointer-events: none;
+//       }
+//     }
+
+//     &::placeholder {
+//       text-align: left;
+//       padding-left: 15px;
+//     }
+//   }
+
+//   &__start {
+//     margin-right: 20px;
+//   }
+
+
+//   table {
+//     border-collapse: collapse;
+//   }
+
+//   &-controls {
+//     width: 100%;
+//     position: absolute;
+//     bottom: 10px;
+//     display: flex;
+//     justify-content: space-between;
+//     font: $btn-font;
+//     text-transform: uppercase;
+
+//     .clear {
+//       width: auto;
+//     }
+
+//     .close {
+//       position: relative;
+//       right: 20px;
+//       width: auto;
+//       color: $purple;
+//     }
+//   }
+
+//   &-switch {
+//     font: $datepicker-switch;
+//     color: $dark-100;
+//   }
+
+//   .prev {
+//     font-size: 0;
+//     width: 24px;
+//     height: 24px;
+//     background-image: url('/assets/components/form-elements/datepicker/arrow_back.svg');
+//     background-repeat: no-repeat;
+//     background-position: center;
+//   }
+
+//   .next {
+//     font-size: 0;
+//     width: 24px;
+//     height: 24px;
+//     background-image: url('/assets/components/form-elements/datepicker/arrow_forward.svg');
+//     background-repeat: no-repeat;
+//     background-position: center;
+//   }
+
+//   .dow {
+//     color: $purple;
+//   }
+
+//   .day {
+//     color: $dark-50 !important;
+//   }
+
+//   .old,
+//   .new {
+//     color: $dark-25 !important;
+//   }
+
+//   .today {
+//     color: $white !important;
+//     background: $datepicker-today;
+//     border-radius: 50%;
+//     font-weight: 700;
+//   }
+
+//   td {
+//     width: 40px !important;
+//     height: 40px !important;
+//     padding: 0 !important;
+//     margin: 0 5px !important;
+//   }
+
+//   .range {
+
+//     background: $btn-gradient-ultralight !important;
+
+//     &-start {
+//       position: relative;
+//       border-radius: 50% !important;
+//       background-image: $btn-gradient;
+//       background-color: transparent !important;
+//       color: $white !important;
+//       font-weight: 700;
+
+//       &::before {
+//         content: "";
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         z-index: 5;
+//         width: 40px;
+//         height: 40px;
+//         background: $btn-gradient-ultralight !important;
+//         border-radius: 50% 0 0 50%;
+//       }
+
+//       &:hover {
+//         background-image: $btn-gradient !important;
+//       }
+//     }
+
+//     &-end {
+//       position: relative;
+//       background-image: $btn-gradient;
+//       background-color: transparent !important;
+//       color: $white !important;
+//       border-radius: 50%;
+//       font-weight: 700;
+
+//       &::before {
+//         content: '';
+//         background: $btn-gradient-ultralight !important;
+//         width: 40px;
+//         height: 40px;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         border-radius: 0 50% 50% 0;
+//       }
+
+//       &:hover {
+//         background-image: $btn-gradient !important;
+//       }
+//     }
+
+//   }
+
+// }

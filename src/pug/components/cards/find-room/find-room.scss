@@ -9,11 +9,13 @@
   &__title {
     max-width: 320px;
     font: $h2-font;
+    font-size: 24px;
+    letter-spacing: 0.05em;
     margin-bottom: 20px;
   }
 
   &__datepicker {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
   }
 
   &__dropdown {

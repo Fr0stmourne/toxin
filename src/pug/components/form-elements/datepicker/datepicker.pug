@@ -1,18 +1,16 @@
-//- mixin datepicker(options)
-//-   .input-daterange.input-group(id=options.id)
-//-     .datepicker__start
-//-       .datepicker__label=options.startLabel
-//-       .datepicker__input-box
-//-         input.input-sm.form-control.datepicker__input(type='text', name='start' placeholder="ДД.ММ.ГГГГ")
-//-     .datepicker__end
-//-       .datepicker__label=options.endLabel
-//-       .datepicker__input-box
-//-         input.input-sm.form-control.datepicker__input(type='text', name='end' placeholder="ДД.ММ.ГГГГ")
-
 mixin datepicker(options)
   .datepicker-single
     if options.title
       .masked-field__title=options.title
     input.datepicker-single__input(type="text" id=options.id placeholder="ДД.ММ.ГГГГ" class='datepicker-here')
+
+mixin datepicker-double(options)
+  .datepicker-double
+    .datepicker-double__start
+      label.datepicker-double__label(for=options.start.id)=options.start.label
+      input.datepicker-double__input(type="text" id=options.start.id data-range="true" data-multiple-dates-separator=" - " class="datepicker-here")
+    .datepicker-double__end
+      label.datepicker-double__label(for=options.end.id)=options.end.label
+      input.datepicker-double__input(type="text" id=options.end.id data-range="true" data-multiple-dates-separator=" - " class="datepicker-here")
   
 
