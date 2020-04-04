@@ -23,6 +23,14 @@
     background-size: 24px auto;
     background-position: right center;
 
+    &:disabled {
+      pointer-events: none;
+
+      &:hover {
+        background-image: initial;
+      }
+    }
+
 
     &:checked,
     &:hover {

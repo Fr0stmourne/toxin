@@ -1,7 +1,5 @@
 mixin rate-btn(options) 
   fieldset.rate-btn
-    input.rate-btn__star(type="radio", name=options.name, value=1)
-    input.rate-btn__star(type="radio", name=options.name, value=2)
-    input.rate-btn__star(type="radio", name=options.name, value=3)
-    input.rate-btn__star(type="radio", name=options.name, value=4)
-    input.rate-btn__star(type="radio", name=options.name, value=5)
+    each val in [1, 2, 3, 4, 5]
+      input.rate-btn__star(type="radio", name=options.name, value=val disabled=options.disabled checked=options.checkedNum==val)
+
