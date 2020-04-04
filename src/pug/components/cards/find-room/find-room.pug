@@ -4,7 +4,7 @@ include ../../form-elements/buttons/buttons.pug
 
 mixin find-room(options)
   form.find-room
-    .find-room__title=options.title
+    h3.find-room__title=options.title
     .find-room__datepicker
       +datepicker-double({ start: {label: 'Прибытие', id: options.start.id}, end: {label: 'Выезд', id: options.end.id} })
     .find-room__dropdown

@@ -1,10 +1,9 @@
-.find-room {
+.login {
   box-sizing: border-box;
   max-width: 380px;
   padding: 40px 30px 30px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  background-color: $white;
 
   &__title {
     max-width: 320px;
@@ -15,17 +14,11 @@
     margin-bottom: 20px;
   }
 
-  &__datepicker {
-    margin-bottom: 21px;
+  &__login-data {
+    margin-bottom: 20px;
   }
 
-  &__dropdown {
-    margin-bottom: 30px;
-  }
-
-  &__label {
-    font: $btn-font;
-    text-transform: uppercase;
-    margin-bottom: 5px;
+  &__proceed {
+    margin-bottom: 28px;
   }
 }

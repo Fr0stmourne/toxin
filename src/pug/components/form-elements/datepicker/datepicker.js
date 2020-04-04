@@ -19,6 +19,8 @@ $('#booking-datepicker').datepicker({
   language: 'ru-RU',
 });
 
+
+
 function addRangeDatepicker() {
 
   // const datepickerStartClass = '.js-range-datepicker-start';
@@ -33,17 +35,35 @@ function addRangeDatepicker() {
   //     $(endInput).val(fd.split("-")[1]);
   //   }});
   
-  $('#cards__start').datepicker({ 
+  $('#cards__start').datepicker({
+    navTitles: {
+      days: 'MM yyyy'
+    },
     onSelect: function (fd, d, picker) { 
       $("#cards__start").val(fd.split("-")[0]);
       $("#cards__end").val(fd.split("-")[1]);
     }
   });
 
-  $('#cards__start-1').datepicker({ 
+  $('#cards__start-1').datepicker({
+    navTitles: {
+      days: 'MM yyyy'
+    },
+    
     onSelect: function (fd, d, picker) { 
       $("#cards__start-1").val(fd.split("-")[0]);
       $("#cards__end-1").val(fd.split("-")[1]);
+    }
+  });
+  $('#cards-date__start').datepicker({ 
+    inline: true,
+    clearButton: true,
+    navTitles: {
+      days: 'MM yyyy'
+    },
+    onSelect: function (fd, d, picker) { 
+      $("#cards-date__start").val(fd.split("-")[0]);
+      $("#cards-date__end").val(fd.split("-")[1]);
     }
   });
 }

@@ -17,6 +17,6 @@ mixin room(options)
           span.room__measurement  в сутки
       .room__rating
         +rate-btn({name: options.name})
-        a.room__per-day(href=options.link)
+        a.room__per-day.room__per-day--link(href=options.link)
           =options.reviewNum
           span.room__measurement  Отзывов

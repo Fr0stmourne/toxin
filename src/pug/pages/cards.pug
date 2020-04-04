@@ -2,6 +2,8 @@ include ../components/cards/find-room/find-room.pug
 include ../components/cards/registration/registration.pug
 include ../components/cards/booking/booking.pug
 include ../components/cards/room/room.pug
+include ../components/cards/login/login.pug
+include ../components/form-elements/datepicker/datepicker.pug
 
 <!DOCTYPE html>
 html(lang="en")
@@ -19,8 +21,16 @@ html(lang="en")
       .cards__col-2
         .cards__booking
           +booking({num: '888', type: 'люкс', fullPrice: '38 081₽', start: {id: 'cards__start-1'}, end: {id: 'cards__end-1'}, price: '9 990₽', calc: [['9 990₽ х 4 суток', '39 960₽'], ['Сбор за услуги: скидка 2 179₽', '0₽', 'Инфо'], ['Сбор за дополнительные услуги', '300₽', 'Информация']]})
-        .cards__room
-          +room({num: '888', sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#', sliderId: 'room-slider', reviewNum: 65,  type: 'люкс', fullPrice: '38 081₽', price: '9 990₽', calc: [['9 990₽ х 4 суток', '39 960₽'], ['Сбор за услуги: скидка 2 179₽', '0₽', 'Инфо'], ['Сбор за дополнительные услуги', '300₽', 'Информация']]})
+        .cards__login
+          +login({noteText: 'Нет аккаунта на Toxin?'})
+      .cards__col-3
+        .cards__datepicker
+          +datepicker-double({ start: {label: 'Прибытие', id: 'cards-date__start'}, end: {label: 'Выезд', id: 'cards-date__end'} , controls: true})
+        .cards__rooms
+          .cards__room
+            +room({num: '888', sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#', sliderId: 'room-slider', reviewNum: 145,  type: 'люкс', fullPrice: '38 081₽', price: '9 990₽', calc: [['9 990₽ х 4 суток', '39 960₽'], ['Сбор за услуги: скидка 2 179₽', '0₽', 'Инфо'], ['Сбор за дополнительные услуги', '300₽', 'Информация']]})
+          .cards__room
+            +room({num: '840', sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#', sliderId: 'room-slider', reviewNum: 65, fullPrice: '38 081₽', price: '9 990₽', calc: [['9 990₽ х 4 суток', '39 960₽'], ['Сбор за услуги: скидка 2 179₽', '0₽', 'Инфо'], ['Сбор за дополнительные услуги', '300₽', 'Информация']]})
 
 
 

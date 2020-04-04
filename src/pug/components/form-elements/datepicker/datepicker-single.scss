@@ -2,6 +2,7 @@
   position: relative;
 
 
+
   &__input {
     box-sizing: border-box;
     width: 100%;
@@ -37,7 +38,8 @@
   width: 320px !important;
   font: $default-font !important;
   font-size: 12px !important;
-  padding-bottom: 0 !important;
+  padding-bottom: 10px !important;
+  box-sizing: border-box !important;
 
   &--cells {
     width: 280px !important;
@@ -57,12 +59,14 @@
   }
 
   &--content {
-    padding: 0 0 20px 0 !important;
+    padding: 0 !important;
   }
 
   &--nav {
+    display: flex;
+    align-items: center;
     border: 0 !important;
-    padding: 20px 20px 30px !important;
+    padding: 15px 20px 25px !important;
   }
 
   &--nav-title {
@@ -78,6 +82,16 @@
 
     &[data-action='next'] {
       background-image: url('/assets/components/form-elements/date-filter/arrow_forward.svg');
+
+      &:hover {
+        background-image: url('/assets/components/form-elements/date-filter/arrow_forward.svg') !important;
+      }
+    }
+
+    &:hover {
+      background-image: url('/assets/components/form-elements/date-filter/arrow_back.svg') !important;
+      background-repeat: no-repeat !important;
+      background-position: center !important;
     }
 
     svg {
@@ -154,7 +168,7 @@
     display: flex !important;
     justify-content: space-between !important;
     border-top: 0 !important;
-    padding: 0 20px 20px !important;
+    padding: 12px 20px 0 !important;
     font: $btn-font !important;
     text-transform: uppercase !important;
   }
