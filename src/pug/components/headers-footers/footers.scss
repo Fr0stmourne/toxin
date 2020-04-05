@@ -1,4 +1,5 @@
 .main-footer {
+  background-color: $white;
 
   &__main {
     display: flex;
@@ -12,9 +13,14 @@
 
       .company__text {
         max-width: 560px;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
+      }
+
+      .company__logos {
+        margin-bottom: 12px;
       }
     }
+
   }
 
   &__company {
@@ -43,12 +49,14 @@
   &__logos {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
   }
 
-  &__text {
+  &__text:not(:only-child) {
+    display: flex;
     font: $default-font;
     color: $dark-75;
+    line-height: 24px;
   }
 
 }
@@ -57,12 +65,15 @@
   color: $dark-50;
   font: $default-font;
 
+  &:nth-child(2) {
+    margin: 0 28px 0 32px;
+  }
 
   &__title {
     color: $dark-100;
     font: $btn-font;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin: 4px 0 22px;
   }
 
   &__item {
@@ -86,14 +97,15 @@
     color: $dark-100;
     font: $btn-font;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin: 4px 0 18px;
   }
 
   &__text {
     max-width: 200px;
     font: $default-font;
     color: $dark-75;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
+    line-height: 24px;
   }
 
   &__input {
@@ -102,7 +114,7 @@
 }
 
 .bottom {
-  padding: 26px 0;
+  padding: 25px 0 19px;
   display: flex;
   justify-content: space-between;
 
@@ -114,10 +126,15 @@
   &__social {
     display: flex;
 
+    &-link {
+      display: block;
+    }
+
     &-item {
       &:not(:last-child) {
-        margin-right: 20px;
+        margin-right: 22px;
       }
     }
   }
+
 }
