@@ -66,6 +66,7 @@
       &-content {
         position: absolute;
         display: none;
+        z-index: 15;
         background-color: #f1f1f1;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         width: 100%;
@@ -87,7 +88,7 @@
       }
     }
 
-    &__item:not(:last-child) .nav__link {
+    &__item .nav__link {
       margin-right: 30px;
     }
 
@@ -104,7 +105,7 @@
 
   .login-menu {
     display: flex;
-    padding-left: 27px;
+    margin-left: -3px;
 
     &--logged {
       align-items: center;
@@ -112,7 +113,7 @@
       border-left: 1px solid rgba($dark-100, 0.1);
       font: $default-font;
       padding-left: 31px;
-      margin-left: 30px;
+      margin-left: 0;
     }
 
     &__login {

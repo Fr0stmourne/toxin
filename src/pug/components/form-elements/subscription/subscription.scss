@@ -18,6 +18,10 @@
       border-color: $dark-50;
       color: $dark-75;
     }
+
+    &::placeholder {
+      color: inherit;
+    }
   }
 
   &__submit-btn {

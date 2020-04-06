@@ -8,7 +8,7 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
-  body
+  body.landing-page
     +header({unlogged: true, regText: 'зарегистрироваться', loginText: 'войти',
     items: [{text: 'О нас', link: '#'}, {text: 'Услуги', link: '#', dropdown: [{text: 'Услуга', link: '#'},{text: 'Услуга 2', link: '#'},{text: 'Услуга 2', link: '#'}]},
       {text: 'Вакансии', link: '#'},{text: 'Новости', link: '#'},
@@ -22,9 +22,8 @@ html(lang="en")
           .room-booking__note Лучшие номера для вашей работы, отдыха и просто вдохновения
     +footer({extended: true,
      copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
-      socialList: [{name: 'Insta', link: '#', imgLink: '/assets/img/insta.svg'},
- {name: 'Twitter', link: '#', imgLink: '/assets/img/twitter.svg'},
-  {name: 'Facebook', link: '#', imgLink: '/assets/img/facebook.svg'}],
+      socialList: [{name: 'Twitter', link: '#', imgLink: '/assets/img/twitter.svg'},
+      {name: 'Facebook', link: '#', imgLink: '/assets/img/facebook.svg'},{name: 'Insta', link: '#', imgLink: '/assets/img/insta.svg'}],
    sub: {title: 'Subscribe to our newsletter',
     text: 'Receive our latest news and promotions in your inbox!',
      placeholder: 'Your email address'},

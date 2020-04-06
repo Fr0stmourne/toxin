@@ -2,25 +2,58 @@
   position: relative;
   max-width: 1440px;
   margin: 0 auto;
-  min-height: 830px;
+  min-height: 760px;
   background-image: url("/assets/img/landing.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position-y: -70px;
 
 
-  padding-top: 72px;
+  padding-top: 70px;
 
   .container {
     display: grid;
+    padding-right: 134px;
   }
 
   &__form {
-    margin-bottom: 320px;
+    margin-bottom: 318px;
   }
 
   &__note {
     max-width: 300px;
     justify-self: end;
     font: $default-font;
+    text-align: right;
+    line-height: 24px;
+  }
+
+
+}
+
+.landing-page {
+  .login-menu {
+    margin-left: -3px;
+  }
+
+  .nav__item--dropdown {
+    padding-right: 28px;
+    margin-right: 0;
+
+  }
+
+  .nav__item .nav__link {
+    margin-right: 20px !important;
+  }
+
+  .nav__item--dropdown:after {
+    right: 29px;
+  }
+
+  .footer-nav:nth-child(2) {
+    margin: 0px 40px 0 4px;
+  }
+
+  .sub__text {
+    max-width: none;
   }
 }
