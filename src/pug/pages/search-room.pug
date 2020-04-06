@@ -5,6 +5,8 @@ include ../components/form-elements/range-slider/range-slider.pug
 include ../components/form-elements/expandable-list/expandable-list.pug
 include ../components/form-elements/checkbox-buttons/checkbox.pug
 include ../components/form-elements/rich-checkbox/rich-checkbox.pug
+include ../components/form-elements/date-filter/date-filter.pug
+include ../components/form-elements/dropdown/dropdown.pug
 
 <!DOCTYPE html>
 html(lang="en")
@@ -12,7 +14,7 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
-  body
+  body.search-room
     +header({unlogged: true, regText: 'зарегистрироваться', loginText: 'войти',
     items: [{text: 'О нас', link: '#'}, {text: 'Услуги', link: '#', dropdown: [{text: 'Услуга', link: '#'},{text: 'Услуга 2', link: '#'},{text: 'Услуга 2', link: '#'}]},
       {text: 'Вакансии', link: '#'},{text: 'Новости', link: '#'},
@@ -21,34 +23,45 @@ html(lang="en")
       .container
         section.filter
           h2.filter__title
+          .filter__date-filter
+            +date-filter({title: 'даты пребывания в отеле'})
+          .filter__guests
+            +dropdown({title: 'гости', id: 'guest-3',placeholder: 'Сколько гостей', optionsList: [{text: 'Взрослые', id: 'adult-1'},{text: 'Дети', id: 'children-1'},{text: 'Младенцы', id: 'baby-1', checked: true}]})
           .filter__slider
             +range-slider({title: 'диапазон цены'})
             .filter__slider-hint Стоимость за сутки пребывания в номере
           .filter__checkbox-group
             .form-element__title Checkbox Buttons
-            +checkbox({labelText: "Можно курить"})
-            +checkbox({labelText: "Можно с питомцами"})
-            +checkbox({labelText: "Можно пригласить гостей (до 10 человек)"})
+            .filter__checkbox
+              +checkbox({labelText: "Можно курить"})
+            .filter__checkbox
+              +checkbox({labelText: "Можно с питомцами"})
+            .filter__checkbox
+              +checkbox({labelText: "Можно пригласить гостей (до 10 человек)"})
           .filter__ally
             .form-element__title доступность
-            +rich-checkbox({labelText: 'Широкий коридор', description: 'Ширина коридоров в номере не менее 91 см.'})
-            +rich-checkbox({labelText: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
+            .filter__rich-checkboxes 
+              .filter__rich-checkbox
+                +rich-checkbox({labelText: 'Широкий коридор', description: 'Ширина коридоров в номере не менее 91 см.'})
+              .filter__rich-checkbox
+                +rich-checkbox({labelText: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
           .filter__comfort
-            .form-element__title Удобства номера
+
+             +dropdown({title: 'Удобства номера',id: 'room-1',placeholder: 'Комнаты', optionsList: [{text: 'Спальни', id: 'bedroom-1'},{text: 'Кровати', id: 'bed-1'},{text: 'Ванные комнаты', id: 'bathroom-1', checked: true}]})
           .filter__additional
              +expandable-list({id: 'expandable', btnId: 'expandable-btn', title: 'дополнительные удобства',list: [{labelText: 'Завтрак'}, {labelText: 'Письменный стол', checked: true},{labelText: 'Стул для кормления', checked: true},{labelText: 'Кроватка', checked: true},{labelText: 'Телевизор'},{labelText: 'Шампунь'},{labelText: 'Телевизор'},{labelText: 'Шампунь'}]})
         section.rooms
           h2.rooms__title Номера, которые мы для вас подобрали
           ul.rooms__list
-            +room({num: '888', sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 65,  type: 'люкс', price: '9 990₽' })
-            +room({num: '888', sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 65,  type: 'люкс', price: '9 990₽' })
-            +room({num: '888', sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 65,  type: 'люкс', price: '9 990₽' })
-            +room({num: '888', sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 65,  type: 'люкс', price: '9 990₽' })
-            +room({num: '888', sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 65,  type: 'люкс', price: '9 990₽' })
-            +room({num: '888', sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 65,  type: 'люкс', price: '9 990₽' })
-            +room({num: '888', sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 65,  type: 'люкс', price: '9 990₽' })
-            +room({num: '888', sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 65,  type: 'люкс', price: '9 990₽' })
-            +room({num: '888', sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 65,  type: 'люкс', price: '9 990₽' })
-            +room({num: '888', sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 65,  type: 'люкс', price: '9 990₽' })
-            +room({num: '888', sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 65,  type: 'люкс', price: '9 990₽' })
-            +room({num: '888', sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 65,  type: 'люкс', price: '9 990₽' })
+            +room({num: '888',checkedRating: 5, isRatingDisabled: true, sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 145, type: 'люкс', price: '9 990₽' })
+            +room({num: '840',checkedRating: 4, isRatingDisabled: true, sliderImgs: ['/assets/img/2.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 65,  price: '9 900₽' })
+            +room({num: '980',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/assets/img/3.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 35,  type: 'люкс', price: '8 500₽' })
+            +room({num: '856',checkedRating: 5, isRatingDisabled: true, sliderImgs: ['/assets/img/4.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 19,  price: '7 300₽' })
+            +room({num: '740',checkedRating: 4, isRatingDisabled: true, sliderImgs: ['/assets/img/5.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 44,  price: '6 000₽' })
+            +room({num: '982',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/assets/img/6.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 56,  price: '5 800₽' })
+            +room({num: '678',checkedRating: 5, isRatingDisabled: true, sliderImgs: ['/assets/img/7.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 45,  price: '5 500₽' })
+            +room({num: '450',checkedRating: 4, isRatingDisabled: true, sliderImgs: ['/assets/img/8.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 39,  price: '5 300₽' })
+            +room({num: '350',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/assets/img/9.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 77,  price: '5 000₽' })
+            +room({num: '666',checkedRating: 5, isRatingDisabled: true, sliderImgs: ['/assets/img/10.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 25,  price: '5 000₽' })
+            +room({num: '444',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/assets/img/11.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 15,  price: '5 000₽' })
+            +room({num: '352',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/assets/img/12.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 55,  price: '5 000₽' })

@@ -1,8 +1,13 @@
-main.search-room__main {
+.search-room {
   .container {
     display: grid;
     grid-template-columns: 270px max-content;
-    grid-column-gap: 50px;
+    grid-column-gap: 55px;
+    padding-top: 12px;
+  }
+
+  .main-header {
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   }
 }
 
@@ -10,17 +15,27 @@ main.search-room__main {
 
   &__title {
     font: $h1-font;
+    margin-top: 19px;
+    letter-spacing: 0.03em;
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 12px 20px;
+    grid-gap: 18px 13px;
   }
 }
 
 .filter {
+  max-width: 266px;
 
+  &__date-filter {
+    margin-bottom: 20px;
+  }
+
+  &__guests {
+    margin-bottom: 30px;
+  }
 
   &__slider-hint {
     font: $default-font;
@@ -31,16 +46,33 @@ main.search-room__main {
     margin-bottom: 30px;
 
     .slider {
-      margin-bottom: 10px;
+      margin-bottom: 13px;
     }
   }
 
+  &__checkbox-group {
+    margin-bottom: 32px;
+  }
+
   &__checkbox {
-    margin-bottom: 30px;
+    margin: 10px 0 12px;
+    max-width: 222px;
   }
 
   &__ally {
-    margin-bottom: 30px;
+    margin-bottom: 31px;
+  }
+
+  &__rich-checkbox {
+    margin-bottom: 8px;
+
+    &:nth-child(1) .rich-checkbox__description {
+      max-width: 205px;
+    }
+
+    &:nth-child(2) .rich-checkbox__description {
+      max-width: 230px;
+    }
   }
 
   &__comfort {
@@ -52,4 +84,32 @@ main.search-room__main {
 .form-element__title {
   @include form-element;
   margin-bottom: 16px;
+}
+
+.search-room {
+  .login-menu {
+    margin-left: -3px;
+  }
+
+  .nav__item--dropdown {
+    padding-right: 28px;
+    margin-right: 0;
+
+  }
+
+  .nav__item .nav__link {
+    margin-right: 20px !important;
+  }
+
+  .nav__item--dropdown:after {
+    right: 29px;
+  }
+
+  .footer-nav:nth-child(2) {
+    margin: 0px 40px 0 4px;
+  }
+
+  .sub__text {
+    max-width: none;
+  }
 }
