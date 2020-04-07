@@ -8,7 +8,7 @@ mixin comment(options)
       .comment__date=options.date
     .comment__box
       .comment__like
-        +like-btn({likes: options.likes, active: true})
+        +like-btn({likes: options.likes, active: options.activeLike})
       blockquote.comment__text=options.comment
 
 

@@ -1,0 +1,73 @@
+include ../components/headers-footers/headers.pug
+include ../components/headers-footers/footers.pug
+include ../components/form-elements/advantage/advantage.pug
+include ../components/form-elements/comment/comment.pug
+include ../components/form-elements/bullet-list/bullet-list.pug
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Room Details
+  body.room-details
+    +header({unlogged: true, regText: 'зарегистрироваться', loginText: 'войти',
+    items: [{text: 'О нас', link: '#'}, {text: 'Услуги', link: '#', dropdown: [{text: 'Услуга', link: '#'},{text: 'Услуга 2', link: '#'},{text: 'Услуга 2', link: '#'}]},
+      {text: 'Вакансии', link: '#'},{text: 'Новости', link: '#'},
+      {text: 'Соглашения', link: '#', dropdown: [{text: 'Услуга', link: '#'},{text: 'Услуга 2', link: '#'},{text: 'Услуга 2', link: '#'}]}]})
+    main
+      .room-photos
+        img.room-photos__photo(src="/assets/img/details-1.jpg", alt="")
+        img.room-photos__photo(src="/assets/img/details-2.jpg", alt="")
+        img.room-photos__photo(src="/assets/img/details-3.jpg", alt="")
+      .container
+        .room-info
+          .room-info__info
+            h2.room-info__title Сведения о номере
+            .room-info__advantages
+              .room-info__advantage
+                +advantage({title: 'Комфорт', description: 'Шумопоглощающие стены', imgLink: "/assets/components/form-elements/advantage/emoji.svg"})
+              .room-info__advantage
+                +advantage({title: 'Удобство', description: 'Окно в каждой из спален', imgLink: "/assets/components/form-elements/advantage/city.svg"})
+              .room-info__advantage
+                +advantage({title: 'Уют', description: 'Номер оснащён камином', imgLink: "/assets/img/whatshot.svg"})
+          .room-info__impression
+            h2.room-info__title Впечатления от номера
+            .room-info__diagram
+            //- 
+        .room-reviews
+          h2.room-reviews__title Отзывы посетителей номера
+          .room-review
+            +comment({src: "/assets/img/comment.jpg", activeLike: true, likes: 12, author: "Мурад Сарафанов", date: "5 дней назад", comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+          .room-review
+            +comment({src: "/assets/img/comment-1.jpg", likes: 2, author: "Патрисия Стёклышкова", date: "Неделю назад", comment: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"})
+        .room-restrictions
+          .room-rules
+            h2.room-rules__title Правила
+            .room-rules__list
+              +bullet-list({items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
+          .room-cancel
+            h2.room-cancel__title Отмена
+            .room-cancel__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+
+
+  
+
+
+
+
+    +footer({extended: true,
+     copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
+      socialList: [{name: 'Twitter', link: '#', imgLink: '/assets/img/twitter.svg'},
+      {name: 'Facebook', link: '#', imgLink: '/assets/img/facebook.svg'},{name: 'Insta', link: '#', imgLink: '/assets/img/insta.svg'}],
+   sub: {title: 'Subscribe to our newsletter',
+    text: 'Receive our latest news and promotions in your inbox!',
+     placeholder: 'Your email address'},
+      navLists: [{title: 'навигация',
+       items: ['О нас', 'Новости', 'Служба поддержки', 'Услуги']},
+        {title: 'о нас', 
+        items: ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']},
+         {title: 'Служба поддержки', items: ['Соглашения', 'Сообщества', 'Связь с нами']}],
+          sub: {title: 'Подписка', placeholder: 'Email', text: 'Получайте специальные предложения и новости сервиса'},
+           companyText: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»'})
+              
