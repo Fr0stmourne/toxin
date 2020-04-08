@@ -24,6 +24,15 @@
   .sub__text {
     max-width: none;
   }
+
+  main .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main {
+    border-bottom: 1px solid $border;
+  }
 }
 
 .room-photos {
@@ -50,6 +59,8 @@
   &__photo:nth-child(3) {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
+    position: relative;
+    bottom: 2px;
   }
 
 }
@@ -139,6 +150,7 @@
   }
 
   &s {
+    max-width: 710px;
     margin-bottom: 33px;
 
     &__title {
@@ -150,6 +162,7 @@
     &__box {
       display: flex;
       justify-content: space-between;
+      align-items: baseline;
     }
 
     &__reviews-num {
@@ -197,6 +210,7 @@
 
 .room-restrictions {
   display: flex;
+  margin-bottom: 61px;
 }
 
 .diagram-legend {
