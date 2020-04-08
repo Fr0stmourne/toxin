@@ -55,10 +55,50 @@
 }
 
 .room-info {
-  max-width: 291px;
   display: flex;
 
-  &__info {}
+  &__info {
+    max-width: 291px;
+    margin-right: 85px;
+  }
+
+  &__impression {
+    width: 100%;
+  }
+
+  &__diagram {
+    display: flex;
+
+  }
+
+  &__canvas-box {
+    position: relative;
+    width: 123px;
+    height: 123px;
+    margin-right: 28px;
+  }
+
+  &__canvas-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font: $h1-font;
+    color: $purple;
+    line-height: 18px;
+
+    span {
+      font: $btn-font;
+      text-transform: uppercase;
+    }
+  }
+
+  &__diagram-legend {
+    margin: 29px 0 0 0;
+    padding: 0;
+
+  }
 
   &__title {
     margin: 0 0 18px;
@@ -106,6 +146,16 @@
       font: $h2-font;
       letter-spacing: 0.03em;
     }
+
+    &__box {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__reviews-num {
+      font: $default-font;
+      color: $dark-50;
+    }
   }
 
   .comment__photo {
@@ -147,5 +197,42 @@
 
 .room-restrictions {
   display: flex;
+}
+
+.diagram-legend {
+  list-style: none;
+
+  &__item {
+    padding-left: 15px;
+    position: relative;
+    font: $default-font;
+    line-height: 24px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    &:nth-child(1)::before {
+      background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+    }
+
+    &:nth-child(2)::before {
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    }
+
+    &:nth-child(3)::before {
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+
+    &:nth-child(4)::before {
+      background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+    }
+  }
 
 }
