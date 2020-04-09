@@ -7,6 +7,19 @@
     align-items: center;
     color: $dark-50;
     padding: 13px 139px;
+
+    @media (max-width: 1200px) {
+      padding: 13px 20px;
+    }
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+
+    @media (max-width: 400px) {
+      padding: 5px;
+    }
+
   }
 
   &__logo {
@@ -16,14 +29,37 @@
   &__logo-link {
     display: flex;
     align-items: center;
+
+    @media (max-width: 850px) {
+      margin-right: 20px;
+    }
+
+    @media (max-width: 600px) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 400px) {
+      margin: 10px 0;
+    }
   }
 
   &__menu {
     display: flex;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
   }
 
   .btn {
     padding: 10px 20px;
+  }
+
+  .main-logo__nav {
+
+    @media (max-width: 600px) {
+      margin-bottom: 20px;
+    }
   }
 
 
@@ -34,7 +70,12 @@
     &__list {
 
       display: flex;
+      flex-wrap: wrap;
       font: $default-font;
+
+      @media (max-width: 800px) {
+        justify-content: space-evenly;
+      }
     }
 
     &__item {
@@ -61,6 +102,8 @@
         }
       }
     }
+
+
 
     &__dropdown {
       &-content {
@@ -118,6 +161,20 @@
 
     &__login {
       margin-right: 20px;
+
+      @media (max-width: 950px) {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+
+    @media (max-width: 950px) and (min-width: 601px) {
+      flex-direction: column;
+    }
+
+    @media (max-width: 600px) {
+      flex-direction: row;
+      justify-content: space-evenly;
     }
   }
 }

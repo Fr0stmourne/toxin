@@ -10,13 +10,33 @@
 
   padding-top: 70px;
 
+  @media (max-width: 600px) {
+    padding: 70px 0;
+    min-height: 0;
+    background-size: cover;
+    background-position-y: 0;
+  }
+
   .container {
     display: grid;
     padding-right: 134px;
+
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0;
+    }
   }
 
   &__form {
     margin-bottom: 318px;
+
+    @media (max-width: 600px) {
+      display: flex;
+      justify-content: center;
+      margin: 0 10px;
+    }
   }
 
   &__note {
@@ -25,6 +45,10 @@
     font: $default-font;
     text-align: right;
     line-height: 24px;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 
 
@@ -51,6 +75,10 @@
 
   .footer-nav:nth-child(2) {
     margin: 0px 40px 0 4px;
+
+    @media (max-width: 1300px) {
+      margin: 0;
+    }
   }
 
   .sub__text {

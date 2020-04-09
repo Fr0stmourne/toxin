@@ -16,6 +16,10 @@
       text-transform: none;
     }
 
+    @media (max-width: 600px) {
+      padding: 5px 15px 5px 10px;
+    }
+
   }
 
   &::before {
