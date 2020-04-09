@@ -1,9 +1,14 @@
 .search-room {
-  .container {
+  main .container {
     display: grid;
-    grid-template-columns: 270px max-content;
+    grid-template-columns: 270px 1fr;
     grid-column-gap: 55px;
     padding-top: 12px;
+    padding-right: 139px;
+  }
+
+  main {
+    border-bottom: 1px solid $border;
   }
 
   .main-header {
@@ -21,8 +26,17 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, 270px);
     grid-gap: 18px 13px;
+    margin-bottom: 40px;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin-right: 15px;
+    margin-bottom: 70px;
   }
 }
 

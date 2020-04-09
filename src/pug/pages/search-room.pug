@@ -7,6 +7,7 @@ include ../components/form-elements/checkbox-buttons/checkbox.pug
 include ../components/form-elements/rich-checkbox/rich-checkbox.pug
 include ../components/form-elements/date-filter/date-filter.pug
 include ../components/form-elements/dropdown/dropdown.pug
+include ../components/form-elements/pagination/pagination.pug
 
 <!DOCTYPE html>
 html(lang="en")
@@ -65,3 +66,19 @@ html(lang="en")
             +room({num: '666',checkedRating: 5, isRatingDisabled: true, sliderImgs: ['/assets/img/10.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 25,  price: '5 000₽' })
             +room({num: '444',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/assets/img/11.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 15,  price: '5 000₽' })
             +room({num: '352',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/assets/img/12.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: '#',  reviewNum: 55,  price: '5 000₽' })
+          .rooms__pagination
+            +pagination({num: 15, description: "1 – 12 из 100+ вариантов аренды"})
+    +footer({extended: true,
+     copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
+      socialList: [{name: 'Twitter', link: '#', imgLink: '/assets/img/twitter.svg'},
+      {name: 'Facebook', link: '#', imgLink: '/assets/img/facebook.svg'},{name: 'Insta', link: '#', imgLink: '/assets/img/insta.svg'}],
+   sub: {title: 'Subscribe to our newsletter',
+    text: 'Receive our latest news and promotions in your inbox!',
+     placeholder: 'Your email address'},
+      navLists: [{title: 'навигация',
+       items: ['О нас', 'Новости', 'Служба поддержки', 'Услуги']},
+        {title: 'о нас', 
+        items: ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']},
+         {title: 'Служба поддержки', items: ['Соглашения', 'Сообщества', 'Связь с нами']}],
+          sub: {title: 'Подписка', placeholder: 'Email', text: 'Получайте специальные предложения и новости сервиса'},
+           companyText: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»'})
