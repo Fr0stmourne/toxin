@@ -20,7 +20,7 @@ mixin footer(options)
                   each val in navList.items.length ? navList.items : ['There are no values']
                     li.footer-nav__item
                       a.footer-nav__link(href=val.link)=val
-            .footer-nav__sub.sub
+            form.footer-nav__sub.sub
               h3.sub__title=options.sub.title
               .sub__text=options.sub.text
               .sub__input
