@@ -1,5 +1,6 @@
 .plus-minus {
   display: flex;
+  align-items: center;
 
   &__btn {
     display: flex;
@@ -74,6 +75,7 @@
     align-items: center;
     font: inherit;
     text-transform: uppercase;
+    flex-wrap: wrap;
   }
 
   &__controls {

@@ -10,7 +10,7 @@ mixin dropdown(options)
       ul.dropdown__list
         each option in options.optionsList.length ? options.optionsList : ['There are no values']
           li.dropdown__item
-            option.dropdown__option(selected=option.selected)=option.text
+            .dropdown__option(selected=option.selected)=option.text
             +plus-minus({min: 0, max: 5, id: option.id, name: option.name})
       if options.controls
         .dropdown__controls

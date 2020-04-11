@@ -1,10 +1,29 @@
 .search-room {
   main .container {
     display: grid;
-    grid-template-columns: 270px 1fr;
+    // grid-template-columns: 270px 1fr;
+    grid-template-columns: max-content 1fr;
     grid-column-gap: 55px;
     padding-top: 12px;
     padding-right: 139px;
+
+    @media (max-width: 1200px) {
+      padding: 12px 30px;
+      grid-column-gap: 30px;
+    }
+
+    @media (max-width: 700px) {
+      padding: 12px 15px;
+      grid-column-gap: 15px;
+    }
+
+    @media (max-width: 600px) {
+      display: flex;
+    }
+
+    @media (max-width: 550px) {
+      flex-direction: column;
+    }
   }
 
   main {
@@ -22,6 +41,11 @@
     font: $h1-font;
     margin-top: 19px;
     letter-spacing: 0.03em;
+
+    @media (max-width: 850px) {
+      text-align: center;
+      font-size: 17px;
+    }
   }
 
   &__list {
@@ -30,6 +54,11 @@
     grid-template-columns: repeat(auto-fill, 270px);
     grid-gap: 18px 13px;
     margin-bottom: 40px;
+
+    @media (max-width: 850px) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
   }
 
   &__pagination {
@@ -42,6 +71,13 @@
 
 .filter {
   max-width: 266px;
+
+  @media (max-width: 550px) {
+    max-width: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 10px;
+  }
 
   &__date-filter {
     margin-bottom: 20px;
