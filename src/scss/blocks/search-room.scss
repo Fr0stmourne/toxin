@@ -75,7 +75,7 @@
   @media (max-width: 550px) {
     max-width: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(2, auto);
     gap: 10px;
   }
 
