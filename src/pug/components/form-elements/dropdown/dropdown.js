@@ -154,6 +154,7 @@ function num2str(n, text_forms) {
 function addDropdown(options) {
   options.ids.forEach(id => {
     const dropdownSelector = `#${id}`;
+    const initialText = $(dropdownSelector).text();
     addPlusMinus(dropdownSelector)
 
     if (id === 'room-1') {
@@ -164,11 +165,15 @@ function addDropdown(options) {
           return $(this).data('forms')
         }).each(function(){
           const currentValue = $( this ).parent().find('input').val();
-          resultArr.push(`${currentValue} ${num2str(currentValue, $(this).data('forms').split(' '))}`);
+          if (+currentValue !== 0) {
+            console.log('value', currentValue, typeof currentValue, currentValue !== 0);
+            
+            resultArr.push(`${currentValue} ${num2str(currentValue, $(this).data('forms').split(' '))}`);
+          }
         })
-          
-        $(dropdownSelector).text(resultArr.join(', '));
 
+        $(dropdownSelector).text(resultArr.length ? resultArr.join(', ') : initialText);
+  
       })
 
     }
