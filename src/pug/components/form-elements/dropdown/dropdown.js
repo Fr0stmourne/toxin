@@ -143,7 +143,7 @@ function addPlusMinus(id) {
   $(id).parent().find(' .plus-minus').htmlNumberSpinner();
 }
 
-function num2str(n, text_forms) {  
+function getCorrectWordForm(n, text_forms) {  
   n = Math.abs(n) % 100; var n1 = n % 10;
   if (n > 10 && n < 20) { return text_forms[2]; }
   if (n1 > 1 && n1 < 5) { return text_forms[1]; }
@@ -155,35 +155,47 @@ function addDropdown(options) {
   options.ids.forEach(id => {
     const dropdownSelector = `#${id}`;
     const initialText = $(dropdownSelector).text();
-    addPlusMinus(dropdownSelector)
+    addPlusMinus(dropdownSelector);
 
-    if (id === 'room-1') {
-      $(dropdownSelector).parent().find('.dropdown__item .plus-minus__btn').click((e) => {
-
-        let resultArr = [];
-        $(e.target).closest('.dropdown').find('.dropdown__option').filter(function() {
-          return $(this).data('forms')
-        }).each(function(){
-          const currentValue = $( this ).parent().find('input').val();
-          if (+currentValue !== 0) {
-            console.log('value', currentValue, typeof currentValue, currentValue !== 0);
-            
-            resultArr.push(`${currentValue} ${num2str(currentValue, $(this).data('forms').split(' '))}`);
-          }
-        })
-
-        $(dropdownSelector).text(resultArr.length ? resultArr.join(', ') : initialText);
-  
-      })
-
-    }
-    
-    $(dropdownSelector).click(() => {
+    function closeHandler(e) {
       $('.plus-minus__btn').click(e => e.preventDefault())
   
       $(dropdownSelector).next().slideToggle();
-    });
-  
+    }
+
+    function resetHandler() {
+      $(dropdownSelector).parent().find('.dropdown__item input').each(function() {
+        $(this).val(0);
+        $(this).parent().find('.plus-minus__btn--minus').click();
+      })
+    }
+
+    function changeHandler(e) {
+      $(e.target).closest('.dropdown').find('.dropdown__reset').removeClass('dropdown__reset--hidden');
+
+      let resultArr = [];
+      $(e.target).closest('.dropdown').find('.dropdown__option').filter(function() {
+        return $(this).data('forms')
+      }).each(function(){
+        const currentValue = $( this ).parent().find('input').val();
+        if (+currentValue !== 0) {          
+          resultArr.push(`${currentValue} ${getCorrectWordForm(currentValue, $(this).data('forms').split(' '))}`);
+        }
+      })
+
+      const resultText = `${(resultArr.length ? resultArr.join(', ') : initialText)}...`;
+
+      $(dropdownSelector).text(resultText);
+    }
+
+    $(dropdownSelector).parent().find('.js-apply').click(closeHandler);
+    $(dropdownSelector).click(closeHandler);
+
+    $(dropdownSelector).parent().find('.js-reset').click(resetHandler);
+
+    $(dropdownSelector).parent().find('.dropdown__item input').change(changeHandler);
+    $(dropdownSelector).parent().find('.dropdown__item .plus-minus__btn').click(changeHandler);
+
     $(dropdownSelector).click();
   })
     

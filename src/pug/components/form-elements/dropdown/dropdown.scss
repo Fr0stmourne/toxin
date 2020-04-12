@@ -30,7 +30,7 @@
     border-radius: 4px 4px 0 0;
     font: $default-font;
     color: $dark-75;
-    padding: 12px 15px;
+    padding: 12px 30px 12px 15px;
     transition: $transition;
     cursor: pointer;
 
@@ -93,6 +93,10 @@
 
   &__reset {
     color: $dark-50;
+
+    &--hidden {
+      visibility: hidden;
+    }
   }
 
   &__apply {

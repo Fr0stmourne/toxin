@@ -14,5 +14,5 @@ mixin dropdown(options)
             +plus-minus({min: 0, max: 5, id: option.id, name: option.name})
       if options.controls
         .dropdown__controls
-          button.dropdown__reset Очистить
-          button.dropdown__apply Применить
+          button.dropdown__reset.js-reset.dropdown__reset--hidden Очистить
+          button.dropdown__apply.js-apply Применить
