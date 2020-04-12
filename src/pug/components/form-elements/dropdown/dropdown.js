@@ -143,11 +143,35 @@ function addPlusMinus(id) {
   $(id).parent().find(' .plus-minus').htmlNumberSpinner();
 }
 
+function num2str(n, text_forms) {  
+  n = Math.abs(n) % 100; var n1 = n % 10;
+  if (n > 10 && n < 20) { return text_forms[2]; }
+  if (n1 > 1 && n1 < 5) { return text_forms[1]; }
+  if (n1 == 1) { return text_forms[0]; }
+  return text_forms[2];
+}
 
 function addDropdown(options) {
   options.ids.forEach(id => {
     const dropdownSelector = `#${id}`;
     addPlusMinus(dropdownSelector)
+
+    if (id === 'room-1') {
+      $(dropdownSelector).parent().find('.dropdown__item .plus-minus__btn').click((e) => {
+
+        let resultArr = [];
+        $(e.target).closest('.dropdown').find('.dropdown__option').filter(function() {
+          return $(this).data('forms')
+        }).each(function(){
+          const currentValue = $( this ).parent().find('input').val();
+          resultArr.push(`${currentValue} ${num2str(currentValue, $(this).data('forms').split(' '))}`);
+        })
+          
+        $(dropdownSelector).text(resultArr.join(', '));
+
+      })
+
+    }
     
     $(dropdownSelector).click(() => {
       $('.plus-minus__btn').click(e => e.preventDefault())

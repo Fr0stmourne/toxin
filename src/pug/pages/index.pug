@@ -109,7 +109,7 @@ html(lang="en")
         .set-2__col-1.col-1
           .col-1__dropdowns
             .col-1__dropdown
-              +dropdown({title: 'dropdown',id: 'room-1',placeholder: 'Комнаты', optionsList: [{text: 'Спальни', id: 'bedroom-1'},{text: 'Кровати', id: 'bed-1'},{text: 'Ванные комнаты', id: 'bathroom-1', checked: true}]})
+              +dropdown({title: 'dropdown',id: 'room-1',placeholder: 'Комнаты', optionsList: [{text: 'Спальни', id: 'bedroom-1', wordForms: 'спальня спальни спален'},{text: 'Кровати', id: 'bed-1', wordForms: 'кровать кровати кроватей'},{text: 'Ванные комнаты', id: 'bathroom-1', checked: true}]})
             .col-1__dropdown
               +dropdown({title: 'dropdown',id: 'room-2',placeholder: 'Комнаты', optionsList: [{text: 'Спальни', id: 'bedroom-2'},{text: 'Кровати', id: 'bed-2'},{text: 'Ванные комнаты', id: 'bathroom-2', checked: true}]})
           .col-1__expand-lists
