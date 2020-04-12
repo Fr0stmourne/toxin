@@ -27,7 +27,7 @@ html(lang="en")
           .filter__date-filter
             +date-filter({title: 'даты пребывания в отеле'})
           .filter__guests
-            +dropdown({title: 'гости', id: 'guest-3',placeholder: 'Сколько гостей', optionsList: [{text: 'Взрослые', id: 'adult-1'},{text: 'Дети', id: 'children-1'},{text: 'Младенцы', id: 'baby-1', checked: true}]})
+            +dropdown({title: 'гости', id: 'guest-3',placeholder: 'Сколько гостей', optionsList: [{text: 'Взрослые', wordForms: 'взрослый взрослых взрослых'},{text: 'Дети', wordForms: 'ребенок ребенка детей'},{text: 'Младенцы', wordForms: 'младенец младенца младенцев'}]})
           .filter__slider
             +range-slider({title: 'диапазон цены'})
             .filter__slider-hint Стоимость за сутки пребывания в номере
@@ -47,8 +47,7 @@ html(lang="en")
               .filter__rich-checkbox
                 +rich-checkbox({labelText: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
           .filter__comfort
-
-             +dropdown({title: 'Удобства номера',id: 'room-1',placeholder: 'Комнаты', optionsList: [{text: 'Спальни', id: 'bedroom-1'},{text: 'Кровати', id: 'bed-1'},{text: 'Ванные комнаты', id: 'bathroom-1', checked: true}]})
+             +dropdown({title: 'Удобства номера',id: 'room-1',placeholder: 'Комнаты', optionsList: [{text: 'Спальни', wordForms: 'спальня спальни спален'},{text: 'Кровати', wordForms: 'кровать кровати кроватей'},{text: 'Ванные комнаты', wordForms: 'ванная ванные ванных' }]})
           .filter__additional
              +expandable-list({id: 'expandable', btnId: 'expandable-btn', title: 'дополнительные удобства',list: [{labelText: 'Завтрак'}, {labelText: 'Письменный стол', checked: true},{labelText: 'Стул для кормления', checked: true},{labelText: 'Кроватка', checked: true},{labelText: 'Телевизор'},{labelText: 'Шампунь'},{labelText: 'Телевизор'},{labelText: 'Шампунь'}]})
         section.rooms
