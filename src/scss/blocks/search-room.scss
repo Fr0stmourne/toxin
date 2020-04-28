@@ -2,10 +2,12 @@
   main .container {
     display: grid;
     // grid-template-columns: 270px 1fr;
-    grid-template-columns: max-content 1fr;
-    grid-column-gap: 55px;
+    // grid-template-columns: max-content 1fr;
+    grid-template-columns: minmax(max-content, 266px) 1fr;
+
+    grid-column-gap: 60px;
     padding-top: 12px;
-    padding-right: 139px;
+    padding-right: 135px;
 
     @media (max-width: 1200px) {
       padding: 12px 30px;
@@ -71,11 +73,19 @@
 
 .filter {
   max-width: 266px;
+  margin-top: 18px;
 
   @media (max-width: 550px) {
     max-width: none;
     display: grid;
     grid-template-columns: repeat(2, auto);
+    gap: 10px;
+  }
+
+  @media (max-width: 500px) {
+    max-width: none;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 

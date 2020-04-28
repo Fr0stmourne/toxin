@@ -5,7 +5,7 @@ mixin page(options)
 mixin pagination(options)
  .pagination__container
     if options.title
-      .masked-field__title=options.title
+      .form-element-title=options.title
     ul.pagination
       +page({active: true , link: 1, linkText: 1})
       +page({active: false , link: 2, linkText: 2})

@@ -1,6 +1,6 @@
 mixin date-filter(options)
   .date-filter.date-filter--range
     if options.title
-      .masked-field__title=options.title
+      .form-element-title=options.title
     input.date-filter__input(type="text" data-range="true" data-multiple-dates-separator=" - ")
   

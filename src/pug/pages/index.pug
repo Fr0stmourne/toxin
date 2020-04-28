@@ -53,34 +53,34 @@ html(lang="en")
         .checkers
           .checkboxes
             .checkboxes__checkbox
-              .masked-field__title Checkbox Buttons
+              .form-element-title Checkbox Buttons
               +checkbox({labelText: "Можно курить"})
             .checkboxes__checkbox
               +checkbox({labelText:"Можно с питомцами", checked: true})
             .checkboxes__checkbox
               +checkbox({labelText:"Можно пригласить гостей (до 10 человек)", checked: true})
           .radio
-            .masked-field__title Radio Buttons
+            .form-element-title Radio Buttons
             .radio__buttons
               .radio__button
                 +radio-btn({labelText: "Мужчина", name: "gender"})
               .radio__button
                 +radio-btn({labelText: "Женщина", name: "gender"})
           .togglers
-            .masked-field__title Toggle
+            .form-element-title Toggle
             .togglers__toggle
               +toggle({btnText: "Получать спецпредложения"})
             .togglers__toggle
               +toggle({btnText: "Получать спецпредложения"})
           .like
-            .masked-field__title Like button
+            .form-element-title Like button
             .like__buttons
               .like__button
                 +like-btn({likes: 2})
               .like__button
                 +like-btn({likes: 12, active: true})
           .rate
-            .masked-field__title Rate button
+            .form-element-title Rate button
             .rate__buttons
               .rate__button
                 +rate-btn({name: "test"})
@@ -90,7 +90,7 @@ html(lang="en")
           .buttons__slider-range
             +range-slider({title: 'range slider'})
           .buttons__buttons
-            .masked-field__title Buttons
+            .form-element-title Buttons
             .buttons__list
               +button({type: "primary", btnText: "click me"})
               +button({type: "primary", btnText: "click me"})
@@ -130,7 +130,7 @@ html(lang="en")
               +dropdown({title: 'гости', controls: true, id: 'guest-3',placeholder: 'Сколько гостей', optionsList: [{text: 'Взрослые', wordForms: 'взрослый взрослых взрослых'},{text: 'Дети', wordForms: 'ребенок ребенка детей'},{text: 'Младенцы', wordForms: 'младенец младенца младенцев'}]})
           .col-2__checkboxes-bullet
             .col-2__rich-checkboxes
-              .masked-field__title rich Checkbox Buttons
+              .form-element-title rich Checkbox Buttons
               .col-2__rich-checkbox.col-2__rich-checkbox-1
                 +rich-checkbox({labelText: 'Широкий коридор', description: 'Ширина коридоров в номере не менее 91 см.'})
               .col-2__rich-checkbox.col-2__rich-checkbox-2
@@ -138,5 +138,5 @@ html(lang="en")
             .col-2__bullet
               +bullet-list({title: 'bullet list', items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
           .col-2__comment
-            +comment({src: "/assets/img/comment.jpg", likes: 12, author: "Мурад Сарафанов", date: "5 дней назад", comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+            +comment({src: "/assets/img/comment.jpg", likes: 12, activeLike: true, author: "Мурад Сарафанов", date: "5 дней назад", comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
   

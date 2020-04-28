@@ -1,7 +1,7 @@
 mixin subscription(options)
   .subscription
     if options.title
-      .masked-field__title=options.title
+      .form-element-title=options.title
     input.subscription__input(type="email", name=options.name, placeholder=options.placeholder)
     button.subscription__submit-btn(type="submit")
       span.visually-hidden Submit
