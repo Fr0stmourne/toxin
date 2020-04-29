@@ -1,31 +1,29 @@
 .checkbox {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding-left: 30px;
-  font: $default-font;
-  line-height: 18px;
-  color: $dark-50;
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	padding-left: 30px;
+	font: $default-font;
+	line-height: 18px;
+	color: $dark-50;
 
-  &__checkmark {
-    position: absolute;
-    left: 0;
-    top: 0px;
-    width: 18px;
-    height: 18px;
-    border: 1px solid $dark-25;
-    background-image: none;
-    border-radius: 4px;
-  }
+	&__checkmark {
+		position: absolute;
+		left: 0;
+		top: 0px;
+		width: 18px;
+		height: 18px;
+		border: 1px solid $dark-25;
+		background-image: none;
+		border-radius: 4px;
+	}
 
-
-  input:checked~&__checkmark {
-    border: 1px solid $purple;
-    background-image: url("/assets/components/form-elements/checkbox-buttons/tick.svg");
-    background-position: center 3px;
-    background-repeat: no-repeat;
-    background-size: 10px;
-  }
-
+	input:checked ~ &__checkmark {
+		border: 1px solid $purple;
+		background-image: url('/assets/components/form-elements/checkbox-buttons/tick.svg');
+		background-position: center 3px;
+		background-repeat: no-repeat;
+		background-size: 10px;
+	}
 }

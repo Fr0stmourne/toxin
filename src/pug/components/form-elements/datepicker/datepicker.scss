@@ -1,75 +1,71 @@
 .input-group {
-  display: flex;
+	display: flex;
 }
 
 .datepicker-double {
-  display: flex;
+	display: flex;
 
-  @media (max-width: 400px) {
-    flex-direction: column;
-  }
+	@media (max-width: 400px) {
+		flex-direction: column;
+	}
 
-  &__label {
-    display: block;
-    font: $btn-font;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-  }
+	&__label {
+		display: block;
+		font: $btn-font;
+		text-transform: uppercase;
+		margin-bottom: 5px;
+	}
 
-  &__box {
-    position: relative;
+	&__box {
+		position: relative;
 
-    &::before {
-      content: '';
-      width: 44px;
-      height: 44px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      background-image: url('/assets/components/form-elements/datepicker/arrow_down.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-      pointer-events: none;
+		&::before {
+			content: '';
+			width: 44px;
+			height: 44px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			background-image: url('/assets/components/form-elements/datepicker/arrow_down.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			pointer-events: none;
 
-      // @media (max-width: 600px) {
-      //   width: 20px;
-      //   height: 30px;
-      //   right: 3px;
-      // }
-    }
-  }
+			// @media (max-width: 600px) {
+			//   width: 20px;
+			//   height: 30px;
+			//   right: 3px;
+			// }
+		}
+	}
 
-  &__input {
-    box-sizing: border-box;
-    width: 100%;
-    border: 1px solid $dark-25;
-    padding: 12px 30px 12px 15px;
-    font: $default-font;
-    color: $dark-75;
-    border-radius: 4px;
+	&__input {
+		box-sizing: border-box;
+		width: 100%;
+		border: 1px solid $dark-25;
+		padding: 12px 30px 12px 15px;
+		font: $default-font;
+		color: $dark-75;
+		border-radius: 4px;
 
-    &::placeholder {
-      text-transform: none;
+		&::placeholder {
+			text-transform: none;
+		}
 
-    }
+		@media (max-width: 600px) {
+			padding: 10px 20px 10px 5px;
+		}
+	}
 
-    @media (max-width: 600px) {
-      padding: 10px 20px 10px 5px;
-    }
+	&__start {
+		margin-right: 20px;
 
-  }
-
-  &__start {
-    margin-right: 20px;
-
-    @media (max-width: 400px) {
-      margin-right: 0;
-      margin-bottom: 15px;
-    }
-  }
-
+		@media (max-width: 400px) {
+			margin-right: 0;
+			margin-bottom: 15px;
+		}
+	}
 }
-
 
 // .datepicker {
 //   font: $default-font;
@@ -84,7 +80,6 @@
 //     border: 1px solid rgba(31, 32, 65, 0.25);
 //     box-sizing: border-box;
 //     border-radius: 4px !important;
-
 
 //     &-box {
 //       position: relative;
@@ -112,7 +107,6 @@
 //   &__start {
 //     margin-right: 20px;
 //   }
-
 
 //   table {
 //     border-collapse: collapse;
@@ -202,7 +196,7 @@
 //       font-weight: 700;
 
 //       &::before {
-//         content: "";
+//         content: '';
 //         position: absolute;
 //         top: 0;
 //         left: 0;

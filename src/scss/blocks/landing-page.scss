@@ -3,7 +3,7 @@
   max-width: 1440px;
   margin: 0 auto;
   min-height: 760px;
-  background-image: url("/assets/img/landing.jpg");
+  background-image: url('/assets/img/landing.jpg');
   background-repeat: no-repeat;
   background-position-y: -70px;
 
@@ -55,6 +55,8 @@
 }
 
 .landing-page {
+
+
   .login-menu {
     margin-left: -3px;
   }
