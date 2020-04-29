@@ -25,43 +25,6 @@
         '}</style>',
     );
 
-    /* styling the counter buttons */
-    // $(this)
-    //   .find('.plus-minus__btn')
-    //   .css({
-    //     display: 'inline-block',
-    //     width: '50px',
-    //     height: '30px',
-    //     'font-size': '25px',
-    //     'text-align': 'center',
-    //     'vertical-align': 'middle',
-    //     'line-height': '1',
-    //     cursor: 'pointer',
-    //     'user-select': 'none',
-    //   });
-    // incrementerEl$.css({ 'background-color': 'slateblue', color: 'white', border: '1px solid slateblue' });
-    // decrementerEl$.css({
-    //   'background-color': 'hotpink',
-    //   color: 'white',
-    //   'font-size': '25px',
-    //   border: '1px solid hotpink',
-    // });
-    // numberInput$.css({
-    //   'background-color': 'white',
-    //   border: '1px solid',
-    //   color: 'black',
-    //   'text-align': 'center',
-    //   width: '55px',
-    //   'font-size': '18px',
-    //   'line-height': 'normal',
-    //   padding: '0',
-    //   outline: 'none',
-    //   'border-left-color': 'hotpink',
-    //   'border-right-color': 'slateblue',
-    //   'border-top-color': 'lightblue',
-    //   'border-bottom-color': 'lightblue',
-    // });
-
     /* props - dynamic attributes */
     const minAttributeValue = $(this).attr('min');
     const maxAttributeValue = $(this).attr('max');
