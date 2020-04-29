@@ -1,47 +1,50 @@
 .signin-page {
-  .login-menu {
-    margin-left: -3px;
-  }
+	main {
+		flex: 1 0 auto;
+	}
 
-  .nav__item--dropdown {
-    padding-right: 28px;
-    margin-right: 0;
+	.login-menu {
+		margin-left: -3px;
+	}
 
-  }
+	.nav__item--dropdown {
+		padding-right: 28px;
+		margin-right: 0;
+	}
 
-  .nav__item .nav__link {
-    margin-right: 20px !important;
-  }
+	.nav__item .nav__link {
+		margin-right: 20px !important;
+	}
 
-  .nav__item--dropdown:after {
-    right: 29px;
-  }
+	.nav__item--dropdown:after {
+		right: 29px;
+	}
 
-  .footer-nav:nth-child(2) {
-    margin: 0px 40px 0 4px;
-  }
+	.footer-nav:nth-child(2) {
+		margin: 0px 40px 0 4px;
+	}
 
-  .sub__text {
-    max-width: none;
-  }
+	.sub__text {
+		max-width: none;
+	}
 
-  main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1440px;
-    min-height: 702px;
-    width: 100%;
-    margin: 0 auto;
-    background-image: url('/assets/img/registration-bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: -70px;
-  }
+	main {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 1440px;
+		min-height: 702px;
+		width: 100%;
+		margin: 0 auto;
+		background-image: url('/assets/img/registration-bg.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position-y: -70px;
+	}
 
-  &__login-card {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
+	&__login-card {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
 }

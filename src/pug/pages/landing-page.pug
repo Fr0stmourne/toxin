@@ -9,33 +9,34 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body.landing-page
-    +header({unlogged: true, regText: 'зарегистрироваться', loginText: 'войти',
-    items: [{text: 'О нас', link: '#'}, {text: 'Услуги', link: '#', dropdown: [{text: 'Услуга', link: '#'},{text: 'Услуга 2', link: '#'},{text: 'Услуга 2', link: '#'}]},
-      {text: 'Вакансии', link: '#'},{text: 'Новости', link: '#'},
-      {text: 'Соглашения', link: '#', dropdown: [{text: 'Услуга', link: '#'},{text: 'Услуга 2', link: '#'},{text: 'Услуга 2', link: '#'}]}]})
-    main
-      section.room-booking
-        .container
-          h2.room-booking__title.visually-hidden Бронирование комнат
-          .room-booking__form
-            +find-room({title: 'Найдём номера под ваши пожелания', start: {id: 'cards__start'}, end: {id: 'cards__end'}})
-          .room-booking__note Лучшие номера для вашей работы, отдыха и просто вдохновения
-    +footer({extended: true,
-     copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
-      socialList: [{name: 'Twitter', link: '#', imgLink: '/assets/img/twitter.svg'},
-      {name: 'Facebook', link: '#', imgLink: '/assets/img/facebook.svg'},{name: 'Insta', link: '#', imgLink: '/assets/img/insta.svg'}],
-   sub: {title: 'Subscribe to our newsletter',
-    text: 'Receive our latest news and promotions in your inbox!',
-     placeholder: 'Your email address'},
-      navLists: [{title: 'навигация',
-       items: ['О нас', 'Новости', 'Служба поддержки', 'Услуги']},
-        {title: 'о нас', 
-        items: ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']},
-         {title: 'Служба поддержки', items: ['Соглашения', 'Сообщества', 'Связь с нами']}],
-          sub: {title: 'Подписка', placeholder: 'Email', text: 'Получайте специальные предложения и новости сервиса'},
-           companyText: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»'})
-              
+    .wrapper
+      +header({unlogged: true, regText: 'зарегистрироваться', loginText: 'войти',
+      items: [{text: 'О нас', link: '#'}, {text: 'Услуги', link: '#', dropdown: [{text: 'Услуга', link: '#'},{text: 'Услуга 2', link: '#'},{text: 'Услуга 2', link: '#'}]},
+        {text: 'Вакансии', link: '#'},{text: 'Новости', link: '#'},
+        {text: 'Соглашения', link: '#', dropdown: [{text: 'Услуга', link: '#'},{text: 'Услуга 2', link: '#'},{text: 'Услуга 2', link: '#'}]}]})
+      main
+        section.room-booking
+          .container
+            h2.room-booking__title.visually-hidden Бронирование комнат
+            .room-booking__form
+              +find-room({title: 'Найдём номера под ваши пожелания', start: {id: 'cards__start'}, end: {id: 'cards__end'}})
+            .room-booking__note Лучшие номера для вашей работы, отдыха и просто вдохновения
+      +footer({extended: true,
+      copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
+        socialList: [{name: 'Twitter', link: '#', imgLink: '/assets/img/twitter.svg'},
+        {name: 'Facebook', link: '#', imgLink: '/assets/img/facebook.svg'},{name: 'Insta', link: '#', imgLink: '/assets/img/insta.svg'}],
+    sub: {title: 'Subscribe to our newsletter',
+      text: 'Receive our latest news and promotions in your inbox!',
+      placeholder: 'Your email address'},
+        navLists: [{title: 'навигация',
+        items: ['О нас', 'Новости', 'Служба поддержки', 'Услуги']},
+          {title: 'о нас', 
+          items: ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']},
+          {title: 'Служба поддержки', items: ['Соглашения', 'Сообщества', 'Связь с нами']}],
+            sub: {title: 'Подписка', placeholder: 'Email', text: 'Получайте специальные предложения и новости сервиса'},
+            companyText: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»'})
+                
 
 
-      
+        
 

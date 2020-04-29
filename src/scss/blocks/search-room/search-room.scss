@@ -1,4 +1,9 @@
 .search-room {
+	main {
+		flex: 1 0 auto;
+		border-bottom: 1px solid $border;
+	}
+
 	main .container {
 		display: grid;
 		grid-template-columns: minmax(max-content, 266px) 1fr;
@@ -24,10 +29,6 @@
 		@media (max-width: 550px) {
 			flex-direction: column;
 		}
-	}
-
-	main {
-		border-bottom: 1px solid $border;
 	}
 
 	.main-header {
