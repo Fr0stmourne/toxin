@@ -1,0 +1,143 @@
+include ../components/form-elements/checkbox-buttons/checkbox.pug
+include ../components/form-elements/text-field/text-field.pug
+include ../components/form-elements/radio-buttons/radio-buttons.pug
+include ../components/form-elements/subscription/subscription.pug
+include ../components/form-elements/buttons/buttons.pug
+include ../components/form-elements/links/links.pug
+include ../components/form-elements/like-btn/like-btn.pug
+include ../components/form-elements/rate-btn/rate-btn.pug
+include ../components/form-elements/rate-btn/rate-btn.pug
+include ../components/form-elements/toggle/toggle.pug
+include ../components/form-elements/pagination/pagination.pug
+include ../components/form-elements/comment/comment.pug
+include ../components/form-elements/advantage/advantage.pug
+include ../components/form-elements/bullet-list/bullet-list.pug
+include ../components/form-elements/rich-checkbox/rich-checkbox.pug
+include ../components/form-elements/range-slider/range-slider.pug
+include ../components/form-elements/masked-text-field/masked-text-field.pug
+include ../components/form-elements/expandable-list/expandable-list.pug
+include ../components/form-elements/dropdown/dropdown.pug
+include ../components/form-elements/datepicker/datepicker.pug
+include ../components/form-elements/date-filter/date-filter.pug
+include ../components/cards/find-room/find-room.pug
+
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title UI Kit
+    link(rel="shortcut icon", href="/assets/img/favicon.png", type="image/x-icon")
+  body.ui-kit
+    .container
+      .set-1
+        .inputs
+          .inputs__text-field
+            +text-field({placeholder: "Email", name: "test", title: 'text field'})
+          .inputs__text-field
+            +text-field({placeholder: "This is pretty awesome", name: "test", title: 'text field'})
+          .inputs__dropdown
+            +dropdown({title: 'dropdown',id: 'guest',placeholder: 'Сколько гостей', optionsList: [{text: 'Спальни', wordForms: 'спальня спальни спален'},{text: 'Кровати', wordForms: 'кровать кровати кроватей'},{text: 'Ванные комнаты', wordForms: 'ванная ванные ванных' }]})
+          .inputs__masked-field
+            +masked-text-field({placeholder: 'ДД.ММ.ГГГГ', mask: '00.00.0000', title: 'masked text field'})
+          .inputs__date-dropdowns
+            .inputs__date-dropdown
+              +datepicker({title: 'date dropdown', id: 'date-dropdown'})
+            .inputs__date-dropdown
+              +datepicker({title: 'date dropdown', id: 'date-dropdown-1'})
+          .inputs__date-filter
+            +date-filter({title: 'filter date dropdown'})
+          .inputs__sub
+            +subscription({placeholder: "Email", title: 'subscription text field'})
+        .checkers
+          .checkboxes
+            .checkboxes__checkbox
+              .form-element-title Checkbox Buttons
+              +checkbox({labelText: "Можно курить"})
+            .checkboxes__checkbox
+              +checkbox({labelText:"Можно с питомцами", checked: true})
+            .checkboxes__checkbox
+              +checkbox({labelText:"Можно пригласить гостей (до 10 человек)", checked: true})
+          .radio
+            .form-element-title Radio Buttons
+            .radio__buttons
+              .radio__button
+                +radio-btn({labelText: "Мужчина", name: "gender"})
+              .radio__button
+                +radio-btn({labelText: "Женщина", name: "gender"})
+          .togglers
+            .form-element-title Toggle
+            .togglers__toggle
+              +toggle({btnText: "Получать спецпредложения"})
+            .togglers__toggle
+              +toggle({btnText: "Получать спецпредложения"})
+          .like
+            .form-element-title Like button
+            .like__buttons
+              .like__button
+                +like-btn({likes: 2})
+              .like__button
+                +like-btn({likes: 12, active: true})
+          .rate
+            .form-element-title Rate button
+            .rate__buttons
+              .rate__button
+                +rate-btn({name: "test"})
+              .rate__button
+                +rate-btn({name: "test1"})
+        .buttons
+          .buttons__slider-range
+            +range-slider({title: 'range slider'})
+          .buttons__buttons
+            .form-element-title Buttons
+            .buttons__list
+              +button({type: "primary", btnText: "click me"})
+              +button({type: "primary", btnText: "click me"})
+              +button({type: "secondary", btnText: "click me"})
+              +button({type: "secondary", btnText: "click me"})
+            .buttons__links
+              .buttons__link
+                +link({link: "#", linkText: "Click me"})
+              .buttons__link
+                +link({link: "#", linkText: "Click me"})
+            .buttons__proceed
+              +button({type: "proceed", btnText: "перейти к оплате"})
+            .buttons__pagination
+              +pagination({num: 15, title: 'pagination', description: "1 – 12 из 100+ вариантов аренды"})
+      .set-2
+        .set-2__col-1.col-1
+          .col-1__dropdowns
+            .col-1__dropdown
+              +dropdown({title: 'dropdown',id: 'room-1',placeholder: 'Комнаты', optionsList: [{text: 'Спальни', wordForms: 'спальня спальни спален'},{text: 'Кровати', wordForms: 'кровать кровати кроватей'},{text: 'Ванные комнаты', wordForms: 'ванная ванные ванных' }]})
+            .col-1__dropdown
+              +dropdown({title: 'dropdown',id: 'room-2',placeholder: 'Комнаты', optionsList: [{text: 'Спальни', wordForms: 'спальня спальни спален'},{text: 'Кровати', wordForms: 'кровать кровати кроватей'},{text: 'Ванные комнаты', wordForms: 'ванная ванные ванных' }]})
+          .col-1__expand-lists
+            .col-1__expand-list
+              +expandable-list({title: 'expandable checkbox list',list: [{labelText: 'Завтрак'}, {labelText: 'Письменный стол', checked: true},{labelText: 'Стул для кормления', checked: true},{labelText: 'Кроватка', checked: true},{labelText: 'Телевизор'},{labelText: 'Шампунь'},{labelText: 'Телевизор'},{labelText: 'Шампунь'}]})
+            .col-1__expand-list
+              +expandable-list({title: 'expandable checkbox list',list: [{labelText: 'Завтрак'}, {labelText: 'Письменный стол', checked: true},{labelText: 'Стул для кормления', checked: true},{labelText: 'Кроватка', checked: true},{labelText: 'Телевизор'},{labelText: 'Шампунь'},{labelText: 'Телевизор'},{labelText: 'Шампунь'}]})
+          .col-1__advantages
+            .col-1__advantage
+              +advantage({title: 'Комфорт', description: 'Шумопоглощающие стены', imgLink: "/assets/components/form-elements/advantage/emoji.svg"})
+            .col-1__advantage
+              +advantage({title: 'Удобство', description: 'Окно в каждой из спален', imgLink: "/assets/components/form-elements/advantage/city.svg"})
+        .set-2__col-2.col-2
+          .col-2__dropdowns
+            .col-2__dropdown
+              +dropdown({title: 'гости', controls: true, id: 'guest-2',placeholder: 'Сколько гостей', optionsList: [{text: 'Взрослые', wordForms: 'взрослый взрослых взрослых'},{text: 'Дети', wordForms: 'ребенок ребенка детей'},{text: 'Младенцы', wordForms: 'младенец младенца младенцев'}]})
+            .col-2__dropdown
+              +dropdown({title: 'гости', controls: true, id: 'guest-3',placeholder: 'Сколько гостей', optionsList: [{text: 'Взрослые', wordForms: 'взрослый взрослых взрослых'},{text: 'Дети', wordForms: 'ребенок ребенка детей'},{text: 'Младенцы', wordForms: 'младенец младенца младенцев'}]})
+          .col-2__checkboxes-bullet
+            .col-2__rich-checkboxes
+              .form-element-title rich Checkbox Buttons
+              .col-2__rich-checkbox.col-2__rich-checkbox-1
+                +rich-checkbox({labelText: 'Широкий коридор', description: 'Ширина коридоров в номере не менее 91 см.'})
+              .col-2__rich-checkbox.col-2__rich-checkbox-2
+                +rich-checkbox({labelText: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
+            .col-2__bullet
+              +bullet-list({title: 'bullet list', items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
+          .col-2__comment
+            +comment({src: "/assets/img/comment.jpg", likes: 12, activeLike: true, author: "Мурад Сарафанов", date: "5 дней назад", comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+  

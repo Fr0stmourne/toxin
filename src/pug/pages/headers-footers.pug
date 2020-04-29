@@ -6,6 +6,7 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Headers Footers
+    link(rel="shortcut icon", href="/assets/img/favicon.png", type="image/x-icon")
   body.headers-footers
     .header-1
       +header({unlogged: true, regText: 'register', loginText: 'login', items: [{text: 'Home', active: true, link: '#'}, {text: 'About Us', link: '#'}, {text: 'Services', link: '#', dropdown: [{text: 'Service', link: '#'}, {text: 'Service', link: '#'}]},{text: 'Careers', link: '#'},{text: 'News', link: '#'},{text: 'Documentation', link: '#'}]})
