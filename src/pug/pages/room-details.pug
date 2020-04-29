@@ -6,7 +6,7 @@ include ../components/form-elements/bullet-list/bullet-list.pug
 include ../components/cards/booking/booking.pug
 
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -19,6 +19,7 @@ html(lang="en")
         {text: 'Вакансии', link: '#'},{text: 'Новости', link: '#'},
         {text: 'Соглашения', link: '#', dropdown: [{text: 'Услуга', link: '#'},{text: 'Услуга 2', link: '#'},{text: 'Услуга 2', link: '#'}]}]})
       main
+        h2.room-details__title.visually-hidden Сведения о номере
         .room-photos
           .room-photos__photo-box
             img.room-photos__photo(src="/assets/img/details-1.jpg", alt="")

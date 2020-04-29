@@ -3,7 +3,7 @@ include ../components/headers-footers/footers.pug
 include ../components/cards/login/login.pug
 
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -11,6 +11,7 @@ html(lang="en")
     link(rel="shortcut icon", href="/assets/img/favicon.png", type="image/x-icon")
   body.signin-page
     .wrapper
+      h2.signin-page__title.visually-hidden Войти
       +header({unlogged: true, regText: 'зарегистрироваться', loginText: 'войти',
       items: [{text: 'О нас', link: '#'}, {text: 'Услуги', link: '#', dropdown: [{text: 'Услуга', link: '#'},{text: 'Услуга 2', link: '#'},{text: 'Услуга 2', link: '#'}]},
         {text: 'Вакансии', link: '#'},{text: 'Новости', link: '#'},

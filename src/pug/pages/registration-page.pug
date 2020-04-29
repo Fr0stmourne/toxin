@@ -3,7 +3,7 @@ include ../components/headers-footers/footers.pug
 include ../components/cards/registration/registration.pug
 
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -17,8 +17,8 @@ html(lang="en")
         {text: 'Соглашения', link: '#', dropdown: [{text: 'Услуга', link: '#'},{text: 'Услуга 2', link: '#'},{text: 'Услуга 2', link: '#'}]}]})
       main
         .registration-card
+          h2.registration-card__title.visually-hidden Регистрация
           +registration({title: 'Регистрация аккаунта', noteText: 'Уже есть аккаунт на Toxin'})
-      
       +footer({extended: true,
       copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
         socialList: [{name: 'Twitter', link: '#', imgLink: '/assets/img/twitter.svg'},
