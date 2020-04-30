@@ -12,17 +12,17 @@ html(lang="ru")
   body.registration-page
     .wrapper
       +header({unlogged: true, regText: 'зарегистрироваться', loginText: 'войти',
-      items: [{text: 'О нас', link: '#'}, {text: 'Услуги', link: '#', dropdown: [{text: 'Услуга', link: '#'},{text: 'Услуга 2', link: '#'},{text: 'Услуга 2', link: '#'}]},
-        {text: 'Вакансии', link: '#'},{text: 'Новости', link: '#'},
-        {text: 'Соглашения', link: '#', dropdown: [{text: 'Услуга', link: '#'},{text: 'Услуга 2', link: '#'},{text: 'Услуга 2', link: '#'}]}]})
+      items: [{text: 'О нас', link: './mock'}, {text: 'Услуги', link: './mock', dropdown: [{text: 'Услуга', link: './mock'},{text: 'Услуга 2', link: './mock'},{text: 'Услуга 2', link: './mock'}]},
+        {text: 'Вакансии', link: './mock'},{text: 'Новости', link: './mock'},
+        {text: 'Соглашения', link: './mock', dropdown: [{text: 'Услуга', link: './mock'},{text: 'Услуга 2', link: './mock'},{text: 'Услуга 2', link: './mock'}]}]})
       main
         .registration-card
           h2.registration-card__title.visually-hidden Регистрация
           +registration({title: 'Регистрация аккаунта', noteText: 'Уже есть аккаунт на Toxin'})
       +footer({extended: true,
       copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
-        socialList: [{name: 'Twitter', link: '#', imgLink: '/assets/img/twitter.svg'},
-        {name: 'Facebook', link: '#', imgLink: '/assets/img/facebook.svg'},{name: 'Insta', link: '#', imgLink: '/assets/img/insta.svg'}],
+        socialList: [{name: 'Twitter', link: './mock', imgLink: '/assets/img/twitter.svg'},
+        {name: 'Facebook', link: './mock', imgLink: '/assets/img/facebook.svg'},{name: 'Insta', link: './mock', imgLink: '/assets/img/insta.svg'}],
     sub: {title: 'Subscribe to our newsletter',
       text: 'Receive our latest news and promotions in your inbox!',
       placeholder: 'Your email address'},

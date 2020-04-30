@@ -3,7 +3,7 @@ include ../../form-elements/text-field/text-field.pug
 mixin login(options)
   .login
     h3.login__title Войти
-    form(action='#')
+    form(action=options.action)
       .login__login-data.login-data
         .login-data__email
           +text-field({placeholder: "Email", name: "email"})
