@@ -3,92 +3,44 @@
 import 'air-datepicker/dist/js/datepicker';
 import 'air-datepicker/dist/css/datepicker.css';
 
-$('#datepicker').datepicker({
-  todayHighlight: true,
-  clearBtn: true,
-  language: 'ru-RU',
-});
-$('#find-room-datepicker').datepicker({
-  todayHighlight: true,
-  clearBtn: true,
-  language: 'ru-RU',
-});
-$('#booking-datepicker').datepicker({
-  todayHighlight: true,
-  clearBtn: true,
-  language: 'ru-RU',
-});
 
+const defaultOptions = {
+  navTitles: {
+    days: 'MM yyyy'
+  }
+};
 
+const inlineOptions = {
+  inline: true,
+  clearButton: true,
+  navTitles: {
+    days: 'MM yyyy'
+  }
+}
 
-function addRangeDatepicker() {
-
-  // const datepickerStartClass = '.js-range-datepicker-start';
-  // const datepickerEndClass = '.js-range-datepicker-end';
-  // const startInput =  $(datepickerStartClass).parent('.datepicker-double').find(datepickerStartClass);
-  // const endInput =  $(datepickerStartClass).parent('.datepicker-double').find(datepickerEndClass);
-
-
-  // $(startInput).datepicker({ 
-  //   onSelect: function (fd, d, picker) { 
-  //     $(startInput).val(fd.split("-")[0]);
-  //     $(endInput).val(fd.split("-")[1]);
-  //   }});
-  
-  $('#cards__start').datepicker({
-    navTitles: {
-      days: 'MM yyyy'
-    },
-    onSelect: function (fd, d, picker) { 
-      $("#cards__start").val(fd.split("-")[0]);
-      $("#cards__end").val(fd.split("-")[1]);
-    }
+function addDefaultDatepicker(selector) {
+  $(`${selector}`).datepicker({
+    todayHighlight: true,
+    clearBtn: true,
+    language: 'ru-RU',
   });
+}
 
-  $('#cards__start-1').datepicker({
-    navTitles: {
-      days: 'MM yyyy'
-    },
-    
-    onSelect: function (fd, d, picker) { 
-      $("#cards__start-1").val(fd.split("-")[0]);
-      $("#cards__end-1").val(fd.split("-")[1]);
-    }
-  });
-  $('#cards-date__start').datepicker({ 
-    inline: true,
-    clearButton: true,
-    navTitles: {
-      days: 'MM yyyy'
-    },
-    onSelect: function (fd, d, picker) { 
-      $("#cards-date__start").val(fd.split("-")[0]);
-      $("#cards-date__end").val(fd.split("-")[1]);
+function addRangeDatepicker(startElSelector, endElSelector, options) {
+
+  $(`${startElSelector}`).datepicker({
+    ...options,
+    onSelect: function (fd, d, picker) {
+      $(`${startElSelector}`).val(fd.split("-")[0]);
+      $(`${endElSelector}`).val(fd.split("-")[1]);
     }
   });
 }
 
-addRangeDatepicker();
+addDefaultDatepicker('#datepicker');
+addDefaultDatepicker('#find-room-datepicker');
+addDefaultDatepicker('#booking-datepicker');
 
-// $(() => {
-//   $('.datepicker').daterangepicker({ linkedCalendars: false });
-// });
-
-// var $start = $('#start'),
-//     $end = $('#end');
-
-// $start.datepicker({
-//     onSelect: function (fd, date) {
-//         $end.data('datepicker')
-//                 .update('minDate', date);
-
-//         $end.focus();
-//     }
-// })
-
-// $end.datepicker({
-//     onSelect: function (fd, date) {
-//         $start.data('datepicker')
-//                 .update('maxDate', date)
-//     }
-// })
+addRangeDatepicker('#cards__start', '#cards__end', defaultOptions);
+addRangeDatepicker('#cards__start-1', '#cards__end-1', defaultOptions);
+addRangeDatepicker('#cards__start-1', '#cards__end-1', inlineOptions);
