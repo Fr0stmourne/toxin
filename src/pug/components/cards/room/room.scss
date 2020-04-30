@@ -1,129 +1,129 @@
 .room {
-  box-sizing: border-box;
-  width: 270px;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  overflow: hidden;
+	box-sizing: border-box;
+	width: 270px;
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	overflow: hidden;
 
+	&__room {
+		font: $h1-font;
+		font-size: 14px;
 
-  &__room {
-    font: $h1-font;
-    font-size: 14px;
-  }
+		text-decoration: none;
+		color: inherit;
+	}
 
-  &__info {
-    padding: 20px 15px 17px 20px;
-  }
+	&__info {
+		padding: 20px 15px 17px 20px;
+	}
 
-  &__room-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba($dark-100, 0.1);
-  }
+	&__room-info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid rgba($dark-100, 0.1);
+	}
 
-  &__type {
-    color: $purple;
-    font: $btn-font;
-    text-transform: uppercase;
-  }
+	&__type {
+		color: $purple;
+		font: $btn-font;
+		text-transform: uppercase;
+	}
 
-  &__per-day {
-    padding-right: 3px;
-    color: $dark-50;
-    font: $btn-font;
-    text-decoration: none;
+	&__per-day {
+		padding-right: 3px;
+		color: $dark-50;
+		font: $btn-font;
+		text-decoration: none;
 
-    &--link {
-      font-size: 14px;
-    }
-  }
+		&--link {
+			font-size: 14px;
+		}
+	}
 
-  &__price {
-    font-size: 14px;
-  }
+	&__price {
+		font-size: 14px;
+	}
 
-  &__num {
-    font-size: 19px;
-    margin: 0 5px;
-  }
+	&__num {
+		font-size: 19px;
+		margin: 0 5px;
+	}
 
-  &__rating {
-    padding: 0 2px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    font-weight: 400;
-  }
+	&__rating {
+		padding: 0 2px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		font-weight: 400;
+	}
 
-  &__measurement {
-    font-weight: 400;
-  }
-
+	&__measurement {
+		font-weight: 400;
+	}
 }
 
 .bx-wrapper {
-  margin: 0 0 2px 0;
-  border: 0;
+	margin: 0 0 2px 0;
+	border: 0;
 
-  .bx-controls-direction a {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-top: 0;
-    height: 32px;
-    width: 32px;
-  }
+	.bx-controls-direction a {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		margin-top: 0;
+		height: 32px;
+		width: 32px;
+	}
 
-  .bx-next {
-    right: 6px;
-    background: url('/assets/components/cards/room/right.svg') no-repeat;
+	.bx-next {
+		right: 6px;
+		background: url('/assets/components/cards/room/right.svg') no-repeat;
 
-    background-position: center;
+		background-position: center;
 
-    &:hover,
-    &:focus {
-      background-position: center !important;
-    }
-  }
+		&:hover,
+		&:focus {
+			background-position: center !important;
+		}
+	}
 
-  .bx-pager.bx-default-pager a {
-    box-sizing: border-box;
-    height: 7px;
-    width: 7px;
-    margin: 1px 2px;
-  }
+	.bx-pager.bx-default-pager a {
+		box-sizing: border-box;
+		height: 7px;
+		width: 7px;
+		margin: 1px 2px;
+	}
 
-  .bx-prev {
-    left: 6px;
-    background: url('/assets/components/cards/room/left.svg') 50% no-repeat;
+	.bx-prev {
+		left: 6px;
+		background: url('/assets/components/cards/room/left.svg') 50% no-repeat;
 
-    &:hover,
-    &:focus {
-      background-position: center !important;
-    }
-  }
+		&:hover,
+		&:focus {
+			background-position: center !important;
+		}
+	}
 
-  .bx-pager {
-    bottom: 13px;
-    text-align: right;
-    padding-right: 13px;
-    box-sizing: border-box;
+	.bx-pager {
+		bottom: 13px;
+		text-align: right;
+		padding-right: 13px;
+		box-sizing: border-box;
 
-    &-item {}
+		&-item {
+		}
 
-    &-link {
-      background-color: transparent !important;
-      border: 1px solid $white;
-      border-radius: 50% !important;
+		&-link {
+			background-color: transparent !important;
+			border: 1px solid $white;
+			border-radius: 50% !important;
 
-
-      &.active {
-        background-color: $white !important;
-      }
-    }
-  }
-
+			&.active {
+				background-color: $white !important;
+			}
+		}
+	}
 }
