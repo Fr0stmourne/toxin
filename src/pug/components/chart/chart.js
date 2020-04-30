@@ -1,17 +1,22 @@
-/* eslint-disable */
+/* eslint-disable no-undef */
+/* eslint-disable no-new */
 import 'chart.js/dist/Chart.bundle';
 
-var bar_ctx = document.getElementById('doughnut-chart').getContext('2d');
+const barCtx = document.getElementById('doughnut-chart').getContext('2d');
 
-const gradientOne = bar_ctx.createLinearGradient(0, 0, 0, 220);
-const gradientTwo = bar_ctx.createLinearGradient(0, 0, 0, 220);
-const gradientThree = bar_ctx.createLinearGradient(0, 0, 0, 220);
-const gradientFour = bar_ctx.createLinearGradient(0, 0, 0, 220);
-const setup = [['rgb(255, 227, 156)','rgb(255, 186, 156)'],
-['rgb(111, 207, 151)','rgb(102, 210, 234)'],['rgb(188, 156, 255)','rgb(139, 164, 249)'],['rgb(144, 144, 144)','rgb(61, 73, 117)'] ]
+const gradientOne = barCtx.createLinearGradient(0, 0, 0, 220);
+const gradientTwo = barCtx.createLinearGradient(0, 0, 0, 220);
+const gradientThree = barCtx.createLinearGradient(0, 0, 0, 220);
+const gradientFour = barCtx.createLinearGradient(0, 0, 0, 220);
+const setup = [
+  ['rgb(255, 227, 156)', 'rgb(255, 186, 156)'],
+  ['rgb(111, 207, 151)', 'rgb(102, 210, 234)'],
+  ['rgb(188, 156, 255)', 'rgb(139, 164, 249)'],
+  ['rgb(144, 144, 144)', 'rgb(61, 73, 117)'],
+];
 const colors = [];
 
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < 4; i += 1) {
   switch (i) {
     case 0:
       gradientOne.addColorStop(0, setup[i][0]);
@@ -33,6 +38,8 @@ for (let i = 0; i < 4; i++) {
       gradientFour.addColorStop(1, setup[i][1]);
       colors.push(gradientFour);
       break;
+    default:
+      break;
   }
 }
 
@@ -51,11 +58,10 @@ new Chart(document.getElementById('doughnut-chart'), {
   },
   options: {
     legend: {
-      display: false
+      display: false,
     },
     tooltips: false,
     cutoutPercentage: 90,
-    rotation: Math.PI * 1 / 2,
-    
+    rotation: (Math.PI * 1) / 2,
   },
 });

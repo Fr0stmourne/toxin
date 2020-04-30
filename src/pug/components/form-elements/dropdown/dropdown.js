@@ -103,15 +103,25 @@
 })(jQuery);
 
 function addPlusMinus(id) {
-  $(id).parent().find(' .plus-minus').htmlNumberSpinner();
+  $(id)
+    .parent()
+    .find(' .plus-minus')
+    .htmlNumberSpinner();
 }
 
-function getCorrectWordForm(n, text_forms) {  
-  n = Math.abs(n) % 100; var n1 = n % 10;
-  if (n > 10 && n < 20) { return text_forms[2]; }
-  if (n1 > 1 && n1 < 5) { return text_forms[1]; }
-  if (n1 == 1) { return text_forms[0]; }
-  return text_forms[2];
+function getCorrectWordForm(n, textForms) {
+  const num = Math.abs(n) % 100;
+  const n1 = num % 10;
+  if (num > 10 && num < 20) {
+    return textForms[2];
+  }
+  if (n1 > 1 && n1 < 5) {
+    return textForms[1];
+  }
+  if (n1 === 1) {
+    return textForms[0];
+  }
+  return textForms[2];
 }
 
 function addDropdown(options) {
@@ -121,53 +131,97 @@ function addDropdown(options) {
     addPlusMinus(dropdownSelector);
 
     function closeHandler(e) {
-      $('.plus-minus__btn').click(e => e.preventDefault())
-  
-      $(dropdownSelector).next().slideToggle();
+      $('.plus-minus__btn').click(e => e.preventDefault());
+
+      $(dropdownSelector)
+        .next()
+        .slideToggle();
     }
 
     function resetHandler() {
-      $(dropdownSelector).parent().find('.dropdown__item input').each(function() {
-        $(this).val(0);
-        $(this).parent().find('.plus-minus__btn--minus').click();
-      })
+      $(dropdownSelector)
+        .parent()
+        .find('.dropdown__item input')
+        .each(function() {
+          $(this).val(0);
+          $(this)
+            .parent()
+            .find('.plus-minus__btn--minus')
+            .click();
+        });
     }
 
     function changeHandler(e) {
-      $(e.target).closest('.dropdown').find('.dropdown__reset').removeClass('dropdown__reset--hidden');
+      $(e.target)
+        .closest('.dropdown')
+        .find('.dropdown__reset')
+        .removeClass('dropdown__reset--hidden');
 
-      let resultArr = [];
-      $(e.target).closest('.dropdown').find('.dropdown__option').filter(function() {
-        return $(this).data('forms')
-      }).each(function(){
-        const currentValue = $( this ).parent().find('input').val();
-        if (+currentValue !== 0) {          
-          resultArr.push(`${currentValue} ${getCorrectWordForm(currentValue, $(this).data('forms').split(' '))}`);
-        }
-      })
+      const resultArr = [];
+      $(e.target)
+        .closest('.dropdown')
+        .find('.dropdown__option')
+        .filter(function() {
+          return $(this).data('forms');
+        })
+        .each(function() {
+          const currentValue = $(this)
+            .parent()
+            .find('input')
+            .val();
+          if (+currentValue !== 0) {
+            resultArr.push(
+              `${currentValue} ${getCorrectWordForm(
+                currentValue,
+                $(this)
+                  .data('forms')
+                  .split(' '),
+              )}`,
+            );
+          }
+        });
 
-      const resultText = `${(resultArr.length ? resultArr.join(', ') : initialText)}...`;
+      const resultText = `${resultArr.length ? resultArr.join(', ') : initialText}...`;
 
       $(dropdownSelector).text(resultText);
     }
 
-    $(dropdownSelector).parent().find('.js-apply').click(closeHandler);
+    $(dropdownSelector)
+      .parent()
+      .find('.js-apply')
+      .click(closeHandler);
     $(dropdownSelector).click(closeHandler);
 
-    $(dropdownSelector).parent().find('.js-reset').click(resetHandler);
+    $(dropdownSelector)
+      .parent()
+      .find('.js-reset')
+      .click(resetHandler);
 
-    $(dropdownSelector).parent().find('.dropdown__item input').change(changeHandler);
-    $(dropdownSelector).parent().find('.dropdown__item .plus-minus__btn').click(changeHandler);
+    $(dropdownSelector)
+      .parent()
+      .find('.dropdown__item input')
+      .change(changeHandler);
+    $(dropdownSelector)
+      .parent()
+      .find('.dropdown__item .plus-minus__btn')
+      .click(changeHandler);
 
     $(dropdownSelector).click();
-  })
-    
-  
-
+  });
 }
 
 $(() => {
   addDropdown({
-    ids: ['booking-dropdown','guest', 'guest-1','guest-2','guest-3','room-1','room-2','find-room-dropdown','booking-dropdown',]
-  })
-})
+    ids: [
+      'booking-dropdown',
+      'guest',
+      'guest-1',
+      'guest-2',
+      'guest-3',
+      'room-1',
+      'room-2',
+      'find-room-dropdown',
+      'booking-dropdown',
+    ],
+  });
+});
