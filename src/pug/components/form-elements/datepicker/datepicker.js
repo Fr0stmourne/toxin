@@ -1,22 +1,19 @@
-/* eslint-disable */
-
 import 'air-datepicker/dist/js/datepicker';
 import 'air-datepicker/dist/css/datepicker.css';
 
-
 const defaultOptions = {
   navTitles: {
-    days: 'MM yyyy'
-  }
+    days: 'MM yyyy',
+  },
 };
 
 const inlineOptions = {
   inline: true,
   clearButton: true,
   navTitles: {
-    days: 'MM yyyy'
-  }
-}
+    days: 'MM yyyy',
+  },
+};
 
 function addDefaultDatepicker(selector) {
   $(`${selector}`).datepicker({
@@ -27,13 +24,12 @@ function addDefaultDatepicker(selector) {
 }
 
 function addRangeDatepicker(startElSelector, endElSelector, options) {
-
   $(`${startElSelector}`).datepicker({
     ...options,
-    onSelect: function (fd, d, picker) {
-      $(`${startElSelector}`).val(fd.split("-")[0]);
-      $(`${endElSelector}`).val(fd.split("-")[1]);
-    }
+    onSelect(fd) {
+      $(`${startElSelector}`).val(fd.split('-')[0]);
+      $(`${endElSelector}`).val(fd.split('-')[1]);
+    },
   });
 }
 

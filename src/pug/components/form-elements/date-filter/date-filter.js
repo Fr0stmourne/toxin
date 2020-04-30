@@ -8,7 +8,6 @@ $(() => {
     navTitles: {
       days: 'MM yyyy',
     },
-    // inline: true,
     onShow: dp => {
       dp.$datepicker.find('.datepicker--button[data-action="close"]').click(() => {
         dp.hide();

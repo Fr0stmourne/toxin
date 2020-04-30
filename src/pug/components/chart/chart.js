@@ -50,7 +50,6 @@ new Chart(document.getElementById('doughnut-chart'), {
     datasets: [
       {
         label: 'Population (millions)',
-        // backgroundColor: ['#FFE39C', '#BC9CFF','#6FCF97', '#909090'],
         backgroundColor: colors,
         data: [130, 65, 65, 0],
       },
