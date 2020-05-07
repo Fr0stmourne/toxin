@@ -6,8 +6,7 @@
       },
       "corejs": "core-js@3",
       "useBuiltIns": "entry"
-    }],
-    "@babel/react"
+    }]
   ],
   "plugins": ["@babel/plugin-proposal-class-properties"]
 }

@@ -9,7 +9,6 @@
         "airbnb-base",
         "plugin:prettier/recommended",
         "plugin:jest/recommended",
-        "plugin:react/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -25,7 +24,6 @@
         }
     },
     "plugins": [
-        "react",
         "prettier",
         "jest",
         "babel"
