@@ -50,11 +50,13 @@ if (chart) {
     type: 'doughnut',
     data: {
       labels: ['Великолепно', 'Хорошо', 'Удовлетворительно', 'Разочарован'],
-      datasets: [{
-        label: 'Population (millions)',
-        backgroundColor: colors,
-        data: [130, 65, 65, 0],
-      }, ],
+      datasets: [
+        {
+          label: 'Population (millions)',
+          backgroundColor: colors,
+          data: [130, 65, 65, 0],
+        },
+      ],
     },
     options: {
       legend: {
@@ -65,5 +67,4 @@ if (chart) {
       rotation: (Math.PI * 1) / 2,
     },
   });
-
 }
