@@ -38,7 +38,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: ['babel-loader', 'eslint-loader'],
+        loader: this.mode === 'development' ? ['babel-loader', 'eslint-loader'] : 'babel-loader',
         exclude: '/node_modules/',
       },
       {
