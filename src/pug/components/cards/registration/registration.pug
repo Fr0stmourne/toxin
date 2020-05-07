@@ -17,7 +17,7 @@ mixin registration(options)
       .sex__woman
         +radio-btn({name: 'sex', labelText: 'Женщина'})
     .registration__birthday
-      +masked-text-field({placeholder: 'ДД.ММ.ГГГГ', mask: '00.00.0000', title: 'Дата рождения', name:'birthday'})
+      +masked-text-field({placeholder: 'ДД.ММ.ГГГГ', title: 'Дата рождения', name:'birthday'})
     .registration__login-data.login-data
       .login-data__email
         +text-field({placeholder: "Email", name: "email", title: 'данные для входа в сервис'})

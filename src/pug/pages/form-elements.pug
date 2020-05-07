@@ -41,7 +41,7 @@ html(lang="ru")
           .inputs__dropdown
             +dropdown({title: 'dropdown',id: 'guest',placeholder: 'Сколько гостей', optionsList: [{text: 'Спальни', wordForms: 'спальня спальни спален'},{text: 'Кровати', wordForms: 'кровать кровати кроватей'},{text: 'Ванные комнаты', wordForms: 'ванная ванные ванных' }]})
           .inputs__masked-field
-            +masked-text-field({placeholder: 'ДД.ММ.ГГГГ', mask: '00.00.0000', title: 'masked text field'})
+            +masked-text-field({placeholder: 'ДД.ММ.ГГГГ', title: 'masked text field'})
           .inputs__date-dropdowns
             .inputs__date-dropdown
               +datepicker({title: 'date dropdown', id: 'date-dropdown'})
