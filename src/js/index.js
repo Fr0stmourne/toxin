@@ -4,10 +4,10 @@ import 'bxslider/dist/jquery.bxslider.min';
 import 'bxslider/dist/jquery.bxslider.min.css';
 
 import '../scss/main.scss';
-import '../scss/utils/variables.scss';
 
 function importAll(r) {
   r.keys().forEach(r);
 }
 
-importAll(require.context('../pug/', true, /\.js$/));
+importAll(require.context('../components/', true, /\.js$/));
+importAll(require.context('../', true, /\.(jpe?g|png|gif|svg)$/));

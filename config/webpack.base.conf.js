@@ -52,7 +52,7 @@ module.exports = {
         test: /\.(jpe?g|png|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]',
+          name: 'assets/images/[name].[ext]',
         },
       },
       {
@@ -146,20 +146,20 @@ module.exports = {
       'window.$': 'jquery',
     }),
     new CopyWebpackPlugin([
-      {
-        from: `${PATHS.src}/img`,
-        to: `${PATHS.assets}img`,
-      },
+      // {
+      //   from: `${PATHS.src}/img`,
+      //   to: `${PATHS.assets}img`,
+      // },
       {
         from: `${PATHS.src}/fonts`,
         to: `${PATHS.assets}fonts`,
       },
       {
-        from: `${PATHS.src}/pug/components`,
+        from: `${PATHS.src}/components`,
         to: `${PATHS.assets}components`,
       },
       // {
-      //   test: /.+\.(png|svg|jpg)/,
+      //   test: /\.(jpe?g|png|gif|svg)/,
       //   to: `${PATHS.assets}img`,
       // },
     ]),
