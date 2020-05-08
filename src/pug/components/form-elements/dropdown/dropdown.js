@@ -4,7 +4,7 @@
   $.fn.htmlNumberSpinner = function() {
     /* creating the counter buttons */
     $(this).append(
-      "<button class='plus-minus__btn plus-minus__btn--minus'>-</button> <input class='plus-minus__input' type='number'/> <button class='plus-minus__btn plus-minus__btn--plus'>+</button>",
+      "<button class='plus-minus__btn js-plus-minus-btn plus-minus__btn--minus js-minus-btn'>-</button> <input class='plus-minus__input' type='number'/> <button class='plus-minus__btn js-plus-minus-btn plus-minus__btn--plus js-plus-btn'>+</button>",
     );
 
     /* default value and variables and jquery elements */
@@ -134,7 +134,7 @@ function addDropdown(options) {
     addPlusMinus(dropdownSelector);
 
     function closeHandler() {
-      $('.plus-minus__btn').click(e => e.preventDefault());
+      $('.js-plus-minus-btn').click(e => e.preventDefault());
 
       $(dropdownSelector)
         .next()
@@ -144,27 +144,23 @@ function addDropdown(options) {
     function resetHandler() {
       $(dropdownSelector)
         .parent()
-        .find('.dropdown__item input')
+        .find('.js-dropdown-item input')
         .each((idx, el) => {
           $(el).val(0);
           $(el)
             .parent()
-            .find('.plus-minus__btn--minus')
+            .find('.js-minus-btn')
             .click();
         });
     }
 
     function changeHandler(e) {
-      $(e.target)
-        .closest('.dropdown')
-        .find('.dropdown__reset')
-        .removeClass('dropdown__reset--hidden');
+      const dropdown = $(e.target).closest('.js-dropdown');
+      dropdown.find('.js-reset').removeClass('dropdown__reset--hidden');
 
       const resultArr = [];
 
-      const allOptions = $(e.target)
-        .closest('.dropdown')
-        .find('.dropdown__option');
+      const allOptions = dropdown.find('.js-dropdown-option');
 
       allOptions
         .filter((idx, el) => $(el).data('forms'))
@@ -221,11 +217,11 @@ function addDropdown(options) {
 
     $(dropdownSelector)
       .parent()
-      .find('.dropdown__item input')
+      .find('.js-dropdown-item input')
       .change(changeHandler);
     $(dropdownSelector)
       .parent()
-      .find('.dropdown__item .plus-minus__btn')
+      .find('.js-dropdown-item .js-plus-minus-btn')
       .click(changeHandler);
 
     $(dropdownSelector).click();
