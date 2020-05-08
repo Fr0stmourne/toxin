@@ -1,4 +1,5 @@
 /* eslint-disable */
+
 (function($) {
   $.fn.htmlNumberSpinner = function() {
     /* creating the counter buttons */
@@ -105,7 +106,7 @@
 function addPlusMinus(id) {
   $(id)
     .parent()
-    .find(' .plus-minus')
+    .find('.plus-minus')
     .htmlNumberSpinner();
 }
 
@@ -124,13 +125,15 @@ function getCorrectWordForm(n, textForms) {
   return textForms[2];
 }
 
+/* eslint-enable */
+
 function addDropdown(options) {
   options.ids.forEach(id => {
     const dropdownSelector = `#${id}`;
     const initialText = $(dropdownSelector).text();
     addPlusMinus(dropdownSelector);
 
-    function closeHandler(e) {
+    function closeHandler() {
       $('.plus-minus__btn').click(e => e.preventDefault());
 
       $(dropdownSelector)
@@ -142,7 +145,7 @@ function addDropdown(options) {
       $(dropdownSelector)
         .parent()
         .find('.dropdown__item input')
-        .each(function(idx, el) {
+        .each((idx, el) => {
           $(el).val(0);
           $(el)
             .parent()
@@ -158,17 +161,36 @@ function addDropdown(options) {
         .removeClass('dropdown__reset--hidden');
 
       const resultArr = [];
-      $(e.target)
+
+      const allOptions = $(e.target)
         .closest('.dropdown')
-        .find('.dropdown__option')
-        .filter(function(idx, el) {
-          return $(el).data('forms');
-        })
-        .each(function(idx, el) {
-          const currentValue = $(el)
-            .parent()
-            .find('input')
-            .val();
+        .find('.dropdown__option');
+
+      allOptions
+        .filter((idx, el) => $(el).data('forms'))
+        .each((idx, el) => {
+          let currentValue;
+          const group = $(el).data('group');
+
+          if (group) {
+            const filtered = $(allOptions).filter((index, option) => {
+              return $(option).data('group') === group;
+            });
+            currentValue = 0;
+
+            filtered.each((index, option) => {
+              currentValue += +$(option)
+                .parent()
+                .find('input')
+                .val();
+            });
+          } else {
+            currentValue = $(el)
+              .parent()
+              .find('input')
+              .val();
+          }
+
           if (+currentValue !== 0) {
             resultArr.push(
               `${currentValue} ${getCorrectWordForm(
@@ -181,7 +203,7 @@ function addDropdown(options) {
           }
         });
 
-      const resultText = `${resultArr.length ? resultArr.join(', ') : initialText}`;
+      const resultText = `${resultArr.length ? [...new Set(resultArr)].join(', ') : initialText}`;
 
       $(dropdownSelector).text(resultText);
     }

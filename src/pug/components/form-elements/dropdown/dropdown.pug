@@ -1,5 +1,5 @@
 mixin plus-minus(options)
-  .plus-minus(min=options.min max=options.max id=options.id name=options.name)
+  .plus-minus(min=(options.min || 0) max=(options.max  || 5) id=options.id name=options.name)
 
 mixin dropdown(options)
   .dropdown
@@ -10,8 +10,8 @@ mixin dropdown(options)
       ul.dropdown__list
         each option in options.optionsList.length ? options.optionsList : ['There are no values']
           li.dropdown__item
-            .dropdown__option(selected=option.selected data-min=option.min data-max=option.max data-forms=option.wordForms)=option.text
-            +plus-minus({min: 0, max: 5, id: option.id, name: option.name})
+            .dropdown__option(selected=option.selected data-forms=option.wordForms data-group=option.group)=option.text
+            +plus-minus({min: options.min , max: options.max, id: option.id, name: option.name})
       if options.controls
         .dropdown__controls
           button.dropdown__reset.js-reset.dropdown__reset--hidden Очистить
