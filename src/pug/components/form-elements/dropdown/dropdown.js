@@ -142,9 +142,9 @@ function addDropdown(options) {
       $(dropdownSelector)
         .parent()
         .find('.dropdown__item input')
-        .each(function() {
-          $(this).val(0);
-          $(this)
+        .each(function(idx, el) {
+          $(el).val(0);
+          $(el)
             .parent()
             .find('.plus-minus__btn--minus')
             .click();
@@ -161,11 +161,11 @@ function addDropdown(options) {
       $(e.target)
         .closest('.dropdown')
         .find('.dropdown__option')
-        .filter(function() {
-          return $(this).data('forms');
+        .filter(function(idx, el) {
+          return $(el).data('forms');
         })
-        .each(function() {
-          const currentValue = $(this)
+        .each(function(idx, el) {
+          const currentValue = $(el)
             .parent()
             .find('input')
             .val();
@@ -173,7 +173,7 @@ function addDropdown(options) {
             resultArr.push(
               `${currentValue} ${getCorrectWordForm(
                 currentValue,
-                $(this)
+                $(el)
                   .data('forms')
                   .split(' '),
               )}`,
