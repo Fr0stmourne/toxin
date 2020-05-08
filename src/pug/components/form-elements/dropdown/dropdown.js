@@ -181,7 +181,7 @@ function addDropdown(options) {
           }
         });
 
-      const resultText = `${resultArr.length ? resultArr.join(', ') : initialText}...`;
+      const resultText = `${resultArr.length ? resultArr.join(', ') : initialText}`;
 
       $(dropdownSelector).text(resultText);
     }

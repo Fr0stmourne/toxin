@@ -22,8 +22,10 @@
 	}
 }
 
+
 .dropdown {
 	position: relative;
+	min-width: 235px;
 
 	&__result {
 		border: 1px solid $dark-25;
@@ -33,6 +35,9 @@
 		padding: 12px 30px 12px 15px;
 		transition: $transition;
 		cursor: pointer;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 
 		background-image: url('/assets/components/form-elements/dropdown/hidden.svg');
 		background-repeat: no-repeat;
