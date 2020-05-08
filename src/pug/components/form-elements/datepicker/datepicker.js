@@ -40,3 +40,4 @@ addDefaultDatepicker('#booking-datepicker');
 addRangeDatepicker('#cards__start', '#cards__end', defaultOptions);
 addRangeDatepicker('#cards__start-1', '#cards__end-1', defaultOptions);
 addRangeDatepicker('#cards-date__start', '#cards-date__end', inlineOptions);
+addRangeDatepicker('#date-dropdown__start', '#date-dropdown__end', defaultOptions);

@@ -43,10 +43,7 @@ html(lang="ru")
           .inputs__masked-field
             +masked-text-field({placeholder: 'ДД.ММ.ГГГГ', title: 'masked text field'})
           .inputs__date-dropdowns
-            .inputs__date-dropdown
-              +datepicker({title: 'date dropdown', id: 'date-dropdown'})
-            .inputs__date-dropdown
-              +datepicker({title: 'date dropdown', id: 'date-dropdown-1'})
+            +datepicker-double({ start: {label: 'date dropdown', id: 'date-dropdown__start'}, end: {label: 'date dropdown', id: 'date-dropdown__end'} , controls: true})
           .inputs__date-filter
             +date-filter({title: 'filter date dropdown'})
           .inputs__sub
