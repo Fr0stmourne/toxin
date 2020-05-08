@@ -19,7 +19,8 @@ mixin booking(options)
     .booking__calc.calc
       each val in options.calc.length ? options.calc : ['There are no values']
         .calc__item
-          .calc__position=val[0]
+          .calc__position
+            .calc__item-description=val[0]
             if val[2]
               .calc__btn-box
                 .calc__btn

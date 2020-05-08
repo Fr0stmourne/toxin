@@ -8,7 +8,7 @@ mixin room(options)
           img(src=link, alt="slider image")
     .room__info
       .room__room-info
-        a.room__room(href='./mock')
+        a.room__room(href=options.link)
           span №
             span.room__num=options.num
           span.room__type=options.type
@@ -17,6 +17,6 @@ mixin room(options)
           span.room__measurement  в сутки
       .room__rating
         +rate-btn({name: options.name, checkedNum: options.checkedRating, disabled: options.isRatingDisabled})
-        a.room__per-day.room__per-day--link(href=options.link)
+        a.room__per-day.room__per-day--link(href=options.reviewsLink)
           =options.reviewNum
           span.room__measurement  Отзывов
