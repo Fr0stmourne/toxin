@@ -6,6 +6,7 @@
 	font: $default-font;
 	line-height: 24px;
 	color: $dark-50;
+	cursor: pointer;
 
 	&__checkmark {
 		position: absolute;
@@ -19,7 +20,7 @@
 		border-radius: 50%;
 	}
 
-	input:checked ~ &__checkmark {
+	input:checked~&__checkmark {
 		border: 1px solid $purple;
 		background-image: url('/assets/components/form-elements/radio-buttons/pin.svg');
 		background-position: center;
@@ -27,7 +28,7 @@
 		background-size: 12px;
 	}
 
-	input:checked ~ * {
+	input:checked~* {
 		color: $dark-75;
 	}
 }

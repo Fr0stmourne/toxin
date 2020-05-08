@@ -41,6 +41,7 @@
 		font: $default-font;
 		color: $dark-75;
 		border-radius: 4px;
+		cursor: pointer;
 
 		&::placeholder {
 			text-transform: none;

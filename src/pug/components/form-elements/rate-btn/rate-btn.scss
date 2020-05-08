@@ -22,6 +22,7 @@
     background-image: url("/assets/components/form-elements/rate-btn/star_border.svg");
     background-size: 24px auto;
     background-position: right center;
+    cursor: pointer;
 
     &:disabled {
       pointer-events: none;
