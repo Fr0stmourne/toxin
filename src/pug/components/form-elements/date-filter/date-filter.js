@@ -2,7 +2,7 @@ import 'air-datepicker/dist/js/datepicker';
 import 'air-datepicker/dist/css/datepicker.css';
 
 $(() => {
-  $('.date-filter--range .date-filter__input').datepicker({
+  $('.js-date-filter-range .js-date-filter-input').datepicker({
     dateFormat: 'dd M',
     clearButton: true,
     navTitles: {
