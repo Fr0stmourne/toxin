@@ -15,7 +15,7 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Search room
-    link(rel="shortcut icon", href="/assets/img/favicon.png", type="image/x-icon")
+    link(rel="shortcut icon", href="/favicon.png", type="image/x-icon")
   body.search-room
     .wrapper
       +header({unlogged: true, regText: 'зарегистрироваться', loginText: 'войти',
@@ -55,24 +55,24 @@ html(lang="ru")
           section.rooms
             h2.rooms__title Номера, которые мы для вас подобрали
             ul.rooms__list
-              +room({num: '888',checkedRating: 5, isRatingDisabled: true, sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 145, type: 'люкс', price: '9 990₽' })
-              +room({num: '840',checkedRating: 4, isRatingDisabled: true, sliderImgs: ['/assets/img/2.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 65,  price: '9 900₽' })
-              +room({num: '980',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/assets/img/3.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 35,  type: 'люкс', price: '8 500₽' })
-              +room({num: '856',checkedRating: 5, isRatingDisabled: true, sliderImgs: ['/assets/img/4.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 19,  price: '7 300₽' })
-              +room({num: '740',checkedRating: 4, isRatingDisabled: true, sliderImgs: ['/assets/img/5.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 44,  price: '6 000₽' })
-              +room({num: '982',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/assets/img/6.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 56,  price: '5 800₽' })
-              +room({num: '678',checkedRating: 5, isRatingDisabled: true, sliderImgs: ['/assets/img/7.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 45,  price: '5 500₽' })
-              +room({num: '450',checkedRating: 4, isRatingDisabled: true, sliderImgs: ['/assets/img/8.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 39,  price: '5 300₽' })
-              +room({num: '350',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/assets/img/9.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 77,  price: '5 000₽' })
-              +room({num: '666',checkedRating: 5, isRatingDisabled: true, sliderImgs: ['/assets/img/10.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 25,  price: '5 000₽' })
-              +room({num: '444',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/assets/img/11.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 15,  price: '5 000₽' })
-              +room({num: '352',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/assets/img/12.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 55,  price: '5 000₽' })
+              +room({num: '888',checkedRating: 5, isRatingDisabled: true, sliderImgs: ['/1.jpg','/1.jpg' ,'/2.jpg', '/1.jpg'], link: './mock',  reviewNum: 145, type: 'люкс', price: '9 990₽' })
+              +room({num: '840',checkedRating: 4, isRatingDisabled: true, sliderImgs: ['/2.jpg','/1.jpg' ,'/2.jpg', '/1.jpg'], link: './mock',  reviewNum: 65,  price: '9 900₽' })
+              +room({num: '980',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/3.jpg','/1.jpg' ,'/2.jpg', '/1.jpg'], link: './mock',  reviewNum: 35,  type: 'люкс', price: '8 500₽' })
+              +room({num: '856',checkedRating: 5, isRatingDisabled: true, sliderImgs: ['/4.jpg','/1.jpg' ,'/2.jpg', '/1.jpg'], link: './mock',  reviewNum: 19,  price: '7 300₽' })
+              +room({num: '740',checkedRating: 4, isRatingDisabled: true, sliderImgs: ['/5.jpg','/1.jpg' ,'/2.jpg', '/1.jpg'], link: './mock',  reviewNum: 44,  price: '6 000₽' })
+              +room({num: '982',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/6.jpg','/1.jpg' ,'/2.jpg', '/1.jpg'], link: './mock',  reviewNum: 56,  price: '5 800₽' })
+              +room({num: '678',checkedRating: 5, isRatingDisabled: true, sliderImgs: ['/7.jpg','/1.jpg' ,'/2.jpg', '/1.jpg'], link: './mock',  reviewNum: 45,  price: '5 500₽' })
+              +room({num: '450',checkedRating: 4, isRatingDisabled: true, sliderImgs: ['/8.jpg','/1.jpg' ,'/2.jpg', '/1.jpg'], link: './mock',  reviewNum: 39,  price: '5 300₽' })
+              +room({num: '350',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/9.jpg','/1.jpg' ,'/2.jpg', '/1.jpg'], link: './mock',  reviewNum: 77,  price: '5 000₽' })
+              +room({num: '666',checkedRating: 5, isRatingDisabled: true, sliderImgs: ['/10.jpg','/1.jpg' ,'/2.jpg', '/1.jpg'], link: './mock',  reviewNum: 25,  price: '5 000₽' })
+              +room({num: '444',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/11.jpg','/1.jpg' ,'/2.jpg', '/1.jpg'], link: './mock',  reviewNum: 15,  price: '5 000₽' })
+              +room({num: '352',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/12.jpg','/1.jpg' ,'/2.jpg', '/1.jpg'], link: './mock',  reviewNum: 55,  price: '5 000₽' })
             .rooms__pagination
               +pagination({num: 15, description: "1 – 12 из 100+ вариантов аренды"})
       +footer({extended: true,
       copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
-        socialList: [{name: 'Twitter', link: './mock', imgLink: '/assets/img/twitter.svg'},
-        {name: 'Facebook', link: './mock', imgLink: '/assets/img/facebook.svg'},{name: 'Insta', link: './mock', imgLink: '/assets/img/insta.svg'}],
+        socialList: [{name: 'Twitter', link: './mock', imgLink: '/twitter.svg'},
+        {name: 'Facebook', link: './mock', imgLink: '/facebook.svg'},{name: 'Insta', link: './mock', imgLink: '/insta.svg'}],
     sub: {title: 'Subscribe to our newsletter',
       text: 'Receive our latest news and promotions in your inbox!',
       placeholder: 'Your email address'},

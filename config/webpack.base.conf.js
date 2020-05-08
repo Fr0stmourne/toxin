@@ -49,10 +49,10 @@ module.exports = {
         exclude: '/node_modules/',
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/,
+        test: /\.(jpeg|jpg|png|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: 'assets/images/[name].[ext]',
+          name: '[name].[ext]',
         },
       },
       {

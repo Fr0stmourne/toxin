@@ -19,7 +19,7 @@
     left: 0;
     width: 24px;
     height: 24px;
-    background-image: url("/assets/components/form-elements/rate-btn/star_border.svg");
+    background-image: url("/rating_star_border.svg");
     background-size: 24px auto;
     background-position: right center;
     cursor: pointer;
@@ -39,7 +39,7 @@
     }
 
     &:hover~& {
-      background-image: url("/assets/components/form-elements/rate-btn/star_border.svg");
+      background-image: url("/rating_star_border.svg");
     }
 
     &:focus {

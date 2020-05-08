@@ -10,4 +10,4 @@ function importAll(r) {
 }
 
 importAll(require.context('../components/', true, /\.js$/));
-importAll(require.context('../', true, /\.(jpe?g|png|gif|svg)$/));
+importAll(require.context('../../src', true, /\.(jpeg|jpg|png|gif|svg)$/));

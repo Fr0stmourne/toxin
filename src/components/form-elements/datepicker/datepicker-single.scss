@@ -29,7 +29,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    background-image: url('/assets/components/form-elements/date-filter/arrow_down.svg');
+    background-image: url('/datepicker_arrow_down.svg');
     background-repeat: no-repeat;
     background-position: center;
     pointer-events: none;
@@ -84,20 +84,20 @@
   &--nav-action {
     width: 24px !important;
     height: 24px !important;
-    background-image: url('/assets/components/form-elements/date-filter/arrow_back.svg');
+    background-image: url('/datepicker_arrow_back.svg');
     background-repeat: no-repeat;
     background-position: center;
 
     &[data-action='next'] {
-      background-image: url('/assets/components/form-elements/date-filter/arrow_forward.svg');
+      background-image: url('/datepicker_arrow_forward.svg');
 
       &:hover {
-        background-image: url('/assets/components/form-elements/date-filter/arrow_forward.svg') !important;
+        background-image: url('/datepicker_arrow_forward.svg') !important;
       }
     }
 
     &:hover {
-      background-image: url('/assets/components/form-elements/date-filter/arrow_back.svg') !important;
+      background-image: url('/datepicker_arrow_back.svg') !important;
       background-repeat: no-repeat !important;
       background-position: center !important;
     }

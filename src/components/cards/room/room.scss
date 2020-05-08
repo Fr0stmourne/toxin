@@ -93,7 +93,7 @@
 
 	.bx-next {
 		right: 6px;
-		background: url('/assets/components/cards/room/right.svg') no-repeat;
+		background: url('/room_right.svg') no-repeat;
 
 		background-position: center;
 
@@ -112,7 +112,7 @@
 
 	.bx-prev {
 		left: 6px;
-		background: url('/assets/components/cards/room/left.svg') 50% no-repeat;
+		background: url('/room_left.svg') 50% no-repeat;
 
 		&:hover,
 		&:focus {

@@ -9,9 +9,9 @@ mixin footer(options)
           .main-footer__company.company
             a(href=options.logoLink).company__logos
               .company__logo
-                img(src="/assets/img/logo.svg", alt="Logo")
+                img(src="/logo.svg", alt="Logo")
               .company__name
-                img(src="/assets/img/toxin.svg", alt="Company TOXIN")
+                img(src="/toxin.svg", alt="Company TOXIN")
             .company__text=options.companyText
           .main-footer__menu
             each navList in options.navLists.length ? options.navLists : ['There are no values']
@@ -41,9 +41,9 @@ mixin footer(options)
         .main-footer__main.main-footer__main--small
           a(href=options.logoLink).company__logos
               .company__logo
-                img(src="/assets/img/logo.svg", alt="Logo")
+                img(src="/logo.svg", alt="Logo")
               .company__name
-                img(src="/assets/img/toxin.svg", alt="Company TOXIN")
+                img(src="/toxin.svg", alt="Company TOXIN")
           .company__text=options.companyText
           ul.bottom__social
             each social in options.socialList.length ? options.socialList : ['None']
