@@ -1,0 +1,43 @@
+.rich-checkbox {
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	padding-left: 30px;
+	font: $default-font;
+	line-height: 18px;
+	color: $dark-75;
+	font-weight: 700;
+	cursor: pointer;
+
+	&__checkmark {
+		position: absolute;
+		left: 0;
+		top: 0px;
+		width: 18px;
+		height: 18px;
+		border: 1px solid $dark-25;
+		background-image: none;
+		border-radius: 4px;
+	}
+
+	input:checked~&__checkmark {
+		border: 2px solid $purple;
+		background-image: url('/assets/components/form-elements/checkbox-buttons/tick.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 12px;
+	}
+
+	&__label-text {
+		display: inline-block;
+		padding-top: 2px;
+	}
+
+	&__description {
+		margin: 0;
+		margin-top: 5px;
+		font-size: 12px;
+		line-height: 14px;
+		font-weight: 400;
+	}
+}

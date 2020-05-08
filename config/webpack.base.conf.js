@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const glob = require('glob');
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -13,8 +14,14 @@ const PATHS = {
   assets: 'assets/',
 };
 
-const PAGES_DIR = `${PATHS.src}/pug/pages/`;
-const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
+const PAGES_DIR = `${PATHS.src}/`;
+// let PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
+let PAGES = [];
+glob(`${__dirname}/../src/pages/**/*.pug`, {}, (err, files) => {
+  console.warn('ФАЙЛЫ', files);
+
+  PAGES = files;
+});
 
 module.exports = {
   // BASE config
@@ -156,13 +163,56 @@ module.exports = {
       //   to: `${PATHS.assets}img`,
       // },
     ]),
-    ...PAGES.map(
-      page =>
-        new HtmlWebpackPlugin({
-          template: `${PAGES_DIR}/${page}`,
-          filename: `./${page.replace(/\.pug/, '.html')}`,
-        }),
-    ),
+    // ...PAGES.map(
+    //   page =>
+    //     new HtmlWebpackPlugin({
+    //       template: `.${page.split('..')[1]}`,
+    //       filename: `${page
+    //         .split('/')
+    //         .slice(-1)[0]
+    //         .replace(/\.pug/, '.html')}`,
+    //     }),
+    // ),
+    new HtmlWebpackPlugin({
+      template: `./src/pages/index/index.pug`,
+      filename: `index.html`,
+    }),
+    new HtmlWebpackPlugin({
+      template: `./src/pages/colors-type/colors-type.pug`,
+      filename: `colors-type.html`,
+    }),
+    new HtmlWebpackPlugin({
+      template: `./src/pages/cards/cards.pug`,
+      filename: `cards.html`,
+    }),
+    new HtmlWebpackPlugin({
+      template: `./src/pages/form-elements/form-elements.pug`,
+      filename: `form-elements.html`,
+    }),
+    new HtmlWebpackPlugin({
+      template: `./src/pages/headers-footers/headers-footers.pug`,
+      filename: `headers-footers.html`,
+    }),
+    new HtmlWebpackPlugin({
+      template: `./src/pages/landing-page/landing-page.pug`,
+      filename: `landing-page.html`,
+    }),
+    new HtmlWebpackPlugin({
+      template: `./src/pages/registration-page/registration-page.pug`,
+      filename: `registration-page.html`,
+    }),
+    new HtmlWebpackPlugin({
+      template: `./src/pages/room-details/room-details.pug`,
+      filename: `room-details.html`,
+    }),
+    new HtmlWebpackPlugin({
+      template: `./src/pages/search-room/search-room.pug`,
+      filename: `search-room.html`,
+    }),
+    new HtmlWebpackPlugin({
+      template: `./src/pages/signin-page/signin-page.pug`,
+      filename: `signin-page.html`,
+    }),
     new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
   ],
 };

@@ -1,0 +1,37 @@
+include ../../form-elements/datepicker/datepicker.pug
+include ../../form-elements/dropdown/dropdown.pug
+include ../../form-elements/buttons/buttons.pug
+
+mixin booking(options)
+  form.booking
+    .booking__room-info
+      .booking__room
+        span №
+          span.booking__num=options.num
+        span.booking__type=options.type
+      .booking__per-day
+        span.booking__price=options.price
+        span.booking__measurement  в сутки
+    .booking__datepicker
+      +datepicker-double({ start: {label: 'Прибытие', id: options.start.id}, end: {label: 'Выезд', id: options.end.id} })
+    .booking__dropdown
+      +dropdown({title: 'гости', id: 'guest-3',placeholder: 'Сколько гостей', optionsList: [{text: 'Взрослые', wordForms: 'взрослый взрослых взрослых'},{text: 'Дети', wordForms: 'ребенок ребенка детей'},{text: 'Младенцы', wordForms: 'младенец младенца младенцев'}]})
+    .booking__calc.calc
+      each val in options.calc.length ? options.calc : ['There are no values']
+        .calc__item
+          .calc__position
+            .calc__item-description=val[0]
+            if val[2]
+              .calc__btn-box
+                .calc__btn
+                .calc__tooltip=val[2]
+          .calc__price=val[1]
+    .booking__result Итого
+      .booking__dots
+      .booking__price=options.fullPrice
+    +button({btnText: 'забронировать', type: 'proceed'})
+      
+
+    
+      
+    

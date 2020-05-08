@@ -1,0 +1,14 @@
+.link {
+  font: $btn-font;
+  color: $purple;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $dark-50;
+  }
+
+  &:active {
+    color: $dark-75
+  }
+}

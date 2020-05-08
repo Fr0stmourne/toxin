@@ -1,0 +1,7 @@
+mixin bullet-list(options) 
+  .bullet-list
+    if options.title
+      .form-element-title=options.title
+    ul.bullet-list__list
+      each items in options.items.length ? options.items : ['There are no items']
+        li.bullet-list__item= items

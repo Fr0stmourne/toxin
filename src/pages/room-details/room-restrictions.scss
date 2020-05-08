@@ -1,0 +1,12 @@
+.room-restrictions {
+	display: flex;
+	margin-bottom: 61px;
+
+	@media (max-width: 1150px) {
+		justify-content: space-evenly;
+	}
+
+	@media (max-width: 700px) {
+		flex-direction: column;
+	}
+}

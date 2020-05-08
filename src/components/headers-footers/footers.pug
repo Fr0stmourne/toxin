@@ -1,0 +1,54 @@
+include ../form-elements/subscription/subscription.pug
+
+mixin footer(options)
+  footer.main-footer
+    h2.visually-hidden Page footer
+    if options.extended
+      .container
+        .main-footer__main
+          .main-footer__company.company
+            a(href=options.logoLink).company__logos
+              .company__logo
+                img(src="/assets/img/logo.svg", alt="Logo")
+              .company__name
+                img(src="/assets/img/toxin.svg", alt="Company TOXIN")
+            .company__text=options.companyText
+          .main-footer__menu
+            each navList in options.navLists.length ? options.navLists : ['There are no values']
+              nav.main-footer__nav.footer-nav
+                h3.footer-nav__title=navList.title
+                ul.footer-nav__list
+                  each val in navList.items.length ? navList.items : ['There are no values']
+                    li.footer-nav__item
+                      a.footer-nav__link(href=val.link)=val
+            form.footer-nav__sub.sub
+              h3.sub__title=options.sub.title
+              .sub__text=options.sub.text
+              .sub__input
+                +subscription({placeholder: options.sub.placeholder})
+      .border-div
+      .container
+        .main-footer__bottom.bottom
+          .bottom__copyright=options.copyright
+          ul.bottom__social
+            each social in options.socialList.length ? options.socialList : ['None']
+              li.bottom__social-item
+                a.bottom__social-link(href=social.link)
+                  img(src=social.imgLink, alt=social.name)
+                  span.visually-hidden=social.name
+    else
+      .container
+        .main-footer__main.main-footer__main--small
+          a(href=options.logoLink).company__logos
+              .company__logo
+                img(src="/assets/img/logo.svg", alt="Logo")
+              .company__name
+                img(src="/assets/img/toxin.svg", alt="Company TOXIN")
+          .company__text=options.companyText
+          ul.bottom__social
+            each social in options.socialList.length ? options.socialList : ['None']
+              li.bottom__social-item
+                a.bottom__social-link(href=social.link)
+                  img(src=social.imgLink, alt=social.name)
+                  span.visually-hidden=social.name
+

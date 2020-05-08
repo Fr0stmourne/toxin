@@ -1,0 +1,19 @@
+mixin page(options)
+  li.pagination__page(class=options.active? 'pagination__page--active' : '' )
+    a.pagination__page-link(href=options.link)=options.linkText
+
+mixin pagination(options)
+ .pagination__container
+    if options.title
+      .form-element-title=options.title
+    ul.pagination
+      +page({active: true , link: 1, linkText: 1})
+      +page({active: false , link: 2, linkText: 2})
+      +page({active: false , link: 3, linkText: 3})
+      li.pagination__hidden-pages ... 
+      +page({active: false , link: options.num, linkText: options.num})
+      a(href='./mock').pagination__next-page
+        span.visually-hidden Next page
+    p.pagination__description=options.description
+
+

@@ -1,0 +1,9 @@
+mixin button(options)
+  case options.type
+    when 'secondary'
+      - var btnClass = 'btn btn--secondary'
+    when 'proceed'
+      - var btnClass = 'btn btn--proceed'
+    default
+      - var btnClass = 'btn btn--primary'
+  button(class=btnClass)=options.btnText

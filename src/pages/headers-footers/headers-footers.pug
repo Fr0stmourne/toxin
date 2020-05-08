@@ -1,0 +1,20 @@
+include ../../components/headers-footers/headers.pug
+include ../../components/headers-footers/footers.pug
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Headers Footers
+    link(rel="shortcut icon", href="/assets/img/favicon.png", type="image/x-icon")
+  body.headers-footers
+    .header-1
+      +header({unlogged: true, regText: 'register', loginText: 'login', items: [{text: 'Home', active: true, link: './mock'}, {text: 'About Us', link: './mock'}, {text: 'Services', link: './mock', dropdown: [{text: 'Service', link: './mock'}, {text: 'Service', link: './mock'}]},{text: 'Careers', link: './mock'},{text: 'News', link: './mock'},{text: 'Documentation', link: './mock'}]})
+    .header-2
+      +header({username: 'Cosmin Negoita', items: [{text: 'Home', active: true, link: './mock'}, {text: 'About Us', link: './mock'}, {text: 'Services', link: './mock', dropdown: [{text: 'Service', link: './mock'},{text: 'Service', link: './mock'}]},{text: 'Careers', link: './mock'},{text: 'News', link: './mock'},{text: 'Documentation', link: './mock'}]})
+    .footer-1
+      +footer({logoLink: '/mock', extended: true, copyright: 'Copyright © 2018 Toxin UI Kit. All rights reserved.', socialList: [{name: 'Twitter', link: './mock', imgLink: '/assets/img/twitter.svg'},
+      {name: 'Facebook', link: './mock', imgLink: '/assets/img/facebook.svg'},{name: 'Insta', link: './mock', imgLink: '/assets/img/insta.svg'}], sub: {title: 'Subscribe to our newsletter', text: 'Receive our latest news and promotions in your inbox!', placeholder: 'Your email address'}, navLists: [{title: 'Navigation', items: ['About Us', 'News', 'Support', 'Products']}, {title: 'ABOUT US', items: ['Who we are', 'Our team', 'Careers', 'Investors']}, {title: 'Support', items: ['Documentation', 'Community', 'Get in Touch']}], sub: {title: 'Subscribe to our newsletter', placeholder: 'Your email address', text: 'Receive our latest news and promotions in your inbox!'}, companyText: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'})
+    .footer-2
+      +footer({logoLink: '/mock', socialList: [{name: 'Twitter', link: './mock', imgLink: '/assets/img/twitter.svg'},
+      {name: 'Facebook', link: './mock', imgLink: '/assets/img/facebook.svg'},{name: 'Insta', link: './mock', imgLink: '/assets/img/insta.svg'}],companyText: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'})

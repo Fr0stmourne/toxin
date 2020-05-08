@@ -1,0 +1,14 @@
+include ../like-btn/like-btn.pug
+
+mixin comment(options)
+  .comment
+    .comment__info
+      img.comment__photo(src=options.src, alt='Фото автора комментария')
+      .comment__author=options.author
+      .comment__date=options.date
+    .comment__box
+      .comment__like
+        +like-btn({likes: options.likes, active: options.activeLike})
+      blockquote.comment__text=options.comment
+
+

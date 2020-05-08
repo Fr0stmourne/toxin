@@ -1,0 +1,247 @@
+.ui-kit .container {
+  padding-left: 141px;
+  padding-right: 141px;
+
+
+  .set-1 {
+    display: flex;
+    margin-top: 143px;
+
+    .inputs {
+      width: 100%;
+      max-width: 320px;
+      margin-bottom: 100px;
+      margin-right: 126px;
+
+      &__text-field {
+        margin-bottom: 20px;
+
+        *::placeholder {
+          letter-spacing: -0.01em;
+        }
+      }
+
+      &__dropdown {
+        margin-bottom: 23px;
+      }
+
+      &__masked-field {
+        margin-bottom: 40px;
+      }
+
+      &__date-dropdowns {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 41px;
+      }
+
+      &__date-dropdown {
+        max-width: 150px;
+      }
+
+      &__date-filter {
+        max-width: 266px;
+        margin-bottom: 41px;
+      }
+
+      &__sub {
+        max-width: 267px;
+      }
+    }
+
+    .checkers {
+      margin-right: 130px;
+    }
+
+    .checkboxes {
+      max-width: 222px;
+      margin-bottom: 42px;
+
+      &__checkbox {
+        .form-element-title {
+          margin-bottom: 16.5px;
+        }
+
+        margin-bottom: 12px;
+      }
+    }
+
+    .radio {
+      margin-bottom: 38px;
+
+      &__buttons {
+
+        display: flex;
+      }
+
+      &__button:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      .form-element-title {
+        margin-bottom: 14px;
+      }
+    }
+
+    .togglers {
+      margin-bottom: 46px;
+
+      .form-element-title {
+        margin-bottom: 17px;
+      }
+
+      &__toggle {
+        margin-bottom: 16px;
+      }
+    }
+
+    .like {
+      margin-bottom: 40px;
+
+      .form-element-title {
+        margin-bottom: 16px;
+      }
+
+      &__buttons {
+        display: flex;
+      }
+
+      &__button:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    .rate {
+      .form-element-title {
+        margin-bottom: 18px;
+      }
+
+      &__buttons {
+        display: flex;
+        margin-left: 2px;
+      }
+
+      &__button:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+
+    .buttons {
+      width: 100%;
+
+      .form-element-title {
+        margin-bottom: 16px;
+      }
+
+      &__slider-range {
+        max-width: 266px;
+        margin-bottom: 44px;
+      }
+
+      &__list {
+        max-width: 220px;
+        display: grid;
+        grid-template-columns: repeat(2, 99px);
+
+        grid-gap: 29px 19px;
+        margin-bottom: 27px;
+      }
+
+      &__links {
+        display: flex;
+        margin-bottom: 30px;
+      }
+
+      &__link:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      &__proceed {
+        margin-bottom: 40px;
+      }
+    }
+
+  }
+
+  .set-2 {
+
+    display: flex;
+
+    .col-1 {
+      margin-right: 170px;
+
+      &__dropdown {
+        max-width: 266px;
+        margin-bottom: 20px;
+      }
+
+      &__dropdowns {
+        margin-bottom: 172px;
+      }
+
+      &__expand-lists {
+        max-width: 266px;
+        margin-bottom: 40px;
+      }
+
+      &__expand-list {
+        margin-bottom: 19px;
+      }
+
+      &__advantages {
+        max-width: 280px;
+      }
+    }
+
+    .col-2 {
+      width: 100%;
+      max-width: 712px;
+
+      &__dropdowns {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &__dropdown {
+        width: 100%;
+        max-width: 320px;
+        margin-bottom: 256px;
+      }
+
+      &__rich-checkboxes {
+        .form-element-title {
+          margin-bottom: 15px;
+        }
+      }
+
+      &__rich-checkbox {
+
+        &-1 {
+          margin-bottom: 10px;
+
+          .rich-checkbox__description {
+            max-width: 205px;
+          }
+        }
+
+        &-2 {
+          .rich-checkbox__description {
+            max-width: 230px;
+          }
+        }
+
+      }
+
+      &__checkboxes-bullet {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 222px;
+      }
+
+      &__bullet {
+        max-width: 260px;
+        margin-right: 60px;
+      }
+    }
+  }
+}

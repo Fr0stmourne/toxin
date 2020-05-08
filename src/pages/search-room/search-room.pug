@@ -1,0 +1,85 @@
+include ../../components/headers-footers/headers.pug
+include ../../components/headers-footers/footers.pug
+include ../../components/cards/room/room.pug
+include ../../components/form-elements/range-slider/range-slider.pug
+include ../../components/form-elements/expandable-list/expandable-list.pug
+include ../../components/form-elements/checkbox-buttons/checkbox.pug
+include ../../components/form-elements/rich-checkbox/rich-checkbox.pug
+include ../../components/form-elements/date-filter/date-filter.pug
+include ../../components/form-elements/dropdown/dropdown.pug
+include ../../components/form-elements/pagination/pagination.pug
+
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Search room
+    link(rel="shortcut icon", href="/assets/img/favicon.png", type="image/x-icon")
+  body.search-room
+    .wrapper
+      +header({unlogged: true, regText: 'зарегистрироваться', loginText: 'войти',
+      items: [{text: 'О нас', link: './mock'}, {text: 'Услуги', link: './mock', dropdown: [{text: 'Услуга', link: './mock'},{text: 'Услуга 2', link: './mock'},{text: 'Услуга 2', link: './mock'}]},
+        {text: 'Вакансии', link: './mock'},{text: 'Новости', link: './mock'},
+        {text: 'Соглашения', link: './mock', dropdown: [{text: 'Услуга', link: './mock'},{text: 'Услуга 2', link: './mock'},{text: 'Услуга 2', link: './mock'}]}]})
+      main
+        .container
+          section.filter
+            h2.filter__title.visually-hidden Фильтр комнат
+            .filter__date-filter
+              +date-filter({title: 'даты пребывания в отеле'})
+            .filter__guests
+              +dropdown({title: 'гости', id: 'guest-3',placeholder: 'Сколько гостей', optionsList: [{text: 'Взрослые', wordForms: 'взрослый взрослых взрослых'},{text: 'Дети', wordForms: 'ребенок ребенка детей'},{text: 'Младенцы', wordForms: 'младенец младенца младенцев'}]})
+            .filter__slider
+              +range-slider({title: 'диапазон цены'})
+              .filter__slider-hint Стоимость за сутки пребывания в номере
+            .filter__checkbox-group
+              .form-element__title Checkbox Buttons
+              .filter__checkbox
+                +checkbox({labelText: "Можно курить"})
+              .filter__checkbox
+                +checkbox({labelText: "Можно с питомцами"})
+              .filter__checkbox
+                +checkbox({labelText: "Можно пригласить гостей (до 10 человек)"})
+            .filter__ally
+              .form-element__title доступность
+              .filter__rich-checkboxes 
+                .filter__rich-checkbox
+                  +rich-checkbox({labelText: 'Широкий коридор', description: 'Ширина коридоров в номере не менее 91 см.'})
+                .filter__rich-checkbox
+                  +rich-checkbox({labelText: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
+            .filter__comfort
+              +dropdown({title: 'Удобства номера',id: 'room-1',placeholder: 'Комнаты', optionsList: [{text: 'Спальни', wordForms: 'спальня спальни спален'},{text: 'Кровати', wordForms: 'кровать кровати кроватей'},{text: 'Ванные комнаты', wordForms: 'ванная ванные ванных' }]})
+            .filter__additional
+              +expandable-list({id: 'expandable', btnId: 'expandable-btn', title: 'дополнительные удобства',list: [{labelText: 'Завтрак'}, {labelText: 'Письменный стол', checked: true},{labelText: 'Стул для кормления', checked: true},{labelText: 'Кроватка', checked: true},{labelText: 'Телевизор'},{labelText: 'Шампунь'},{labelText: 'Телевизор'},{labelText: 'Шампунь'}]})
+          section.rooms
+            h2.rooms__title Номера, которые мы для вас подобрали
+            ul.rooms__list
+              +room({num: '888',checkedRating: 5, isRatingDisabled: true, sliderImgs: ['/assets/img/1.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 145, type: 'люкс', price: '9 990₽' })
+              +room({num: '840',checkedRating: 4, isRatingDisabled: true, sliderImgs: ['/assets/img/2.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 65,  price: '9 900₽' })
+              +room({num: '980',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/assets/img/3.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 35,  type: 'люкс', price: '8 500₽' })
+              +room({num: '856',checkedRating: 5, isRatingDisabled: true, sliderImgs: ['/assets/img/4.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 19,  price: '7 300₽' })
+              +room({num: '740',checkedRating: 4, isRatingDisabled: true, sliderImgs: ['/assets/img/5.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 44,  price: '6 000₽' })
+              +room({num: '982',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/assets/img/6.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 56,  price: '5 800₽' })
+              +room({num: '678',checkedRating: 5, isRatingDisabled: true, sliderImgs: ['/assets/img/7.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 45,  price: '5 500₽' })
+              +room({num: '450',checkedRating: 4, isRatingDisabled: true, sliderImgs: ['/assets/img/8.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 39,  price: '5 300₽' })
+              +room({num: '350',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/assets/img/9.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 77,  price: '5 000₽' })
+              +room({num: '666',checkedRating: 5, isRatingDisabled: true, sliderImgs: ['/assets/img/10.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 25,  price: '5 000₽' })
+              +room({num: '444',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/assets/img/11.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 15,  price: '5 000₽' })
+              +room({num: '352',checkedRating: 3, isRatingDisabled: true, sliderImgs: ['/assets/img/12.jpg','/assets/img/1.jpg' ,'/assets/img/2.jpg', '/assets/img/1.jpg'], link: './mock',  reviewNum: 55,  price: '5 000₽' })
+            .rooms__pagination
+              +pagination({num: 15, description: "1 – 12 из 100+ вариантов аренды"})
+      +footer({extended: true,
+      copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
+        socialList: [{name: 'Twitter', link: './mock', imgLink: '/assets/img/twitter.svg'},
+        {name: 'Facebook', link: './mock', imgLink: '/assets/img/facebook.svg'},{name: 'Insta', link: './mock', imgLink: '/assets/img/insta.svg'}],
+    sub: {title: 'Subscribe to our newsletter',
+      text: 'Receive our latest news and promotions in your inbox!',
+      placeholder: 'Your email address'},
+        navLists: [{title: 'навигация',
+        items: ['О нас', 'Новости', 'Служба поддержки', 'Услуги']},
+          {title: 'о нас', 
+          items: ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']},
+          {title: 'Служба поддержки', items: ['Соглашения', 'Сообщества', 'Связь с нами']}],
+            sub: {title: 'Подписка', placeholder: 'Email', text: 'Получайте специальные предложения и новости сервиса'},
+            companyText: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»'})

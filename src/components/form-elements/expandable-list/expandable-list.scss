@@ -1,0 +1,31 @@
+.expandable-list {
+  position: relative;
+  min-height: 44px;
+
+  &__title {
+    @include form-element;
+    margin-bottom: 18px;
+    padding-right: 30px;
+  }
+
+  &__expand-btn {
+    position: absolute;
+    border: 0;
+    width: 22px;
+    height: 22px;
+    right: 11px;
+    top: -3px;
+    background-color: transparent;
+    background-image: url('/assets/components/form-elements/expandable-list/opened.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--hidden {
+      background-image: url('/assets/components/form-elements/expandable-list/hidden.svg');
+    }
+  }
+
+  &__checkbox {
+    margin-bottom: 12px;
+  }
+}

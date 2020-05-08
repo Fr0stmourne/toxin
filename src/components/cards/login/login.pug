@@ -1,0 +1,17 @@
+include ../../form-elements/text-field/text-field.pug
+
+mixin login(options)
+  .login
+    h3.login__title Войти
+    form(action=options.action)
+      .login__login-data.login-data
+        .login-data__email
+          +text-field({placeholder: "Email", name: "email"})
+        .login-data__password
+          +text-field({placeholder: "Пароль", name: "password"})
+      .login__proceed
+        +button({btnText: 'войти', type: 'proceed'})
+      .login__note.note
+        span.note__text=options.noteText
+        .note__btn
+          +button({btnText: 'Создать', type: 'secondary'})

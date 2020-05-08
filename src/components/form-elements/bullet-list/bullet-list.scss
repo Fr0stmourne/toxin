@@ -1,0 +1,27 @@
+.bullet-list {
+	font: $default-font;
+	line-height: 24px;
+	list-style: none;
+
+	&__item {
+		position: relative;
+		padding-left: 20px;
+		color: $dark-75;
+		margin-bottom: 10px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 6px;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: $dark-25;
+		}
+	}
+
+	.form-element-title {
+		margin-bottom: 14px;
+	}
+}
