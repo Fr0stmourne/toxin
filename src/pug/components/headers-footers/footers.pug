@@ -7,7 +7,7 @@ mixin footer(options)
       .container
         .main-footer__main
           .main-footer__company.company
-            .company__logos
+            a(href=options.logoLink).company__logos
               .company__logo
                 img(src="/assets/img/logo.svg", alt="Logo")
               .company__name
@@ -39,7 +39,7 @@ mixin footer(options)
     else
       .container
         .main-footer__main.main-footer__main--small
-          .company__logos
+          a(href=options.logoLink).company__logos
               .company__logo
                 img(src="/assets/img/logo.svg", alt="Logo")
               .company__name
