@@ -69,6 +69,19 @@
 	margin: 0 0 2px 0;
 	border: 0;
 
+	.bx-next,
+	.bx-prev {
+		display: none;
+	}
+
+	&:hover {
+
+		.bx-next,
+		.bx-prev {
+			display: block;
+		}
+	}
+
 	.bx-controls-direction a {
 		position: absolute;
 		top: 50%;
@@ -113,8 +126,7 @@
 		padding-right: 13px;
 		box-sizing: border-box;
 
-		&-item {
-		}
+		&-item {}
 
 		&-link {
 			background-color: transparent !important;

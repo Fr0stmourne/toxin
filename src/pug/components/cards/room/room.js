@@ -1,3 +1,3 @@
 $(document).ready(function() {
-  $('.room__slider').bxSlider();
+  $('.js-room-slider').bxSlider();
 });

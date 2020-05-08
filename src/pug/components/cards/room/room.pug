@@ -2,7 +2,7 @@ include ../../form-elements/rate-btn/rate-btn.pug
 
 mixin room(options)
   .room
-    ul.room__slider(id=options.sliderId)
+    ul.room__slider.js-room-slider(id=options.sliderId)
       each link in options.sliderImgs.length ? options.sliderImgs : ['There are no values']
         li.room__slider-item
           img(src=link, alt="slider image")
