@@ -128,6 +128,15 @@ module.exports = {
               sourceMap: true,
             },
           },
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: [
+                path.resolve(__dirname, '../src/scss/utils/variables.scss'),
+                path.resolve(__dirname, '../src/scss/utils/mixins.scss'),
+              ],
+            },
+          },
         ],
       },
     ],
