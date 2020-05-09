@@ -133,15 +133,16 @@ function addDropdown(options) {
     const initialText = $(dropdownSelector).text();
     addPlusMinus(dropdownSelector);
 
-    function closeHandler() {
-      $('.js-plus-minus-btn').click(e => e.preventDefault());
+    function closeHandler(e) {
+      e.preventDefault();
 
       $(dropdownSelector)
         .next()
         .slideToggle();
     }
 
-    function resetHandler() {
+    function resetHandler(e) {
+      e.preventDefault();
       $(dropdownSelector)
         .parent()
         .find('.js-dropdown-item input')
@@ -155,6 +156,7 @@ function addDropdown(options) {
     }
 
     function changeHandler(e) {
+      e.preventDefault();
       const dropdown = $(e.target).closest('.js-dropdown');
       dropdown.find('.js-reset').removeClass('dropdown__reset--hidden');
 
