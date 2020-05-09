@@ -9,7 +9,7 @@ function maskField(selector) {
 
   $(selector).inputmask({
     alias: 'datetime',
-    min: '01/01/1993',
+    min: '01/01/1900',
     max: maxDate,
     inputFormat: 'dd.mm.yyyy',
     placeholder: '_',
