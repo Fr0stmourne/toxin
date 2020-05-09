@@ -15,7 +15,7 @@ mixin booking(options)
     .booking__datepicker
       +datepicker-double({ start: {label: 'Прибытие', id: options.start.id}, end: {label: 'Выезд', id: options.end.id} })
     .booking__dropdown
-      +dropdown({title: 'гости', id: 'guest-3',placeholder: 'Сколько гостей', optionsList: [{text: 'Взрослые', wordForms: 'взрослый взрослых взрослых'},{text: 'Дети', wordForms: 'ребенок ребенка детей'},{text: 'Младенцы', wordForms: 'младенец младенца младенцев'}]})
+      +dropdown({title: 'гости', controls: true, id: 'guest-3',placeholder: 'Сколько гостей', optionsList: [{text: 'Взрослые', wordForms: 'гость гостя гостей', group: 1},{text: 'Дети', wordForms: 'гость гостя гостей', group: 1},{text: 'Младенцы', wordForms: 'младенец младенца младенцев'}]})
     .booking__calc.calc
       each val in options.calc.length ? options.calc : ['There are no values']
         .calc__item
