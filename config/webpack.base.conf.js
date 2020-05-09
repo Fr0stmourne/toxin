@@ -49,8 +49,15 @@ module.exports = {
         exclude: '/node_modules/',
       },
       {
-        test: /\.(jpeg|jpg|png|gif|svg)$/,
+        test: /\.(jpeg|jpg|png|gif)$/,
         loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+        },
+      },
+      {
+        test: /\.svg$/,
+        loader: 'url-loader',
         options: {
           name: '[name].[ext]',
         },
