@@ -1,12 +1,12 @@
 const path = require('path');
-const fs = require('fs');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
-const glob = require('glob');
+const TinyPngWebpackPlugin = require('tinypng-webpack-plugin');
+// const glob = require('glob');
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -14,14 +14,8 @@ const PATHS = {
   assets: 'assets/',
 };
 
-const PAGES_DIR = `${PATHS.src}/`;
-// let PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
-let PAGES = [];
-glob(`${__dirname}/../src/pages/**/*.pug`, {}, (err, files) => {
-  console.warn('ФАЙЛЫ', files);
-
-  PAGES = files;
-});
+// const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
+// const PAGES = glob.sync(`${__dirname}/../src/pages/**/*.pug`);
 
 module.exports = {
   // BASE config
@@ -162,10 +156,6 @@ module.exports = {
       'window.$': 'jquery',
     }),
     new CopyWebpackPlugin([
-      // {
-      //   from: `${PATHS.src}/img`,
-      //   to: `${PATHS.assets}img`,
-      // },
       {
         from: `${PATHS.src}/fonts`,
         to: `${PATHS.assets}fonts`,
@@ -174,10 +164,6 @@ module.exports = {
         from: `${PATHS.src}/components`,
         to: `${PATHS.assets}components`,
       },
-      // {
-      //   test: /\.(jpe?g|png|gif|svg)/,
-      //   to: `${PATHS.assets}img`,
-      // },
     ]),
     // ...PAGES.map(
     //   page =>
@@ -230,5 +216,9 @@ module.exports = {
       filename: `signin-page.html`,
     }),
     new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
+    new TinyPngWebpackPlugin({
+      ext: ['png', 'jpeg', 'jpg'],
+      key: 'RsCZev1geyFwOKznstLNGmxugsTZZmG6',
+    }),
   ],
 };
