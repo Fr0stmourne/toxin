@@ -1,13 +1,13 @@
 import 'air-datepicker/dist/js/datepicker';
 import 'air-datepicker/dist/css/datepicker.css';
 
-const defaultOptions = {
+export const defaultOptions = {
   navTitles: {
     days: 'MM yyyy',
   },
 };
 
-const inlineOptions = {
+export const inlineOptions = {
   inline: true,
   clearButton: true,
   navTitles: {
@@ -15,7 +15,7 @@ const inlineOptions = {
   },
 };
 
-function addDefaultDatepicker(selector) {
+export function addDefaultDatepicker(selector) {
   $(`${selector}`).datepicker({
     todayHighlight: true,
     clearBtn: true,
@@ -23,7 +23,7 @@ function addDefaultDatepicker(selector) {
   });
 }
 
-function addRangeDatepicker(startElSelector, endElSelector, options) {
+export function addRangeDatepicker(startElSelector, endElSelector, options) {
   $(`${startElSelector}`).datepicker({
     ...options,
     onSelect(fd) {
@@ -33,11 +33,8 @@ function addRangeDatepicker(startElSelector, endElSelector, options) {
   });
 }
 
-addDefaultDatepicker('#datepicker');
-addDefaultDatepicker('#find-room-datepicker');
-addDefaultDatepicker('#booking-datepicker');
+// addDefaultDatepicker('#datepicker');
+// addDefaultDatepicker('#find-room-datepicker');
+// addDefaultDatepicker('#booking-datepicker');
 
-addRangeDatepicker('#cards__start', '#cards__end', defaultOptions);
-addRangeDatepicker('#cards__start-1', '#cards__end-1', defaultOptions);
-addRangeDatepicker('#cards-date__start', '#cards-date__end', inlineOptions);
 addRangeDatepicker('#date-dropdown__start', '#date-dropdown__end', defaultOptions);

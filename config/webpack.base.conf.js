@@ -5,7 +5,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
-const TinyPngWebpackPlugin = require('tinypng-webpack-plugin');
 // const glob = require('glob');
 
 const PATHS = {
@@ -216,9 +215,5 @@ module.exports = {
       filename: `signin-page.html`,
     }),
     new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
-    new TinyPngWebpackPlugin({
-      ext: ['png', 'jpeg', 'jpg'],
-      key: 'RsCZev1geyFwOKznstLNGmxugsTZZmG6',
-    }),
   ],
 };
