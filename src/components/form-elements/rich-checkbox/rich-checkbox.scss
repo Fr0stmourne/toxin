@@ -10,6 +10,7 @@
 	cursor: pointer;
 
 	&__checkmark {
+		display: inline-block;
 		position: absolute;
 		left: 0;
 		top: 0px;
