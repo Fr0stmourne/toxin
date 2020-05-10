@@ -18,4 +18,6 @@ function maskField(selector) {
   });
 }
 
-maskField('.js-date');
+$(() => {
+  maskField('.js-date');
+});

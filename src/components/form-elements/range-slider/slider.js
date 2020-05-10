@@ -14,7 +14,7 @@ function formatNumber(num) {
     .join(' ');
 }
 
-function addSlider(options) {
+export default function addSlider(options) {
   $(options.inputSelector).slider({
     range: true,
     min: options.min,
@@ -31,13 +31,3 @@ function addSlider(options) {
     )}₽`,
   );
 }
-
-$(() => {
-  addSlider({
-    inputSelector: '#slider-range',
-    min: 0,
-    max: 15000,
-    values: [5000, 10000],
-    textSelector: '#amount',
-  });
-});

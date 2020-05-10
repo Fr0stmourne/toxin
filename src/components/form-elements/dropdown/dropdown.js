@@ -127,7 +127,7 @@ function getCorrectWordForm(n, textForms) {
 
 /* eslint-enable */
 
-function addDropdown(options) {
+export default function addDropdown(options) {
   options.ids.forEach(id => {
     const dropdownSelector = `#${id}`;
     const initialText = $(dropdownSelector).text();
@@ -229,19 +229,3 @@ function addDropdown(options) {
     $(dropdownSelector).click();
   });
 }
-
-$(() => {
-  addDropdown({
-    ids: [
-      'booking-dropdown',
-      'guest',
-      'guest-1',
-      'guest-2',
-      'guest-3',
-      'room-1',
-      'room-2',
-      'find-room-dropdown',
-      'booking-dropdown',
-    ],
-  });
-});

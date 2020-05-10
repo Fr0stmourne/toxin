@@ -29,9 +29,9 @@ html(lang="ru")
             .filter__date-filter
               +date-filter({title: 'даты пребывания в отеле'})
             .filter__guests
-              +dropdown({title: 'гости', controls: true, id: 'guest-3',placeholder: 'Сколько гостей', optionsList: [{text: 'Взрослые', wordForms: 'гость гостя гостей', group: 1},{text: 'Дети', wordForms: 'гость гостя гостей', group: 1},{text: 'Младенцы', wordForms: 'младенец младенца младенцев'}]})
+              +dropdown({title: 'гости', controls: true, id: 'search-room-dropdown',placeholder: 'Сколько гостей', optionsList: [{text: 'Взрослые', wordForms: 'гость гостя гостей', group: 1},{text: 'Дети', wordForms: 'гость гостя гостей', group: 1},{text: 'Младенцы', wordForms: 'младенец младенца младенцев'}]})
             .filter__slider
-              +range-slider({title: 'диапазон цены'})
+              +range-slider({title: 'диапазон цены', id: 'search-room-slider'})
               .filter__slider-hint Стоимость за сутки пребывания в номере
             .filter__checkbox-group
               .form-element__title Checkbox Buttons
@@ -49,7 +49,7 @@ html(lang="ru")
                 .filter__rich-checkbox
                   +rich-checkbox({labelText: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист  и проводит до номера.'})
             .filter__comfort
-              +dropdown({title: 'Удобства номера',id: 'room-1',placeholder: 'Комнаты', optionsList: [{text: 'Спальни', wordForms: 'спальня спальни спален'},{text: 'Кровати', wordForms: 'кровать кровати кроватей'},{text: 'Ванные комнаты', wordForms: 'ванная ванные ванных' }]})
+              +dropdown({title: 'Удобства номера',id: 'search-room-dropdown-1',placeholder: 'Комнаты', optionsList: [{text: 'Спальни', wordForms: 'спальня спальни спален'},{text: 'Кровати', wordForms: 'кровать кровати кроватей'},{text: 'Ванные комнаты', wordForms: 'ванная ванные ванных' }]})
             .filter__additional
               +expandable-list({id: 'expandable', btnId: 'expandable-btn', title: 'дополнительные удобства',list: [{labelText: 'Завтрак'}, {labelText: 'Письменный стол', checked: true},{labelText: 'Стул для кормления', checked: true},{labelText: 'Кроватка', checked: true},{labelText: 'Телевизор'},{labelText: 'Шампунь'},{labelText: 'Телевизор'},{labelText: 'Шампунь'}]})
           section.rooms

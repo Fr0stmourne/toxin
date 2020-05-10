@@ -36,5 +36,3 @@ export function addRangeDatepicker(startElSelector, endElSelector, options) {
 // addDefaultDatepicker('#datepicker');
 // addDefaultDatepicker('#find-room-datepicker');
 // addDefaultDatepicker('#booking-datepicker');
-
-addRangeDatepicker('#date-dropdown__start', '#date-dropdown__end', defaultOptions);
