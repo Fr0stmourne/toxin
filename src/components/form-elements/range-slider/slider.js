@@ -15,19 +15,22 @@ function formatNumber(num) {
 }
 
 export default function addSlider(options) {
-  $(options.inputSelector).slider({
+  const input = $(options.sliderSelector)
+    .parent()
+    .find('input');
+  $(options.sliderSelector).slider({
     range: true,
     min: options.min,
     max: options.max,
     values: options.values,
     slide(event, ui) {
-      $(options.textSelector).val(`${formatNumber(ui.values[0])}₽ - ${formatNumber(ui.values[1])}₽`);
+      input.val(`${formatNumber(ui.values[0])}₽ - ${formatNumber(ui.values[1])}₽`);
     },
   });
 
-  $(options.textSelector).val(
-    `${formatNumber($(options.inputSelector).slider('values', 0))}₽ - ${formatNumber(
-      $(options.inputSelector).slider('values', 1),
+  input.val(
+    `${formatNumber($(options.sliderSelector).slider('values', 0))}₽ - ${formatNumber(
+      $(options.sliderSelector).slider('values', 1),
     )}₽`,
   );
 }

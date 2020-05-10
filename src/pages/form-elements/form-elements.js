@@ -9,7 +9,7 @@ $(() => {
   });
 
   addSlider({
-    inputSelector: '#slider-range',
+    sliderSelector: '#form-elements-slider',
     min: 0,
     max: 15000,
     values: [5000, 10000],

@@ -7,10 +7,9 @@ $(() => {
   });
 
   addSlider({
-    inputSelector: '#slider-range',
+    sliderSelector: '#search-room-slider',
     min: 0,
     max: 15000,
     values: [5000, 10000],
-    textSelector: '#amount',
   });
 });
