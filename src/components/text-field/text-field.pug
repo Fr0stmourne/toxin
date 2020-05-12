@@ -1,4 +1,4 @@
-mixin text-field(options)
-  if options.title
-    .text-field__title=options.title
-  input.text-field(type="text", name=options.name, placeholder=options.placeholder)
+mixin text-field({title = 'Текстовое поле', placeholder = 'Введите что-то...'})
+  if title
+    .text-field__title=title
+  input.text-field(type="text" name=name placeholder=placeholder)

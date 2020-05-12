@@ -1,6 +1,6 @@
 include ../buttons/buttons.pug
 
-mixin header(options)
+mixin header({items = [], unlogged = false, loginText = 'Войти', regText = 'Зарегистрироваться', username = 'Иван Иванов'})
   header.main-header
     .container
       h1.visually-hidden Toxin
@@ -12,19 +12,19 @@ mixin header(options)
       div.main-header__menu
         nav.main-logo__nav.nav
           ul.main-logo__nav-list.nav__list
-            each val in options.items.length ? options.items : ['There are no values']
+            each val in items.length ? items : ['There are no values']
               li.nav__item(class=val.dropdown ? 'nav__item_dropdown' : '')
                 a.nav__link(href=val.link class=val.active ? 'nav__link_active' : '')=val.text
                 if val.dropdown
                   .nav__dropdown-content
                     each dropdownItem in val.dropdown.length ? val.dropdown : ['None']
                       a.nav__dropdown-link(href=dropdownItem.link)=dropdownItem.text              
-        if options.unlogged
+        if unlogged
           .login-menu.main-logo__login
             .login-menu__login
-              +button({btnText: options.loginText, type: 'secondary'})
+              +button({btnText: loginText, type: 'secondary'})
             .login-menu__register
-              +button({btnText: options.regText})
+              +button({btnText: regText})
         else
           .main-logo__login.login-menu.login-menu_logged
-            =options.username
+            =username

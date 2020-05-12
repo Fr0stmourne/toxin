@@ -1,2 +1,2 @@
-mixin link(options)
-  a.link(href=options.link)=options.linkText
+mixin link({link = './mock', linkText = 'Ссылка'})
+  a.link(href=link)=linkText

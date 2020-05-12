@@ -1,20 +1,20 @@
-mixin page(options)
-  li.pagination__page(class=options.active? 'pagination__page_active' : '' )
-    a.pagination__page-link(href=options.link)=options.linkText
+mixin page({ active = false, link = './mock', linkText = 'Текст' })
+  li.pagination__page(class=active? 'pagination__page_active' : '' )
+    a.pagination__page-link(href=link)=linkText
 
-mixin pagination(options)
+mixin pagination({title = 'Пагинация', num = 10, description = 'Описание пагинации'})
  .pagination__container
-    if options.title
-      .form-element-title=options.title
+    if title
+      .form-element-title=title
     ul.pagination
       +page({active: true , link: 1, linkText: 1})
       +page({active: false , link: 2, linkText: 2})
       +page({active: false , link: 3, linkText: 3})
       li.pagination__hidden-pages ... 
-      +page({active: false , link: options.num, linkText: options.num})
+      +page({active: false , link: num, linkText: num})
       li.pagination__next
         a(href='./mock').pagination__next-page
           span.visually-hidden Next page
-    p.pagination__description=options.description
+    p.pagination__description=description
 
 

@@ -1,7 +1,7 @@
-mixin subscription(options)
+mixin subscription({title = 'Подписка', name = 'subscription-input', placeholder = 'Введите почту'})
   .subscription
-    if options.title
-      .form-element-title=options.title
-    input.subscription__input(type="email", name=options.name, placeholder=options.placeholder)
+    if title
+      .form-element-title=title
+    input.subscription__input(type="email" name=name placeholder=placeholder)
     button.subscription__submit-btn(type="submit")
       span.visually-hidden Submit

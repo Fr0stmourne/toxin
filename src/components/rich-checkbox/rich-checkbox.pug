@@ -1,6 +1,6 @@
-mixin rich-checkbox(options)
+mixin rich-checkbox({inputName = 'rich-checkbox', labelText = 'Заголовок', description = 'Описание пункта'})
   label.rich-checkbox
-    input.rich-checkbox__input.visually-hidden(type="checkbox", name=options.inputName)
+    input.rich-checkbox__input.visually-hidden(type="checkbox", name=inputName)
     span.rich-checkbox__checkmark
-    span.rich-checkbox__label-text=options.labelText
-    span.rich-checkbox__description=options.description
+    span.rich-checkbox__label-text=labelText
+    span.rich-checkbox__description=description

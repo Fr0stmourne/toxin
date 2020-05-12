@@ -1,6 +1,6 @@
-mixin range-slider(options)
+mixin range-slider({ title = 'Слайдер', id })
   .slider
     .slider__info
-      .slider__title=options.title
-      input.slider__input(type="text" name=options.id readonly)
-    div(id=options.id)
+      .slider__title=title
+      input.slider__input(type="text" name=id readonly)
+    div(id=id)

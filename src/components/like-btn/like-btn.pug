@@ -1,2 +1,2 @@
-mixin like-btn(options)
-  button.like-btn.js-like-btn(class=options.active? 'like-btn_active' : '')=options.likes
+mixin like-btn({active = false, likes = 5})
+  button.like-btn.js-like-btn(class=active? 'like-btn_active' : '')=likes

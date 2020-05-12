@@ -4,9 +4,9 @@ include ../masked-text-field/masked-text-field.pug
 include ../toggle/toggle.pug
 include ../buttons/buttons.pug
 
-mixin registration(options)
+mixin registration({title = 'Регистрация', noteText = 'Уже зарегистрированы?'})
   form.registration
-    h3.registration__title=options.title
+    h3.registration__title=title
     .registration__name
       +text-field({placeholder: 'Имя', name:'name'})
     .registration__surname
@@ -28,7 +28,7 @@ mixin registration(options)
     .registration__proceed
       +button({btnText: 'перейти к оплате', type: 'proceed'})
     .registration__note.note
-      span.note__text=options.noteText
+      span.note__text=noteText
       .note__btn
         +button({btnText: 'войти', type: 'secondary'})
 

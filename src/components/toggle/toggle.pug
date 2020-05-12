@@ -1,5 +1,5 @@
-mixin toggle(options)
+mixin toggle({name = 'toggle-input', btnText = 'Переключатель'})
   label.toggle-btn
-    input.toggle-btn__input.visually-hidden(type="checkbox", name=options.name)
+    input.toggle-btn__input.visually-hidden(type="checkbox" name=name)
     span.toggle-btn__box
-    =options.btnText
+    =btnText
