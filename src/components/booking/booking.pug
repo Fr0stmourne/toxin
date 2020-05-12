@@ -13,9 +13,35 @@ mixin booking({num = 1, type = '', price = '0', calc = [], fullPrice = 0, start,
         span.booking__price=price
         span.booking__measurement  в сутки
     .booking__datepicker
-      +datepicker-double({ start: {label: 'Прибытие', id: start.id}, end: {label: 'Выезд', id: end.id} })
+      +datepicker-double({
+        start: {
+          label: 'Прибытие',
+          id: start.id
+        },
+        end: {
+          label: 'Выезд',
+          id: end.id
+        }
+      })
     .booking__dropdown
-      +dropdown({title: 'гости', controls: true, id: 'booking-dropdown', placeholder: 'Сколько гостей', optionsList: [{text: 'Взрослые', wordForms: 'гость гостя гостей', group: 1},{text: 'Дети', wordForms: 'гость гостя гостей', group: 1},{text: 'Младенцы', wordForms: 'младенец младенца младенцев'}]})
+      +dropdown({
+        title: 'гости',
+        controls: true,
+        id: 'booking-dropdown',
+        placeholder: 'Сколько гостей',
+        optionsList: [{
+          text: 'Взрослые',
+          wordForms: 'гость гостя гостей',
+          group: 1
+        }, {
+          text: 'Дети',
+          wordForms: 'гость гостя гостей',
+          group: 1
+        }, {
+          text: 'Младенцы',
+          wordForms: 'младенец младенца младенцев'
+        }]
+      })
     .booking__calc.calc
       each val in calc.length ? calc : ['There are no values']
         .calc__item
