@@ -1,6 +1,6 @@
-mixin date-filter(options)
+mixin date-filter({title = 'Заголовок'})
   .date-filter.date-filter_range.js-date-filter-range
-    if options.title
-      .form-element-title=options.title
+    if title
+      .form-element-title=title
     input.date-filter__input.js-date-filter-input(type="text" data-range="true" data-multiple-dates-separator=" - ")
   

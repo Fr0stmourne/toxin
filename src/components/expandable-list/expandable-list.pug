@@ -1,10 +1,10 @@
 include ../checkbox-buttons/checkbox.pug
 
-mixin expandable-list(options)
+mixin expandable-list({title = 'Заголовок', id, btnId, list = []})
   .expandable-list
-    .expandable-list__title=options.title
-    button.expandable-list__expand-btn.js-expandable-btn(id=options.btnId)
-    ul.expandable-list__list.js-expandable(id=options.id)
-      each val in options.list ? options.list : ['There are no values']
+    .expandable-list__title=title
+    button.expandable-list__expand-btn.js-expandable-btn(id=btnId)
+    ul.expandable-list__list.js-expandable(id=id)
+      each val in list ? list : ['There are no values']
         li.expandable-list__checkbox
           +checkbox({labelText: val.labelText, checked: val.checked})

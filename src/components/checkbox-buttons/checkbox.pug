@@ -1,7 +1,7 @@
-mixin checkbox(options)
-  if options.title
-    .form-element-title=options.title
+mixin checkbox({title = 'Заголовок', inputName = 'checkbox-input', checked = false, labelText = 'Поставьте галочку'})
+  if title
+    .form-element-title=title
   label.checkbox
-    input.checkbox__input.visually-hidden(type="checkbox", name=options.inputName, checked=options.checked)
+    input.checkbox__input.visually-hidden(type="checkbox", name=inputName, checked=checked)
     span.checkbox__checkmark
-    =options.labelText
+    =labelText

@@ -2,22 +2,22 @@ include ../datepicker/datepicker.pug
 include ../dropdown/dropdown.pug
 include ../buttons/buttons.pug
 
-mixin booking(options)
+mixin booking({num = 1, type = '', price = '0', calc = [], fullPrice = 0, start, end})
   form.booking
     .booking__room-info
       .booking__room
         span №
-          span.booking__num=options.num
-        span.booking__type=options.type
+          span.booking__num=num
+        span.booking__type=type
       .booking__per-day
-        span.booking__price=options.price
+        span.booking__price=price
         span.booking__measurement  в сутки
     .booking__datepicker
-      +datepicker-double({ start: {label: 'Прибытие', id: options.start.id}, end: {label: 'Выезд', id: options.end.id} })
+      +datepicker-double({ start: {label: 'Прибытие', id: start.id}, end: {label: 'Выезд', id: end.id} })
     .booking__dropdown
       +dropdown({title: 'гости', controls: true, id: 'booking-dropdown', placeholder: 'Сколько гостей', optionsList: [{text: 'Взрослые', wordForms: 'гость гостя гостей', group: 1},{text: 'Дети', wordForms: 'гость гостя гостей', group: 1},{text: 'Младенцы', wordForms: 'младенец младенца младенцев'}]})
     .booking__calc.calc
-      each val in options.calc.length ? options.calc : ['There are no values']
+      each val in calc.length ? calc : ['There are no values']
         .calc__item
           .calc__position
             .calc__item-description=val[0]
@@ -28,7 +28,7 @@ mixin booking(options)
           .calc__price=val[1]
     .booking__result Итого
       .booking__dots
-      .booking__price=options.fullPrice
+      .booking__price=fullPrice
     +button({btnText: 'забронировать', type: 'proceed'})
       
 

@@ -1,18 +1,18 @@
-mixin datepicker(options)
+mixin datepicker({title = 'Заголовок', id, start, end})
   .datepicker-single
-    if options.title
-      .form-element-title=options.title
-    input.datepicker-single__input(type="text" id=options.id placeholder="ДД.ММ.ГГГГ" class='datepicker-here')
+    if title
+      .form-element-title=title
+    input.datepicker-single__input(type="text" id=id placeholder="ДД.ММ.ГГГГ" class='datepicker-here')
 
-mixin datepicker-double(options)
+mixin datepicker-double({start, end})
   .datepicker-double
     .datepicker-double__start
-      label.datepicker-double__label(for=options.start.id)=options.start.label
+      label.datepicker-double__label(for=start.id)=start.label
       .datepicker-double__box
-        input.datepicker-double__input.js-range-datepicker-start(type="text" id=options.start.id data-range="true" name=options.name data-multiple-dates-separator=" - " class="datepicker-here" placeholder="ДД.ММ.ГГГГ")
+        input.datepicker-double__input.js-range-datepicker-start(type="text" id=start.id data-range="true" name=name data-multiple-dates-separator=" - " class="datepicker-here" placeholder="ДД.ММ.ГГГГ")
     .datepicker-double__end
-      label.datepicker-double__label(for=options.end.id)=options.end.label
+      label.datepicker-double__label(for=end.id)=end.label
       .datepicker-double__box
-        input.datepicker-double__input.js-range-datepicker-end(type="text" id=options.end.id data-range="true" name=options.name data-multiple-dates-separator=" - " class="datepicker-here" placeholder="ДД.ММ.ГГГГ")
+        input.datepicker-double__input.js-range-datepicker-end(type="text" id=end.id data-range="true" name=name data-multiple-dates-separator=" - " class="datepicker-here" placeholder="ДД.ММ.ГГГГ")
   
 
