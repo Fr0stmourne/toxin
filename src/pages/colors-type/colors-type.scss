@@ -1,3 +1,72 @@
+.colors-type .container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 145px;
+}
+
+.colors {
+  font: $datepicker-switch;
+
+  &__list {
+    margin-left: 10px;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.5;
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__text {
+    font-weight: 400;
+  }
+
+  &__sample {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    margin-right: 40px;
+  }
+}
+
+.dark-100 {
+  background-color: $dark-100;
+}
+
+.dark-75 {
+  background-color: $dark-75;
+}
+
+.dark-50 {
+  background-color: $dark-50;
+}
+
+.dark-25 {
+  background-color: $dark-25;
+}
+
+.dark-5 {
+  background-color: $dark-5;
+}
+
+.purple {
+  background-color: $purple;
+}
+
+.green {
+  background-color: $green;
+}
+
 .type {
   margin-right: 48px;
 

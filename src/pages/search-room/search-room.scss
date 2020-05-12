@@ -59,3 +59,109 @@
 		box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 	}
 }
+
+.rooms {
+	&__title {
+		font: $h1-font;
+		margin-top: 19px;
+		letter-spacing: 0.03em;
+
+		@media (max-width: 850px) {
+			text-align: center;
+			font-size: 17px;
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 270px);
+		grid-gap: 18px 13px;
+		margin-bottom: 40px;
+
+		@media (max-width: 850px) {
+			grid-template-columns: 1fr;
+			justify-items: center;
+		}
+	}
+
+	&__pagination {
+		display: flex;
+		justify-content: center;
+		margin-right: 15px;
+		margin-bottom: 70px;
+	}
+}
+
+.filter {
+	max-width: 266px;
+	margin-top: 18px;
+
+	@media (max-width: 550px) {
+		max-width: none;
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+		gap: 10px;
+	}
+
+	@media (max-width: 500px) {
+		max-width: none;
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
+
+	&__date-filter {
+		margin-bottom: 20px;
+	}
+
+	&__guests {
+		margin-bottom: 30px;
+	}
+
+	&__slider-hint {
+		font: $default-font;
+		font-size: 12px;
+	}
+
+	&__slider {
+		margin-bottom: 30px;
+
+		.slider {
+			margin-bottom: 13px;
+		}
+	}
+
+	&__checkbox-group {
+		margin-bottom: 32px;
+	}
+
+	&__checkbox {
+		margin: 10px 0 12px;
+		max-width: 222px;
+	}
+
+	&__ally {
+		margin-bottom: 31px;
+	}
+
+	&__rich-checkbox {
+		margin-bottom: 8px;
+
+		&:nth-child(1) .rich-checkbox__description {
+			max-width: 205px;
+		}
+
+		&:nth-child(2) .rich-checkbox__description {
+			max-width: 230px;
+		}
+	}
+
+	&__comfort {
+		margin-bottom: 30px;
+	}
+}
+
+.form-element__title {
+	@include form-element;
+	margin-bottom: 16px;
+}
