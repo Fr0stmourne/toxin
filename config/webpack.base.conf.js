@@ -125,8 +125,8 @@ module.exports = {
             loader: 'sass-resources-loader',
             options: {
               resources: [
-                path.resolve(__dirname, '../src/scss/utils/variables.scss'),
-                path.resolve(__dirname, '../src/scss/utils/mixins.scss'),
+                path.resolve(__dirname, '../src/utils/variables.scss'),
+                path.resolve(__dirname, '../src/utils/mixins.scss'),
               ],
             },
           },
@@ -141,11 +141,6 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].css`,
-    }),
-    new HtmlWebpackPlugin({
-      hash: false,
-      template: `${PATHS.src}/index.html`,
-      filename: './index.html',
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
