@@ -13,8 +13,8 @@ mixin header(options)
         nav.main-logo__nav.nav
           ul.main-logo__nav-list.nav__list
             each val in options.items.length ? options.items : ['There are no values']
-              li.nav__item(class=val.dropdown ? 'nav__item--dropdown' : '')
-                a.nav__link(href=val.link class=val.active ? 'nav__link--active' : '')=val.text
+              li.nav__item(class=val.dropdown ? 'nav__item_dropdown' : '')
+                a.nav__link(href=val.link class=val.active ? 'nav__link_active' : '')=val.text
                 if val.dropdown
                   .nav__dropdown-content
                     each dropdownItem in val.dropdown.length ? val.dropdown : ['None']
@@ -26,5 +26,5 @@ mixin header(options)
             .login-menu__register
               +button({btnText: options.regText})
         else
-          .main-logo__login.login-menu.login-menu--logged
+          .main-logo__login.login-menu.login-menu_logged
             =options.username

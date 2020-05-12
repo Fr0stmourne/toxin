@@ -1,4 +1,4 @@
-const listClass = 'expandable-list__expand-btn--hidden';
+const listClass = 'expandable-list__expand-btn_hidden';
 const list = '.js-expandable';
 const btn = '.js-expandable-btn';
 

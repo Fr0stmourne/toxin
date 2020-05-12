@@ -1,4 +1,4 @@
-const activeClass = 'like-btn--active';
+const activeClass = 'like-btn_active';
 
 $('.js-like-btn').click(e => {
   const currentNum = +$(e.target).text();

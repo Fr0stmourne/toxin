@@ -60,7 +60,7 @@
 			}
 		}
 
-		&--active &-link {
+		&_active &-link {
 			background-image: $btn-gradient;
 			color: $white;
 			font-weight: 700;

@@ -21,11 +21,11 @@
 		border-color: rgba($purple, 0.5);
 	}
 
-	&--primary {
+	&_primary {
 		color: $white;
 	}
 
-	&--secondary {
+	&_secondary {
 		color: $purple;
 		z-index: 1;
 
@@ -43,7 +43,7 @@
 		}
 	}
 
-	&--proceed {
+	&_proceed {
 		color: $white;
 		padding-right: 40px;
 		padding-left: 40px;

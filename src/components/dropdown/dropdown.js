@@ -4,15 +4,15 @@
   $.fn.htmlNumberSpinner = function() {
     /* creating the counter buttons */
     $(this).append(
-      "<button class='plus-minus__btn js-plus-minus-btn plus-minus__btn--minus js-minus-btn'>-</button> <input class='plus-minus__input' type='number'/> <button class='plus-minus__btn js-plus-minus-btn plus-minus__btn--plus js-plus-btn'>+</button>",
+      "<button class='plus-minus__btn js-plus-minus-btn plus-minus__btn_minus js-minus-btn'>-</button> <input class='plus-minus__input' type='number'/> <button class='plus-minus__btn js-plus-minus-btn plus-minus__btn_plus js-plus-btn'>+</button>",
     );
 
     /* default value and variables and jquery elements */
     const defaultValue = 0;
     let inputValue;
     const numberInput$ = $(this).find('.plus-minus__input');
-    const incrementerEl$ = $(this).find('.plus-minus__btn--plus');
-    const decrementerEl$ = $(this).find('.plus-minus__btn--minus');
+    const incrementerEl$ = $(this).find('.plus-minus__btn_plus');
+    const decrementerEl$ = $(this).find('.plus-minus__btn_minus');
 
     /* hide the default number input spinner */
     $(this).append(
@@ -158,7 +158,7 @@ export default function addDropdown(options) {
     function changeHandler(e) {
       e.preventDefault();
       const dropdown = $(e.target).closest('.js-dropdown');
-      dropdown.find('.js-reset').removeClass('dropdown__reset--hidden');
+      dropdown.find('.js-reset').removeClass('dropdown__reset_hidden');
 
       const resultArr = [];
 

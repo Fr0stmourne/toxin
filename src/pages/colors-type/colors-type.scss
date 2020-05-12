@@ -81,7 +81,7 @@
       padding-bottom: 50px;
     }
 
-    &--h1 {
+    &_h1 {
       font: $h1-font;
 
       .type__type {
@@ -92,7 +92,7 @@
       }
     }
 
-    &--h2 {
+    &_h2 {
       font: $h2-font;
 
       .type__type {
@@ -102,7 +102,7 @@
       }
     }
 
-    &--h3 {
+    &_h3 {
       font: $btn-font;
       text-transform: uppercase;
 
@@ -116,7 +116,7 @@
       }
     }
 
-    &--body {
+    &_body {
       font: $default-font;
 
       .type__type {
