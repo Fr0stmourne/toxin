@@ -1,6 +1,20 @@
 include ../rate-btn/rate-btn.pug
 
-mixin room({sliderId, sliderImgs = [], link = './mock', type = '', price = '0', name = 'room-rating', checkedRating = 4, isRatingDisabled = true, reviewNum = 10, reviewsLink = './mock'})
+mixin room(options = {})
+  -
+    var {
+      sliderId, 
+      num = 1, 
+      sliderImgs = [], 
+      link = './mock', 
+      type = '', 
+      price = '0', 
+      name = 'room-rating', 
+      checkedRating = 4, 
+      isRatingDisabled = true, 
+      reviewNum = 10, 
+      reviewsLink = './mock'
+    } = options
   .room
     ul.room__slider.js-room-slider(id=sliderId)
       each link in sliderImgs.length ? sliderImgs : ['There are no values']

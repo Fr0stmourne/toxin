@@ -1,4 +1,4 @@
-mixin button({type, btnText = 'Кнопка'})
+mixin button({type, btnText = 'Кнопка'} = {})
   case type
     when 'secondary'
       - var btnClass = 'btn btn_secondary'

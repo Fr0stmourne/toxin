@@ -1,6 +1,14 @@
 include ../subscription/subscription.pug
 
-mixin footer({ extended = false, logoLink = './mock', companyText = 'Текст о компании', navLists = [], copyright = 'Копирайт', socialList = [], sub = {title:'Подписка', text: 'Текст подписки', placeholder: 'Заглушка'} })
+mixin footer(options = {})
+  -
+    var { extended = false, 
+    logoLink = './mock', 
+    companyText = 'Текст о компании', 
+    navLists = [], 
+    copyright = 'Копирайт', 
+    socialList = [], 
+    sub = {title:'Подписка', text: 'Текст подписки', placeholder: 'Заглушка'} } = options
   footer.main-footer
     h2.visually-hidden Page footer
     if extended

@@ -1,7 +1,7 @@
-mixin plus-minus({min = 0, max = 5, id, name = 'plus-minus-input'})
+mixin plus-minus({min = 0, max = 5, id, name = 'plus-minus-input'} = {})
   .js-plus-minus.plus-minus(min=min max=max id=id name=name)
 
-mixin dropdown({title = 'Заголовок', placeholder = 'Список', optionsList = [], min = 0, max = 5, id, name = 'plus-minus-input', controls = false})
+mixin dropdown({title, placeholder = 'Список', optionsList = [], min = 0, max = 5, id, name = 'plus-minus-input', controls = false} = {})
   .dropdown.js-dropdown
     if title
       .text-field__title=title

@@ -2,7 +2,7 @@ include ../datepicker/datepicker.pug
 include ../dropdown/dropdown.pug
 include ../buttons/buttons.pug
 
-mixin find-room({title = 'Заголовок', start, end, dropdownLabel = 'Меню'})
+mixin find-room({title, start, end, dropdownLabel} = {})
   form.find-room
     h3.find-room__title=title
     .find-room__datepicker

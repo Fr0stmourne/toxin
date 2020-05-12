@@ -1,6 +1,6 @@
 include ../like-btn/like-btn.pug
 
-mixin comment({src = './mock', author = 'Автор', date = '31.12.2020', likes = 5, activeLike = false, comment = 'Комментарий'})
+mixin comment({src = './mock', author = 'Автор', date = '31.12.2020', likes = 5, activeLike = false, comment = 'Комментарий'} = {})
   .comment
     .comment__info
       img.comment__photo(src=src, alt='Фото автора комментария')

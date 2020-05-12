@@ -1,10 +1,10 @@
-mixin datepicker({title = 'Заголовок', id, start, end})
+mixin datepicker({title, id, start, end} = {})
   .datepicker-single
     if title
       .form-element-title=title
     input.datepicker-single__input(type="text" id=id placeholder="ДД.ММ.ГГГГ" class='datepicker-here')
 
-mixin datepicker-double({start, end})
+mixin datepicker-double({start, end} = {})
   .datepicker-double
     .datepicker-double__start
       label.datepicker-double__label(for=start.id)=start.label

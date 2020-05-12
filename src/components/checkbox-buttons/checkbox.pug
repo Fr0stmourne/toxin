@@ -1,4 +1,4 @@
-mixin checkbox({title = 'Заголовок', inputName = 'checkbox-input', checked = false, labelText = 'Поставьте галочку'})
+mixin checkbox({title, inputName = 'checkbox-input', checked = false, labelText = 'Поставьте галочку'} = {})
   if title
     .form-element-title=title
   label.checkbox

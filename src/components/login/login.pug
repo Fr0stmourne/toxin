@@ -1,6 +1,6 @@
 include ../text-field/text-field.pug
 
-mixin login({action = './mock', noteText = 'Подсказка'})
+mixin login({action = './mock', noteText = 'Подсказка'} = {})
   .login
     h3.login__title Войти
     form(action=action)

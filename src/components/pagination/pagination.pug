@@ -1,8 +1,8 @@
-mixin page({ active = false, link = './mock', linkText = 'Текст' })
+mixin page({ active = false, link = './mock', linkText = 'Текст' } = {})
   li.pagination__page(class=active? 'pagination__page_active' : '' )
     a.pagination__page-link(href=link)=linkText
 
-mixin pagination({title = 'Пагинация', num = 10, description = 'Описание пагинации'})
+mixin pagination({title = 'Пагинация', num = 10, description = 'Описание пагинации'} = {})
  .pagination__container
     if title
       .form-element-title=title

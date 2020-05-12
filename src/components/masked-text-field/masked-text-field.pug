@@ -1,6 +1,6 @@
 include ../text-field/text-field.pug
 
-mixin masked-text-field({title = 'Заголовок', name = 'masked-field-input', placeholder = 'Дата'})
+mixin masked-text-field({title, name = 'masked-field-input', placeholder = 'Дата'} = {})
   if title
     .form-element-title=title
   input.text-field.js-date(type="text" name=name placeholder=placeholder)

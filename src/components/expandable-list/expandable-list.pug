@@ -1,6 +1,6 @@
 include ../checkbox-buttons/checkbox.pug
 
-mixin expandable-list({title = 'Заголовок', id, btnId, list = []})
+mixin expandable-list({title, id, btnId, list = []} = {})
   .expandable-list
     .expandable-list__title=title
     button.expandable-list__expand-btn.js-expandable-btn(id=btnId)
