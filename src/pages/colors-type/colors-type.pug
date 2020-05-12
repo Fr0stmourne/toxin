@@ -9,7 +9,44 @@ html(lang="en")
     .container
       section.colors
         ul.colors__list
-          each val in [{title: 'Dark Shade 100%', text: '#1F2041', class: 'dark-100'},{title: 'Dark Shade 75%', text: '#1F2041', class: 'dark-75'},{title: 'Dark Shade 50%', text: '#1F2041', class: 'dark-50'},{title: 'Dark Shade 25%', text: '#1F2041', class: 'dark-25'},{title: 'Dark Shade 5%', text: '#1F2041', class: 'dark-5'},{title: 'Purple', text: '#BC9CFF', class: 'purple'},{title: 'Green', text: '#6FCF97', class: 'green'}]
+          -
+            var colors = [{
+                title: 'Dark Shade 100%',
+                text: '#1F2041',
+                class: 'dark-100'
+              },
+              {
+                title: 'Dark Shade 75%',
+                text: '#1F2041',
+                class: 'dark-75'
+              },
+              {
+                title: 'Dark Shade 50%',
+                text: '#1F2041',
+                class: 'dark-50'
+              },
+              {
+                title: 'Dark Shade 25%',
+                text: '#1F2041',
+                class: 'dark-25'
+              },
+              {
+                title: 'Dark Shade 5%',
+                text: '#1F2041',
+                class: 'dark-5'
+              },
+              {
+                title: 'Purple',
+                text: '#BC9CFF',
+                class: 'purple'
+              },
+              {
+                title: 'Green',
+                text: '#6FCF97',
+                class: 'green'
+              }
+            ]
+          each val in colors
             li.colors__item
               .colors__sample(class=val.class)
               .colors__info
@@ -17,7 +54,29 @@ html(lang="en")
                 .colors__text=val.text
       section.type
         ul.type__list
-          each val in [{type: 'h1', text: 'This one is the sub-section or widget title', class: 'h1'},{type: 'h2', text: 'Next one is the item title inside widgets', class:'h2'},{type: 'h3', text: 'This is a label or CTA text', class:'h3'},{type: 'body', text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.', class:'body'}]
+          -
+            var types = [{
+                type: 'h1',
+                text: 'This one is the sub-section or widget title',
+                class: 'h1'
+              },
+              {
+                type: 'h2',
+                text: 'Next one is the item title inside widgets',
+                class: 'h2'
+              },
+              {
+                type: 'h3',
+                text: 'This is a label or CTA text',
+                class: 'h3'
+              },
+              {
+                type: 'body',
+                text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.',
+                class: 'body'
+              }
+            ]
+          each val in types 
             li.type__item(class=('type__item--'+val.type))
               span.type__type=val.type
               span.type__text=val.text
