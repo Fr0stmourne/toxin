@@ -1,4 +1,4 @@
-import addDropdown from '../../form-elements/dropdown/dropdown';
+import addDropdown from '../dropdown/dropdown';
 
 $(() => {
   addDropdown({

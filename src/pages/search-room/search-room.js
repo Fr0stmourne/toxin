@@ -1,5 +1,5 @@
-import addDropdown from '../../components/form-elements/dropdown/dropdown';
-import addSlider from '../../components/form-elements/range-slider/slider';
+import addDropdown from '../../components/dropdown/dropdown';
+import addSlider from '../../components/range-slider/slider';
 
 $(() => {
   addDropdown({
