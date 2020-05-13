@@ -14,23 +14,36 @@ function formatNumber(num) {
     .join(' ');
 }
 
-export default function addSlider(options) {
-  const input = $(options.sliderSelector)
-    .parent()
-    .find('input');
-  $(options.sliderSelector).slider({
-    range: true,
-    min: options.min,
-    max: options.max,
-    values: options.values,
-    slide(event, ui) {
-      input.val(`${formatNumber(ui.values[0])}₽ - ${formatNumber(ui.values[1])}₽`);
-    },
-  });
+export default class Slider {
+  constructor({ sliderSelector, min = 0, max = 1000, values = [0, 1000] }) {
+    this.sliderSelector = sliderSelector;
+    this.slider = $(this.sliderSelector);
+    this.input = this.slider.parent().find('input');
+    this.min = min;
+    this.max = max;
+    this.values = values;
 
-  input.val(
-    `${formatNumber($(options.sliderSelector).slider('values', 0))}₽ - ${formatNumber(
-      $(options.sliderSelector).slider('values', 1),
-    )}₽`,
-  );
+    this.init();
+  }
+
+  updateInitialValue() {
+    const { input, slider } = this;
+    input.val(`${formatNumber(slider.slider('values', 0))}₽ - ${formatNumber(slider.slider('values', 1))}₽`);
+  }
+
+  init() {
+    const { min, max, values, input, slider } = this;
+
+    slider.slider({
+      range: true,
+      min,
+      max,
+      values,
+      slide(event, ui) {
+        input.val(`${formatNumber(ui.values[0])}₽ - ${formatNumber(ui.values[1])}₽`);
+      },
+    });
+
+    this.updateInitialValue();
+  }
 }

@@ -1,12 +1,13 @@
+/* eslint-disable no-new */
 import addDropdown from '../../components/dropdown/dropdown';
-import addSlider from '../../components/range-slider/slider';
+import Slider from '../../components/range-slider/slider';
 
 $(() => {
   addDropdown({
     ids: ['search-room-dropdown', 'search-room-dropdown-1'],
   });
 
-  addSlider({
+  new Slider({
     sliderSelector: '#search-room-slider',
     min: 0,
     max: 15000,

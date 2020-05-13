@@ -1,18 +1,18 @@
-import { defaultOptions, addRangeDatepicker } from '../../components/datepicker/datepicker';
+/* eslint-disable no-new */
+import { defaultOptions, RangeDatepicker } from '../../components/datepicker/datepicker';
 import addDropdown from '../../components/dropdown/dropdown';
-import addSlider from '../../components/range-slider/slider';
+import Slider from '../../components/range-slider/slider';
 
 $(() => {
-  addRangeDatepicker('#date-dropdown__start', '#date-dropdown__end', defaultOptions);
+  new RangeDatepicker('#date-dropdown__start', '#date-dropdown__end', defaultOptions);
   addDropdown({
     ids: ['form-elements-1', 'form-elements-2', 'form-elements-3', 'room-1', 'room-2'],
   });
 
-  addSlider({
+  new Slider({
     sliderSelector: '#form-elements-slider',
     min: 0,
     max: 15000,
     values: [5000, 10000],
-    textSelector: '#amount',
   });
 });

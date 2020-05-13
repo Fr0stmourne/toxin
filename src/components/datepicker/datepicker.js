@@ -15,24 +15,25 @@ export const inlineOptions = {
   },
 };
 
-export function addDefaultDatepicker(selector) {
-  $(`${selector}`).datepicker({
-    todayHighlight: true,
-    clearBtn: true,
-    language: 'ru-RU',
-  });
-}
+export class RangeDatepicker {
+  constructor(startSelector, endSelector, options) {
+    this.startSelector = startSelector;
+    this.endSelector = endSelector;
+    this.options = options;
 
-export function addRangeDatepicker(startElSelector, endElSelector, options) {
-  $(`${startElSelector}`).datepicker({
-    ...options,
-    onSelect(fd) {
-      $(`${startElSelector}`).val(fd.split('-')[0]);
-      $(`${endElSelector}`).val(fd.split('-')[1]);
-    },
-  });
-}
+    this.init();
+  }
 
-// addDefaultDatepicker('#datepicker');
-// addDefaultDatepicker('#find-room-datepicker');
-// addDefaultDatepicker('#booking-datepicker');
+  init() {
+    const startEl = $(this.startSelector);
+    const endEl = $(this.endSelector);
+    const { options } = this;
+    startEl.datepicker({
+      ...options,
+      onSelect(fd) {
+        startEl.val(fd.split('-')[0]);
+        endEl.val(fd.split('-')[1]);
+      },
+    });
+  }
+}
