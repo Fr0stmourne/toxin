@@ -1,7 +1,6 @@
-import addDropdown from '../dropdown/dropdown';
+/* eslint-disable no-new */
+import Dropdown from '../dropdown/dropdown';
 
 $(() => {
-  addDropdown({
-    ids: ['find-room-dropdown'],
-  });
+  new Dropdown('#find-room-dropdown');
 });

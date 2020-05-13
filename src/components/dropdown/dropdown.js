@@ -103,12 +103,7 @@
   };
 })(jQuery);
 
-function addPlusMinus(id) {
-  $(id)
-    .parent()
-    .find('.plus-minus')
-    .htmlNumberSpinner();
-}
+/* eslint-enable */
 
 function getCorrectWordForm(n, textForms) {
   const num = Math.abs(n) % 100;
@@ -125,107 +120,115 @@ function getCorrectWordForm(n, textForms) {
   return textForms[2];
 }
 
-/* eslint-enable */
+export default class Dropdown {
+  constructor(selector) {
+    this.selector = selector;
+    this.dropdown = $(selector);
+    this.initialText = this.dropdown.text();
 
-export default function addDropdown(options) {
-  options.ids.forEach(id => {
-    const dropdownSelector = `#${id}`;
-    const initialText = $(dropdownSelector).text();
-    addPlusMinus(dropdownSelector);
+    if (this.dropdown) this.init();
+  }
 
-    function closeHandler(e) {
-      e.preventDefault();
+  createInput = () => {
+    this.dropdown
+      .parent()
+      .find('.plus-minus')
+      .htmlNumberSpinner();
+  };
 
-      $(dropdownSelector)
-        .next()
-        .slideToggle();
-    }
+  close = e => {
+    e.preventDefault();
+    this.dropdown.next().slideToggle();
+  };
 
-    function resetHandler(e) {
-      e.preventDefault();
-      $(dropdownSelector)
-        .parent()
-        .find('.js-dropdown-item input')
-        .each((idx, el) => {
-          $(el).val(0);
-          $(el)
-            .parent()
-            .find('.js-minus-btn')
-            .click();
-        });
-    }
+  reset = e => {
+    e.preventDefault();
+    this.dropdown
+      .parent()
+      .find('.js-dropdown-item input')
+      .each((idx, el) => {
+        $(el).val(0);
+        $(el)
+          .parent()
+          .find('.js-minus-btn')
+          .click();
+      });
+  };
 
-    function changeHandler(e) {
-      e.preventDefault();
-      const dropdown = $(e.target).closest('.js-dropdown');
-      dropdown.find('.js-reset').removeClass('dropdown__reset_hidden');
+  changeValue = e => {
+    e.preventDefault();
+    const dropdown = $(e.target).closest('.js-dropdown');
+    dropdown.find('.js-reset').removeClass('dropdown__reset_hidden');
 
-      const resultArr = [];
+    const resultArr = [];
+    const allOptions = dropdown.find('.js-dropdown-option');
 
-      const allOptions = dropdown.find('.js-dropdown-option');
+    allOptions
+      .filter((idx, el) => $(el).data('forms'))
+      .each((idx, el) => {
+        let currentValue;
+        const group = $(el).data('group');
 
-      allOptions
-        .filter((idx, el) => $(el).data('forms'))
-        .each((idx, el) => {
-          let currentValue;
-          const group = $(el).data('group');
+        if (group) {
+          const filtered = $(allOptions).filter((index, option) => {
+            return $(option).data('group') === group;
+          });
+          currentValue = 0;
 
-          if (group) {
-            const filtered = $(allOptions).filter((index, option) => {
-              return $(option).data('group') === group;
-            });
-            currentValue = 0;
-
-            filtered.each((index, option) => {
-              currentValue += +$(option)
-                .parent()
-                .find('input')
-                .val();
-            });
-          } else {
-            currentValue = $(el)
+          filtered.each((index, option) => {
+            currentValue += +$(option)
               .parent()
               .find('input')
               .val();
-          }
+          });
+        } else {
+          currentValue = $(el)
+            .parent()
+            .find('input')
+            .val();
+        }
 
-          if (+currentValue !== 0) {
-            resultArr.push(
-              `${currentValue} ${getCorrectWordForm(
-                currentValue,
-                $(el)
-                  .data('forms')
-                  .split(' '),
-              )}`,
-            );
-          }
-        });
+        if (+currentValue !== 0) {
+          resultArr.push(
+            `${currentValue} ${getCorrectWordForm(
+              currentValue,
+              $(el)
+                .data('forms')
+                .split(' '),
+            )}`,
+          );
+        }
+      });
 
-      const resultText = `${resultArr.length ? [...new Set(resultArr)].join(', ') : initialText}`;
+    const resultText = `${resultArr.length ? [...new Set(resultArr)].join(', ') : this.initialText}`;
 
-      $(dropdownSelector).text(resultText);
-    }
+    this.dropdown.text(resultText);
+  };
 
-    $(dropdownSelector)
+  init() {
+    this.createInput();
+
+    this.dropdown
       .parent()
       .find('.js-apply')
-      .click(closeHandler);
-    $(dropdownSelector).click(closeHandler);
+      .click(this.close);
+    this.dropdown.click(this.close);
 
-    $(dropdownSelector)
+    this.dropdown
       .parent()
       .find('.js-reset')
-      .click(resetHandler);
+      .click(this.reset);
 
-    $(dropdownSelector)
+    this.dropdown
       .parent()
       .find('.js-dropdown-item input')
-      .change(changeHandler);
-    $(dropdownSelector)
+      .change(this.changeValue);
+
+    this.dropdown
       .parent()
       .find('.js-dropdown-item .js-plus-minus-btn')
-      .click(changeHandler);
+      .click(this.changeValue);
 
-    $(dropdownSelector).click();
-  });
+    this.dropdown.click();
+  }
 }

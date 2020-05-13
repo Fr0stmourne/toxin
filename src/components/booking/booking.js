@@ -1,7 +1,6 @@
-import addDropdown from '../dropdown/dropdown';
+/* eslint-disable no-new */
+import Dropdown from '../dropdown/dropdown';
 
 $(() => {
-  addDropdown({
-    ids: ['booking-dropdown'],
-  });
+  new Dropdown('#booking-dropdown');
 });

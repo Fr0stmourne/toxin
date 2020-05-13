@@ -1,11 +1,10 @@
 /* eslint-disable no-new */
-import addDropdown from '../../components/dropdown/dropdown';
+import Dropdown from '../../components/dropdown/dropdown';
 import Slider from '../../components/range-slider/slider';
 
 $(() => {
-  addDropdown({
-    ids: ['search-room-dropdown', 'search-room-dropdown-1'],
-  });
+  const ids = ['search-room-dropdown', 'search-room-dropdown-1'];
+  ids.forEach(id => new Dropdown(`#${id}`));
 
   new Slider({
     sliderSelector: '#search-room-slider',
