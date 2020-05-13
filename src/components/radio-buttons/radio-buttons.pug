@@ -1,4 +1,4 @@
-mixin radio-btn({name = 'radio-button', labelText = 'Радио кнопка'} = {})
+mixin radio-btn({name, labelText = 'Радио кнопка'} = {})
   label.radio-btn
     input.radio-btn__input.visually-hidden(type="radio", name=name)
     span.radio-btn__checkmark
