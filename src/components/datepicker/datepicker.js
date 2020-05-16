@@ -24,8 +24,6 @@ export class RangeDatepicker {
   }
 
   init() {
-    console.log(this.container);
-
     const startInput = this.container.find('.js-range-datepicker-start');
     const endInput = this.container.find('.js-range-datepicker-end');
     const { options } = this;
