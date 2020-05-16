@@ -15,9 +15,8 @@ function formatNumber(num) {
 }
 
 export default class Slider {
-  constructor({ sliderSelector, min = 0, max = 1000, values = [0, 1000] }) {
-    this.sliderSelector = sliderSelector;
-    this.slider = $(this.sliderSelector);
+  constructor({ slider, min = 0, max = 1000, values = [0, 1000] }) {
+    this.slider = $(slider);
     this.input = this.slider.parent().find('input');
     this.min = min;
     this.max = max;
