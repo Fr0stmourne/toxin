@@ -13,7 +13,7 @@ mixin header({items = ['There are no values'], unlogged = false, loginText = 'В
         nav.main-logo__nav.nav
           ul.main-logo__nav-list.nav__list
             each val in items
-              li.nav__item(class=val.dropdown ? 'nav__item_dropdown' : '')
+              li.nav__item(class=val.dropdown ? 'nav__item_with-dropdown' : '')
                 a.nav__link(href=val.link class=val.active ? 'nav__link_active' : '')=val.text
                 if val.dropdown
                   .nav__dropdown-content
