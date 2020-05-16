@@ -1,41 +1,41 @@
 .toggle-btn {
-	position: relative;
-	font: $default-font;
-	padding-left: 50px;
-	cursor: pointer;
+  position: relative;
+  font: $default-font;
+  padding-left: 50px;
+  cursor: pointer;
 
-	&__box {
-		display: inline-block;
-		box-sizing: border-box;
-		position: absolute;
-		left: 0;
-		top: -1px;
-		width: 40px;
-		height: 20px;
-		border-radius: 10px;
-		border: 1px solid $dark-25;
-		outline: none;
+  &__box {
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid $dark-25;
+    outline: none;
 
-		&::before {
-			content: '';
-			position: absolute;
-			left: 3px;
-			top: 50%;
-			transform: translateY(-50%);
-			width: 12px;
-			height: 12px;
-			border-radius: 50%;
-			background-color: $dark-25;
-			transition: $transition;
-		}
-	}
+    &::before {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $dark-25;
+      transition: $transition;
+    }
+  }
 
-	&__input:checked~&__box {
-		border-color: $purple;
+  &__input:checked~&__box {
+    border-color: $purple;
 
-		&::before {
-			background-color: $purple;
-			left: 23px;
-		}
-	}
+    &::before {
+      background-color: $purple;
+      left: 23px;
+    }
+  }
 }

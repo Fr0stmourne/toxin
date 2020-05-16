@@ -1,45 +1,45 @@
 .rich-checkbox {
-	position: relative;
-	display: block;
-	box-sizing: border-box;
-	padding-left: 30px;
-	font: $default-font;
-	line-height: 18px;
-	color: $dark-75;
-	font-weight: 700;
-	cursor: pointer;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  padding-left: 30px;
+  font: $default-font;
+  line-height: 18px;
+  color: $dark-75;
+  font-weight: 700;
+  cursor: pointer;
 
-	&__checkmark {
-		display: inline-block;
-		position: absolute;
-		left: 0;
-		top: 0px;
-		width: 18px;
-		height: 18px;
-		border: 1px solid $dark-25;
-		background-image: none;
-		border-radius: 4px;
-	}
+  &__checkmark {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $dark-25;
+    background-image: none;
+    border-radius: 4px;
+  }
 
-	input:checked~&__checkmark {
-		border: 1px solid $purple;
-		background-image: url('/rich-checkbox_tick.svg');
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: 10px;
-	}
+  input:checked~&__checkmark {
+    border: 1px solid $purple;
+    background-image: url('/rich-checkbox_tick.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 10px;
+  }
 
-	&__label-text {
-		display: inline-block;
-		padding-top: 2px;
-	}
+  &__label-text {
+    display: inline-block;
+    padding-top: 2px;
+  }
 
-	&__description {
-		display: block;
-		margin: 0;
-		margin-top: 5px;
-		font-size: 12px;
-		line-height: 14px;
-		font-weight: 400;
-	}
+  &__description {
+    display: block;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+  }
 }

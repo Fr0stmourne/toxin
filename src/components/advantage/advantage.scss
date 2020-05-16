@@ -7,10 +7,8 @@
   padding: 2px 20px 20px 3px;
   border-bottom: 1px solid $dark-10;
   margin-bottom: 18px;
-
   font: $default-font;
   line-height: 24px;
-
 
   &__img {
     padding-top: 4px;
@@ -20,7 +18,6 @@
 
   &__title {
     grid-row: 1 / 2;
-
     font-weight: 700;
   }
 
@@ -28,6 +25,4 @@
     grid-row: 2 / 3;
     color: $dark-75;
   }
-
-
 }

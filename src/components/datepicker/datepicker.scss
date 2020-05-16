@@ -1,63 +1,63 @@
 .input-group {
-	display: flex;
+  display: flex;
 }
 
 .datepicker-double {
-	display: flex;
+  display: flex;
 
-	@media (max-width: 400px) {
-		flex-direction: column;
-	}
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
 
-	&__label {
-		display: block;
-		font: $btn-font;
-		text-transform: uppercase;
-		margin-bottom: 5px;
-	}
+  &__label {
+    display: block;
+    font: $btn-font;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
 
-	&__box {
-		position: relative;
+  &__box {
+    position: relative;
 
-		&::before {
-			content: '';
-			width: 44px;
-			height: 44px;
-			position: absolute;
-			right: 0;
-			top: 0;
-			background-image: url('/datepicker_arrow_down.svg');
-			background-repeat: no-repeat;
-			background-position: center;
-			pointer-events: none;
-		}
-	}
+    &::before {
+      content: '';
+      width: 44px;
+      height: 44px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-image: url('/datepicker_arrow_down.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      pointer-events: none;
+    }
+  }
 
-	&__input {
-		box-sizing: border-box;
-		width: 100%;
-		border: 1px solid $dark-25;
-		padding: 12px 30px 12px 15px;
-		font: $default-font;
-		color: $dark-75;
-		border-radius: 4px;
-		cursor: pointer;
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid $dark-25;
+    padding: 12px 30px 12px 15px;
+    font: $default-font;
+    color: $dark-75;
+    border-radius: 4px;
+    cursor: pointer;
 
-		&::placeholder {
-			text-transform: none;
-		}
+    &::placeholder {
+      text-transform: none;
+    }
 
-		@media (max-width: 600px) {
-			padding: 10px 20px 10px 5px;
-		}
-	}
+    @media (max-width: 600px) {
+      padding: 10px 20px 10px 5px;
+    }
+  }
 
-	&__start {
-		margin-right: 20px;
+  &__start {
+    margin-right: 20px;
 
-		@media (max-width: 400px) {
-			margin-right: 0;
-			margin-bottom: 15px;
-		}
-	}
+    @media (max-width: 400px) {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
 }

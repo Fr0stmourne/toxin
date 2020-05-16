@@ -1,8 +1,6 @@
 .datepicker-single {
   position: relative;
 
-
-
   &__input {
     box-sizing: border-box;
     width: 100%;
@@ -19,7 +17,6 @@
     @media (max-width: 600px) {
       padding: 10px 15px 10px 10px;
     }
-
   }
 
   &::before {
@@ -34,8 +31,6 @@
     background-position: center;
     pointer-events: none;
   }
-
-
 }
 
 .datepicker {
@@ -192,6 +187,4 @@
       color: $purple !important;
     }
   }
-
-
 }

@@ -2,7 +2,6 @@
   padding-left: 141px;
   padding-right: 141px;
 
-
   .set-1 {
     display: flex;
     margin-top: 143px;
@@ -58,11 +57,11 @@
       margin-bottom: 42px;
 
       &__checkbox {
+        margin-bottom: 12px;
+
         .form-element-title {
           margin-bottom: 16.5px;
         }
-
-        margin-bottom: 12px;
       }
     }
 
@@ -70,7 +69,6 @@
       margin-bottom: 38px;
 
       &__buttons {
-
         display: flex;
       }
 
@@ -142,7 +140,6 @@
         max-width: 220px;
         display: grid;
         grid-template-columns: repeat(2, 100px);
-
         grid-gap: 29px 19px;
         margin-bottom: 27px;
       }
@@ -160,11 +157,9 @@
         margin-bottom: 40px;
       }
     }
-
   }
 
   .set-2 {
-
     display: flex;
 
     .col-1 {
@@ -215,7 +210,6 @@
       }
 
       &__rich-checkbox {
-
         &-1 {
           margin-bottom: 10px;
 
@@ -229,7 +223,6 @@
             max-width: 230px;
           }
         }
-
       }
 
       &__checkboxes-bullet {
