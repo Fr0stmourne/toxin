@@ -1,11 +1,11 @@
 mixin button({type = '', btnText = 'Кнопка', link = ''} = {})
   case type
     when 'secondary'
-      - var btnClass = 'btn btn_secondary'
+      - var btnClass = 'btn btn_type_secondary'
     when 'proceed'
-      - var btnClass = 'btn btn_proceed'
+      - var btnClass = 'btn btn_type_proceed'
     default
-      - var btnClass = 'btn btn_primary'
+      - var btnClass = 'btn btn_type_primary'
   if link
     a(href=link class=btnClass)=btnText
   else

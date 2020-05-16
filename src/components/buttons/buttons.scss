@@ -22,11 +22,11 @@
     border-color: rgba($purple, 0.5);
   }
 
-  &_primary {
+  &_type_primary {
     color: $white;
   }
 
-  &_secondary {
+  &_type_secondary {
     color: $purple;
     z-index: 1;
 
@@ -44,7 +44,7 @@
     }
   }
 
-  &_proceed {
+  &_type_proceed {
     color: $white;
     padding-right: 40px;
     padding-left: 40px;
