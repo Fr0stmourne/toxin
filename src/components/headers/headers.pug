@@ -1,6 +1,6 @@
 include ../buttons/buttons.pug
 
-mixin header({items = [], unlogged = false, loginText = 'Войти', regText = 'Зарегистрироваться', username = 'Иван Иванов'} = {})
+mixin header({items = ['There are no values'], unlogged = false, loginText = 'Войти', regText = 'Зарегистрироваться', username = 'Иван Иванов'} = {})
   header.main-header
     .container
       h1.visually-hidden Toxin
@@ -12,7 +12,7 @@ mixin header({items = [], unlogged = false, loginText = 'Войти', regText = 
       div.main-header__menu
         nav.main-logo__nav.nav
           ul.main-logo__nav-list.nav__list
-            each val in items.length ? items : ['There are no values']
+            each val in items
               li.nav__item(class=val.dropdown ? 'nav__item_dropdown' : '')
                 a.nav__link(href=val.link class=val.active ? 'nav__link_active' : '')=val.text
                 if val.dropdown

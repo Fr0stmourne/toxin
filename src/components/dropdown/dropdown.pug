@@ -1,14 +1,14 @@
 mixin plus-minus({min = 0, max = 5, id, name} = {})
   .js-plus-minus.plus-minus(min=min max=max id=id name=name)
 
-mixin dropdown({title, placeholder = 'Список', optionsList = [], min = 0, max = 5, id, name, controls = false} = {})
+mixin dropdown({title, placeholder = 'Список', optionsList = ['There are no values'], min = 0, max = 5, id, name, controls = false} = {})
   .dropdown.js-dropdown
     if title
       .text-field__title=title
     .dropdown__result(id=id)=placeholder
     .dropdown__content
       ul.dropdown__list
-        each option in optionsList.length ? optionsList : ['There are no values']
+        each option in optionsList
           li.dropdown__item.js-dropdown-item
             .dropdown__option.js-dropdown-option(selected=option.selected data-forms=option.wordForms data-group=option.group)=option.text
             +plus-minus({min: min , max: max, id: option.id, name: option.name})

@@ -2,7 +2,7 @@ include ../datepicker/datepicker.pug
 include ../dropdown/dropdown.pug
 include ../buttons/buttons.pug
 
-mixin booking({num = 1, type = '', price = '0', calc = [], fullPrice = 0, start, end} = {})
+mixin booking({num = 1, type = '', price = '0', calc = ['There are no values'], fullPrice = 0, start, end} = {})
   form.booking
     .booking__room-info
       .booking__room
@@ -43,7 +43,7 @@ mixin booking({num = 1, type = '', price = '0', calc = [], fullPrice = 0, start,
         }]
       })
     .booking__calc.calc
-      each val in calc.length ? calc : ['There are no values']
+      each val in calc
         .calc__item
           .calc__position
             .calc__item-description=val[0]

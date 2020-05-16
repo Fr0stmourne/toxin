@@ -5,9 +5,9 @@ mixin footer(options = {})
     var { extended = false, 
     logoLink = './mock', 
     companyText = 'Текст о компании', 
-    navLists = [], 
+    navLists = ['There are no values'], 
     copyright = 'Копирайт', 
-    socialList = [], 
+    socialList = ['None'], 
     sub = {title:'Подписка', text: 'Текст подписки', placeholder: 'Заглушка'} } = options
   footer.main-footer
     h2.visually-hidden Page footer
@@ -22,7 +22,7 @@ mixin footer(options = {})
                 img(src="/toxin.svg", alt="Company TOXIN")
             .company__text=companyText
           .main-footer__menu
-            each navList in navLists.length ? navLists : ['There are no values']
+            each navList in navLists
               nav.main-footer__nav.footer-nav
                 h3.footer-nav__title=navList.title
                 ul.footer-nav__list
@@ -39,7 +39,7 @@ mixin footer(options = {})
         .main-footer__bottom.bottom
           .bottom__copyright=copyright
           ul.bottom__social
-            each social in socialList.length ? socialList : ['None']
+            each social in socialList
               li.bottom__social-item
                 a.bottom__social-link(href=social.link)
                   img(src=social.imgLink, alt=social.name)
@@ -54,7 +54,7 @@ mixin footer(options = {})
                 img(src="/toxin.svg", alt="Company TOXIN")
           .company__text=companyText
           ul.bottom__social
-            each social in socialList.length ? socialList : ['None']
+            each social in socialList
               li.bottom__social-item
                 a.bottom__social-link(href=social.link)
                   img(src=social.imgLink, alt=social.name)
