@@ -1,4 +1,8 @@
 .search-room {
+  &__wrapper {
+    @include wrapper;
+  }
+
   .login-menu {
     margin-left: -3px;
   }
@@ -24,7 +28,8 @@
     max-width: none;
   }
 
-  main .container {
+  &__container {
+    @include container;
     display: grid;
     grid-template-columns: minmax(max-content, 266px) 1fr;
     grid-column-gap: 60px;

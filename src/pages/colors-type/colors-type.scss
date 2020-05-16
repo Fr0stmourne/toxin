@@ -1,4 +1,5 @@
-.colors-type .container {
+.colors-type__container {
+  @include container;
   display: flex;
   justify-content: space-between;
   padding-top: 145px;

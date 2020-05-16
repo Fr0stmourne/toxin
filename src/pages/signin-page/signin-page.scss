@@ -3,6 +3,10 @@
     flex: 1 0 auto;
   }
 
+  &__wrapper {
+    @include wrapper;
+  }
+
   .login-menu {
     margin-left: -3px;
   }

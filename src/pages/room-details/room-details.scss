@@ -24,7 +24,12 @@
     max-width: none;
   }
 
-  main .container {
+  &__wrapper {
+    @include wrapper;
+  }
+
+  &__container {
+    @include container;
     display: flex;
     justify-content: space-between;
 

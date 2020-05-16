@@ -19,7 +19,7 @@ html(lang="ru")
     title Search room
     link(rel="shortcut icon", href="/favicon.png", type="image/x-icon")
   body.search-room
-    .wrapper
+    .search-room__wrapper
       +header({
         unlogged: true,
         regText: 'зарегистрироваться',
@@ -65,7 +65,7 @@ html(lang="ru")
         ]
       })
       main
-        .container
+        .search-room__container
           section.filter
             h2.filter__title.visually-hidden Фильтр комнат
             .filter__date-filter

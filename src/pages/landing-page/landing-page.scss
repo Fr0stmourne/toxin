@@ -3,6 +3,10 @@
     flex: 1 0 auto;
   }
 
+  &__wrapper {
+    @include wrapper;
+  }
+
   .login-menu {
     margin-left: -3px;
   }
@@ -50,7 +54,8 @@
     background-position-y: 0;
   }
 
-  .container {
+  &__container {
+    @include container;
     display: grid;
     padding-right: 134px;
 

@@ -12,7 +12,7 @@ html(lang="ru")
     title Landing page
     link(rel="shortcut icon", href="/favicon.png", type="image/x-icon")
   body.landing-page
-    .wrapper
+    .landing-page__wrapper
       +header({
         unlogged: true,
         regText: 'зарегистрироваться',
@@ -59,7 +59,7 @@ html(lang="ru")
       })
       main
         section.room-booking
-          .container
+          .room-booking__container
             h2.room-booking__title.visually-hidden Бронирование комнат
             .room-booking__form
               +find-room({

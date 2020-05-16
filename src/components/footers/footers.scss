@@ -3,7 +3,9 @@
   min-width: 320px;
   flex: 0 0 auto;
 
-  .container {
+  &__container {
+    @include container;
+
     @media (max-width: 1300px) {
       padding: 0 30px;
     }

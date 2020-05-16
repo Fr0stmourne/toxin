@@ -1,7 +1,8 @@
 .main-header {
   background-color: $white;
 
-  .container {
+  &__container {
+    @include container;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -139,7 +140,6 @@
 
   .login-menu {
     display: flex;
-    margin-left: -3px;
 
     &_logged {
       align-items: center;

@@ -2,7 +2,7 @@ include ../buttons/buttons.pug
 
 mixin header({items = ['There are no values'], unlogged = false, loginText = 'Войти', regText = 'Зарегистрироваться', username = 'Иван Иванов', logoLink = 'landing-page.html'} = {})
   header.main-header
-    .container
+    .main-header__container
       h1.visually-hidden Toxin
       a(href=logoLink).main-header__logo-link
         .main-header__logo

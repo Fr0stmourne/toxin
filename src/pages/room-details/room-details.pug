@@ -15,7 +15,7 @@ html(lang="ru")
     title Room Details
     link(rel="shortcut icon", href="/favicon.png", type="image/x-icon")
   body.room-details
-    .wrapper
+    .room-details__wrapper
       +header({
         unlogged: true,
         regText: 'зарегистрироваться',
@@ -69,7 +69,7 @@ html(lang="ru")
             img.room-photos__photo(src="/details-2.jpg", alt="room-photo")
           .room-photos__photo-box
             img.room-photos__photo(src="/details-3.jpg", alt="room-photo")
-        .container
+        .room-details__container
           .room-details__main
             .room-info
               section.room-info__info

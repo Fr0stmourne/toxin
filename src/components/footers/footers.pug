@@ -12,7 +12,7 @@ mixin footer(options = {})
   footer.main-footer
     h2.visually-hidden Page footer
     if extended
-      .container
+      .main-footer__container
         .main-footer__main
           .main-footer__company.company
             a(href=logoLink).company__logos
@@ -35,7 +35,7 @@ mixin footer(options = {})
               .sub__input
                 +subscription({placeholder: sub.placeholder})
       .border-div
-      .container
+      .main-footer__container
         .main-footer__bottom.bottom
           .bottom__copyright=copyright
           ul.bottom__social
@@ -45,7 +45,7 @@ mixin footer(options = {})
                   img(src=social.imgLink, alt=social.name)
                   span.visually-hidden=social.name
     else
-      .container
+      .main-footer__container
         .main-footer__main.main-footer__main_small
           a(href=logoLink).company__logos
               .company__logo
