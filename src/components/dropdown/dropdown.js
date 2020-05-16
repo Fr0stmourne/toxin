@@ -121,9 +121,9 @@ function getCorrectWordForm(n, textForms) {
 }
 
 export default class Dropdown {
-  constructor(selector) {
-    this.selector = selector;
-    this.dropdown = $(selector);
+  constructor(dropdownEl) {
+    this.container = $(dropdownEl);
+    this.dropdown = this.container.find('.js-dropdown-result');
     this.initialText = this.dropdown.text();
 
     if (this.dropdown) this.init();
