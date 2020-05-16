@@ -3,37 +3,9 @@
     @include wrapper;
   }
 
-  main {
-    flex: 1 0 auto;
-  }
-
-  .login-menu {
-    margin-left: -3px;
-  }
-
-  .nav__item_with-dropdown {
-    padding-right: 28px;
-    margin-right: 0;
-  }
-
-  .nav__item .nav__link {
-    margin-right: 20px !important;
-  }
-
-  .nav__item_with-dropdown:after {
-    right: 29px;
-  }
-
-  .footer-nav:nth-child(2) {
-    margin: 0px 40px 0 4px;
-  }
-
-  .sub__text {
-    max-width: none;
-  }
-
-  main {
+  &__main {
     display: flex;
+    flex: 1 0 auto;
     align-items: center;
     justify-content: center;
     max-width: 1440px;

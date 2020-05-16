@@ -1,39 +1,10 @@
 .landing-page {
-  main {
+  &__main {
     flex: 1 0 auto;
   }
 
   &__wrapper {
     @include wrapper;
-  }
-
-  .login-menu {
-    margin-left: -3px;
-  }
-
-  .nav__item_with-dropdown {
-    padding-right: 28px;
-    margin-right: 0;
-  }
-
-  .nav__item .nav__link {
-    margin-right: 20px !important;
-  }
-
-  .nav__item_with-dropdown:after {
-    right: 29px;
-  }
-
-  .footer-nav:nth-child(2) {
-    margin: 0px 40px 0 4px;
-
-    @media (max-width: 1300px) {
-      margin: 0;
-    }
-  }
-
-  .sub__text {
-    max-width: none;
   }
 }
 

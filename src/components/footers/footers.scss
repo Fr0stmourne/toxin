@@ -90,7 +90,7 @@
   font: $default-font;
 
   &:nth-child(2) {
-    margin: 0 28px 0 32px;
+    margin: 0px 40px 0 4px;
 
     @media (max-width: 1300px) {
       margin: 0;
@@ -146,7 +146,6 @@
   }
 
   &__text {
-    max-width: 200px;
     font: $default-font;
     color: $dark-75;
     margin-bottom: 23px;

@@ -78,12 +78,13 @@
     &__item {
       &_with-dropdown {
         position: relative;
-        padding-right: 10px;
+        padding-right: 28px;
+        margin-right: 0;
 
         &::after {
           content: '';
           position: absolute;
-          right: 24px;
+          right: 29px;
           top: 6px;
           width: 12px;
           height: 8px;
@@ -125,7 +126,7 @@
     }
 
     &__item .nav__link {
-      margin-right: 30px;
+      margin-right: 20px;
     }
 
     &__link {
