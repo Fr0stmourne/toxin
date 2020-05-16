@@ -1,5 +1,6 @@
 .btn {
   width: 100%;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,6 +13,7 @@
   font: $btn-font;
   background-image: linear-gradient(180deg, rgba(#bc9cff, 1) 0%, rgba(#8ba4f9, 1) 100%);
   text-transform: uppercase;
+  text-decoration: none;
   outline: 0;
 
   &:hover,

@@ -1,4 +1,4 @@
-mixin button({type, btnText = 'Кнопка'} = {})
+mixin button({type = '', btnText = 'Кнопка', link = ''} = {})
   case type
     when 'secondary'
       - var btnClass = 'btn btn_secondary'
@@ -6,4 +6,7 @@ mixin button({type, btnText = 'Кнопка'} = {})
       - var btnClass = 'btn btn_proceed'
     default
       - var btnClass = 'btn btn_primary'
-  button(class=btnClass)=btnText
+  if link
+    a(href=link class=btnClass)=btnText
+  else
+    button(class=btnClass)=btnText

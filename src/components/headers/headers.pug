@@ -22,9 +22,9 @@ mixin header({items = ['There are no values'], unlogged = false, loginText = 'В
         if unlogged
           .login-menu.main-logo__login
             .login-menu__login
-              +button({btnText: loginText, type: 'secondary'})
+              +button({btnText: loginText, type: 'secondary', link: 'signin-page.html'})
             .login-menu__register
-              +button({btnText: regText})
+              +button({btnText: regText, link: 'registration-page.html'})
         else
           .main-logo__login.login-menu.login-menu_logged
             =username
