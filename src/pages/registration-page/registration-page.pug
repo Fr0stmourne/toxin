@@ -57,13 +57,14 @@ html(lang="ru")
           }
         ]
       })
-      main
-        .registration-card
-          h2.registration-card__title.visually-hidden Регистрация
-          +registration({
-            title: 'Регистрация аккаунта',
-            noteText: 'Уже есть аккаунт на Toxin'
-          })
+      main.registration-page__main
+        .registration-page__registration-card
+          .registration-card
+            h2.registration-card__title.visually-hidden Регистрация
+            +registration({
+              title: 'Регистрация аккаунта',
+              noteText: 'Уже есть аккаунт на Toxin'
+            })
       +footer({
         extended: true,
         copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',

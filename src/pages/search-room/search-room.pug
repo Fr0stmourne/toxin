@@ -64,230 +64,232 @@ html(lang="ru")
           }
         ]
       })
-      main
+      main.search-room__main
         .search-room__container
-          section.filter
-            h2.filter__title.visually-hidden Фильтр комнат
-            .filter__date-filter
-              +date-filter({title: 'даты пребывания в отеле'})
-            .filter__guests
-              +dropdown({
-                title: 'гости',
-                controls: true,
-                id: 'search-room-dropdown',
-                placeholder: 'Сколько гостей',
-                optionsList: [{
-                  text: 'Взрослые',
-                  wordForms: 'гость гостя гостей',
-                  group: 1
-                }, {
-                  text: 'Дети',
-                  wordForms: 'гость гостя гостей',
-                  group: 1
-                }, {
-                  text: 'Младенцы',
-                  wordForms: 'младенец младенца младенцев'
-                }]
-              })
-            .filter__slider
-              +range-slider({
-                title: 'диапазон цены', 
-                id: 'search-room-slider'
-              })
-              .filter__slider-hint Стоимость за сутки пребывания в номере
-            .filter__checkbox-group
-              .form-element__title Checkbox Buttons
-              .filter__checkbox
-                +checkbox({labelText: "Можно курить"})
-              .filter__checkbox
-                +checkbox({labelText: "Можно с питомцами"})
-              .filter__checkbox
-                +checkbox({labelText: "Можно пригласить гостей (до 10 человек)"})
-            .filter__ally
-              .form-element__title доступность
-              .filter__rich-checkboxes 
-                .filter__rich-checkbox
-                  +rich-checkbox({
-                    labelText: 'Широкий коридор', 
-                    description: 'Ширина коридоров в номере не менее 91 см.'
+          .search-room__filter
+            section.filter
+              h2.filter__title.visually-hidden Фильтр комнат
+              .filter__date-filter
+                +date-filter({title: 'даты пребывания в отеле'})
+              .filter__guests
+                +dropdown({
+                  title: 'гости',
+                  controls: true,
+                  id: 'search-room-dropdown',
+                  placeholder: 'Сколько гостей',
+                  optionsList: [{
+                    text: 'Взрослые',
+                    wordForms: 'гость гостя гостей',
+                    group: 1
+                  }, {
+                    text: 'Дети',
+                    wordForms: 'гость гостя гостей',
+                    group: 1
+                  }, {
+                    text: 'Младенцы',
+                    wordForms: 'младенец младенца младенцев'
+                  }]
+                })
+              .filter__slider
+                +range-slider({
+                  title: 'диапазон цены', 
+                  id: 'search-room-slider'
+                })
+                .filter__slider-hint Стоимость за сутки пребывания в номере
+              .filter__checkbox-group
+                .form-element__title Checkbox Buttons
+                .filter__checkbox
+                  +checkbox({labelText: "Можно курить"})
+                .filter__checkbox
+                  +checkbox({labelText: "Можно с питомцами"})
+                .filter__checkbox
+                  +checkbox({labelText: "Можно пригласить гостей (до 10 человек)"})
+              .filter__ally
+                .form-element__title доступность
+                .filter__rich-checkboxes 
+                  .filter__rich-checkbox
+                    +rich-checkbox({
+                      labelText: 'Широкий коридор', 
+                      description: 'Ширина коридоров в номере не менее 91 см.'
+                    })
+                  .filter__rich-checkbox
+                    +rich-checkbox({
+                      labelText: 'Помощник для инвалидов', 
+                      description: 'На 1 этаже вас встретит специалист  и проводит до номера.'
+                    })
+              .filter__comfort
+                +dropdown({
+                  title: 'Удобства номера',
+                  id: 'search-room-dropdown-1',
+                  placeholder: 'Комнаты',
+                  optionsList: [{
+                    text: 'Спальни',
+                    wordForms: 'спальня спальни спален'
+                  }, {
+                    text: 'Кровати',
+                    wordForms: 'кровать кровати кроватей'
+                  }, {
+                    text: 'Ванные комнаты',
+                    wordForms: 'ванная ванные ванных'
+                  }]
+                })
+              .filter__additional
+                +expandable-list({
+                  id: 'expandable',
+                  btnId: 'expandable-btn',
+                  title: 'дополнительные удобства',
+                  list: [{
+                    labelText: 'Завтрак'
+                  }, {
+                    labelText: 'Письменный стол',
+                    checked: true
+                  }, {
+                    labelText: 'Стул для кормления',
+                    checked: true
+                  }, {
+                    labelText: 'Кроватка',
+                    checked: true
+                  }, {
+                    labelText: 'Телевизор'
+                  }, {
+                    labelText: 'Шампунь'
+                  }, {
+                    labelText: 'Телевизор'
+                  }, {
+                    labelText: 'Шампунь'
+                  }]
+                })
+          .search-room__rooms
+            section.rooms
+              h2.rooms__title Номера, которые мы для вас подобрали
+              ul.rooms__list
+                li.rooms__room-item
+                  +room({
+                    num: '888',
+                    checkedRating: 5,
+                    isRatingDisabled: true,
+                    sliderImgs: ['/1.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
+                    link: 'room-details.html',
+                    reviewNum: 145,
+                    type: 'люкс',
+                    price: '9 990₽'
                   })
-                .filter__rich-checkbox
-                  +rich-checkbox({
-                    labelText: 'Помощник для инвалидов', 
-                    description: 'На 1 этаже вас встретит специалист  и проводит до номера.'
+                li.rooms__room-item
+                  +room({
+                    num: '840',
+                    checkedRating: 4,
+                    isRatingDisabled: true,
+                    sliderImgs: ['/2.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
+                    link: 'room-details.html',
+                    reviewNum: 65,
+                    price: '9 900₽'
                   })
-            .filter__comfort
-              +dropdown({
-                title: 'Удобства номера',
-                id: 'search-room-dropdown-1',
-                placeholder: 'Комнаты',
-                optionsList: [{
-                  text: 'Спальни',
-                  wordForms: 'спальня спальни спален'
-                }, {
-                  text: 'Кровати',
-                  wordForms: 'кровать кровати кроватей'
-                }, {
-                  text: 'Ванные комнаты',
-                  wordForms: 'ванная ванные ванных'
-                }]
-              })
-            .filter__additional
-              +expandable-list({
-                id: 'expandable',
-                btnId: 'expandable-btn',
-                title: 'дополнительные удобства',
-                list: [{
-                  labelText: 'Завтрак'
-                }, {
-                  labelText: 'Письменный стол',
-                  checked: true
-                }, {
-                  labelText: 'Стул для кормления',
-                  checked: true
-                }, {
-                  labelText: 'Кроватка',
-                  checked: true
-                }, {
-                  labelText: 'Телевизор'
-                }, {
-                  labelText: 'Шампунь'
-                }, {
-                  labelText: 'Телевизор'
-                }, {
-                  labelText: 'Шампунь'
-                }]
-              })
-          section.rooms
-            h2.rooms__title Номера, которые мы для вас подобрали
-            ul.rooms__list
-              li.rooms__room-item
-                +room({
-                  num: '888',
-                  checkedRating: 5,
-                  isRatingDisabled: true,
-                  sliderImgs: ['/1.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
-                  link: 'room-details.html',
-                  reviewNum: 145,
-                  type: 'люкс',
-                  price: '9 990₽'
+                li.rooms__room-item
+                  +room({
+                    num: '980',
+                    checkedRating: 3,
+                    isRatingDisabled: true,
+                    sliderImgs: ['/3.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
+                    link: 'room-details.html',
+                    reviewNum: 35,
+                    type: 'люкс',
+                    price: '8 500₽'
+                  })
+                li.rooms__room-item
+                  +room({
+                    num: '856',
+                    checkedRating: 5,
+                    isRatingDisabled: true,
+                    sliderImgs: ['/4.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
+                    link: 'room-details.html',
+                    reviewNum: 19,
+                    price: '7 300₽'
+                  })
+                li.rooms__room-item
+                  +room({
+                    num: '740',
+                    checkedRating: 4,
+                    isRatingDisabled: true,
+                    sliderImgs: ['/5.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
+                    link: 'room-details.html',
+                    reviewNum: 44,
+                    price: '6 000₽'
+                  })
+                li.rooms__room-item
+                  +room({
+                    num: '982',
+                    checkedRating: 3,
+                    isRatingDisabled: true,
+                    sliderImgs: ['/6.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
+                    link: 'room-details.html',
+                    reviewNum: 56,
+                    price: '5 800₽'
+                  })
+                li.rooms__room-item
+                  +room({
+                    num: '678',
+                    checkedRating: 5,
+                    isRatingDisabled: true,
+                    sliderImgs: ['/7.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
+                    link: 'room-details.html',
+                    reviewNum: 45,
+                    price: '5 500₽'
+                  })
+                li.rooms__room-item
+                  +room({
+                    num: '450',
+                    checkedRating: 4,
+                    isRatingDisabled: true,
+                    sliderImgs: ['/8.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
+                    link: 'room-details.html',
+                    reviewNum: 39,
+                    price: '5 300₽'
+                  })
+                li.rooms__room-item
+                  +room({
+                    num: '350',
+                    checkedRating: 3,
+                    isRatingDisabled: true,
+                    sliderImgs: ['/9.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
+                    link: 'room-details.html',
+                    reviewNum: 77,
+                    price: '5 000₽'
+                  })
+                li.rooms__room-item
+                  +room({
+                    num: '666',
+                    checkedRating: 5,
+                    isRatingDisabled: true,
+                    sliderImgs: ['/10.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
+                    link: 'room-details.html',
+                    reviewNum: 25,
+                    price: '5 000₽'
+                  })
+                li.rooms__room-item
+                  +room({
+                    num: '444',
+                    checkedRating: 3,
+                    isRatingDisabled: true,
+                    sliderImgs: ['/11.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
+                    link: 'room-details.html',
+                    reviewNum: 15,
+                    price: '5 000₽'
+                  })
+                li.rooms__room-item
+                  +room({
+                    num: '352',
+                    checkedRating: 3,
+                    isRatingDisabled: true,
+                    sliderImgs: ['/12.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
+                    link: 'room-details.html',
+                    reviewNum: 55,
+                    price: '5 000₽'
+                  })
+              .rooms__pagination
+                +pagination({
+                  num: 15, 
+                  description: "1 – 12 из 100+ вариантов аренды"
                 })
-              li.rooms__room-item
-                +room({
-                  num: '840',
-                  checkedRating: 4,
-                  isRatingDisabled: true,
-                  sliderImgs: ['/2.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
-                  link: 'room-details.html',
-                  reviewNum: 65,
-                  price: '9 900₽'
-                })
-              li.rooms__room-item
-                +room({
-                  num: '980',
-                  checkedRating: 3,
-                  isRatingDisabled: true,
-                  sliderImgs: ['/3.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
-                  link: 'room-details.html',
-                  reviewNum: 35,
-                  type: 'люкс',
-                  price: '8 500₽'
-                })
-              li.rooms__room-item
-                +room({
-                  num: '856',
-                  checkedRating: 5,
-                  isRatingDisabled: true,
-                  sliderImgs: ['/4.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
-                  link: 'room-details.html',
-                  reviewNum: 19,
-                  price: '7 300₽'
-                })
-              li.rooms__room-item
-                +room({
-                  num: '740',
-                  checkedRating: 4,
-                  isRatingDisabled: true,
-                  sliderImgs: ['/5.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
-                  link: 'room-details.html',
-                  reviewNum: 44,
-                  price: '6 000₽'
-                })
-              li.rooms__room-item
-                +room({
-                  num: '982',
-                  checkedRating: 3,
-                  isRatingDisabled: true,
-                  sliderImgs: ['/6.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
-                  link: 'room-details.html',
-                  reviewNum: 56,
-                  price: '5 800₽'
-                })
-              li.rooms__room-item
-                 +room({
-                  num: '678',
-                  checkedRating: 5,
-                  isRatingDisabled: true,
-                  sliderImgs: ['/7.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
-                  link: 'room-details.html',
-                  reviewNum: 45,
-                  price: '5 500₽'
-                })
-              li.rooms__room-item
-                +room({
-                  num: '450',
-                  checkedRating: 4,
-                  isRatingDisabled: true,
-                  sliderImgs: ['/8.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
-                  link: 'room-details.html',
-                  reviewNum: 39,
-                  price: '5 300₽'
-                })
-              li.rooms__room-item
-                +room({
-                  num: '350',
-                  checkedRating: 3,
-                  isRatingDisabled: true,
-                  sliderImgs: ['/9.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
-                  link: 'room-details.html',
-                  reviewNum: 77,
-                  price: '5 000₽'
-                })
-              li.rooms__room-item
-                +room({
-                  num: '666',
-                  checkedRating: 5,
-                  isRatingDisabled: true,
-                  sliderImgs: ['/10.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
-                  link: 'room-details.html',
-                  reviewNum: 25,
-                  price: '5 000₽'
-                })
-              li.rooms__room-item
-                +room({
-                  num: '444',
-                  checkedRating: 3,
-                  isRatingDisabled: true,
-                  sliderImgs: ['/11.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
-                  link: 'room-details.html',
-                  reviewNum: 15,
-                  price: '5 000₽'
-                })
-              li.rooms__room-item
-                +room({
-                  num: '352',
-                  checkedRating: 3,
-                  isRatingDisabled: true,
-                  sliderImgs: ['/12.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
-                  link: 'room-details.html',
-                  reviewNum: 55,
-                  price: '5 000₽'
-                })
-            .rooms__pagination
-              +pagination({
-                num: 15, 
-                description: "1 – 12 из 100+ вариантов аренды"
-              })
       +footer({
         extended: true,
         copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',

@@ -10,7 +10,7 @@ html(lang="ru")
     title Headers Footers
     link(rel="shortcut icon", href="/favicon.png", type="image/x-icon")
   body.headers-footers
-    .header-1
+    .headers-footers__header-1
       +header({
         unlogged: true,
         regText: 'register',
@@ -51,7 +51,7 @@ html(lang="ru")
           }
         ]
       })
-    .header-2
+    .headers-footers__header-2
       +header({
         username: 'Cosmin Negoita',
         items: [{
@@ -90,7 +90,7 @@ html(lang="ru")
           }
         ]
       })
-    .footer-1
+    .headers-footers__footer-1
       +footer({
         logoLink: 'landing-page.html',
         extended: true,
@@ -131,7 +131,7 @@ html(lang="ru")
         ],
         companyText: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'
       })
-    .footer-2
+    .headers-footers__footer-2
       +footer({
         logoLink: 'landing-page.html',
         socialList: [{
