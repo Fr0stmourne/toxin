@@ -1,10 +1,10 @@
 include ../buttons/buttons.pug
 
-mixin header({items = ['There are no values'], unlogged = false, loginText = 'Войти', regText = 'Зарегистрироваться', username = 'Иван Иванов'} = {})
+mixin header({items = ['There are no values'], unlogged = false, loginText = 'Войти', regText = 'Зарегистрироваться', username = 'Иван Иванов', logoLink = 'landing-page.html'} = {})
   header.main-header
     .container
       h1.visually-hidden Toxin
-      a(href="#").main-header__logo-link
+      a(href=logoLink).main-header__logo-link
         .main-header__logo
           img(src="/logo.svg", alt="Logo")
         .main-header__name
