@@ -4,15 +4,15 @@ mixin datepicker({title, id, start, end} = {})
       .form-element-title=title
     input.datepicker-single__input(type="text" id=id placeholder="ДД.ММ.ГГГГ" class='datepicker-here')
 
-mixin datepicker-double({start, end} = {})
-  .datepicker-double
+mixin datepicker-double({ inline = false, startLabel = 'Приезд', endLabel = 'Выезд' } = {})
+  .datepicker-double.js-range-datepicker(class = inline ? 'js-range-datepicker-inline' : '')
     .datepicker-double__start
-      label.datepicker-double__label(for=start.id)=start.label
+      span.datepicker-double__label=startLabel
       .datepicker-double__box
-        input.datepicker-double__input.js-range-datepicker-start(type="text" id=start.id data-range="true" name=name data-multiple-dates-separator=" - " class="datepicker-here" placeholder="ДД.ММ.ГГГГ")
+        input.datepicker-double__input.js-range-datepicker-start(type="text" data-range="true" name=name data-multiple-dates-separator=" - " class="datepicker-here" placeholder="ДД.ММ.ГГГГ")
     .datepicker-double__end
-      label.datepicker-double__label(for=end.id)=end.label
+      span.datepicker-double__label=endLabel
       .datepicker-double__box
-        input.datepicker-double__input.js-range-datepicker-end(type="text" id=end.id data-range="true" name=name data-multiple-dates-separator=" - " class="datepicker-here" placeholder="ДД.ММ.ГГГГ")
+        input.datepicker-double__input.js-range-datepicker-end(type="text" data-range="true" name=name data-multiple-dates-separator=" - " class="datepicker-here" placeholder="ДД.ММ.ГГГГ")
   
 

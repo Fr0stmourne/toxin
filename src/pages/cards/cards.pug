@@ -52,15 +52,10 @@ html(lang="ru")
       .cards__col-3
         .cards__datepicker
           +datepicker-double({
-            start: {
-              label: 'Прибытие',
-              id: 'cards-date__start'
-            },
-            end: {
-              label: 'Выезд',
-              id: 'cards-date__end'
-            },
-            controls: true
+            startLabel: 'Прибытие',
+            endLabel: 'Выезд',
+            controls: true,
+            inline: true
           })
         .cards__rooms
           .cards__room

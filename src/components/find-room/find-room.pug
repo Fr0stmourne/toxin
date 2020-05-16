@@ -7,14 +7,8 @@ mixin find-room({title, start, end, dropdownLabel} = {})
     h3.find-room__title=title
     .find-room__datepicker
       +datepicker-double({
-        start: {
-          label: 'Прибытие',
-          id: start.id
-        },
-        end: {
-          label: 'Выезд',
-          id: end.id
-        }
+        startLabel: 'Прибытие',
+        endLabel: 'Выезд'
       })
     .find-room__dropdown
       .find-room__label=dropdownLabel

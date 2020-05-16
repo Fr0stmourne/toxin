@@ -16,23 +16,24 @@ export const inlineOptions = {
 };
 
 export class RangeDatepicker {
-  constructor(startSelector, endSelector, options) {
-    this.startSelector = startSelector;
-    this.endSelector = endSelector;
+  constructor(datepickerContainer, options) {
+    this.container = $(datepickerContainer);
     this.options = options;
 
     this.init();
   }
 
   init() {
-    const startEl = $(this.startSelector);
-    const endEl = $(this.endSelector);
+    console.log(this.container);
+
+    const startInput = this.container.find('.js-range-datepicker-start');
+    const endInput = this.container.find('.js-range-datepicker-end');
     const { options } = this;
-    startEl.datepicker({
+    startInput.datepicker({
       ...options,
       onSelect(fd) {
-        startEl.val(fd.split('-')[0]);
-        endEl.val(fd.split('-')[1]);
+        startInput.val(fd.split('-')[0]);
+        endInput.val(fd.split('-')[1]);
       },
     });
   }

@@ -14,14 +14,8 @@ mixin booking({num = 1, type = '', price = '0', calc = ['There are no values'], 
         span.booking__measurement  в сутки
     .booking__datepicker
       +datepicker-double({
-        start: {
-          label: 'Прибытие',
-          id: start.id
-        },
-        end: {
-          label: 'Выезд',
-          id: end.id
-        }
+        startLabel: 'Прибытие',
+        endLabel: 'Выезд'
       })
     .booking__dropdown
       +dropdown({
