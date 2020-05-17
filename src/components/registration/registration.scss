@@ -25,7 +25,6 @@
   }
 
   &__sex {
-    display: flex;
     margin-bottom: 22px;
   }
 
@@ -43,6 +42,8 @@
 }
 
 .sex {
+  display: flex;
+
   &__man {
     margin-right: 20px;
   }

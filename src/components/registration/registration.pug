@@ -11,26 +11,29 @@ mixin registration({title = 'Регистрация', noteText = 'Уже зар�
       +text-field({placeholder: 'Имя', name:'name'})
     .registration__surname
       +text-field({placeholder: 'Фамилия', name:'surname'})
-    .registration__sex.sex
-      .sex__man
-        +radio-btn({name: 'sex', labelText: 'Мужчина'})
-      .sex__woman
-        +radio-btn({name: 'sex', labelText: 'Женщина'})
+    .registration__sex
+      .sex
+        .sex__man
+          +radio-btn({name: 'sex', labelText: 'Мужчина'})
+        .sex__woman
+          +radio-btn({name: 'sex', labelText: 'Женщина'})
     .registration__birthday
       +masked-text-field({placeholder: 'ДД.ММ.ГГГГ', title: 'Дата рождения', name:'birthday'})
-    .registration__login-data.login-data
-      .login-data__email
-        +text-field({placeholder: "Email", name: "email", title: 'данные для входа в сервис'})
-      .login-data__password
-        +text-field({placeholder: "Пароль", name: "password"})
+    .registration__login-data
+      .login-data
+        .login-data__email
+          +text-field({placeholder: "Email", name: "email", title: 'данные для входа в сервис'})
+        .login-data__password
+          +text-field({placeholder: "Пароль", name: "password"})
     .registration__offers-btn
       +toggle({name: 'offers', btnText: 'Получать спецпредложения'})
     .registration__proceed
       +button({btnText: 'перейти к оплате', type: 'proceed'})
-    .registration__note.note
-      span.note__text=noteText
-      .note__btn
-        +button({btnText: 'войти', type: 'secondary'})
+    .registration__note
+      .note
+        span.note__text=noteText
+        .note__btn
+          +button({btnText: 'войти', type: 'secondary'})
 
 
       
