@@ -62,6 +62,7 @@
       }
 
       &__title {
+        @include form-element;
         margin-bottom: 16.5px;
       }
     }
@@ -78,6 +79,7 @@
       }
 
       &__title {
+        @include form-element;
         margin-bottom: 14px;
       }
     }
@@ -86,6 +88,7 @@
       margin-bottom: 46px;
 
       &__title {
+        @include form-element;
         margin-bottom: 17px;
       }
 
@@ -98,6 +101,7 @@
       margin-bottom: 40px;
 
       &__title {
+        @include form-element;
         margin-bottom: 16px;
       }
 
@@ -112,6 +116,7 @@
 
     .rate {
       &__title {
+        @include form-element;
         margin-bottom: 18px;
       }
 
@@ -129,6 +134,7 @@
       width: 100%;
 
       &__title {
+        @include form-element;
         margin-bottom: 16px;
       }
 
@@ -205,6 +211,7 @@
       }
 
       &__rich-checkboxes-title {
+        @include form-element;
         margin-bottom: 15px;
       }
 

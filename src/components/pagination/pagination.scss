@@ -1,9 +1,10 @@
 .pagination {
   display: flex;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 
   &__title {
     @include form-element;
+    margin-bottom: 18px;
   }
 
   &__container {

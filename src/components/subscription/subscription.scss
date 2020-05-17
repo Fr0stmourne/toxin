@@ -4,6 +4,7 @@
 
   &__title {
     @include form-element;
+    margin-bottom: 5px;
   }
 
   &__input {
