@@ -28,10 +28,12 @@ export class RangeDatepicker {
   }
 
   addApplyBtn() {
-    const btnContainer = $('.datepicker--buttons');
-    if (btnContainer.children().length === 1) {
-      btnContainer.append('<span class="datepicker--button" data-action="close">применить</span>');
-    }
+    const btnContainers = $('.datepicker--buttons');
+    btnContainers.each((idx, btnContainer) => {
+      if (!$(btnContainer).find('.datepicker--button[data-action="close"]').length) {
+        $(btnContainer).append('<span class="datepicker--button" data-action="close">применить</span>');
+      }
+    });
   }
 
   init() {
