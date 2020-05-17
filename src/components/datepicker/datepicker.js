@@ -5,6 +5,7 @@ export const defaultOptions = {
   navTitles: {
     days: 'MM yyyy',
   },
+  clearButton: true,
 };
 
 export const inlineOptions = {
@@ -26,6 +27,13 @@ export class RangeDatepicker {
     this.init();
   }
 
+  addApplyBtn() {
+    const btnContainer = $('.datepicker--buttons');
+    if (btnContainer.children().length === 1) {
+      btnContainer.append('<span class="datepicker--button" data-action="close">применить</span>');
+    }
+  }
+
   init() {
     const startInput = this.container.find(startInputClass);
     const endInput = this.container.find(endInputClass);
@@ -36,6 +44,13 @@ export class RangeDatepicker {
         startInput.val(fd.split('-')[0]);
         endInput.val(fd.split('-')[1]);
       },
+      onShow: dp => {
+        dp.$datepicker.find('.datepicker--button[data-action="close"]').click(() => {
+          dp.hide();
+        });
+      },
     });
+
+    this.addApplyBtn();
   }
 }
