@@ -44,6 +44,20 @@
     display: none;
   }
 
+  &--cell {
+    &.-current-.-in-range- {
+      color: black;
+    }
+
+    &.-range-to- {
+      border: 0;
+    }
+
+    &.-range-from- {
+      border: 0;
+    }
+  }
+
   &--cells {
     width: 280px;
     margin: 0 auto;
@@ -77,8 +91,8 @@
   }
 
   &--nav-action {
-    width: 24px !important;
-    height: 24px !important;
+    width: 24px;
+    height: 24px;
     background-image: url('/datepicker_arrow_back.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -87,14 +101,14 @@
       background-image: url('/datepicker_arrow_forward.svg');
 
       &:hover {
-        background-image: url('/datepicker_arrow_forward.svg') !important;
+        background-image: url('/datepicker_arrow_forward.svg');
       }
     }
 
     &:hover {
-      background-image: url('/datepicker_arrow_back.svg') !important;
-      background-repeat: no-repeat !important;
-      background-position: center !important;
+      background-image: url('/datepicker_arrow_back.svg');
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     svg {
@@ -103,7 +117,7 @@
   }
 
   .-current- {
-    color: $white !important;
+    color: $white;
     background: $datepicker-today;
     border-radius: 50%;
     font-weight: 700;
@@ -111,10 +125,10 @@
 
   .-range-from- {
     position: relative;
-    border-radius: 50% !important;
-    background-image: $btn-gradient !important;
-    background-color: transparent !important;
-    color: $white !important;
+    border-radius: 50%;
+    background-image: $btn-gradient;
+    background-color: transparent;
+    color: $white;
     font-weight: 700;
 
     &::before {
@@ -125,26 +139,26 @@
       z-index: 5;
       width: 40px;
       height: 40px;
-      background: $btn-gradient-ultralight !important;
+      background: $btn-gradient-ultralight;
       border-radius: 50% 0 0 50%;
     }
 
     &:hover {
-      background-image: $btn-gradient !important;
+      background-image: $btn-gradient;
     }
   }
 
   .-range-to- {
     position: relative;
-    background-image: $btn-gradient !important;
-    background-color: transparent !important;
-    color: $white !important;
-    border-radius: 50% !important;
+    background-image: $btn-gradient;
+    background-color: transparent;
+    color: $white;
+    border-radius: 50%;
     font-weight: 700;
 
     &::before {
       content: '';
-      background: $btn-gradient-ultralight !important;
+      background: $btn-gradient-ultralight;
       width: 40px;
       height: 40px;
       position: absolute;
@@ -154,37 +168,37 @@
     }
 
     &:hover {
-      background-image: $btn-gradient !important;
+      background-image: $btn-gradient;
     }
   }
 
   .-in-range- {
-    background: $btn-gradient-ultralight !important;
+    background: $btn-gradient-ultralight;
   }
 
   &--cell-day {
-    width: 40px !important;
-    height: 40px !important;
+    width: 40px;
+    height: 40px;
   }
 
   &--buttons {
-    display: flex !important;
-    justify-content: space-between !important;
-    border-top: 0 !important;
-    padding: 12px 20px 0 !important;
-    font: $btn-font !important;
-    text-transform: uppercase !important;
+    display: flex;
+    justify-content: space-between;
+    border-top: 0;
+    padding: 12px 20px 0;
+    font: $btn-font;
+    text-transform: uppercase;
   }
 
   &--button {
-    flex: 0 !important;
+    flex: 0;
 
     &[data-action='clear'] {
-      color: $dark-50 !important;
+      color: $dark-50;
     }
 
     &[data-action='close'] {
-      color: $purple !important;
+      color: $purple;
     }
   }
 }

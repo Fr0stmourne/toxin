@@ -39,7 +39,21 @@
   }
 
   &--cell {
-    border: 0 !important;
+    border: 0;
+  }
+
+  &--cell {
+    &.-current-.-in-range- {
+      color: black;
+    }
+
+    &.-range-to- {
+      border: 0;
+    }
+
+    &.-range-from- {
+      border: 0;
+    }
   }
 
   &--days-names {
@@ -68,8 +82,8 @@
   }
 
   &--nav-action {
-    width: 24px !important;
-    height: 24px !important;
+    width: 24px;
+    height: 24px;
     background-image: url('/datefilter_arrow_back.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -84,7 +98,7 @@
   }
 
   .-current- {
-    color: $white !important;
+    color: $white;
     background: $datepicker-today;
     border-radius: 50%;
     font-weight: 700;
@@ -92,14 +106,14 @@
 
   .-selected- {
     position: relative;
-    border-radius: 50% !important;
-    background-image: $btn-gradient !important;
-    background-color: transparent !important;
-    color: $white !important;
+    border-radius: 50%;
+    background-image: $btn-gradient;
+    background-color: transparent;
+    color: $white;
     font-weight: 700;
 
     &:hover {
-      background-image: $btn-gradient !important;
+      background-image: $btn-gradient;
     }
   }
 
@@ -113,7 +127,7 @@
       z-index: 5;
       width: 40px;
       height: 40px;
-      background: $btn-gradient-ultralight !important;
+      background: $btn-gradient-ultralight;
       border-radius: 50% 0 0 50%;
     }
   }
@@ -121,7 +135,7 @@
   .-range-to- {
     &::before {
       content: '';
-      background: $btn-gradient-ultralight !important;
+      background: $btn-gradient-ultralight;
       width: 40px;
       height: 40px;
       position: absolute;
@@ -132,7 +146,7 @@
   }
 
   .-in-range- {
-    background: $btn-gradient-ultralight !important;
+    background: $btn-gradient-ultralight;
   }
 
   .-focus- {
@@ -140,28 +154,28 @@
   }
 
   &--cell-day {
-    width: 40px !important;
-    height: 40px !important;
+    width: 40px;
+    height: 40px;
   }
 
   &--buttons {
-    display: flex !important;
-    justify-content: space-between !important;
-    border-top: 0 !important;
-    padding: 0 20px 20px !important;
-    font: $btn-font !important;
-    text-transform: uppercase !important;
+    display: flex;
+    justify-content: space-between;
+    border-top: 0;
+    padding: 12px 20px 0;
+    font: $btn-font;
+    text-transform: uppercase;
   }
 
   &--button {
-    flex: 0 !important;
+    flex: 0;
 
     &[data-action='clear'] {
-      color: $dark-50 !important;
+      color: $dark-50;
     }
 
     &[data-action='close'] {
-      color: $purple !important;
+      color: $purple;
     }
   }
 }
