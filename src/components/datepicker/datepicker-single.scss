@@ -56,6 +56,10 @@
     &.-range-from- {
       border: 0;
     }
+
+    &.-focus- {
+      border-radius: 50%;
+    }
   }
 
   &--cells {
