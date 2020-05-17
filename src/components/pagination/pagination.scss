@@ -2,6 +2,10 @@
   display: flex;
   margin-bottom: 8px;
 
+  &__title {
+    @include form-element;
+  }
+
   &__container {
     font: $default-font;
     display: flex;

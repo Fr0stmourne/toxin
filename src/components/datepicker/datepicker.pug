@@ -1,7 +1,7 @@
 mixin datepicker({title, id, start, end} = {})
   .datepicker-single
     if title
-      .form-element-title=title
+      .datepicker-single__title=title
     input.datepicker-single__input(type="text" id=id placeholder="ДД.ММ.ГГГГ" class='datepicker-here')
 
 mixin datepicker-double({ inline = false, startLabel = 'Приезд', endLabel = 'Выезд' } = {})

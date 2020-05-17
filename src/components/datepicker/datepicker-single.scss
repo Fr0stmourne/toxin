@@ -1,6 +1,10 @@
 .datepicker-single {
   position: relative;
 
+  &__title {
+    @include form-element;
+  }
+
   &__input {
     box-sizing: border-box;
     width: 100%;

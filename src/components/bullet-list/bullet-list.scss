@@ -21,7 +21,8 @@
     }
   }
 
-  .form-element-title {
+  &__title {
+    @include form-element;
     margin-bottom: 14px;
   }
 }

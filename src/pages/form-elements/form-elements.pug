@@ -89,7 +89,7 @@ html(lang="ru")
           .checkers
             .checkboxes
               .checkboxes__checkbox
-                .form-element-title Checkbox Buttons
+                .checkboxes__title Checkbox Buttons
                 +checkbox({labelText: "Можно курить"})
               .checkboxes__checkbox
                 +checkbox({
@@ -102,7 +102,7 @@ html(lang="ru")
                   checked: true
                 })
             .radio
-              .form-element-title Radio Buttons
+              .radio__title Radio Buttons
               .radio__buttons
                 .radio__button
                   +radio-btn({
@@ -115,13 +115,13 @@ html(lang="ru")
                     name: "gender"
                   })
             .togglers
-              .form-element-title Toggle
+              .togglers__title Toggle
               .togglers__toggle
                 +toggle({btnText: "Получать спецпредложения"})
               .togglers__toggle
                 +toggle({btnText: "Получать спецпредложения"})
             .like
-              .form-element-title Like button
+              .like__title Like button
               .like__buttons
                 .like__button
                   +like-btn({likes: 2})
@@ -131,7 +131,7 @@ html(lang="ru")
                     active: true
                   })
             .rate
-              .form-element-title Rate button
+              .rate__title Rate button
               .rate__buttons
                 .rate__button
                   +rate-btn({name: "test", checkedRating: 4})
@@ -144,7 +144,7 @@ html(lang="ru")
                 id: 'form-elements-slider'
               })
             .buttons__buttons
-              .form-element-title Buttons
+              .buttons__title Buttons
               .buttons__list
                 +button({
                   type: "primary", 
@@ -354,7 +354,7 @@ html(lang="ru")
                 })
             .col-2__checkboxes-bullet
               .col-2__rich-checkboxes
-                .form-element-title rich Checkbox Buttons
+                .col-2__rich-checkboxes-title rich Checkbox Buttons
                 .col-2__rich-checkbox.col-2__rich-checkbox-1
                   +rich-checkbox({
                     labelText: 'Широкий коридор', 

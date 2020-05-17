@@ -59,10 +59,10 @@
 
       &__checkbox {
         margin-bottom: 12px;
+      }
 
-        .form-element-title {
-          margin-bottom: 16.5px;
-        }
+      &__title {
+        margin-bottom: 16.5px;
       }
     }
 
@@ -77,7 +77,7 @@
         margin-right: 20px;
       }
 
-      .form-element-title {
+      &__title {
         margin-bottom: 14px;
       }
     }
@@ -85,7 +85,7 @@
     .togglers {
       margin-bottom: 46px;
 
-      .form-element-title {
+      &__title {
         margin-bottom: 17px;
       }
 
@@ -97,7 +97,7 @@
     .like {
       margin-bottom: 40px;
 
-      .form-element-title {
+      &__title {
         margin-bottom: 16px;
       }
 
@@ -111,7 +111,7 @@
     }
 
     .rate {
-      .form-element-title {
+      &__title {
         margin-bottom: 18px;
       }
 
@@ -128,7 +128,7 @@
     .buttons {
       width: 100%;
 
-      .form-element-title {
+      &__title {
         margin-bottom: 16px;
       }
 
@@ -204,10 +204,8 @@
         margin-bottom: 256px;
       }
 
-      &__rich-checkboxes {
-        .form-element-title {
-          margin-bottom: 15px;
-        }
+      &__rich-checkboxes-title {
+        margin-bottom: 15px;
       }
 
       &__rich-checkbox {

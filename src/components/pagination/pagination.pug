@@ -5,7 +5,7 @@ mixin page({ active = false, link = './mock', linkText = 'Текст' } = {})
 mixin pagination({title, num = 10, description = 'Описание пагинации'} = {})
  .pagination__container
     if title
-      .form-element-title=title
+      .pagination__title=title
     ul.pagination
       +page({active: true , link: 1, linkText: 1})
       +page({active: false , link: 2, linkText: 2})

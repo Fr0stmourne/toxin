@@ -9,6 +9,10 @@
   color: $dark-50;
   cursor: pointer;
 
+  &__title {
+    @include form-element;
+  }
+
   &__checkmark {
     display: inline-block;
     position: absolute;

@@ -1,7 +1,7 @@
 mixin bullet-list({title, items = ['There are no items']} = {}) 
   .bullet-list
     if title
-      .form-element-title=title
+      .bullet-list__title=title
     ul.bullet-list__list
       each item in items
         li.bullet-list__item= item
