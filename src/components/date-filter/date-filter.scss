@@ -28,13 +28,13 @@
 }
 
 .datepicker {
-  width: 320px !important;
-  font: $default-font !important;
-  font-size: 12px !important;
-  padding-bottom: 0 !important;
+  width: 320px;
+  font: $default-font;
+  font-size: 12px;
+  padding-bottom: 0;
 
   &--cells {
-    width: 280px !important;
+    width: 280px;
     margin: 0 auto;
   }
 
@@ -43,24 +43,24 @@
   }
 
   &--days-names {
-    width: 280px !important;
-    margin: 0 auto !important;
+    width: 280px;
+    margin: 0 auto;
   }
 
   &--day-name {
-    color: $purple !important;
-    font: $btn-font !important;
-    text-transform: none !important;
-    height: 40px !important;
+    color: $purple;
+    font: $btn-font;
+    text-transform: none;
+    height: 40px;
   }
 
   &--content {
-    padding: 0 0 20px 0 !important;
+    padding: 0 0 20px 0;
   }
 
   &--nav {
-    border: 0 !important;
-    padding: 20px 20px 30px !important;
+    border: 0;
+    padding: 20px 20px 30px;
   }
 
   &--nav-title {

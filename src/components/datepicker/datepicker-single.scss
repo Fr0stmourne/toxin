@@ -34,42 +34,42 @@
 }
 
 .datepicker {
-  width: 320px !important;
-  font: $default-font !important;
-  font-size: 12px !important;
-  padding-bottom: 10px !important;
-  box-sizing: border-box !important;
+  width: 320px;
+  font: $default-font;
+  font-size: 12px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
 
   &--pointer {
     display: none;
   }
 
   &--cells {
-    width: 280px !important;
+    width: 280px;
     margin: 0 auto;
   }
 
   &--days-names {
-    width: 280px !important;
-    margin: 0 auto !important;
+    width: 280px;
+    margin: 0 auto;
   }
 
   &--day-name {
-    color: $purple !important;
-    font: $btn-font !important;
-    text-transform: none !important;
-    height: 40px !important;
+    color: $purple;
+    font: $btn-font;
+    text-transform: none;
+    height: 40px;
   }
 
   &--content {
-    padding: 0 !important;
+    padding: 0;
   }
 
   &--nav {
     display: flex;
     align-items: center;
-    border: 0 !important;
-    padding: 15px 20px 25px !important;
+    border: 0;
+    padding: 15px 20px 25px;
   }
 
   &--nav-title {
