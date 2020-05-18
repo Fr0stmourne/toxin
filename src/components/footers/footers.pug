@@ -31,7 +31,8 @@ mixin footer(options = {})
                 .main-footer__sub-text=sub.text
                 .main-footer__sub-input
                   +subscription({placeholder: sub.placeholder})
-      .border-div
+      .main-footer__separator
+      //- hr
       .main-footer__container
         .main-footer__bottom
             .main-footer__copyright=copyright
@@ -39,7 +40,7 @@ mixin footer(options = {})
               each social in socialList
                 li.main-footer__social-item
                   a.main-footer__social-link(href=social.link target="_blank" rel="noopener noreferrer")
-                    img(src=social.imgLink, alt=social.name)
+                    img.main-footer__social-img(src=social.imgLink, alt=social.name)
                     span.main-footer__social-name=social.name
     else
       .main-footer__container
@@ -54,6 +55,6 @@ mixin footer(options = {})
             each social in socialList
               li.main-footer__social-item
                 a.main-footer__social-link(href=social.link target="_blank" rel="noopener noreferrer")
-                  img(src=social.imgLink, alt=social.name)
+                  img.main-footer__social-img(src=social.imgLink, alt=social.name)
                   span.main-footer__social-name=social.name
 

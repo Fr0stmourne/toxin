@@ -149,9 +149,9 @@
       @include visually-hidden;
     }
   }
-}
 
-.border-div {
-  height: 1px;
-  background-color: $border;
+  &__separator {
+    height: 1px;
+    background-color: $border;
+  }
 }
