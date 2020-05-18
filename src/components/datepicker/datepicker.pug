@@ -1,9 +1,3 @@
-mixin datepicker({title, id, start, end} = {})
-  .datepicker-single
-    if title
-      .datepicker-single__title=title
-    input.datepicker-single__input(type="text" id=id placeholder="ДД.ММ.ГГГГ" class='datepicker-here')
-
 mixin datepicker-double({ inline = false, startLabel = 'Приезд', endLabel = 'Выезд' } = {})
   .datepicker-double.js-range-datepicker(class = inline ? 'js-range-datepicker-inline' : '')
     .datepicker-double__start
