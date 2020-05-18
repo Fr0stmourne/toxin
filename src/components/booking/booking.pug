@@ -1,6 +1,7 @@
 include ../datepicker/datepicker.pug
 include ../dropdown/dropdown.pug
 include ../buttons/buttons.pug
+include ../calc/calc.pug
 
 mixin booking({num = 1, type = '', price = '0', calc = ['There are no values'], fullPrice = 0, start, end} = {})
   form.booking
@@ -37,16 +38,7 @@ mixin booking({num = 1, type = '', price = '0', calc = ['There are no values'], 
         }]
       })
     .booking__calc
-      .calc
-        each val in calc
-          .calc__item
-            .calc__position
-              .calc__item-description=val[0]
-              if val[2]
-                .calc__btn-box
-                  .calc__btn
-                  .calc__tooltip=val[2]
-            .calc__price=val[1]
+      +calc({calc})
     .booking__result Итого
       .booking__dots
       .booking__price=fullPrice
