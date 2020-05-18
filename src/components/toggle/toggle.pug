@@ -1,4 +1,5 @@
 mixin toggle({name, btnText = 'Переключатель'} = {})
   label.toggle-btn
     input.toggle-btn__input(type="checkbox" name=name)
-    span.toggle-btn__box=btnText
+    span.toggle-btn__box
+    span.toggle-btn__text=btnText
