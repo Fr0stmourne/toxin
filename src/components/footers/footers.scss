@@ -3,6 +3,10 @@
   min-width: 320px;
   flex: 0 0 auto;
 
+  &__title {
+    @include visually-hidden;
+  }
+
   &__container {
     @include container;
 
@@ -139,6 +143,10 @@
       &:not(:last-child) {
         margin-right: 22px;
       }
+    }
+
+    &-name {
+      @include visually-hidden;
     }
   }
 }

@@ -11,7 +11,7 @@ mixin footer(options = {})
     socialList = ['None'], 
     sub = {title:'Подписка', text: 'Текст подписки', placeholder: 'Заглушка'} } = options
   footer.main-footer
-    h2.visually-hidden Page footer
+    h2.main-footer__title Page footer
     if extended
       .main-footer__container
         .main-footer__main
@@ -40,7 +40,7 @@ mixin footer(options = {})
                 li.main-footer__social-item
                   a.main-footer__social-link(href=social.link target="_blank" rel="noopener noreferrer")
                     img(src=social.imgLink, alt=social.name)
-                    span.visually-hidden=social.name
+                    span.main-footer__social-name=social.name
     else
       .main-footer__container
         .main-footer__main.main-footer__main_small
@@ -55,5 +55,5 @@ mixin footer(options = {})
               li.main-footer__social-item
                 a.main-footer__social-link(href=social.link target="_blank" rel="noopener noreferrer")
                   img(src=social.imgLink, alt=social.name)
-                  span.visually-hidden=social.name
+                  span.main-footer__social-name=social.name
 
