@@ -10,21 +10,24 @@ mixin header({items = ['There are no values'], unlogged = false, loginText = 'В
         .main-header__name
           img(src="/toxin.svg", alt="Company TOXIN")
       div.main-header__menu
-        nav.main-logo__nav.nav
-          ul.main-logo__nav-list.nav__list
-            each val in items
-              li.nav__item(class=val.dropdown ? 'nav__item_with-dropdown' : '')
-                a.nav__link(href=val.link class=val.active ? 'nav__link_active' : '')=val.text
-                if val.dropdown
-                  .nav__dropdown-content
-                    each dropdownItem in val.dropdown.length ? val.dropdown : ['None']
-                      a.nav__dropdown-link(href=dropdownItem.link)=dropdownItem.text              
+        nav.main-logo__nav
+          .nav
+            ul.main-logo__nav-list.nav__list
+              each val in items
+                li.nav__item(class=val.dropdown ? 'nav__item_with-dropdown' : '')
+                  a.nav__link(href=val.link class=val.active ? 'nav__link_active' : '')=val.text
+                  if val.dropdown
+                    .nav__dropdown-content
+                      each dropdownItem in val.dropdown.length ? val.dropdown : ['None']
+                        a.nav__dropdown-link(href=dropdownItem.link)=dropdownItem.text              
         if unlogged
-          .login-menu.main-logo__login
-            .login-menu__login
-              +button({btnText: loginText, type: 'secondary', link: 'signin-page.html'})
-            .login-menu__register
-              +button({btnText: regText, link: 'registration-page.html'})
+          .main-logo__login
+            .login-menu
+              .login-menu__login
+                +button({btnText: loginText, type: 'secondary', link: 'signin-page.html'})
+              .login-menu__register
+                +button({btnText: regText, link: 'registration-page.html'})
         else
-          .main-logo__login.login-menu.login-menu_logged
-            =username
+          .main-logo__login
+            .login-menu.login-menu_logged
+              =username

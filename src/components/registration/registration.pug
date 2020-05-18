@@ -3,6 +3,7 @@ include ../radio-buttons/radio-buttons.pug
 include ../masked-text-field/masked-text-field.pug
 include ../toggle/toggle.pug
 include ../buttons/buttons.pug
+include ../note/note.pug
 
 mixin registration({title = 'Регистрация', noteText = 'Уже зарегистрированы?', link = './mock'} = {})
   form.registration
@@ -30,10 +31,7 @@ mixin registration({title = 'Регистрация', noteText = 'Уже зар�
     .registration__proceed
       +button({btnText: 'перейти к оплате', type: 'proceed'})
     .registration__note
-      .note
-        span.note__text=noteText
-        .note__btn
-          +button({btnText: 'войти', type: 'secondary', link})
+      +note({link, noteText: 'Уже есть аккаунт на Toxin', btnText: 'Войти'})
 
 
       

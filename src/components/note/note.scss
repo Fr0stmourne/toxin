@@ -1,0 +1,13 @@
+.note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__text {
+    font: $default-font;
+  }
+
+  &__btn {
+    min-width: 100px;
+  }
+}

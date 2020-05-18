@@ -14,36 +14,40 @@ mixin footer(options = {})
     if extended
       .main-footer__container
         .main-footer__main
-          .main-footer__company.company
-            a(href=logoLink).company__logos
-              .company__logo
-                img(src="/logo.svg", alt="Logo")
-              .company__name
-                img(src="/toxin.svg", alt="Company TOXIN")
-            .company__text=companyText
+          .main-footer__company
+            .company
+              a(href=logoLink).company__logos
+                .company__logo
+                  img(src="/logo.svg", alt="Logo")
+                .company__name
+                  img(src="/toxin.svg", alt="Company TOXIN")
+              .company__text=companyText
           .main-footer__menu
             each navList in navLists
-              nav.main-footer__nav.footer-nav
-                h3.footer-nav__title=navList.title
-                ul.footer-nav__list
-                  each val in navList.items.length ? navList.items : ['There are no values']
-                    li.footer-nav__item
-                      a.footer-nav__link(href=val.link)=val
-            form.footer-nav__sub.sub
-              h3.sub__title=sub.title
-              .sub__text=sub.text
-              .sub__input
-                +subscription({placeholder: sub.placeholder})
+              nav.main-footer__nav
+                .footer-nav
+                  h3.footer-nav__title=navList.title
+                  ul.footer-nav__list
+                    each val in navList.items.length ? navList.items : ['There are no values']
+                      li.footer-nav__item
+                        a.footer-nav__link(href=val.link)=val
+            form.footer-nav__sub
+              .sub
+                h3.sub__title=sub.title
+                .sub__text=sub.text
+                .sub__input
+                  +subscription({placeholder: sub.placeholder})
       .border-div
       .main-footer__container
-        .main-footer__bottom.bottom
-          .bottom__copyright=copyright
-          ul.bottom__social
-            each social in socialList
-              li.bottom__social-item
-                a.bottom__social-link(href=social.link target="_blank" rel="noopener noreferrer")
-                  img(src=social.imgLink, alt=social.name)
-                  span.visually-hidden=social.name
+        .main-footer__bottom
+          .bottom
+            .bottom__copyright=copyright
+            ul.bottom__social
+              each social in socialList
+                li.bottom__social-item
+                  a.bottom__social-link(href=social.link target="_blank" rel="noopener noreferrer")
+                    img(src=social.imgLink, alt=social.name)
+                    span.visually-hidden=social.name
     else
       .main-footer__container
         .main-footer__main.main-footer__main_small

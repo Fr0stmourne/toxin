@@ -1,0 +1,7 @@
+include ../buttons/buttons.pug
+
+mixin note({btnText = 'войти', noteText = 'Нет аккаунта на Toxin', link})
+  .note
+    span.note__text=noteText
+    .note__btn
+      +button({btnText, type: 'secondary', link})

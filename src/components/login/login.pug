@@ -1,17 +1,16 @@
 include ../text-field/text-field.pug
+include ../note/note.pug
 
 mixin login({action = './mock', noteText = 'Подсказка', link = './mock'} = {})
   .login
     h3.login__title Войти
     form(action=action)
-      .login__login-data.login-data
-        .login-data__email
+      .login__login-data
+        .login__email
           +text-field({placeholder: "Email", name: "email"})
-        .login-data__password
+        .login__password
           +text-field({placeholder: "Пароль", name: "password"})
       .login__proceed
         +button({btnText: 'войти', type: 'proceed'})
-      .login__note.note
-        span.note__text=noteText
-        .note__btn
-          +button({btnText: 'Создать', type: 'secondary', link})
+      .login__note
+        +note({link, noteText: 'Нет аккаунта на Toxin?', btnText: 'Создать'})
