@@ -4,6 +4,10 @@
   padding-left: 50px;
   cursor: pointer;
 
+  &__input {
+    @include visually-hidden;
+  }
+
   &__box {
     display: inline-block;
     box-sizing: border-box;

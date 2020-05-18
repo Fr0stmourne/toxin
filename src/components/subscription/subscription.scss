@@ -42,4 +42,8 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+
+  &__btn-text {
+    @include visually-hidden;
+  }
 }

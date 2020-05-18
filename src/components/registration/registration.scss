@@ -25,7 +25,12 @@
   }
 
   &__sex {
+    display: flex;
     margin-bottom: 22px;
+  }
+
+  &__man {
+    margin-right: 20px;
   }
 
   &__birthday {
@@ -39,17 +44,7 @@
   &__proceed {
     margin-bottom: 29px;
   }
-}
 
-.sex {
-  display: flex;
-
-  &__man {
-    margin-right: 20px;
-  }
-}
-
-.login-data {
   &__email {
     margin-bottom: 10px;
   }

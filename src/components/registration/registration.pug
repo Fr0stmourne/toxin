@@ -9,25 +9,23 @@ mixin registration({title = 'Регистрация', noteText = 'Уже зар�
   form.registration
     h3.registration__title=title
     .registration__name
-      +text-field({placeholder: 'Имя', name:'name'})
+      +text-field({placeholder: 'Имя', name:'registration-name'})
     .registration__surname
-      +text-field({placeholder: 'Фамилия', name:'surname'})
+      +text-field({placeholder: 'Фамилия', name:'registration-surname'})
     .registration__sex
-      .sex
-        .sex__man
-          +radio-btn({name: 'sex', labelText: 'Мужчина'})
-        .sex__woman
-          +radio-btn({name: 'sex', labelText: 'Женщина'})
+        .registration__man
+          +radio-btn({name: 'registration-sex', labelText: 'Мужчина'})
+        .registration__woman
+          +radio-btn({name: 'registration-sex', labelText: 'Женщина'})
     .registration__birthday
-      +masked-text-field({placeholder: 'ДД.ММ.ГГГГ', title: 'Дата рождения', name:'birthday'})
+      +masked-text-field({placeholder: 'ДД.ММ.ГГГГ', title: 'Дата рождения', name:'registration-birthday'})
     .registration__login-data
-      .login-data
-        .login-data__email
-          +text-field({placeholder: "Email", name: "email", title: 'данные для входа в сервис'})
-        .login-data__password
-          +text-field({placeholder: "Пароль", name: "password"})
+        .registration__email
+          +text-field({placeholder: "Email", name: "registration-email", title: 'данные для входа в сервис'})
+        .registration__password
+          +text-field({placeholder: "Пароль", name: "registration-password"})
     .registration__offers-btn
-      +toggle({name: 'offers', btnText: 'Получать спецпредложения'})
+      +toggle({name: 'registration-offers', btnText: 'Получать спецпредложения'})
     .registration__proceed
       +button({btnText: 'перейти к оплате', type: 'proceed'})
     .registration__note
