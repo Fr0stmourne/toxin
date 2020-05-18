@@ -1,6 +1,6 @@
 include ../text-field/text-field.pug
 
-mixin login({action = './mock', noteText = 'Подсказка'} = {})
+mixin login({action = './mock', noteText = 'Подсказка', link = './mock'} = {})
   .login
     h3.login__title Войти
     form(action=action)
@@ -14,4 +14,4 @@ mixin login({action = './mock', noteText = 'Подсказка'} = {})
       .login__note.note
         span.note__text=noteText
         .note__btn
-          +button({btnText: 'Создать', type: 'secondary'})
+          +button({btnText: 'Создать', type: 'secondary', link})

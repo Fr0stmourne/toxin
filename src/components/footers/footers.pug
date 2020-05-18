@@ -41,7 +41,7 @@ mixin footer(options = {})
           ul.bottom__social
             each social in socialList
               li.bottom__social-item
-                a.bottom__social-link(href=social.link)
+                a.bottom__social-link(href=social.link target="_blank" rel="noopener noreferrer")
                   img(src=social.imgLink, alt=social.name)
                   span.visually-hidden=social.name
     else
@@ -56,7 +56,7 @@ mixin footer(options = {})
           ul.bottom__social
             each social in socialList
               li.bottom__social-item
-                a.bottom__social-link(href=social.link)
+                a.bottom__social-link(href=social.link target="_blank" rel="noopener noreferrer")
                   img(src=social.imgLink, alt=social.name)
                   span.visually-hidden=social.name
 
