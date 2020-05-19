@@ -1,0 +1,80 @@
+include ../footers/footers.pug
+
+mixin toxin-footer()
+  +footer({
+    extended: true,
+    copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
+    socialList: [{
+        name: 'Twitter',
+        link: 'https://twitter.com/',
+        imgLink: '/twitter.svg'
+      },
+      {
+        name: 'Facebook',
+        link: 'https://facebook.com/',
+        imgLink: '/facebook.svg'
+      }, 
+      {
+        name: 'Insta',
+        link: 'https://instagram.com/',
+        imgLink: '/insta.svg'
+      }
+    ],
+    sub: {
+      title: 'Subscribe to our newsletter',
+      text: 'Receive our latest news and promotions in your inbox!',
+      placeholder: 'Your email address'
+    },
+    navLists: [{
+        title: 'навигация',
+        items: [{
+          text: 'О нас',
+          link: './mock'
+        }, {
+          text: 'Новости',
+          link: './mock'
+        }, {
+          text: 'Служба поддержки',
+          link: './mock'
+        }, {
+          text: 'Услуги',
+          link: './mock'
+        }]
+      },
+      {
+        title: 'о нас',
+        items: [{
+          text: 'О сервисе',
+          link: './mock'
+        }, {
+          text: 'Наша команда',
+          link: './mock'
+        }, {
+          text: 'Вакансии',
+          link: './mock'
+        }, {
+          text: 'Инвесторы',
+          link: './mock'
+        }]
+      },
+      {
+        title: 'Служба поддержки',
+        items: [{
+          text: 'Соглашения',
+          link: './mock'
+        }, {
+          text: 'Сообщества',
+          link: './mock'
+        }, {
+          text: 'Связь с нами',
+          link: './mock'
+        }]
+      }
+    ],
+    sub: {
+      title: 'Подписка',
+      placeholder: 'Email',
+      text: 'Получайте специальные предложения и новости сервиса'
+    },
+    companyText: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»'
+  })

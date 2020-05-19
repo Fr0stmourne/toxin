@@ -1,3 +1,5 @@
+extends ../template-page/template-page.pug
+
 include ../../components/find-room/find-room.pug
 include ../../components/registration/registration.pug
 include ../../components/booking/booking.pug
@@ -5,15 +7,14 @@ include ../../components/room/room.pug
 include ../../components/login/login.pug
 include ../../components/datepicker/datepicker.pug
 
-<!DOCTYPE html>
-html(lang="ru")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(name="description", content="cards")
-    meta(name="keywords", content="cards")
-    title Cards
-    link(rel="shortcut icon", href="/favicon.png", type="image/x-icon")
+block meta
+  meta(name="description", content="cards")
+  meta(name="keywords", content="cards")
+
+block title
+  title Cards
+
+block content
   body.cards
     .cards__container
       .cards__col-1

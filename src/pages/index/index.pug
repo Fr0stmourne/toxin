@@ -1,24 +1,20 @@
-<!DOCTYPE html>
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Index page
-    link(rel="shortcut icon", href="/favicon.png", type="image/x-icon")
-    style.
-        body {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-  body
-    a(href="./colors-type.html") Colors Type
-    a(href="./cards.html") Cards
-    a(href="./form-elements.html") Form elements
-    a(href="./headers-footers.html") Headers Footers
-    a(href="./landing-page.html") Landing page
-    a(href="./registration-page.html") Registration
-    a(href="./room-details.html") Room details
-    a(href="./search-room.html") Search room
-    a(href="./signin-page.html") Sign in
+extends ../template-page/template-page.pug
+
+block meta
+  meta(name="description", content="index page")
+  meta(name="keywords", content="index")
+
+block title
+  title Index page
+
+block content      
+  body.index-page
+    a.index-page__link(href="./colors-type.html") Colors Type
+    a.index-page__link(href="./cards.html") Cards
+    a.index-page__link(href="./form-elements.html") Form elements
+    a.index-page__link(href="./headers-footers.html") Headers Footers
+    a.index-page__link(href="./landing-page.html") Landing page
+    a.index-page__link(href="./registration-page.html") Registration
+    a.index-page__link(href="./room-details.html") Room details
+    a.index-page__link(href="./search-room.html") Search room
+    a.index-page__link(href="./signin-page.html") Sign in

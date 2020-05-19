@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(name="description", content="colors and type")
-    meta(name="keywords", content="colors, type")
-    title Colors and type
-    link(rel="shortcut icon", href="/favicon.png", type="image/x-icon")
+extends ../template-page/template-page.pug
+
+block meta
+  meta(name="description", content="colors and type")
+  meta(name="keywords", content="colors, type")
+
+block title
+  title Colors and type
+
+block content
   body.colors-type
     .colors-type__container
       .colors-type__colors

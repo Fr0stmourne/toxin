@@ -1,108 +1,23 @@
-include ../../components/headers/headers.pug
-include ../../components/footers/footers.pug
+extends ../template-page/template-page.pug
+
+include ../../components/toxin-header/toxin-header.pug
+include ../../components/toxin-footer/toxin-footer.pug
 include ../../components/login/login.pug
 
-<!DOCTYPE html>
-html(lang="ru")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(name="description", content="login")
-    meta(name="keywords", content="login, sign in")
-    title Sign in
-    link(rel="shortcut icon", href="/favicon.png", type="image/x-icon")
+block meta
+  meta(name="description", content="login")
+  meta(name="keywords", content="login, sign in")
+
+block title
+  title Sign in
+
+block content
   body.signin-page
     .signin-page__wrapper
       h2.signin-page__title.visually-hidden Войти
-      +header({
-        unlogged: true,
-        regText: 'зарегистрироваться',
-        loginText: 'войти',
-        items: [{
-            text: 'О нас',
-            link: './mock'
-          }, {
-            text: 'Услуги',
-            link: './mock',
-            dropdown: [{
-              text: 'Услуга',
-              link: './mock'
-            }, {
-              text: 'Услуга 2',
-              link: './mock'
-            }, {
-              text: 'Услуга 2',
-              link: './mock'
-            }]
-          },
-          {
-            text: 'Вакансии',
-            link: './mock'
-          }, {
-            text: 'Новости',
-            link: './mock'
-          },
-          {
-            text: 'Соглашения',
-            link: './mock',
-            dropdown: [{
-              text: 'Услуга',
-              link: './mock'
-            }, {
-              text: 'Услуга 2',
-              link: './mock'
-            }, {
-              text: 'Услуга 2',
-              link: './mock'
-            }]
-          }
-        ]
-      })
+      +toxin-header()
       main.signin-page__main
         .signin-page__login-card
           +login({noteText: 'Нет аккаунта на Toxin?'})
-      +footer({
-        extended: true,
-        copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
-        socialList: [{
-            name: 'Twitter',
-            link: 'https://twitter.com/',
-            imgLink: '/twitter.svg'
-          },
-          {
-            name: 'Facebook',
-            link: 'https://www.facebook.com/',
-            imgLink: '/facebook.svg'
-          }, 
-          {
-            name: 'Insta',
-            link: 'https://www.instagram.com/',
-            imgLink: '/insta.svg'
-          }
-        ],
-        sub: {
-          title: 'Subscribe to our newsletter',
-          text: 'Receive our latest news and promotions in your inbox!',
-          placeholder: 'Your email address'
-        },
-        navLists: [{
-            title: 'навигация',
-            items: ['О нас', 'Новости', 'Служба поддержки', 'Услуги']
-          },
-          {
-            title: 'о нас',
-            items: ['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']
-          },
-          {
-            title: 'Служба поддержки',
-            items: ['Соглашения', 'Сообщества', 'Связь с нами']
-          }
-        ],
-        sub: {
-          title: 'Подписка',
-          placeholder: 'Email',
-          text: 'Получайте специальные предложения и новости сервиса'
-        },
-        companyText: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»'
-      })
+      +toxin-footer()
                 

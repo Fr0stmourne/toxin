@@ -1,0 +1,47 @@
+include ../headers/headers.pug
+
+mixin toxin-header()
+  +header({
+    unlogged: true,
+    regText: 'зарегистрироваться',
+    loginText: 'войти',
+    items: [{
+        text: 'О нас',
+        link: './mock'
+      }, {
+        text: 'Услуги',
+        link: './mock',
+        dropdown: [{
+          text: 'Услуга',
+          link: './mock'
+        }, {
+          text: 'Услуга 2',
+          link: './mock'
+        }, {
+          text: 'Услуга 2',
+          link: './mock'
+        }]
+      },
+      {
+        text: 'Вакансии',
+        link: './mock'
+      }, {
+        text: 'Новости',
+        link: './mock'
+      },
+      {
+        text: 'Соглашения',
+        link: './mock',
+        dropdown: [{
+          text: 'Услуга',
+          link: './mock'
+        }, {
+          text: 'Услуга 2',
+          link: './mock'
+        }, {
+          text: 'Услуга 2',
+          link: './mock'
+        }]
+      }
+    ]
+  })

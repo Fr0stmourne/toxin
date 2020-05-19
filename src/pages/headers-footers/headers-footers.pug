@@ -1,14 +1,16 @@
+extends ../template-page/template-page.pug
+
 include ../../components/headers/headers.pug
 include ../../components/footers/footers.pug
-<!DOCTYPE html>
-html(lang="ru")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(name="description", content="headers and footers")
-    meta(name="keywords", content="headers, footers")
-    title Headers Footers
-    link(rel="shortcut icon", href="/favicon.png", type="image/x-icon")
+
+block meta
+  meta(name="description", content="headers and footers")
+  meta(name="keywords", content="headers, footers")
+
+block title
+  title Headers Footers
+
+block content
   body.headers-footers
     .headers-footers__header-1
       +header({
