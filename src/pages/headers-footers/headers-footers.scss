@@ -1,16 +1,16 @@
 .headers-footers {
   background-color: lightgray;
 
-  &__header-1 {
+  &__header_unlogged {
     margin-top: 150px;
     margin-bottom: 40px;
   }
 
-  &__header-2 {
+  &__header_logged {
     margin-bottom: 40px;
   }
 
-  &__footer-1 {
+  &__footer_extended {
     margin-bottom: 40px;
   }
 }

@@ -10,28 +10,22 @@
   &__room-booking {
     max-width: 1440px;
     margin: 0 auto;
+    position: relative;
+    min-height: 760px;
+    padding-top: 70px;
+    background-image: url('/landing.jpg');
+    background-repeat: no-repeat;
+    background-position-y: -70px;
 
     @media (max-width: 600px) {
       min-height: 0;
+      background-size: cover;
+      background-position-y: 0;
+      padding: 70px 0;
     }
   }
-}
 
-.room-booking {
-  position: relative;
-  min-height: 760px;
-  padding-top: 70px;
-  background-image: url('/landing.jpg');
-  background-repeat: no-repeat;
-  background-position-y: -70px;
-
-  @media (max-width: 600px) {
-    background-size: cover;
-    background-position-y: 0;
-    padding: 70px 0;
-  }
-
-  &__container {
+  &__booking-container {
     @include container;
     display: grid;
     padding-right: 134px;
@@ -42,6 +36,10 @@
       justify-content: center;
       padding: 0;
     }
+  }
+
+  &__title {
+    @include visually-hidden;
   }
 
   &__form {

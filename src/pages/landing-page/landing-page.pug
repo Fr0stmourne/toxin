@@ -16,16 +16,13 @@ block content
     .landing-page__wrapper
       +toxin-header()
       main.landing-page__main
-        .landing-page__room-booking
-          section.room-booking
-            .room-booking__container
-              h2.room-booking__title.visually-hidden Бронирование комнат
-              .room-booking__form
-                +find-room({
-                  title: 'Найдём номера под ваши пожелания', 
-                  start: {id: 'cards__start'}, 
-                  end: {id: 'cards__end'}
-                })
-              .room-booking__note Лучшие номера для вашей работы, отдыха и просто вдохновения
+        section.landing-page__room-booking
+          .landing-page__booking-container
+            h2.landing-page__title Бронирование комнат
+            .landing-page__form
+              +find-room({
+                title: 'Найдём номера под ваши пожелания'
+              })
+            .landing-page__note Лучшие номера для вашей работы, отдыха и просто вдохновения
       +toxin-footer()
     
