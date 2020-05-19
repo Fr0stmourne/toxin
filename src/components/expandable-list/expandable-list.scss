@@ -23,6 +23,12 @@
     &_hidden {
       background-image: url('/expandable-list_hidden.svg');
     }
+
+    &:focus,
+    &:active {
+      outline: 0;
+      box-shadow: 0 0 0 2px $dark-75;
+    }
   }
 
   &__checkbox {
