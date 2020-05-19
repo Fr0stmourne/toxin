@@ -19,37 +19,37 @@ export default class Dropdown {
   constructor(dropdownEl) {
     this.container = $(dropdownEl);
     this.dropdown = this.container.find('.js-dropdown-result');
+    this.dropdownList = this.dropdown.next();
+    this.plusMinus = this.dropdown.parent().find('.js-plus-minus');
+    this.input = this.dropdown.parent().find('.js-dropdown-item input');
+    this.applyBtn = this.dropdown.parent().find('.js-apply');
+    this.resetBtn = this.dropdown.parent().find('.js-reset');
     this.initialText = this.dropdown.text();
 
     if (this.dropdown) this.init();
   }
 
   createInput() {
-    this.dropdown
-      .parent()
-      .find('.plus-minus')
-      .htmlNumberSpinner();
+    this.plusMinus.htmlNumberSpinner();
+    this.plusMinusBtn = this.dropdown.parent().find('.js-dropdown-item .js-plus-minus-btn');
   }
 
   @boundMethod
   close(e) {
     e.preventDefault();
-    this.dropdown.next().slideToggle();
+    this.dropdownList.slideToggle();
   }
 
   @boundMethod
   reset(e) {
     e.preventDefault();
-    this.dropdown
-      .parent()
-      .find('.js-dropdown-item input')
-      .each((idx, el) => {
-        $(el).val(0);
-        $(el)
-          .parent()
-          .find('.js-minus-btn')
-          .click();
-      });
+    this.input.each((idx, el) => {
+      $(el).val(0);
+      $(el)
+        .parent()
+        .find('.js-minus-btn')
+        .click();
+    });
   }
 
   @boundMethod
@@ -99,33 +99,19 @@ export default class Dropdown {
       });
 
     const resultText = `${resultArr.length ? [...new Set(resultArr)].join(', ') : this.initialText}`;
-
     this.dropdown.text(resultText);
   }
 
   init() {
     this.createInput();
 
-    this.dropdown
-      .parent()
-      .find('.js-apply')
-      .click(this.close);
+    this.applyBtn.click(this.close);
     this.dropdown.click(this.close);
 
-    this.dropdown
-      .parent()
-      .find('.js-reset')
-      .click(this.reset);
+    this.resetBtn.click(this.reset);
 
-    this.dropdown
-      .parent()
-      .find('.js-dropdown-item input')
-      .change(this.changeValue);
-
-    this.dropdown
-      .parent()
-      .find('.js-dropdown-item .js-plus-minus-btn')
-      .click(this.changeValue);
+    this.input.change(this.changeValue);
+    this.plusMinusBtn.click(this.changeValue);
 
     this.dropdown.click();
   }
