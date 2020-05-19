@@ -1,0 +1,11 @@
+mixin room-restrictions()  
+  section.room-restrictions
+    .room-restrictions__room-rules
+      h2.room-restrictions__title Правила
+      .room-restrictions__list
+        +bullet-list({
+          items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
+        })
+    .room-restrictions__room-cancel
+      h2.room-restrictions__cancel-title Отмена
+      .room-restrictions__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
