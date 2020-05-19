@@ -1,91 +1,93 @@
-.colors-type__container {
-  @include container;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 145px;
-}
+.colors-type {
+  &__container {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 145px;
+  }
 
-.colors {
-  font: $datepicker-switch;
+  &__colors {
+    font: $datepicker-switch;
+  }
 
-  &__list {
+  &__colors-list {
     margin-left: 10px;
   }
 
-  &__item {
+  &__color {
     display: flex;
     margin-bottom: 20px;
   }
 
-  &__info {
+  &__color-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     line-height: 1.5;
   }
 
-  &__title {
+  &__color-title {
     font-weight: 700;
   }
 
-  &__text {
+  &__color-text {
     font-weight: 400;
   }
 
-  &__sample {
+  &__color-sample {
     width: 70px;
     height: 70px;
     border-radius: 6px;
     margin-right: 40px;
+
+    &_dark_100 {
+      background-color: $dark-100;
+    }
+
+    &_dark_75 {
+      background-color: $dark-75;
+    }
+
+    &_dark_50 {
+      background-color: $dark-50;
+    }
+
+    &_dark_25 {
+      background-color: $dark-25;
+    }
+
+    &_dark_5 {
+      background-color: $dark-5;
+    }
+
+    &_purple {
+      background-color: $purple;
+    }
+
+    &_green {
+      background-color: $green;
+    }
   }
-}
 
-.dark-100 {
-  background-color: $dark-100;
-}
+  &__type {
+    margin-right: 48px;
+  }
 
-.dark-75 {
-  background-color: $dark-75;
-}
-
-.dark-50 {
-  background-color: $dark-50;
-}
-
-.dark-25 {
-  background-color: $dark-25;
-}
-
-.dark-5 {
-  background-color: $dark-5;
-}
-
-.purple {
-  background-color: $purple;
-}
-
-.green {
-  background-color: $green;
-}
-
-.type {
-  margin-right: 48px;
-
-  &__list {
+  &__type-list {
     display: table;
   }
 
-  &__item {
+  &__type-item {
     display: table-row;
 
-    &:not(:last-child) .type__text {
+    &:not(:last-child) .colors-type__type-text {
       padding-bottom: 50px;
     }
 
-    &_h1 {
+    &_type_h1 {
       font: $h1-font;
 
-      .type__type {
+      .colors-type__type-title {
         text-transform: uppercase;
         font: inherit;
         font-family: 'Montserrat';
@@ -93,38 +95,38 @@
       }
     }
 
-    &_h2 {
+    &_type_h2 {
       font: $h2-font;
 
-      .type__type {
+      .colors-type__type-title {
         font: inherit;
         text-transform: uppercase;
         font-weight: 400;
       }
     }
 
-    &_h3 {
+    &_type_h3 {
       font: $btn-font;
       text-transform: uppercase;
 
-      .type__type {
+      .colors-type__type-title {
         font: inherit;
         font-weight: 400;
       }
 
-      &:not(:last-child) .type__text {
+      &:not(:last-child) .colors-type__type-text {
         padding-bottom: 48px;
       }
     }
 
-    &_body {
+    &_type_body {
       font: $default-font;
 
-      .type__type {
+      .colors-type__type-title {
         text-transform: capitalize;
       }
 
-      .type__text {
+      .colors-type__type-text {
         box-sizing: border-box;
         padding-right: 39px;
         line-height: 24px;
@@ -132,7 +134,7 @@
     }
   }
 
-  &__type {
+  &__type-title {
     display: table-cell;
     color: $dark-25;
     font: $default-font;
@@ -140,7 +142,7 @@
     padding-right: 30px;
   }
 
-  &__text {
+  &__type-text {
     max-width: 340px;
     display: table-cell;
   }
