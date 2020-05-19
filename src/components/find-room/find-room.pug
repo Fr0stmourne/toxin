@@ -2,8 +2,8 @@ include ../datepicker/datepicker.pug
 include ../dropdown/dropdown.pug
 include ../buttons/buttons.pug
 
-mixin find-room({title, start, end, dropdownLabel} = {})
-  form.find-room
+mixin find-room({title, action = 'search-room.html' , dropdownLabel = ''} = {})
+  form(action=action).find-room
     h3.find-room__title=title
     .find-room__datepicker
       +datepicker-double({
@@ -30,4 +30,4 @@ mixin find-room({title, start, end, dropdownLabel} = {})
           wordForms: 'младенец младенца младенцев'
         }]
       })
-    +button({btnText: 'подобрать номер', type: 'proceed', link: 'search-room.html'})
+    +button({btnText: 'подобрать номер', type: 'proceed'})

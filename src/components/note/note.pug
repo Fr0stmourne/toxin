@@ -1,7 +1,7 @@
 include ../buttons/buttons.pug
 
-mixin note({btnText = 'войти', noteText = 'Нет аккаунта на Toxin', link})
+mixin note({btnText = 'войти', noteText = 'Нет аккаунта на Toxin'})
   .note
     span.note__text=noteText
     .note__btn
-      +button({btnText, type: 'secondary', link})
+      +button({btnText, type: 'secondary'})

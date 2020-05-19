@@ -1,10 +1,10 @@
 include ../text-field/text-field.pug
 include ../note/note.pug
 
-mixin login({action = './mock', noteText = 'Подсказка', link = './mock'} = {})
+mixin login({action = './mock', noteText = 'Подсказка', noteAction = 'registration-page.html'} = {})
   .login
     h3.login__title Войти
-    form(action=action)
+    form(action=action).login__form
       .login__login-data
         .login__email
           +text-field({placeholder: "Email", name: "email"})
@@ -12,5 +12,6 @@ mixin login({action = './mock', noteText = 'Подсказка', link = './mock'
           +text-field({placeholder: "Пароль", name: "password"})
       .login__proceed
         +button({btnText: 'войти', type: 'proceed'})
+    form(action=noteAction).login__note-form
       .login__note
-        +note({link, noteText: 'Нет аккаунта на Toxin?', btnText: 'Создать'})
+        +note({noteText: 'Нет аккаунта на Toxin?', btnText: 'Создать'})

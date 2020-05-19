@@ -5,31 +5,30 @@ include ../toggle/toggle.pug
 include ../buttons/buttons.pug
 include ../note/note.pug
 
-mixin registration({title = 'Регистрация', noteText = 'Уже зарегистрированы?', link = './mock'} = {})
-  form.registration
-    h3.registration__title=title
-    .registration__name
-      +text-field({placeholder: 'Имя', name:'registration-name'})
-    .registration__surname
-      +text-field({placeholder: 'Фамилия', name:'registration-surname'})
-    .registration__sex
-        .registration__man
-          +radio-btn({name: 'registration-sex', labelText: 'Мужчина'})
-        .registration__woman
-          +radio-btn({name: 'registration-sex', labelText: 'Женщина'})
-    .registration__birthday
-      +masked-text-field({placeholder: 'ДД.ММ.ГГГГ', title: 'Дата рождения', name:'registration-birthday'})
-    .registration__login-data
-        .registration__email
-          +text-field({placeholder: "Email", name: "registration-email", title: 'данные для входа в сервис'})
-        .registration__password
-          +text-field({placeholder: "Пароль", name: "registration-password"})
-    .registration__offers-btn
-      +toggle({name: 'registration-offers', btnText: 'Получать спецпредложения'})
-    .registration__proceed
-      +button({btnText: 'перейти к оплате', type: 'proceed'})
-    .registration__note
-      +note({link, noteText: 'Уже есть аккаунт на Toxin', btnText: 'Войти'})
-
-
-      
+mixin registration({title = 'Регистрация', noteText = 'Уже зарегистрированы?', action = './mock', noteAction = 'signin-page.html'} = {})
+  .registration
+    form(action=action).registration__main-form
+      h3.registration__title=title
+      .registration__name
+        +text-field({placeholder: 'Имя', name:'registration-name'})
+      .registration__surname
+        +text-field({placeholder: 'Фамилия', name:'registration-surname'})
+      .registration__sex
+          .registration__man
+            +radio-btn({name: 'registration-sex', labelText: 'Мужчина'})
+          .registration__woman
+            +radio-btn({name: 'registration-sex', labelText: 'Женщина'})
+      .registration__birthday
+        +masked-text-field({placeholder: 'ДД.ММ.ГГГГ', title: 'Дата рождения', name:'registration-birthday'})
+      .registration__login-data
+          .registration__email
+            +text-field({placeholder: "Email", name: "registration-email", title: 'данные для входа в сервис'})
+          .registration__password
+            +text-field({placeholder: "Пароль", name: "registration-password"})
+      .registration__offers-btn
+        +toggle({name: 'registration-offers', btnText: 'Получать спецпредложения'})
+      .registration__proceed
+        +button({btnText: 'перейти к оплате', type: 'proceed'})
+    form(action=noteAction).registration__note-form
+      .registration__note
+        +note({noteText: 'Уже есть аккаунт на Toxin', btnText: 'Войти'})
