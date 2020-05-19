@@ -1,3 +1,5 @@
+import { boundMethod } from 'autobind-decorator';
+
 function getCorrectWordForm(n, textForms) {
   const num = Math.abs(n) % 100;
   const n1 = num % 10;
@@ -22,19 +24,21 @@ export default class Dropdown {
     if (this.dropdown) this.init();
   }
 
-  createInput = () => {
+  createInput() {
     this.dropdown
       .parent()
       .find('.plus-minus')
       .htmlNumberSpinner();
-  };
+  }
 
-  close = e => {
+  @boundMethod
+  close(e) {
     e.preventDefault();
     this.dropdown.next().slideToggle();
-  };
+  }
 
-  reset = e => {
+  @boundMethod
+  reset(e) {
     e.preventDefault();
     this.dropdown
       .parent()
@@ -46,9 +50,10 @@ export default class Dropdown {
           .find('.js-minus-btn')
           .click();
       });
-  };
+  }
 
-  changeValue = e => {
+  @boundMethod
+  changeValue(e) {
     e.preventDefault();
     const dropdown = $(e.target).closest('.js-dropdown');
     dropdown.find('.js-reset').removeClass('dropdown__reset_hidden');
@@ -96,7 +101,7 @@ export default class Dropdown {
     const resultText = `${resultArr.length ? [...new Set(resultArr)].join(', ') : this.initialText}`;
 
     this.dropdown.text(resultText);
-  };
+  }
 
   init() {
     this.createInput();

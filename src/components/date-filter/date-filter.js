@@ -4,16 +4,16 @@ import 'air-datepicker/dist/css/datepicker.css';
 export default class DateFilter {
   constructor(dateFilterElement) {
     this.container = $(dateFilterElement);
+    this.btnContainer = $('.datepicker--buttons');
 
     this.init();
   }
 
-  addCloseButton = () => {
-    const btnContainer = $('.datepicker--buttons');
-    if (btnContainer.children().length === 1) {
-      btnContainer.append('<span class="datepicker--button" data-action="close">применить</span>');
+  addCloseButton() {
+    if (this.btnContainer.children().length === 1) {
+      this.btnContainer.append('<span class="datepicker--button" data-action="close">применить</span>');
     }
-  };
+  }
 
   init() {
     this.container.datepicker({
