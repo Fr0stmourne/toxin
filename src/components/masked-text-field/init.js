@@ -1,5 +1,3 @@
 import MaskField from './masked-field';
 
-$(() => {
-  $('.js-date').each((idx, el) => new MaskField(el));
-});
+$('.js-date').each((idx, el) => new MaskField(el));
