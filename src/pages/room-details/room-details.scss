@@ -39,6 +39,10 @@
     }
   }
 
+  &__title {
+    @include visually-hidden;
+  }
+
   &__booking {
     margin-bottom: 30px;
 
@@ -49,11 +53,16 @@
   }
 
   &__room-info {
+    display: flex;
+    justify-content: space-between;
+
     @media (max-width: 1150px) {
+      justify-content: space-evenly;
       margin-bottom: 30px;
     }
 
     @media (max-width: 750px) {
+      flex-direction: column;
       margin-bottom: 20px;
     }
   }
@@ -62,120 +71,24 @@
     margin: 0 auto 71px;
     max-width: 1440px;
     width: 100%;
-  }
+    max-height: 485px;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: max-content max-content;
 
-  &__room-restrictions {
-    margin-bottom: 61px;
-  }
-
-  &__room-reviews {
-    margin-bottom: 33px;
-  }
-}
-
-.room-info {
-  display: flex;
-  justify-content: space-between;
-
-  @media (max-width: 1150px) {
-    justify-content: space-evenly;
-  }
-
-  @media (max-width: 750px) {
-    flex-direction: column;
-  }
-
-  &__info {
-    max-width: 291px;
-    margin-right: 20px;
-
-    @media (max-width: 750px) {
-      margin-right: 0;
-      margin-bottom: 20px;
+    @media (max-width: 1400px) {
+      max-height: none;
+      grid-template-columns: 1fr max-content;
     }
-  }
 
-  &__impression {
-    margin-right: 37px;
-
-    @media (max-width: 1150px) {
-      margin-right: 0;
+    @media (max-width: 800px) {
+      grid-template-columns: repeat(2, 50%);
     }
-  }
 
-  &__diagram {
-    display: flex;
-  }
-
-  &__canvas-box {
-    position: relative;
-    width: 123px;
-    height: 123px;
-    margin-right: 28px;
-
-    @media (max-width: 400px) {
-      margin-right: 10px;
+    @media (max-width: 550px) {
+      display: flex;
+      flex-direction: column;
     }
-  }
-
-  &__canvas-text {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font: $h1-font;
-    color: $purple;
-    line-height: 18px;
-
-    &_highlighted {
-      font: $btn-font;
-      text-transform: uppercase;
-    }
-  }
-
-  &__diagram-legend {
-    margin: 29px 0 0 0;
-    padding: 0;
-  }
-
-  &__title {
-    margin: 0 0 18px;
-    font: $h2-font;
-    letter-spacing: 0.03em;
-  }
-
-  &__advantages {
-    margin-bottom: 10px;
-  }
-
-  &__advantage {
-    margin-bottom: 18px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.room-photos {
-  max-height: 485px;
-  display: grid;
-  grid-template-columns: max-content max-content;
-  grid-template-rows: max-content max-content;
-
-  @media (max-width: 1400px) {
-    max-height: none;
-    grid-template-columns: 1fr max-content;
-  }
-
-  @media (max-width: 800px) {
-    grid-template-columns: repeat(2, 50%);
-  }
-
-  @media (max-width: 550px) {
-    display: flex;
-    flex-direction: column;
   }
 
   &__photo {
@@ -202,7 +115,7 @@
       grid-row: 1/ 2;
     }
 
-    .room-photos__photo {
+    .room-details__photo {
       object-fit: cover;
       width: 100%;
 
@@ -220,7 +133,7 @@
       grid-column: 1 / 2;
       grid-row: 2/ 3;
 
-      .room-photos__photo {
+      .room-details__photo {
         width: 100%;
         object-fit: cover;
       }
@@ -233,7 +146,7 @@
     position: relative;
     bottom: 6px;
 
-    .room-photos__photo {
+    .room-details__photo {
       width: 100%;
     }
 
@@ -244,6 +157,22 @@
     @media (max-width: 800px) {
       grid-column: 2 / 3;
       grid-row: 2/ 3;
+    }
+  }
+
+  &__room-restrictions {
+    margin-bottom: 61px;
+  }
+
+  &__room-reviews {
+    margin-bottom: 33px;
+  }
+
+  &__impression {
+    margin-right: 37px;
+
+    @media (max-width: 1150px) {
+      margin-right: 0;
     }
   }
 }
@@ -355,42 +284,5 @@
   &__text {
     font: $default-font;
     line-height: 24px;
-  }
-}
-
-.diagram-legend {
-  list-style: none;
-
-  &__item {
-    padding-left: 15px;
-    position: relative;
-    font: $default-font;
-    line-height: 24px;
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 8px;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-    }
-
-    &:nth-child(1)::before {
-      background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
-    }
-
-    &:nth-child(2)::before {
-      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-    }
-
-    &:nth-child(3)::before {
-      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-    }
-
-    &:nth-child(4)::before {
-      background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
-    }
   }
 }

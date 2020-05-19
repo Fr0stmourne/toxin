@@ -6,6 +6,8 @@ include ../../components/advantage/advantage.pug
 include ../../components/comment/comment.pug
 include ../../components/bullet-list/bullet-list.pug
 include ../../components/booking/booking.pug
+include ../../components/room-info/room-info.pug
+include ../../components/room-impression/room-impression.pug
 
 block meta
   meta(name="description", content="room details")
@@ -19,55 +21,21 @@ block content
     .room-details__wrapper
       +toxin-header()
       main.room-details__main
-        h2.room-details__title.visually-hidden Сведения о номере
+        h2.room-details__title Сведения о номере
         .room-details__room-photos
-          .room-photos
-            .room-photos__photo-box
-              img.room-photos__photo(src="/details-1.jpg", alt="room-photo")
-            .room-photos__photo-box
-              img.room-photos__photo(src="/details-2.jpg", alt="room-photo")
-            .room-photos__photo-box
-              img.room-photos__photo(src="/details-3.jpg", alt="room-photo")
+            .room-details__photo-box
+              img.room-details__photo(src="/details-1.jpg", alt="room-photo")
+            .room-details__photo-box
+              img.room-details__photo(src="/details-2.jpg", alt="room-photo")
+            .room-details__photo-box
+              img.room-details__photo(src="/details-3.jpg", alt="room-photo")
         .room-details__container
           .room-details__main-block
             .room-details__room-info
-              .room-info
-                section.room-info__info
-                  h2.room-info__title Сведения о номере
-                  .room-info__advantages
-                    .room-info__advantage
-                      +advantage({
-                        title: 'Комфорт',
-                        description: 'Шумопоглощающие стены',
-                        alt: 'Дом',
-                        imgLink: "/advantage_house.svg"
-                      })
-                    .room-info__advantage
-                      +advantage({
-                        title: 'Удобство',
-                        description: 'Окно в каждой из спален',
-                        alt: 'Город',
-                        imgLink: "/advantage_city.svg"
-                      })
-                    .room-info__advantage
-                      +advantage({
-                        title: 'Уют',
-                        description: 'Номер оснащён камином',
-                        alt: 'Камин',
-                        imgLink: "/whatshot.svg"
-                      })
-                section.room-info__impression
-                  h2.room-info__title Впечатления от номера
-                  .room-info__diagram
-                    .room-info__canvas-box
-                      canvas(id='doughnut-chart' width='120' height='120') 
-                      span.room-info__canvas-text 260 
-                        span.room-info__canvas-text_highlighted голосов
-                    ol.room-info__diagram-legend.diagram-legend
-                      li.diagram-legend__item Великолепно
-                      li.diagram-legend__item Хорошо
-                      li.diagram-legend__item Удовлетворительно
-                      li.diagram-legend__item Разочарован
+              .room-details__info
+                +room-info()
+              .room-details__impression
+                +room-impression
             .room-details__room-reviews
               section.room-reviews
                 .room-reviews__box

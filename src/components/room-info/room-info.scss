@@ -1,0 +1,27 @@
+.room-info {
+  max-width: 291px;
+  margin-right: 20px;
+
+  @media (max-width: 750px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin: 0 0 18px;
+    font: $h2-font;
+    letter-spacing: 0.03em;
+  }
+
+  &__advantages {
+    margin-bottom: 10px;
+  }
+
+  &__advantage {
+    margin-bottom: 18px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
