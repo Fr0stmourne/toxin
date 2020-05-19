@@ -17,7 +17,7 @@ block title
 block content
   body.cards
     .cards__container
-      .cards__col-1
+      .cards__find-register
         .cards__find-room
           +find-room({
               title: 'Найдём номера под ваши пожелания'
@@ -27,7 +27,7 @@ block content
               title: 'Регистрация аккаунта',
               noteText: 'Уже есть аккаунт на Toxin'
             })
-      .cards__col-2
+      .cards__booking-login
         .cards__booking
           +booking({
             num: '888',
@@ -42,7 +42,7 @@ block content
           })
         .cards__login
           +login({noteText: 'Нет аккаунта на Toxin?'})
-      .cards__col-3
+      .cards__datepicker-rooms
         .cards__datepicker
           +datepicker-double({
             startLabel: 'Прибытие',

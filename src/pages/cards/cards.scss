@@ -5,17 +5,17 @@
     margin-top: 150px;
   }
 
-  &__col-1 {
+  &__find-register {
     max-width: 380px;
     width: 100%;
     margin-right: 40px;
   }
 
-  &__col-2 {
+  &__booking-login {
     width: 100%;
   }
 
-  &__col-3 {
+  &__datepicker-rooms {
     width: 100%;
     max-width: 320px;
   }
@@ -30,15 +30,6 @@
 
   &__datepicker {
     margin-bottom: 40px;
-
-    .datepicker-double__label {
-      display: none;
-    }
-
-    .datepicker-double input,
-    .datepicker-double__box::before {
-      display: none;
-    }
   }
 
   &__room {

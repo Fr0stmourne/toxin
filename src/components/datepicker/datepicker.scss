@@ -56,4 +56,15 @@
       margin-bottom: 15px;
     }
   }
+
+  &_inlined {
+    .datepicker-double__label {
+      display: none;
+    }
+
+    .datepicker-double__input,
+    .datepicker-double__box::before {
+      display: none;
+    }
+  }
 }
