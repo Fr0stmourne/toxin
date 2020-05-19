@@ -8,7 +8,7 @@
   width: 120px;
 
   &:focus-within {
-    outline: 2px solid #4a90e2;
+    outline: 2px solid $dark-75;
     outline-offset: 4px;
   }
 

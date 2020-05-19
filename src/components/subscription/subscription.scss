@@ -41,6 +41,12 @@
     background-image: url('/sub_arrow_forward.svg');
     background-repeat: no-repeat;
     background-position: center;
+
+    &:focus,
+    &:active {
+      outline: 0;
+      background-size: 30%;
+    }
   }
 
   &__btn-text {

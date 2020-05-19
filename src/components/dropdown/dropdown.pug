@@ -5,7 +5,7 @@ mixin dropdown({title, placeholder = 'Список', optionsList = ['There are n
   .dropdown.js-dropdown
     if title
       .text-field__title=title
-    .dropdown__result.js-dropdown-result=placeholder
+    button(type="button").dropdown__result.js-dropdown-result=placeholder
     .dropdown__content
       ul.dropdown__list
         each option in optionsList

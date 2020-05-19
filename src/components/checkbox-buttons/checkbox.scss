@@ -25,7 +25,16 @@
     border-radius: 4px;
   }
 
-  input:checked~&__checkmark {
+  &__input {
+    @include visually-hidden;
+  }
+
+  &__input:focus~&__checkmark,
+  &__input:active~&__checkmark {
+    box-shadow: 0 0 0 2px $dark-75;
+  }
+
+  &__input:checked~&__checkmark {
     border: 1px solid $purple;
     background-image: url('/checkbox_tick.svg');
     background-position: center 3px;

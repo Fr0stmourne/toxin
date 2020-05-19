@@ -1,32 +1,11 @@
-.plus-minus {
-  display: flex;
-  align-items: center;
-
-  &__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border: 1px solid $dark-50;
-    border-radius: 50%;
-    background-color: white;
-    cursor: pointer;
-  }
-
-  &__input {
-    border: 0;
-    font: $btn-font;
-    text-align: center;
-    max-width: 35px;
-  }
-}
-
 .dropdown {
   position: relative;
   min-width: 235px;
 
   &__result {
+    display: block;
+    width: 100%;
+    text-align: left;
     border: 1px solid $dark-25;
     border-radius: 4px 4px 0 0;
     font: $default-font;
@@ -37,6 +16,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    background-color: transparent;
     background-image: url('/dropdown_hidden.svg');
     background-repeat: no-repeat;
     background-position: calc(100%-16px);
@@ -86,7 +66,8 @@
     justify-content: space-between;
     margin: 13px 0 10px 6px;
 
-    button {
+    .dropdown__apply,
+    .dropdown__reset {
       border: 0;
       background-color: transparent;
       font: $btn-font;
@@ -100,9 +81,21 @@
     &_hidden {
       visibility: hidden;
     }
+
+    &:focus,
+    &:active {
+      outline: 0;
+      color: $dark-75;
+    }
   }
 
   &__apply {
     color: $purple;
+
+    &:focus,
+    &:active {
+      outline: 0;
+      color: $dark-75;
+    }
   }
 }

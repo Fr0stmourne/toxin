@@ -21,7 +21,6 @@ export default class Dropdown {
     this.dropdown = this.container.find('.js-dropdown-result');
     this.dropdownList = this.dropdown.next();
     this.plusMinus = this.dropdown.parent().find('.js-plus-minus');
-    this.input = this.dropdown.parent().find('.js-dropdown-item input');
     this.applyBtn = this.dropdown.parent().find('.js-apply');
     this.resetBtn = this.dropdown.parent().find('.js-reset');
     this.initialText = this.dropdown.text();
@@ -32,6 +31,7 @@ export default class Dropdown {
   createInput() {
     this.plusMinus.htmlNumberSpinner();
     this.plusMinusBtn = this.dropdown.parent().find('.js-dropdown-item .js-plus-minus-btn');
+    this.input = this.dropdown.parent().find('.js-dropdown-item input');
   }
 
   @boundMethod

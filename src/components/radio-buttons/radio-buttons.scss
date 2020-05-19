@@ -21,7 +21,11 @@
     border-radius: 50%;
   }
 
-  input:checked~&__checkmark {
+  &__input {
+    @include visually-hidden;
+  }
+
+  &__input:checked~&__checkmark {
     border: 1px solid $purple;
     background-image: url('/radio_pin.svg');
     background-position: center;
@@ -29,7 +33,12 @@
     background-size: 12px;
   }
 
-  input:checked~* {
+  &__input:focus~&__checkmark,
+  &__input:active~&__checkmark {
+    box-shadow: 0 0 0 2px $dark-75;
+  }
+
+  &__input:checked~* {
     color: $dark-75;
   }
 }

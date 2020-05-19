@@ -34,6 +34,11 @@
     }
   }
 
+  &__input:focus~&__box,
+  &__input:active~&__box {
+    box-shadow: 0 0 0 2px $dark-75;
+  }
+
   &__input:checked~&__box {
     border-color: $purple;
 

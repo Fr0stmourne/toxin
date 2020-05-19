@@ -57,6 +57,7 @@
 
       &:hover,
       &:focus {
+        outline: 0;
         background-color: $dark-25;
       }
 
@@ -87,5 +88,9 @@
     font: inherit;
     color: $dark-75;
     line-height: 24px;
+  }
+
+  &__next-page-text {
+    @include visually-hidden;
   }
 }

@@ -14,7 +14,7 @@ mixin pagination({title, num = 10, description = 'Описание пагина�
       +page({active: false , link: './mock', linkText: num})
       li.pagination__next
         a(href='./mock').pagination__next-page
-          span.visually-hidden Next page
+          span.pagination__next-page-text Next page
     p.pagination__description=description
 
 

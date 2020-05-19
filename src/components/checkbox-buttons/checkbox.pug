@@ -2,6 +2,6 @@ mixin checkbox({title, inputName, checked = false, labelText = 'Поставьт
   if title
     .checkbox__title=title
   label.checkbox
-    input.checkbox__input.visually-hidden(type="checkbox", name=inputName, checked=checked)
+    input.checkbox__input(type="checkbox", name=inputName, checked=checked)
     span.checkbox__checkmark
     =labelText

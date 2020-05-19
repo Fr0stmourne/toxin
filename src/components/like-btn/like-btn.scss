@@ -23,6 +23,12 @@
     background-position: center;
   }
 
+  &:focus,
+  &:active {
+    outline: 0;
+    box-shadow: 0 0 0 2px $dark-75;
+  }
+
   &_active {
     border-color: $purple;
     color: $purple;
