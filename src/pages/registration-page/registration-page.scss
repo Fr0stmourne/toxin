@@ -18,13 +18,13 @@
     background-position-y: -70px;
   }
 
-  &__registration-card {
+  &__card {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
-}
 
-.registration-card {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  &__title {
+    @include visually-hidden;
+  }
 }
