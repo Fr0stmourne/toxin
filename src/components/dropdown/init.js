@@ -1,5 +1,3 @@
 import Dropdown from './dropdown';
 
-$(() => {
-  $('.js-dropdown').each((idx, el) => new Dropdown(el));
-});
+$('.js-dropdown').each((idx, el) => new Dropdown(el));
