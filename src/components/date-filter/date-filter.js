@@ -12,10 +12,10 @@ export default class DateFilter {
   }
 
   addCloseButton() {
-    const btnContainers = $('.datepicker--buttons');
+    const $btnContainers = $('.datepicker--buttons');
 
-    if (!$(btnContainers).find('.datepicker--button[data-action="close"]').length) {
-      btnContainers.append('<span class="datepicker--button" data-action="close">применить</span>');
+    if (!$($btnContainers).find('.datepicker--button[data-action="close"]').length) {
+      $btnContainers.append('<span class="datepicker--button" data-action="close">применить</span>');
     }
   }
 

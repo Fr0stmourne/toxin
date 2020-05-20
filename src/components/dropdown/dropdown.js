@@ -58,25 +58,25 @@ export default class Dropdown {
   @boundMethod
   changeValue(e) {
     e.preventDefault();
-    const dropdown = $(e.target).closest('.js-dropdown');
-    dropdown.find('.js-reset').removeClass('dropdown__reset_hidden');
+    const $dropdown = $(e.target).closest('.js-dropdown');
+    $dropdown.find('.js-reset').removeClass('dropdown__reset_hidden');
 
     const resultArr = [];
-    const allOptions = dropdown.find('.js-dropdown-option');
+    const $allOptions = $dropdown.find('.js-dropdown-option');
 
-    allOptions
+    $allOptions
       .filter((idx, el) => $(el).data('forms'))
       .each((idx, el) => {
         let currentValue;
-        const group = $(el).data('group');
+        const $group = $(el).data('group');
 
-        if (group) {
-          const filtered = $(allOptions).filter((index, option) => {
-            return $(option).data('group') === group;
+        if ($group) {
+          const $filtered = $allOptions.filter((index, option) => {
+            return $(option).data('group') === $group;
           });
           currentValue = 0;
 
-          filtered.each((index, option) => {
+          $filtered.each((index, option) => {
             currentValue += +$(option)
               .parent()
               .find('input')

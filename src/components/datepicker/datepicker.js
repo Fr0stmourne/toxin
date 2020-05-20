@@ -34,8 +34,8 @@ export class RangeDatepicker {
   }
 
   addApplyBtn() {
-    const btnContainers = $('.datepicker--buttons');
-    btnContainers.each((idx, btnContainer) => {
+    const $btnContainers = $('.datepicker--buttons');
+    $btnContainers.each((idx, btnContainer) => {
       if (!$(btnContainer).find('.datepicker--button[data-action="close"]').length) {
         $(btnContainer).append('<span class="datepicker--button" data-action="close">применить</span>');
       }
