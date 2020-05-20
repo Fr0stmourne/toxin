@@ -11,12 +11,14 @@ export default class DateFilter {
     this.container = $(dateFilterElement);
   }
 
-  addCloseButton() {
+  addApplyBtn() {
     const $btnContainers = $('.datepicker--buttons');
 
-    if (!$($btnContainers).find('.datepicker--button[data-action="close"]').length) {
-      $btnContainers.append('<span class="datepicker--button" data-action="close">применить</span>');
-    }
+    $btnContainers.each((idx, btnContainer) => {
+      if (!$(btnContainer).find('.datepicker--button[data-action="close"]').length) {
+        $(btnContainer).append('<span class="datepicker--button" data-action="close">применить</span>');
+      }
+    });
   }
 
   init() {
@@ -33,6 +35,6 @@ export default class DateFilter {
       },
     });
 
-    this.addCloseButton();
+    this.addApplyBtn();
   }
 }
