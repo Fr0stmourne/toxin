@@ -1,5 +1,5 @@
-import 'normalize.css';
 import 'jquery/dist/jquery';
+import 'normalize.css';
 import 'webpack-jquery-ui';
 
 function importAll(r) {
