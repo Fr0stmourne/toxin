@@ -16,13 +16,17 @@ function formatNumber(num) {
 
 export default class Slider {
   constructor({ slider, min = 0, max = 1000, values = [0, 1000] }) {
-    this.slider = $(slider);
-    this.input = this.slider.parent().find('input');
     this.min = min;
     this.max = max;
     this.values = values;
 
+    this.findElements(slider);
     this.init();
+  }
+
+  findElements(slider) {
+    this.slider = $(slider);
+    this.input = this.slider.parent().find('input');
   }
 
   updateInitialValue() {

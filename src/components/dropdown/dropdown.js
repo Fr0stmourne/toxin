@@ -17,6 +17,11 @@ function getCorrectWordForm(n, textForms) {
 
 export default class Dropdown {
   constructor(dropdownEl) {
+    this.findElements(dropdownEl);
+    if (this.dropdown) this.init();
+  }
+
+  findElements(dropdownEl) {
     this.container = $(dropdownEl);
     this.dropdown = this.container.find('.js-dropdown-result');
     this.dropdownList = this.dropdown.next();
@@ -24,8 +29,6 @@ export default class Dropdown {
     this.applyBtn = this.dropdown.parent().find('.js-apply');
     this.resetBtn = this.dropdown.parent().find('.js-reset');
     this.initialText = this.dropdown.text();
-
-    if (this.dropdown) this.init();
   }
 
   createInput() {

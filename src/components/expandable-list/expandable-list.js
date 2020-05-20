@@ -4,11 +4,14 @@ const btn = '.js-expandable-btn';
 
 export default class ExpandableList {
   constructor(listElement) {
+    this.findElements(listElement);
+    this.init();
+  }
+
+  findElements(listElement) {
     this.container = $(listElement);
     this.list = this.container.find(list);
     this.btn = this.container.find(btn);
-
-    this.init();
   }
 
   init() {

@@ -3,9 +3,12 @@ import 'air-datepicker/dist/css/datepicker.css';
 
 export default class DateFilter {
   constructor(dateFilterElement) {
-    this.container = $(dateFilterElement);
-
+    this.findElements(dateFilterElement);
     this.init();
+  }
+
+  findElements(dateFilterElement) {
+    this.container = $(dateFilterElement);
   }
 
   addCloseButton() {

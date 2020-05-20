@@ -1,10 +1,13 @@
 const activeClass = 'like-btn_active';
 
 export default class LikeBtn {
-  constructor(LikeBtnElement) {
-    this.like = $(LikeBtnElement);
-
+  constructor(likeBtnElement) {
+    this.findElements(likeBtnElement);
     this.init();
+  }
+
+  findElements(likeBtnElement) {
+    this.like = $(likeBtnElement);
   }
 
   init() {

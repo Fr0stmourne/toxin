@@ -2,9 +2,12 @@ import 'inputmask/dist/jquery.inputmask';
 
 export default class MaskField {
   constructor(maskFieldEl) {
-    this.field = $(maskFieldEl);
-
+    this.findElements(maskFieldEl);
     this.init();
+  }
+
+  findElements(maskFieldEl) {
+    this.field = $(maskFieldEl);
   }
 
   init() {

@@ -21,10 +21,16 @@ const endInputClass = '.js-range-datepicker-end';
 
 export class RangeDatepicker {
   constructor(datepickerContainer, options) {
-    this.container = $(datepickerContainer);
     this.options = options;
 
+    this.findElements(datepickerContainer);
     this.init();
+  }
+
+  findElements(datepickerContainer) {
+    this.container = $(datepickerContainer);
+    this.startInput = this.container.find(startInputClass);
+    this.endInput = this.container.find(endInputClass);
   }
 
   addApplyBtn() {
@@ -37,9 +43,7 @@ export class RangeDatepicker {
   }
 
   init() {
-    const startInput = this.container.find(startInputClass);
-    const endInput = this.container.find(endInputClass);
-    const { options } = this;
+    const { options, startInput, endInput } = this;
     startInput.datepicker({
       ...options,
       onSelect(fd) {
