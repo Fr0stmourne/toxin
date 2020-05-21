@@ -10,11 +10,15 @@ export default class LikeBtn {
     this.like = $(likeBtnElement);
   }
 
-  init() {
+  bindListeners() {
     this.like.click(e => {
       const currentNum = +$(e.target).text();
       $(e.target).text($(e.target).hasClass(activeClass) ? currentNum - 1 : currentNum + 1);
       $(e.target).toggleClass(activeClass);
     });
+  }
+
+  init() {
+    this.bindListeners();
   }
 }

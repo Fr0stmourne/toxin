@@ -14,11 +14,15 @@ export default class ExpandableList {
     this.btn = this.container.find(btn);
   }
 
-  init() {
+  bindListeners() {
     this.btn.click(e => {
       $(e.target).toggleClass(listClass);
       this.list.slideToggle();
     });
+  }
+
+  init() {
+    this.bindListeners();
 
     this.btn.click();
   }

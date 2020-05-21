@@ -105,9 +105,7 @@ export default class Dropdown {
     this.dropdown.text(resultText);
   }
 
-  init() {
-    this.createInput();
-
+  bindListeners() {
     this.applyBtn.click(this.close);
     this.dropdown.click(this.close);
 
@@ -117,5 +115,10 @@ export default class Dropdown {
     this.plusMinusBtn.click(this.changeValue);
 
     this.dropdown.click();
+  }
+
+  init() {
+    this.createInput();
+    this.bindListeners();
   }
 }
