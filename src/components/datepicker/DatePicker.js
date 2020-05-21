@@ -33,12 +33,25 @@ export class RangeDatepicker {
     this.endInput = this.container.find(endInputClass);
   }
 
+  appendBtn(el) {
+    $(el).append('<span class="datepicker--button js-datepicker-apply" data-action="today">применить</span>');
+  }
+
+  findBtnContainer() {
+    this.$btnContainers = $('.datepicker--buttons');
+  }
+
   addApplyBtn() {
-    const $btnContainers = $('.datepicker--buttons');
-    $btnContainers.each((idx, btnContainer) => {
-      if (!$(btnContainer).find('.datepicker--button[data-action="close"]').length) {
-        $(btnContainer).append('<span class="datepicker--button" data-action="close">применить</span>');
+    this.$btnContainers.each((index, btnContainer) => {
+      if (!$(btnContainer).find('.js-datepicker-apply').length) {
+        this.appendBtn(btnContainer);
       }
+    });
+  }
+
+  onShow(datepicker) {
+    datepicker.$datepicker.find('.js-datepicker-apply').click(() => {
+      datepicker.hide();
     });
   }
 
@@ -50,13 +63,10 @@ export class RangeDatepicker {
         startInput.val(fd.split('-')[0]);
         endInput.val(fd.split('-')[1]);
       },
-      onShow: dp => {
-        dp.$datepicker.find('.datepicker--button[data-action="close"]').click(() => {
-          dp.hide();
-        });
-      },
+      onShow: datepicker => this.onShow(datepicker),
     });
 
+    this.findBtnContainer();
     this.addApplyBtn();
   }
 }

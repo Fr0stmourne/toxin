@@ -12,6 +12,7 @@
   &--cell {
     &.-current-.-in-range- {
       color: black;
+      border-radius: 0;
     }
 
     &.-range-to- {
@@ -166,7 +167,7 @@
       color: $dark-50;
     }
 
-    &[data-action='close'] {
+    &[data-action='today'] {
       color: $purple;
     }
   }

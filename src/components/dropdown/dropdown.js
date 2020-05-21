@@ -46,7 +46,7 @@ export default class Dropdown {
   @boundMethod
   reset(e) {
     e.preventDefault();
-    this.input.each((idx, el) => {
+    this.input.each((index, el) => {
       $(el).val(0);
       $(el)
         .parent()
@@ -65,8 +65,8 @@ export default class Dropdown {
     const $allOptions = $dropdown.find('.js-dropdown-option');
 
     $allOptions
-      .filter((idx, el) => $(el).data('forms'))
-      .each((idx, el) => {
+      .filter((index, el) => $(el).data('forms'))
+      .each((index, el) => {
         let currentValue;
         const $group = $(el).data('group');
 
