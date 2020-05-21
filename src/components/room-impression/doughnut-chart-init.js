@@ -1,4 +1,4 @@
-import DoughnutChart from './room-impression';
+import DoughnutChart from './DoughnutChart';
 
 const setup = [
   ['rgb(255, 227, 156)', 'rgb(255, 186, 156)'],
