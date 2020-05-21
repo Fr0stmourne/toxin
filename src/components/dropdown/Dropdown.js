@@ -66,7 +66,7 @@ export default class Dropdown {
 
     $allOptions
       .filter((index, el) => $(el).data('forms'))
-      .each((index, el) => {
+      .each((optionIndex, el) => {
         let currentValue;
         const $group = $(el).data('group');
 
