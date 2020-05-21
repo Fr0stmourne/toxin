@@ -67,10 +67,10 @@
     background-position: center;
 
     &[data-action='next'] {
-      background-image: url('/datepicker_arrow_forward.svg');
+      background-image: url('/arrow_forward_purple.svg');
 
       &:hover {
-        background-image: url('/datepicker_arrow_forward.svg');
+        background-image: url('/arrow_forward_purple.svg');
       }
     }
 

@@ -16,12 +16,12 @@
     right: 11px;
     top: -3px;
     background-color: transparent;
-    background-image: url('/expandable-list_opened.svg');
+    background-image: url('/arrow_up.svg');
     background-repeat: no-repeat;
     background-position: center;
 
     &_hidden {
-      background-image: url('/expandable-list_hidden.svg');
+      background-image: url('/arrow_down.svg');
     }
 
     &:focus,
