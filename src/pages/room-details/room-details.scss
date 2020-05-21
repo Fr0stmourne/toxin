@@ -98,12 +98,10 @@
   }
 
   &__photo-box {
+    display: flex;
+
     @media (max-width: 1400px) {
       height: 100%;
-    }
-
-    @media (max-width: 400px) {
-      display: flex;
     }
   }
 
@@ -143,8 +141,6 @@
   &__photo-box:nth-child(3) {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
-    position: relative;
-    bottom: 6px;
 
     .room-details__photo {
       width: 100%;
