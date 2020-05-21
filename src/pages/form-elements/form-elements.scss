@@ -192,6 +192,10 @@
     max-width: 280px;
   }
 
+  &__advantage:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
   &__extended-dropdowns {
     width: 100%;
     max-width: 712px;
@@ -222,7 +226,7 @@
   &__checkboxes-bullet {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 222px;
+    margin-bottom: 231px;
   }
 
   &__bullet {
