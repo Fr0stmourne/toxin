@@ -6,6 +6,10 @@
     color: $dark-75;
     margin-bottom: 16px;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     &-description {
       max-width: 214px;
     }
