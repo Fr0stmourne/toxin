@@ -2,9 +2,9 @@ mixin header-nav({ items = [] })
   nav.header-nav
     ul.header-nav__list
       each val in items
-        li.header-nav__item(class=val.dropdown ? 'header-nav__item_with-dropdown' : '')
-          a.header-nav__link(href=val.link class=val.active ? 'header-nav__link_active' : '')=val.text
+        li.header-nav__item(class=val.dropdown ? "header-nav__item_with-dropdown" : "")
+          a.header-nav__link(href=val.link class=val.active ? "header-nav__link_active" : "")=val.text
           if val.dropdown
             .header-nav__dropdown-content
-              each dropdownItem in val.dropdown.length ? val.dropdown : ['None']
+              each dropdownItem in val.dropdown.length ? val.dropdown : ["None"]
                 a.header-nav__dropdown-link(href=dropdownItem.link)=dropdownItem.text     

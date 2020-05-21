@@ -1,19 +1,19 @@
-mixin page({ active = false, link = './mock', linkText = 'Текст' } = {})
-  li.pagination__page(class=active ? 'pagination__page_active' : '' )
+mixin page({ active = false, link = "./mock", linkText = "Текст" } = {})
+  li.pagination__page(class=active ? "pagination__page_active" : "" )
     a.pagination__page-link(href=link)=linkText
 
-mixin pagination({title, num = 10, description = 'Описание пагинации'} = {})
+mixin pagination({title, num = 10, description = "Описание пагинации"} = {})
  .pagination__container
     if title
       .pagination__title=title
     ul.pagination
-      +page({active: true , link: './mock', linkText: 1})
-      +page({active: false , link: './mock', linkText: 2})
-      +page({active: false , link: './mock', linkText: 3})
+      +page({active: true , link: "./mock", linkText: 1})
+      +page({active: false , link: "./mock", linkText: 2})
+      +page({active: false , link: "./mock", linkText: 3})
       li.pagination__hidden-pages ... 
-      +page({active: false , link: './mock', linkText: num})
+      +page({active: false , link: "./mock", linkText: num})
       li.pagination__next
-        a(href='./mock').pagination__next-page
+        a(href="./mock").pagination__next-page
           span.pagination__next-page-text Next page
     p.pagination__description=description
 

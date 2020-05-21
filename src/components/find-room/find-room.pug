@@ -2,32 +2,32 @@ include ../datepicker/datepicker.pug
 include ../dropdown/dropdown.pug
 include ../buttons/buttons.pug
 
-mixin find-room({title, action = 'search-room.html' , dropdownLabel = ''} = {})
+mixin find-room({title, action = "search-room.html" , dropdownLabel = ""} = {})
   form(action=action).find-room
     h3.find-room__title=title
     .find-room__datepicker
       +datepicker-double({
-        startLabel: 'Прибытие',
-        endLabel: 'Выезд'
+        startLabel: "Прибытие",
+        endLabel: "Выезд"
       })
     .find-room__dropdown
       .find-room__label=dropdownLabel
       +dropdown({
-        title: 'гости',
+        title: "гости",
         controls: true,
-        id: 'find-room-dropdown',
-        placeholder: 'Сколько гостей',
+        id: "find-room-dropdown",
+        placeholder: "Сколько гостей",
         optionsList: [{
-          text: 'Взрослые',
-          wordForms: 'гость гостя гостей',
+          text: "Взрослые",
+          wordForms: "гость гостя гостей",
           group: 1
         }, {
-          text: 'Дети',
-          wordForms: 'гость гостя гостей',
+          text: "Дети",
+          wordForms: "гость гостя гостей",
           group: 1
         }, {
-          text: 'Младенцы',
-          wordForms: 'младенец младенца младенцев'
+          text: "Младенцы",
+          wordForms: "младенец младенца младенцев"
         }]
       })
-    +button({btnText: 'подобрать номер', type: 'proceed'})
+    +button({btnText: "подобрать номер", type: "proceed"})

@@ -4,12 +4,12 @@ include ../footer-nav/footer-nav.pug
 mixin footer(options = {})
   -
     var { extended = false, 
-    logoLink = 'landing-page.html', 
-    companyText = 'Текст о компании', 
-    navLists = ['There are no values'], 
-    copyright = 'Копирайт', 
-    socialList = ['None'], 
-    sub = {title:'Подписка', text: 'Текст подписки', placeholder: 'Заглушка'} } = options
+    logoLink = "landing-page.html", 
+    companyText = "Текст о компании", 
+    navLists = ["There are no values"], 
+    copyright = "Копирайт", 
+    socialList = ["None"], 
+    sub = {title:"Подписка", text: "Текст подписки", placeholder: "Заглушка"} } = options
   footer.main-footer
     h2.main-footer__title Page footer
     if extended

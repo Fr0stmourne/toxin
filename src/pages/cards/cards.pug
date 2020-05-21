@@ -20,57 +20,57 @@ block content
       .cards__find-register
         .cards__find-room
           +find-room({
-              title: 'Найдём номера под ваши пожелания'
+              title: "Найдём номера под ваши пожелания"
             })
         .cards__registration
           +registration({
-              title: 'Регистрация аккаунта',
-              noteText: 'Уже есть аккаунт на Toxin'
+              title: "Регистрация аккаунта",
+              noteText: "Уже есть аккаунт на Toxin"
             })
       .cards__booking-login
         .cards__booking
           +booking({
-            num: '888',
-            type: 'люкс',
-            fullPrice: '38 081₽',
-            price: '9 990₽',
+            num: "888",
+            type: "люкс",
+            fullPrice: "38 081₽",
+            price: "9 990₽",
             calc: [
-              ['9 990₽ х 4 суток', '39 960₽'],
-              ['Сбор за услуги: скидка 2 179₽', '0₽', 'Инфо'],
-              ['Сбор за дополнительные услуги', '300₽', 'Информация']
+              ["9 990₽ х 4 суток", "39 960₽"],
+              ["Сбор за услуги: скидка 2 179₽", "0₽", "Инфо"],
+              ["Сбор за дополнительные услуги", "300₽", "Информация"]
             ]
           })
         .cards__login
-          +login({noteText: 'Нет аккаунта на Toxin?'})
+          +login({noteText: "Нет аккаунта на Toxin?"})
       .cards__datepicker-rooms
         .cards__datepicker
           +datepicker-double({
-            startLabel: 'Прибытие',
-            endLabel: 'Выезд',
+            startLabel: "Прибытие",
+            endLabel: "Выезд",
             controls: true,
             inline: true
           })
         .cards__rooms
           .cards__room
             +room({
-              num: '888',
+              num: "888",
               checkedRating: 3,
               isRatingDisabled: true,
-              sliderImgs: ['/1.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
-              link: './mock',
+              sliderImgs: ["/1.jpg", "/1.jpg", "/2.jpg", "/1.jpg"],
+              link: "./mock",
               reviewNum: 145,
-              type: 'люкс',
-              fullPrice: '38 081₽',
-              price: '9 990₽',
+              type: "люкс",
+              fullPrice: "38 081₽",
+              price: "9 990₽",
             })
           .cards__room
             +room({
-              num: '840',
+              num: "840",
               checkedRating: 4,
               isRatingDisabled: true,
-              sliderImgs: ['/1.jpg', '/1.jpg', '/2.jpg', '/1.jpg'],
-              link: './mock',
+              sliderImgs: ["/1.jpg", "/1.jpg", "/2.jpg", "/1.jpg"],
+              link: "./mock",
               reviewNum: 65,
-              fullPrice: '38 081₽',
-              price: '9 990₽',
+              fullPrice: "38 081₽",
+              price: "9 990₽",
             })

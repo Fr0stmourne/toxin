@@ -1,6 +1,6 @@
 include ../text-field/text-field.pug
 
-mixin masked-text-field({title, name, placeholder = 'Дата'} = {})
+mixin masked-text-field({title, name, placeholder = "Дата"} = {})
   if title
     .masked-text-field__title=title
-  +text-field({ className: 'js-date', placeholder: 'ДД.ММ.ГГГГ' })
+  +text-field({ className: "js-date", placeholder: "ДД.ММ.ГГГГ" })

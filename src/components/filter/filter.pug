@@ -9,30 +9,30 @@ mixin filter()
   section.filter
     h2.filter__main-title Фильтр комнат
     .filter__date-filter
-      +date-filter({title: 'даты пребывания в отеле'})
+      +date-filter({title: "даты пребывания в отеле"})
     .filter__guests
       +dropdown({
-        title: 'гости',
+        title: "гости",
         controls: true,
-        id: 'search-room-dropdown',
-        placeholder: 'Сколько гостей',
+        id: "search-room-dropdown",
+        placeholder: "Сколько гостей",
         optionsList: [{
-          text: 'Взрослые',
-          wordForms: 'гость гостя гостей',
+          text: "Взрослые",
+          wordForms: "гость гостя гостей",
           group: 1
         }, {
-          text: 'Дети',
-          wordForms: 'гость гостя гостей',
+          text: "Дети",
+          wordForms: "гость гостя гостей",
           group: 1
         }, {
-          text: 'Младенцы',
-          wordForms: 'младенец младенца младенцев'
+          text: "Младенцы",
+          wordForms: "младенец младенца младенцев"
         }]
       })
     .filter__slider
       +range-slider({
-        title: 'диапазон цены', 
-        id: 'search-room-slider'
+        title: "диапазон цены", 
+        id: "search-room-slider"
       })
       .filter__slider-hint Стоимость за сутки пребывания в номере
     .filter__checkbox-group
@@ -48,54 +48,54 @@ mixin filter()
       .filter__rich-checkboxes 
         .filter__rich-checkbox
           +rich-checkbox({
-            labelText: 'Широкий коридор', 
-            description: 'Ширина коридоров в номере не менее 91 см.'
+            labelText: "Широкий коридор", 
+            description: "Ширина коридоров в номере не менее 91 см."
           })
         .filter__rich-checkbox
           +rich-checkbox({
-            labelText: 'Помощник для инвалидов', 
-            description: 'На 1 этаже вас встретит специалист  и проводит до номера.',
+            labelText: "Помощник для инвалидов", 
+            description: "На 1 этаже вас встретит специалист  и проводит до номера.",
             wide: true
           })
     .filter__comfort
       +dropdown({
-        title: 'Удобства номера',
-        id: 'search-room-dropdown-1',
-        placeholder: 'Комнаты',
+        title: "Удобства номера",
+        id: "search-room-dropdown-1",
+        placeholder: "Комнаты",
         optionsList: [{
-          text: 'Спальни',
-          wordForms: 'спальня спальни спален'
+          text: "Спальни",
+          wordForms: "спальня спальни спален"
         }, {
-          text: 'Кровати',
-          wordForms: 'кровать кровати кроватей'
+          text: "Кровати",
+          wordForms: "кровать кровати кроватей"
         }, {
-          text: 'Ванные комнаты',
-          wordForms: 'ванная ванные ванных'
+          text: "Ванные комнаты",
+          wordForms: "ванная ванные ванных"
         }]
       })
     .filter__additional
       +expandable-list({
-        id: 'expandable',
-        btnId: 'expandable-btn',
-        title: 'дополнительные удобства',
+        id: "expandable",
+        btnId: "expandable-btn",
+        title: "дополнительные удобства",
         list: [{
-          labelText: 'Завтрак'
+          labelText: "Завтрак"
         }, {
-          labelText: 'Письменный стол',
+          labelText: "Письменный стол",
           checked: true
         }, {
-          labelText: 'Стул для кормления',
+          labelText: "Стул для кормления",
           checked: true
         }, {
-          labelText: 'Кроватка',
+          labelText: "Кроватка",
           checked: true
         }, {
-          labelText: 'Телевизор'
+          labelText: "Телевизор"
         }, {
-          labelText: 'Шампунь'
+          labelText: "Шампунь"
         }, {
-          labelText: 'Телевизор'
+          labelText: "Телевизор"
         }, {
-          labelText: 'Шампунь'
+          labelText: "Шампунь"
         }]
       })

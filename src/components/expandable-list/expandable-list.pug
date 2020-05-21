@@ -5,6 +5,6 @@ mixin expandable-list({title, list = []} = {})
     .expandable-list__title=title
     button.expandable-list__expand-btn.js-expandable-btn
     ul.expandable-list__list.js-expandable-list
-      each val in list ? list : ['There are no values']
+      each val in list ? list : ["There are no values"]
         li.expandable-list__checkbox
           +checkbox({labelText: val.labelText, checked: val.checked})

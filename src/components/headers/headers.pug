@@ -1,7 +1,7 @@
 include ../buttons/buttons.pug
 include ../header-nav/header-nav.pug
 
-mixin header({items = [], unlogged = false, loginText = 'Войти', regText = 'Зарегистрироваться', username = 'Иван Иванов', logoLink = 'landing-page.html'} = {})
+mixin header({items = [], unlogged = false, loginText = "Войти", regText = "Зарегистрироваться", username = "Иван Иванов", logoLink = "landing-page.html"} = {})
   header.main-header
     .main-header__container
       h1.main-header__title Toxin
@@ -17,9 +17,9 @@ mixin header({items = [], unlogged = false, loginText = 'Войти', regText = 
           .main-header__login
             .main-header__login-menu
               .main-header__login-btn
-                +button({btnText: loginText, type: 'secondary', slim: true, link: 'signin-page.html'})
+                +button({btnText: loginText, type: "secondary", slim: true, link: "signin-page.html"})
               .main-header__register-btn
-                +button({btnText: regText, slim: true, link: 'registration-page.html'})
+                +button({btnText: regText, slim: true, link: "registration-page.html"})
         else
           .main-header__login
             .main-header__login-menu.main-header__login-menu_logged

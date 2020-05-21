@@ -1,7 +1,7 @@
 include ../text-field/text-field.pug
 include ../note/note.pug
 
-mixin login({action = './mock', noteText = 'Подсказка', noteAction = 'registration-page.html'} = {})
+mixin login({action = "./mock", noteText = "Подсказка", noteAction = "registration-page.html"} = {})
   .login
     h3.login__title Войти
     form(action=action).login__form
@@ -11,6 +11,6 @@ mixin login({action = './mock', noteText = 'Подсказка', noteAction = 'r
         .login__password
           +text-field({placeholder: "Пароль", name: "password"})
       .login__proceed
-        +button({btnText: 'войти', type: 'proceed'})
+        +button({btnText: "войти", type: "proceed"})
     .login__note
-      +note({noteText: 'Нет аккаунта на Toxin?', btnText: 'Создать', link: 'registration-page.html'})
+      +note({noteText: "Нет аккаунта на Toxin?", btnText: "Создать", link: "registration-page.html"})
