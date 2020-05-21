@@ -67,6 +67,9 @@ export class RangeDatepicker {
 
     $endInput.datepicker({
       onShow() {
+        const prevStartValue = $startInput.val();
+        const prevEndValue = $endInput.val();
+
         $startInput
           .datepicker()
           .data('datepicker')
@@ -76,6 +79,9 @@ export class RangeDatepicker {
           .datepicker()
           .data('datepicker')
           .hide();
+
+        $endInput.val(prevEndValue);
+        $startInput.val(prevStartValue);
       },
     });
 
