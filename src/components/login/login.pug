@@ -12,6 +12,5 @@ mixin login({action = './mock', noteText = 'Подсказка', noteAction = 'r
           +text-field({placeholder: "Пароль", name: "password"})
       .login__proceed
         +button({btnText: 'войти', type: 'proceed'})
-    form(action=noteAction).login__note-form
-      .login__note
-        +note({noteText: 'Нет аккаунта на Toxin?', btnText: 'Создать'})
+    .login__note
+      +note({noteText: 'Нет аккаунта на Toxin?', btnText: 'Создать', link: 'registration-page.html'})

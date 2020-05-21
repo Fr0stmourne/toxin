@@ -29,6 +29,5 @@ mixin registration({title = 'Регистрация', noteText = 'Уже зар�
         +toggle({name: 'registration-offers', btnText: 'Получать спецпредложения'})
       .registration__proceed
         +button({btnText: 'перейти к оплате', type: 'proceed'})
-    form(action=noteAction).registration__note-form
-      .registration__note
-        +note({noteText: 'Уже есть аккаунт на Toxin', btnText: 'Войти'})
+    .registration__note
+      +note({noteText: 'Уже есть аккаунт на Toxin', btnText: 'Войти', link: 'signin-page.html'})
