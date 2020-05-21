@@ -17,36 +17,36 @@ function getCorrectWordForm(n, textForms) {
 
 export default class Dropdown {
   constructor(dropdownEl) {
-    this.findElements(dropdownEl);
-    if (this.dropdown) this.init();
+    this.$container = $(dropdownEl);
+    this.findElements();
+    if (this.$dropdown) this.init();
   }
 
-  findElements(dropdownEl) {
-    this.container = $(dropdownEl);
-    this.dropdown = this.container.find('.js-dropdown-result');
-    this.dropdownList = this.dropdown.next();
-    this.plusMinus = this.dropdown.parent().find('.js-plus-minus');
-    this.applyBtn = this.dropdown.parent().find('.js-apply');
-    this.resetBtn = this.dropdown.parent().find('.js-reset');
-    this.initialText = this.dropdown.text();
+  findElements() {
+    this.$dropdown = this.$container.find('.js-dropdown-result');
+    this.$dropdownList = this.$dropdown.next();
+    this.$plusMinus = this.$dropdown.parent().find('.js-plus-minus');
+    this.$applyBtn = this.$dropdown.parent().find('.js-apply');
+    this.$resetBtn = this.$dropdown.parent().find('.js-reset');
+    this.initialText = this.$dropdown.text();
   }
 
   createInput() {
-    this.plusMinus.htmlNumberSpinner();
-    this.plusMinusBtn = this.dropdown.parent().find('.js-dropdown-item .js-plus-minus-btn');
-    this.input = this.dropdown.parent().find('.js-dropdown-item input');
+    this.$plusMinus.htmlNumberSpinner();
+    this.$plusMinusBtn = this.$dropdown.parent().find('.js-dropdown-item .js-plus-minus-btn');
+    this.$input = this.$dropdown.parent().find('.js-dropdown-item input');
   }
 
   @boundMethod
   close(e) {
     e.preventDefault();
-    this.dropdownList.slideToggle();
+    this.$dropdownList.slideToggle();
   }
 
   @boundMethod
   reset(e) {
     e.preventDefault();
-    this.input.each((index, el) => {
+    this.$input.each((index, el) => {
       $(el).val(0);
       $(el)
         .parent()
@@ -102,19 +102,19 @@ export default class Dropdown {
       });
 
     const resultText = `${resultArr.length ? [...new Set(resultArr)].join(', ') : this.initialText}`;
-    this.dropdown.text(resultText);
+    this.$dropdown.text(resultText);
   }
 
   bindListeners() {
-    this.applyBtn.click(this.close);
-    this.dropdown.click(this.close);
+    this.$applyBtn.click(this.close);
+    this.$dropdown.click(this.close);
 
-    this.resetBtn.click(this.reset);
+    this.$resetBtn.click(this.reset);
 
-    this.input.change(this.changeValue);
-    this.plusMinusBtn.click(this.changeValue);
+    this.$input.change(this.changeValue);
+    this.$plusMinusBtn.click(this.changeValue);
 
-    this.dropdown.click();
+    this.$dropdown.click();
   }
 
   init() {

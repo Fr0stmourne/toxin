@@ -22,15 +22,14 @@ const endInputClass = '.js-range-datepicker-end';
 export class RangeDatepicker {
   constructor(datepickerContainer, options) {
     this.options = options;
-
-    this.findElements(datepickerContainer);
+    this.$container = $(datepickerContainer);
+    this.findElements();
     this.init();
   }
 
-  findElements(datepickerContainer) {
-    this.container = $(datepickerContainer);
-    this.startInput = this.container.find(startInputClass);
-    this.endInput = this.container.find(endInputClass);
+  findElements() {
+    this.$startInput = this.$container.find(startInputClass);
+    this.$endInput = this.$container.find(endInputClass);
   }
 
   appendBtn(el) {
@@ -49,21 +48,21 @@ export class RangeDatepicker {
     });
   }
 
-  onShow(datepicker) {
+  bindApplyListener(datepicker) {
     datepicker.$datepicker.find('.js-datepicker-apply').click(() => {
       datepicker.hide();
     });
   }
 
   init() {
-    const { options, startInput, endInput } = this;
-    startInput.datepicker({
+    const { options, $startInput, $endInput } = this;
+    $startInput.datepicker({
       ...options,
       onSelect(fd) {
-        startInput.val(fd.split('-')[0]);
-        endInput.val(fd.split('-')[1]);
+        $startInput.val(fd.split('-')[0]);
+        $endInput.val(fd.split('-')[1]);
       },
-      onShow: datepicker => this.onShow(datepicker),
+      onShow: datepicker => this.bindApplyListener(datepicker),
     });
 
     this.findBtnContainer();

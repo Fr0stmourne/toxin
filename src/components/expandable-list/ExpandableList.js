@@ -4,26 +4,26 @@ const btn = '.js-expandable-btn';
 
 export default class ExpandableList {
   constructor(listElement) {
-    this.findElements(listElement);
+    this.$container = $(listElement);
+    this.findElements();
     this.init();
   }
 
-  findElements(listElement) {
-    this.container = $(listElement);
-    this.list = this.container.find(list);
-    this.btn = this.container.find(btn);
+  findElements() {
+    this.$list = this.$container.find(list);
+    this.$btn = this.$container.find(btn);
   }
 
   bindListeners() {
-    this.btn.click(e => {
+    this.$btn.click(e => {
       $(e.target).toggleClass(listClass);
-      this.list.slideToggle();
+      this.$list.slideToggle();
     });
   }
 
   init() {
     this.bindListeners();
 
-    this.btn.click();
+    this.$btn.click();
   }
 }

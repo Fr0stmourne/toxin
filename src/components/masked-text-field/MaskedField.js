@@ -2,12 +2,8 @@ import 'inputmask/dist/jquery.inputmask';
 
 export default class MaskedField {
   constructor(maskFieldEl) {
-    this.findElements(maskFieldEl);
+    this.$field = $(maskFieldEl);
     this.init();
-  }
-
-  findElements(maskFieldEl) {
-    this.field = $(maskFieldEl);
   }
 
   init() {
@@ -17,7 +13,7 @@ export default class MaskedField {
     const yyyy = today.getFullYear();
     const maxDate = `${dd}-${mm}-${yyyy}`;
 
-    this.field.inputmask({
+    this.$field.inputmask({
       alias: 'datetime',
       min: '01/01/1900',
       max: maxDate,

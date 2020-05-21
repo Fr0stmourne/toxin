@@ -23,7 +23,7 @@ export default class DateFilter {
     });
   }
 
-  onShow(datepicker) {
+  bindApplyListener(datepicker) {
     datepicker.$datepicker.find('.js-datepicker-apply').click(() => {
       datepicker.hide();
     });
@@ -36,7 +36,7 @@ export default class DateFilter {
       navTitles: {
         days: 'MM yyyy',
       },
-      onShow: datepicker => this.onShow(datepicker),
+      onShow: datepicker => this.bindApplyListener(datepicker),
     });
 
     this.findBtnContainer();

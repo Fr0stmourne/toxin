@@ -19,31 +19,31 @@ export default class Slider {
     this.min = min;
     this.max = max;
     this.values = values;
+    this.$slider = $(slider);
 
-    this.findElements(slider);
+    this.findElements();
     this.init();
   }
 
-  findElements(slider) {
-    this.slider = $(slider);
-    this.input = this.slider.parent().find('input');
+  findElements() {
+    this.$input = this.$slider.parent().find('input');
   }
 
   updateInitialValue() {
-    const { input, slider } = this;
-    input.val(`${formatNumber(slider.slider('values', 0))}₽ - ${formatNumber(slider.slider('values', 1))}₽`);
+    const { $input, $slider } = this;
+    $input.val(`${formatNumber($slider.slider('values', 0))}₽ - ${formatNumber($slider.slider('values', 1))}₽`);
   }
 
   init() {
-    const { min, max, values, input, slider } = this;
+    const { min, max, values, $input, $slider } = this;
 
-    slider.slider({
+    $slider.slider({
       range: true,
       min,
       max,
       values,
       slide(event, ui) {
-        input.val(`${formatNumber(ui.values[0])}₽ - ${formatNumber(ui.values[1])}₽`);
+        $input.val(`${formatNumber(ui.values[0])}₽ - ${formatNumber(ui.values[1])}₽`);
       },
     });
 
