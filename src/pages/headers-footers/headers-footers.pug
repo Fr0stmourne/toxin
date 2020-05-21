@@ -12,7 +12,7 @@ block title
 
 block content
   body.headers-footers
-    .headers-footers__header_unlogged
+    .headers-footers__unlogged-header
       +header({
         unlogged: true,
         regText: "register",
@@ -53,7 +53,7 @@ block content
           }
         ]
       })
-    .headers-footers__header_logged
+    .headers-footers__logged-header
       +header({
         username: "Cosmin Negoita",
         items: [{
@@ -92,7 +92,7 @@ block content
           }
         ]
       })
-    .headers-footers__footer_extended
+    .headers-footers__extended-footer
       +footer({
         logoLink: "landing-page.html",
         extended: true,
@@ -155,7 +155,7 @@ block content
         ],
         companyText: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
       })
-    .headers-footers__footer_non-extended
+    .headers-footers__non-extended-footer
       +footer({
         logoLink: "landing-page.html",
         socialList: [{
