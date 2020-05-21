@@ -58,11 +58,25 @@ export class RangeDatepicker {
     const { options, $startInput, $endInput } = this;
     $startInput.datepicker({
       ...options,
-      onSelect(fd) {
-        $startInput.val(fd.split('-')[0]);
-        $endInput.val(fd.split('-')[1]);
+      onSelect(date) {
+        $startInput.val(date.split('-')[0]);
+        $endInput.val(date.split('-')[1]);
       },
       onShow: datepicker => this.bindApplyListener(datepicker),
+    });
+
+    $endInput.datepicker({
+      onShow() {
+        $startInput
+          .datepicker()
+          .data('datepicker')
+          .show();
+
+        $endInput
+          .datepicker()
+          .data('datepicker')
+          .hide();
+      },
     });
 
     this.findBtnContainer();
