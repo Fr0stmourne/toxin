@@ -3,6 +3,11 @@
   line-height: 24px;
   list-style: none;
 
+  &__title {
+    @include form-element;
+    margin-bottom: 14px;
+  }
+
   &__item {
     position: relative;
     padding-left: 20px;
@@ -23,10 +28,5 @@
       border-radius: 50%;
       background-color: $dark-25;
     }
-  }
-
-  &__title {
-    @include form-element;
-    margin-bottom: 14px;
   }
 }
