@@ -5,6 +5,9 @@ const baseWebpackConfig = require('./webpack.base.conf');
 const buildWebpackConfig = merge(baseWebpackConfig, {
   // BUILD config
   mode: 'production',
+  output: {
+    publicPath: './',
+  },
   plugins: [
     new TinyPngWebpackPlugin({
       ext: ['png', 'jpeg', 'jpg'],
