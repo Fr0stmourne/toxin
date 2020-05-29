@@ -19,7 +19,7 @@
     left: 0;
     width: 24px;
     height: 24px;
-    background-image: url("/rating-star-border.svg");
+    background-image: url('/rating-star-border.svg');
     background-size: 24px auto;
     background-position: right center;
     background-repeat: no-repeat;
@@ -30,7 +30,8 @@
     }
 
     &:hover~& {
-      background-image: url("/rating-star-border.svg");
+      background-image: url('/rating-star-border.svg');
+
     }
 
     &:focus {
