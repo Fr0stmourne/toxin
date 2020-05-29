@@ -10,9 +10,9 @@ mixin registration({title = "Регистрация", noteText = "Уже зар�
     form(action=action).registration__main-form
       h3.registration__title=title
       .registration__name
-        +text-field({placeholder: "Имя", name:"registration-name"})
+        +text-field({placeholder: "Имя", name:"registration-name", arialabel: 'Имя'})
       .registration__surname
-        +text-field({placeholder: "Фамилия", name:"registration-surname"})
+        +text-field({placeholder: "Фамилия", name:"registration-surname", arialabel: 'Фамилия'})
       .registration__sex
           .registration__man
             +radio-btn({name: "registration-sex", labelText: "Мужчина"})
@@ -22,9 +22,9 @@ mixin registration({title = "Регистрация", noteText = "Уже зар�
         +masked-text-field({placeholder: "ДД.ММ.ГГГГ", title: "Дата рождения", name:"registration-birthday"})
       .registration__login-data
           .registration__email
-            +text-field({placeholder: "Email", name: "registration-email", title: "данные для входа в сервис"})
+            +text-field({placeholder: "Email", name: "registration-email", title: "данные для входа в сервис", arialabel: 'Почта'})
           .registration__password
-            +text-field({placeholder: "Пароль", name: "registration-password"})
+            +text-field({placeholder: "Пароль", name: "registration-password", arialabel: 'Пароль'})
       .registration__offers-btn
         +toggle({name: "registration-offers", btnText: "Получать спецпредложения"})
       .registration__proceed

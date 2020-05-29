@@ -2,6 +2,7 @@
   position: relative;
 
   &__title {
+    display: block;
     @include form-element;
     margin-bottom: 5px;
   }

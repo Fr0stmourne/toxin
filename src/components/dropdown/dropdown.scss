@@ -2,6 +2,12 @@
   position: relative;
   min-width: 235px;
 
+  &__title {
+    display: block;
+    @include form-element;
+    margin-bottom: 5px;
+  }
+
   &__result {
     display: block;
     width: 100%;

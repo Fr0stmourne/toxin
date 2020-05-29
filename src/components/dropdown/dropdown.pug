@@ -4,7 +4,7 @@ mixin plus-minus({min = 0, max = 5, id, name} = {})
 mixin dropdown({title, placeholder = "Список", optionsList = ["There are no values"], min = 0, max = 5, id, name, controls = false} = {})
   .dropdown.js-dropdown
     if title
-      .text-field__title=title
+      label.dropdown__title=title
     button(type="button").dropdown__result.js-dropdown-result=placeholder
     .dropdown__content
       ul.dropdown__list

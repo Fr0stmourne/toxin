@@ -1,18 +1,20 @@
 .text-field {
-  width: 100%;
-  box-sizing: border-box;
-  border: 1px solid $dark-25;
-  border-radius: 4px;
-  font: $default-font;
-  color: $dark-25;
-  padding: 12px 15px;
-  transition: $transition;
+  &__input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid $dark-25;
+    border-radius: 4px;
+    font: $default-font;
+    color: $dark-25;
+    padding: 12px 15px;
+    transition: $transition;
 
-  &:hover,
-  &:focus {
-    outline: none;
-    border-color: $dark-50;
-    color: $dark-75;
+    &:hover,
+    &:focus {
+      outline: none;
+      border-color: $dark-50;
+      color: $dark-75;
+    }
   }
 
   &__title {

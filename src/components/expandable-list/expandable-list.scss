@@ -3,6 +3,7 @@
   min-height: 44px;
 
   &__title {
+    display: block;
     @include form-element;
     margin-bottom: 18px;
     padding-right: 30px;

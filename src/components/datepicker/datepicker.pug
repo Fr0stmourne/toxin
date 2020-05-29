@@ -1,11 +1,11 @@
 mixin datepicker-double({ inline = false, startLabel = "Приезд", endLabel = "Выезд" } = {})
   .datepicker-double.js-range-datepicker(class = inline ? "datepicker-double_inlined js-range-datepicker-inline" : "")
     .datepicker-double__start
-      span.datepicker-double__label=startLabel
+      label.datepicker-double__label=startLabel
       .datepicker-double__box
         input.datepicker-double__input.js-range-datepicker-start(type="text" data-range="true" name=name data-multiple-dates-separator=" - " class="datepicker-here" placeholder="ДД.ММ.ГГГГ")
     .datepicker-double__end
-      span.datepicker-double__label=endLabel
+      label.datepicker-double__label=endLabel
       .datepicker-double__box
         input.datepicker-double__input.js-range-datepicker-end(type="text" data-range="true" name=name data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ")
   

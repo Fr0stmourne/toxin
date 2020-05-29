@@ -1,4 +1,5 @@
-mixin text-field({title, placeholder = "Введите что-то...", className = ""} = {})
-  if title
-    .text-field__title=title
-  input.text-field(type="text" class=className name=name placeholder=placeholder)
+mixin text-field({title, placeholder = "Введите что-то...", className = "", arialabel} = {})
+  .text-field
+    if title
+      .text-field__title=title
+    input.text-field__input(type="text" class=className name=name placeholder=placeholder aria-labelledby=arialabel)

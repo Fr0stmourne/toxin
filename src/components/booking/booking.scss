@@ -12,7 +12,7 @@
   &__room {
     font: $h1-font;
     font-size: 14px;
-    margin-right: 20px;
+    margin: 0 20px 0 0;
   }
 
   &__room-info {
@@ -39,7 +39,7 @@
     font-size: 12px;
   }
 
-  &__num {
+  &__digit {
     font-size: 24px;
     margin: 0 5px;
   }

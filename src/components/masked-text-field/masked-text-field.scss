@@ -1,4 +1,8 @@
-.masked-text-field__title {
-  @include form-element;
-  margin-bottom: 5px;
+.masked-text-field {
+  display: block;
+
+  &__title {
+    @include form-element;
+    margin-bottom: 5px;
+  }
 }
