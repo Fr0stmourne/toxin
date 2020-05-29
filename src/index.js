@@ -1,6 +1,6 @@
 import 'jquery/dist/jquery';
 import 'normalize.css';
-import 'webpack-jquery-ui';
+import 'webpack-jquery-ui/slider';
 
 function importAll(r) {
   r.keys().forEach(r);
