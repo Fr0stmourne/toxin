@@ -30,6 +30,9 @@ export default class DateFilter {
   }
 
   init() {
+    const now = new Date();
+    const weekLater = new Date(new Date().setDate(new Date().getDate() + 7));
+
     this.$container.datepicker({
       dateFormat: 'dd M',
       clearButton: true,
@@ -38,6 +41,11 @@ export default class DateFilter {
       },
       onShow: datepicker => this.bindApplyListener(datepicker),
     });
+
+    this.$container
+      .datepicker()
+      .data('datepicker')
+      .selectDate([now, weekLater]);
 
     this.findBtnContainer();
     this.addApplyBtn();
