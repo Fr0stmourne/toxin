@@ -1,5 +1,7 @@
 import { boundMethod } from 'autobind-decorator';
 
+const DEFAULT_VALUE = 0;
+
 function getCorrectWordForm(n, textForms) {
   const num = Math.abs(n) % 100;
   const n1 = num % 10;
@@ -33,8 +35,18 @@ export default class Dropdown {
 
   createInput() {
     this.$plusMinus.htmlNumberSpinner();
-    this.$plusMinusBtn = this.$dropdown.parent().find('.js-dropdown-item .js-plus-minus-btn');
+    this.$plusMinusBtns = this.$dropdown.parent().find('.js-dropdown-item .js-plus-minus-btn');
+    this.$minusBtns = this.$dropdown.parent().find('.js-dropdown-item .js-minus-btn');
+    this.$plusBtns = this.$dropdown.parent().find('.js-dropdown-item .js-plus-btn');
     this.$input = this.$dropdown.parent().find('.js-dropdown-item input');
+  }
+
+  disableBtn($btn) {
+    $btn.prop('disabled', true);
+  }
+
+  enableBtn($btn) {
+    $btn.prop('disabled', false);
   }
 
   @boundMethod
@@ -58,7 +70,13 @@ export default class Dropdown {
   @boundMethod
   changeValue(e) {
     e.preventDefault();
-    const $dropdown = $(e.target).closest('.js-dropdown');
+
+    const $target = $(e.target);
+    const $currentItem = $target.closest('.js-dropdown-item');
+    const $minusBtn = $currentItem.find('.js-minus-btn');
+    const $plusBtn = $currentItem.find('.js-plus-btn');
+    const $currentInput = $currentItem.find('.js-plus-minus-input');
+    const $dropdown = $target.closest('.js-dropdown');
     $dropdown.find('.js-reset').removeClass('dropdown__reset_hidden');
 
     const resultArr = [];
@@ -74,22 +92,22 @@ export default class Dropdown {
           const $filtered = $allOptions.filter((index, option) => {
             return $(option).data('group') === $group;
           });
-          currentValue = 0;
+          currentValue = DEFAULT_VALUE;
 
           $filtered.each((index, option) => {
             currentValue += +$(option)
               .parent()
-              .find('input')
+              .find('.js-plus-minus-input')
               .val();
           });
         } else {
           currentValue = $(el)
             .parent()
-            .find('input')
+            .find('.js-plus-minus-input')
             .val();
         }
 
-        if (+currentValue !== 0) {
+        if (+currentValue !== DEFAULT_VALUE) {
           resultArr.push(
             `${currentValue} ${getCorrectWordForm(
               currentValue,
@@ -100,6 +118,22 @@ export default class Dropdown {
           );
         }
       });
+
+    const inputValue = +$currentInput.val();
+    const minInputValue = +$currentInput.attr('min');
+    const maxInputValue = +$currentInput.attr('max');
+
+    if (inputValue === minInputValue) {
+      this.disableBtn($minusBtn);
+    } else {
+      this.enableBtn($minusBtn);
+    }
+
+    if (inputValue === maxInputValue) {
+      this.disableBtn($plusBtn);
+    } else {
+      this.enableBtn($plusBtn);
+    }
 
     const resultText = `${resultArr.length ? [...new Set(resultArr)].join(', ') : this.initialText}`;
     this.$dropdown.text(resultText);
@@ -112,7 +146,7 @@ export default class Dropdown {
     this.$resetBtn.click(this.reset);
 
     this.$input.change(this.changeValue);
-    this.$plusMinusBtn.click(this.changeValue);
+    this.$plusMinusBtns.click(this.changeValue);
 
     this.$dropdown.click();
   }
@@ -120,5 +154,9 @@ export default class Dropdown {
   init() {
     this.createInput();
     this.bindListeners();
+
+    this.$minusBtns.each((index, el) => {
+      this.disableBtn($(el));
+    });
   }
 }
