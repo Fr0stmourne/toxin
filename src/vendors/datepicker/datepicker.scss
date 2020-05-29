@@ -34,6 +34,10 @@
     &.-focus-.-in-range- {
       border-radius: 0;
     }
+
+    &.-selected-.-current- {
+      background: $btn-gradient;
+    }
   }
 
   &--cells {

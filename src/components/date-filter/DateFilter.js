@@ -39,6 +39,7 @@ export default class DateFilter {
       navTitles: {
         days: 'MM yyyy',
       },
+      minDate: new Date(),
       onShow: datepicker => this.bindApplyListener(datepicker),
     });
 

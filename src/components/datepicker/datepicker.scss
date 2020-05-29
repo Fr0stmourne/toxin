@@ -39,6 +39,13 @@
     border-radius: 4px;
     cursor: pointer;
 
+    &:focus,
+    &:active {
+      outline: 0;
+      border-color: $dark-50;
+      color: $dark-75;
+    }
+
     &::placeholder {
       text-transform: none;
     }
