@@ -7,9 +7,9 @@ mixin login({action = "./mock", noteText = "Подсказка", noteAction = "r
     form(action=action).login__form
       .login__login-data
         .login__email
-          +text-field({placeholder: "Email", name: "email", arialabel: 'Почта'})
+          +text-field({placeholder: "Email", name: "email", type: "email", arialabel: "Почта"})
         .login__password
-          +text-field({placeholder: "Пароль", name: "password", arialabel: 'Пароль'})
+          +text-field({placeholder: "Пароль", name: "password", type: "password", arialabel: "Пароль"})
       .login__proceed
         +button({btnText: "войти", type: "proceed"})
     .login__note
