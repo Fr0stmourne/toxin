@@ -36,10 +36,6 @@
     color: $dark-50;
     font: $btn-font;
     text-decoration: none;
-
-    &_link {
-      font-size: 14px;
-    }
   }
 
   &__price {
@@ -47,6 +43,10 @@
   }
 
   &__num {
+    display: inline;
+  }
+
+  &__digit {
     font-size: 19px;
     margin: 0 5px;
   }
@@ -61,5 +61,13 @@
 
   &__measurement {
     font-weight: 400;
+  }
+
+  &__reviews-link {
+    padding-right: 3px;
+    color: $dark-50;
+    font: $btn-font;
+    font-size: 14px;
+    text-decoration: none;
   }
 }

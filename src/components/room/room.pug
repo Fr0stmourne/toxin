@@ -22,14 +22,14 @@ mixin room(options = {})
     .room__info
       .room__room-info
         a.room__room(href=link)
-          span №
-            span.room__num=num
+          h3.room__num №
+            span.room__digit=num
           span.room__type=type
         .room__per-day
           span.room__price=price
           span.room__measurement  в сутки
       .room__rating
         +rate-btn({name: name, checkedRating: checkedRating, disabled: isRatingDisabled})
-        a.room__per-day.room__per-day_link(href=reviewsLink)
+        a.room__reviews-link(href=reviewsLink)
           =reviewNum
           span.room__measurement  Отзывов
