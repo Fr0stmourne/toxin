@@ -39,10 +39,6 @@
     }
   }
 
-  &__title {
-    @include visually-hidden;
-  }
-
   &__booking {
     margin-bottom: 30px;
 

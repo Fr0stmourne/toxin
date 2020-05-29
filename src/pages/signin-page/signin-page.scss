@@ -21,10 +21,6 @@
     background-position-y: -70px;
   }
 
-  &__title {
-    @include visually-hidden;
-  }
-
   &__login-card {
     width: 100%;
     display: flex;

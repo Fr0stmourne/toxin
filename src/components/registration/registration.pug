@@ -8,7 +8,7 @@ include ../note/note.pug
 mixin registration({title = "Регистрация", noteText = "Уже зарегистрированы?", action = "./mock", noteAction = "signin-page.html"} = {})
   .registration
     form(action=action).registration__main-form
-      h3.registration__title=title
+      h2.registration__title=title
       .registration__name
         +text-field({placeholder: "Имя", name:"registration-name", arialabel: 'Имя'})
       .registration__surname

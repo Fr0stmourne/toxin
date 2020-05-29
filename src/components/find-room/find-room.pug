@@ -4,7 +4,7 @@ include ../button/button.pug
 
 mixin find-room({title, action = "search-room.html"} = {})
   form(action=action).find-room
-    h3.find-room__title=title
+    h2.find-room__title=title
     .find-room__datepicker
       +datepicker-double({
         startLabel: "Прибытие",
