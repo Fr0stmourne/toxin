@@ -49,6 +49,8 @@ module.exports = {
         options: {
           name: '[name].[ext]',
           esModule: false,
+          publicPath: './',
+          outputPath: './',
         },
       },
       {
@@ -70,39 +72,9 @@ module.exports = {
         use: [this.mode === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
-        test: /\.module\.s(a|c)ss$/,
+        test: /\.s(a|c)ss$/,
         use: [
           this.mode === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
-          // MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-              modules: true,
-            },
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true,
-              config: {
-                path: `./postcss.config.js`,
-              },
-            },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-        ],
-      },
-      {
-        test: /\.s(a|c)ss$/,
-        exclude: /\.module.(s(a|c)ss)$/,
-        use: [
-          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader?url=false',
             options: {
