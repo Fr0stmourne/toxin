@@ -58,6 +58,7 @@ export class RangeDatepicker {
     const { options, $startInput, $endInput } = this;
     $startInput.datepicker({
       ...options,
+      minDate: new Date(),
       onSelect(date) {
         $startInput.val(date.split('-')[0]);
         $endInput.val(date.split('-')[1]);
