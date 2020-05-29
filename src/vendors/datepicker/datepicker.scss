@@ -30,6 +30,10 @@
     &.-focus- {
       border-radius: 50%;
     }
+
+    &.-focus-.-in-range- {
+      border-radius: 0;
+    }
   }
 
   &--cells {
