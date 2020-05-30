@@ -1,4 +1,4 @@
-const activeClass = 'like-btn_active';
+const ACTIVE_CLASS = 'like-btn_active';
 
 export default class LikeBtn {
   constructor(likeBtnElement) {
@@ -9,8 +9,8 @@ export default class LikeBtn {
   bindListeners() {
     this.$like.click(e => {
       const currentNum = +$(e.target).text();
-      $(e.target).text($(e.target).hasClass(activeClass) ? currentNum - 1 : currentNum + 1);
-      $(e.target).toggleClass(activeClass);
+      $(e.target).text($(e.target).hasClass(ACTIVE_CLASS) ? currentNum - 1 : currentNum + 1);
+      $(e.target).toggleClass(ACTIVE_CLASS);
     });
   }
 
