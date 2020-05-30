@@ -28,10 +28,15 @@
     background-position: calc(100%-16px);
 
     &:hover,
-    &:focus {
+    &:focus,
+    &_opened {
       outline: none;
       border-color: $dark-50;
       color: $dark-75;
+    }
+
+    &:not(.dropdown__result_opened)~.dropdown__content {
+      display: none;
     }
   }
 

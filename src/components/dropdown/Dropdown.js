@@ -37,9 +37,10 @@ export default class Dropdown {
   }
 
   @boundMethod
-  close(e) {
+  toggle(e) {
     e.preventDefault();
     this.$dropdownList.slideToggle();
+    this.$dropdown.toggleClass('dropdown__result_opened');
   }
 
   @boundMethod
@@ -127,15 +128,13 @@ export default class Dropdown {
   }
 
   bindListeners() {
-    this.$applyBtn.click(this.close);
-    this.$dropdown.click(this.close);
+    this.$applyBtn.click(this.toggle);
+    this.$dropdown.click(this.toggle);
 
     this.$resetBtn.click(this.reset);
 
     this.$input.change(this.changeValue);
     this.$plusMinusBtns.click(this.changeValue);
-
-    this.$dropdown.click();
   }
 
   init() {
