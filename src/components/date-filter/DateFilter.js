@@ -16,7 +16,7 @@ export default class DateFilter {
   }
 
   addApplyBtn() {
-    this.$btnContainers.each((index, btnContainer) => {
+    this.$btnContainers.each((_, btnContainer) => {
       if (!$(btnContainer).find('.js-datepicker-apply').length) {
         this.appendBtn(btnContainer);
       }

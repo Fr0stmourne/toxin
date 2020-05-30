@@ -1,7 +1,7 @@
 import Slider from './Slider';
 
 $('.js-slider').each(
-  (index, el) =>
+  (_, el) =>
     new Slider({
       slider: el,
       min: 0,

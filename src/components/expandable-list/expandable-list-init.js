@@ -1,3 +1,3 @@
 import ExpandableList from './ExpandableList';
 
-$('.js-expandable').each((index, el) => new ExpandableList(el));
+$('.js-expandable').each((_, el) => new ExpandableList(el));

@@ -1,21 +1,8 @@
 import { boundMethod } from 'autobind-decorator';
 
-const DEFAULT_VALUE = 0;
+import getCorrectWordForm from '../../utils/js/getCorrectWordForm';
 
-function getCorrectWordForm(n, textForms) {
-  const num = Math.abs(n) % 100;
-  const n1 = num % 10;
-  if (num > 10 && num < 20) {
-    return textForms[2];
-  }
-  if (n1 > 1 && n1 < 5) {
-    return textForms[1];
-  }
-  if (n1 === 1) {
-    return textForms[0];
-  }
-  return textForms[2];
-}
+const DEFAULT_VALUE = 0;
 
 export default class Dropdown {
   constructor(dropdownEl) {
@@ -58,7 +45,7 @@ export default class Dropdown {
   @boundMethod
   reset(e) {
     e.preventDefault();
-    this.$input.each((index, el) => {
+    this.$input.each((_, el) => {
       $(el).val(0);
       $(el)
         .parent()
@@ -83,18 +70,18 @@ export default class Dropdown {
     const $allOptions = $dropdown.find('.js-dropdown-option');
 
     $allOptions
-      .filter((index, el) => $(el).data('forms'))
-      .each((optionIndex, el) => {
+      .filter((_, el) => $(el).data('forms'))
+      .each((_, el) => {
         let currentValue;
         const $group = $(el).data('group');
 
         if ($group) {
-          const $filtered = $allOptions.filter((index, option) => {
+          const $filtered = $allOptions.filter((_, option) => {
             return $(option).data('group') === $group;
           });
           currentValue = DEFAULT_VALUE;
 
-          $filtered.each((index, option) => {
+          $filtered.each((_, option) => {
             currentValue += +$(option)
               .parent()
               .find('.js-plus-minus-input')
@@ -155,7 +142,7 @@ export default class Dropdown {
     this.createInput();
     this.bindListeners();
 
-    this.$minusBtns.each((index, el) => {
+    this.$minusBtns.each((_, el) => {
       this.disableBtn($(el));
     });
   }

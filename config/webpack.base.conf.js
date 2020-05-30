@@ -100,8 +100,8 @@ module.exports = {
             loader: 'sass-resources-loader',
             options: {
               resources: [
-                path.resolve(__dirname, '../src/utils/variables.scss'),
-                path.resolve(__dirname, '../src/utils/mixins.scss'),
+                path.resolve(__dirname, '../src/utils/scss/variables.scss'),
+                path.resolve(__dirname, '../src/utils/scss/mixins.scss'),
               ],
             },
           },
