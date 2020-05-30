@@ -1,0 +1,46 @@
+mixin colors(options = {}) 
+  section.colors
+    ul.colors__list
+      -
+        var { colors = [{
+            title: "Dark Shade 100%",
+            text: "#1F2041",
+            class: "dark-100"
+          },
+          {
+            title: "Dark Shade 75%",
+            text: "#1F2041",
+            class: "dark-75"
+          },
+          {
+            title: "Dark Shade 50%",
+            text: "#1F2041",
+            class: "dark-50"
+          },
+          {
+            title: "Dark Shade 25%",
+            text: "#1F2041",
+            class: "dark-25"
+          },
+          {
+            title: "Dark Shade 5%",
+            text: "#1F2041",
+            class: "dark-5"
+          },
+          {
+            title: "Purple",
+            text: "#BC9CFF",
+            class: "purple"
+          },
+          {
+            title: "Green",
+            text: "#6FCF97",
+            class: "green"
+          }
+        ] } = options
+      each val in colors
+        li.colors__color
+          .colors__sample(class=`colors__sample_${val.class}`)
+          .colors__info
+            .colors__title=val.title
+            .colors__text=val.text
