@@ -10,7 +10,7 @@
     &:focus,
     &:active {
       outline: 0;
-      border-color: $dark-75;
+      border: 2px solid $dark-25;
     }
   }
 }

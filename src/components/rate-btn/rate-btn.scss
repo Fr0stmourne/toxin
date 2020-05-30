@@ -8,8 +8,7 @@
   width: 120px;
 
   &:focus-within {
-    outline: 2px solid $dark-75;
-    outline-offset: 4px;
+    box-shadow: 0 0 0 1px $dark-50;
   }
 
   &__star {
