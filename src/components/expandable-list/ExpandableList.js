@@ -1,3 +1,5 @@
+import { boundMethod } from 'autobind-decorator';
+
 export default class ExpandableList {
   constructor(listElement) {
     this.$container = $(listElement);
@@ -8,13 +10,18 @@ export default class ExpandableList {
   findElements() {
     this.$list = this.$container.find('.js-expandable-list');
     this.$btn = this.$container.find('.js-expandable-btn');
+    this.$label = this.$container.find('.js-expandable-label');
+  }
+
+  @boundMethod
+  handleToggle() {
+    this.$btn.toggleClass('expandable-list__expand-btn_hidden');
+    this.$list.slideToggle();
   }
 
   bindListeners() {
-    this.$btn.click(e => {
-      $(e.target).toggleClass('expandable-list__expand-btn_hidden');
-      this.$list.slideToggle();
-    });
+    this.$btn.click(this.handleToggle);
+    this.$label.click(this.handleToggle);
   }
 
   init() {
