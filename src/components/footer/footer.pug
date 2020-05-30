@@ -31,17 +31,17 @@ mixin footer(options = {})
                 .main-footer__sub-text=sub.text
                 .main-footer__sub-input
                   +subscription({placeholder: sub.placeholder})
-      .main-footer__separator
-      //- hr
-      .main-footer__container
-        .main-footer__bottom
-            .main-footer__copyright=copyright
-            ul.main-footer__social
-              each social in socialList
-                li.main-footer__social-item
-                  a.main-footer__social-link(href=social.link target="_blank" rel="noopener noreferrer")
-                    img.main-footer__social-img(src=social.imgLink, alt=social.name)
-                    span.main-footer__social-name=social.name
+      //- .main-footer__separator
+      .main-footer__outer-wrapper
+        .main-footer__container.main-footer__container_with-border
+          .main-footer__bottom
+              .main-footer__copyright=copyright
+              ul.main-footer__social
+                each social in socialList
+                  li.main-footer__social-item
+                    a.main-footer__social-link(href=social.link target="_blank" rel="noopener noreferrer")
+                      img.main-footer__social-img(src=social.imgLink, alt=social.name)
+                      span.main-footer__social-name=social.name
     else
       .main-footer__container
         .main-footer__main.main-footer__main_small

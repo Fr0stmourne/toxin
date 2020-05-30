@@ -7,6 +7,10 @@
     @include visually-hidden;
   }
 
+  &__outer-wrapper {
+    border-top: 1px solid $border;
+  }
+
   &__container {
     @include container;
 
@@ -148,10 +152,5 @@
     &-name {
       @include visually-hidden;
     }
-  }
-
-  &__separator {
-    height: 1px;
-    background-color: $border;
   }
 }
