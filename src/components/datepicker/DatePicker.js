@@ -16,9 +16,6 @@ export const inlineOptions = {
   },
 };
 
-const startInputClass = '.js-range-datepicker-start';
-const endInputClass = '.js-range-datepicker-end';
-
 export class RangeDatepicker {
   constructor(datepickerContainer, options) {
     this.options = options;
@@ -28,8 +25,8 @@ export class RangeDatepicker {
   }
 
   findElements() {
-    this.$startInput = this.$container.find(startInputClass);
-    this.$endInput = this.$container.find(endInputClass);
+    this.$startInput = this.$container.find('.js-range-datepicker-start');
+    this.$endInput = this.$container.find('.js-range-datepicker-end');
   }
 
   appendBtn(el) {
