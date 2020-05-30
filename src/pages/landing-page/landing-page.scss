@@ -8,16 +8,20 @@
   }
 
   &__room-booking {
-    max-width: 1440px;
-    margin: 0 auto;
+    @include container;
+    display: grid;
     position: relative;
-    min-height: 760px;
+    min-height: 830px;
+    padding-right: 134px;
     padding-top: 70px;
     background-image: url('./img/landing.jpg');
     background-repeat: no-repeat;
     background-position-y: -70px;
 
     @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       min-height: 0;
       background-size: cover;
       background-position-y: 0;
@@ -25,21 +29,8 @@
     }
   }
 
-  &__booking-container {
-    @include container;
-    display: grid;
-    padding-right: 134px;
-
-    @media (max-width: 600px) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0;
-    }
-  }
-
   &__form {
-    margin-bottom: 318px;
+    margin-bottom: 296px;
 
     @media (max-width: 600px) {
       display: flex;
@@ -54,6 +45,7 @@
     font: $default-font;
     text-align: right;
     line-height: 24px;
+    color: $dark-75;
 
     @media (max-width: 600px) {
       display: none;
