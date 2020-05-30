@@ -26,7 +26,5 @@ export default class ExpandableList {
 
   init() {
     this.bindListeners();
-
-    this.$btn.click();
   }
 }

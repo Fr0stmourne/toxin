@@ -34,13 +34,10 @@
       border-color: $dark-50;
       color: $dark-75;
     }
-
-    &:not(.dropdown__result_opened)~.dropdown__content {
-      display: none;
-    }
   }
 
   &__content {
+    display: none;
     width: 100%;
     box-sizing: border-box;
     position: absolute;

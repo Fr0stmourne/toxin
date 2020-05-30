@@ -32,6 +32,10 @@
     }
   }
 
+  &__list {
+    display: none;
+  }
+
   &__checkbox:not(:last-child) {
     margin-bottom: 12px;
   }
