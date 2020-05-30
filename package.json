@@ -22,7 +22,6 @@
     "@babel/plugin-proposal-decorators": "^7.8.3",
     "@babel/polyfill": "^7.8.7",
     "@babel/preset-env": "^7.9.6",
-    "autobind-decorator": "^2.4.0",
     "autoprefixer": "^9.7.6",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
@@ -68,6 +67,7 @@
   },
   "dependencies": {
     "air-datepicker": "^2.2.3",
+    "autobind-decorator": "^2.4.0",
     "bxslider": "^4.2.14",
     "chart.js": "^2.9.3",
     "inputmask": "^5.0.3",
