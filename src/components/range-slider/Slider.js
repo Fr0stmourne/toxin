@@ -1,18 +1,7 @@
-function formatNumber(num) {
-  return String(num)
-    .split('')
-    .reverse()
-    .join('')
-    .match(/.{1,3}/g)
-    .reverse()
-    .map(el =>
-      el
-        .split('')
-        .reverse()
-        .join(''),
-    )
-    .join(' ');
-}
+import 'webpack-jquery-ui/slider';
+import 'jquery-ui-touch-punch';
+
+import formatNumber from '../../utils/js/formatNumber';
 
 export default class Slider {
   constructor({ slider, min = 0, max = 1000, values = [0, 1000] }) {

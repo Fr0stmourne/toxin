@@ -74,6 +74,7 @@
     "jquery": "^3.4.1",
     "jquery-mask-plugin": "^1.14.16",
     "jquery-ui": "^1.12.1",
+    "jquery-ui-touch-punch": "^0.2.3",
     "normalize.css": "^8.0.1",
     "webpack-jquery-ui": "^2.0.1"
   }
