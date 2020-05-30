@@ -3,6 +3,7 @@ import { boundMethod } from 'autobind-decorator';
 import getCorrectWordForm from '../../utils/js/getCorrectWordForm';
 
 const DEFAULT_VALUE = 0;
+const OPENED_DRODPOWN_CLASS = 'dropdown__result_opened';
 
 export default class Dropdown {
   constructor(dropdownEl) {
@@ -40,7 +41,7 @@ export default class Dropdown {
   toggle(e) {
     e.preventDefault();
     this.$dropdownList.slideToggle();
-    this.$dropdown.toggleClass('dropdown__result_opened');
+    this.$dropdown.toggleClass(OPENED_DRODPOWN_CLASS);
   }
 
   @boundMethod
@@ -53,6 +54,13 @@ export default class Dropdown {
         .find('.js-minus-btn')
         .click();
     });
+  }
+
+  @boundMethod
+  handleDocumentClick() {
+    if (this.$dropdown.hasClass(OPENED_DRODPOWN_CLASS)) {
+      this.$dropdown.click();
+    }
   }
 
   @boundMethod
@@ -130,6 +138,9 @@ export default class Dropdown {
   bindListeners() {
     this.$applyBtn.click(this.toggle);
     this.$dropdown.click(this.toggle);
+
+    $(document).click(this.handleDocumentClick);
+    this.$container.click(e => e.stopPropagation());
 
     this.$resetBtn.click(this.reset);
 
