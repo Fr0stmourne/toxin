@@ -35,7 +35,7 @@
 
   &__input:focus~&__checkmark,
   &__input:active~&__checkmark {
-    box-shadow: 0 0 0 2px $dark-75;
+    border: 1px solid $purple;
   }
 
   &__input:checked~* {
