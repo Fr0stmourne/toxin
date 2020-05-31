@@ -8,7 +8,6 @@ const glob = require('glob');
 const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
-  assets: 'assets/',
 };
 
 const PAGES = glob.sync(`${__dirname}/../src/pages/**/*.pug`);
@@ -26,11 +25,11 @@ module.exports = {
     path: PATHS.dist,
     publicPath: '/',
   },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
+  // optimization: {
+  //   splitChunks: {
+  //     chunks: 'all',
+  //   },
+  // },
   stats: {
     entrypoints: false,
     children: false,
