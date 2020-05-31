@@ -11,6 +11,7 @@ const PATHS = {
 };
 
 const PAGES = glob.sync(`${__dirname}/../src/pages/**/*.pug`);
+// const PAGE_SCRIPTS = glob.sync(`${__dirname}/../src/pages/**/*.js`);
 
 module.exports = {
   // BASE config

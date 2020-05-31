@@ -1,5 +1,6 @@
 import { boundMethod } from 'autobind-decorator';
 
+import '../../vendors/dropdown/dropdown';
 import getCorrectWordForm from '../../utils/js/getCorrectWordForm';
 
 const DEFAULT_VALUE = 0;

@@ -1,5 +1,6 @@
 import 'air-datepicker/dist/js/datepicker';
 import 'air-datepicker/dist/css/datepicker.css';
+import '../../vendors/datepicker/datepicker.scss';
 
 export const defaultOptions = {
   navTitles: {
