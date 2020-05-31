@@ -41,11 +41,6 @@ module.exports = {
     path: PATHS.dist,
     publicPath: '/',
   },
-  // optimization: {
-  //   splitChunks: {
-  //     chunks: 'all',
-  //   },
-  // },
   stats: {
     entrypoints: false,
     children: false,

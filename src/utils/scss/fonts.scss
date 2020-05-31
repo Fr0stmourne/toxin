@@ -29,6 +29,7 @@
   font-family: 'Quicksand';
   font-weight: 700;
   font-display: swap;
-  src: url('../../fonts/Quicksand-Bold/Quicksand-Bold.ttf') format('truetype'),
+  src: url('../../fonts/Quicksand-Bold/Quicksand-Bold.woff') format('woff'),
+    url('../../fonts/Quicksand-Bold/Quicksand-Bold.ttf') format('truetype'),
     url('../../fonts/Quicksand-Bold/Quicksand-Bold.svg') format('svg');
 }
