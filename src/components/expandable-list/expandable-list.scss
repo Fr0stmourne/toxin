@@ -17,12 +17,12 @@
     right: 11px;
     top: -3px;
     background-color: transparent;
-    background-image: url('/arrow-up.svg');
+    background-image: url('../../images/arrow-up.svg');
     background-repeat: no-repeat;
     background-position: center;
 
     &_hidden {
-      background-image: url('/arrow-down.svg');
+      background-image: url('../../images/arrow-down.svg');
     }
 
     &:focus,

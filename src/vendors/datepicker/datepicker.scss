@@ -75,20 +75,20 @@
   &--nav-action {
     width: 24px;
     height: 24px;
-    background-image: url('/datepicker-arrow-back.svg');
+    background-image: url('../../images/datepicker-arrow-back.svg');
     background-repeat: no-repeat;
     background-position: center;
 
     &[data-action='next'] {
-      background-image: url('/arrow-forward-purple.svg');
+      background-image: url('../../images/arrow-forward-purple.svg');
 
       &:hover {
-        background-image: url('/arrow-forward-purple.svg');
+        background-image: url('../../images/arrow-forward-purple.svg');
       }
     }
 
     &:hover {
-      background-image: url('/datepicker-arrow-back.svg');
+      background-image: url('../../images/datepicker-arrow-back.svg');
       background-repeat: no-repeat;
       background-position: center;
     }

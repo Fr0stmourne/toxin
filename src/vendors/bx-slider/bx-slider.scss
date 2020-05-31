@@ -54,7 +54,7 @@
 
   .bx-next {
     right: 6px;
-    background: url('/room-right.svg') no-repeat;
+    background: url('./img/room-right.svg') no-repeat;
     background-position: center;
 
     &:hover,
@@ -72,7 +72,7 @@
 
   .bx-prev {
     left: 6px;
-    background: url('/room-left.svg') 50% no-repeat;
+    background: url('./img/room-left.svg') 50% no-repeat;
 
     &:hover,
     &:focus {
