@@ -10,8 +10,8 @@ const PATHS = {
   dist: path.join(__dirname, '../dist'),
 };
 
-const PAGES = glob.sync(`${__dirname}/../src/pages/**/*.pug`);
-const PAGE_SCRIPTS = glob.sync(`${__dirname}/../src/pages/**/*.js`);
+const PAGES = glob.sync(`${PATHS.src}/pages/**/*.pug`);
+const PAGE_SCRIPTS = glob.sync(`${PATHS.src}/pages/**/*.js`);
 
 function getEntrypoints(scripts) {
   const result = {};
@@ -21,7 +21,7 @@ function getEntrypoints(scripts) {
         .split('/')
         .slice(-1)[0]
         .replace(/\.js/, '')}`
-    ] = `${__dirname}/..${scriptPath.split('..')[1]}`;
+    ] = `${__dirname}/../${scriptPath.slice(scriptPath.indexOf('src/pages'))}`;
   });
 
   return result;
@@ -135,7 +135,7 @@ module.exports = {
     ...PAGES.map(
       pagePath =>
         new HtmlWebpackPlugin({
-          template: `${__dirname}/..${pagePath.split('..')[1]}`,
+          template: `${__dirname}/../${pagePath.slice(pagePath.indexOf('src/pages'))}`,
           inject: false,
           filename: `${pagePath
             .split('/')
@@ -143,45 +143,5 @@ module.exports = {
             .replace(/\.pug/, '.html')}`,
         }),
     ),
-    // new HtmlWebpackPlugin({
-    //   template: `./src/pages/index/index.pug`,
-    //   filename: `index.html`,
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: `./src/pages/colors-type/colors-type.pug`,
-    //   filename: `colors-type.html`,
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: `./src/pages/cards/cards.pug`,
-    //   filename: `cards.html`,
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: `./src/pages/form-elements/form-elements.pug`,
-    //   filename: `form-elements.html`,
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: `./src/pages/headers-footers/headers-footers.pug`,
-    //   filename: `headers-footers.html`,
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: `./src/pages/landing-page/landing-page.pug`,
-    //   filename: `landing-page.html`,
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: `./src/pages/registration-page/registration-page.pug`,
-    //   filename: `registration-page.html`,
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: `./src/pages/room-details/room-details.pug`,
-    //   filename: `room-details.html`,
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: `./src/pages/search-room/search-room.pug`,
-    //   filename: `search-room.html`,
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: `./src/pages/signin-page/signin-page.pug`,
-    //   filename: `signin-page.html`,
-    // }),
   ],
 };
