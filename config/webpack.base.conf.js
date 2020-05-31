@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const glob = require('glob');
 
 const PATHS = {
@@ -23,7 +22,7 @@ module.exports = {
     app: PATHS.src,
   },
   output: {
-    filename: `${PATHS.assets}js/[name].js`,
+    filename: `[name].js`,
     path: PATHS.dist,
     publicPath: '/',
   },
@@ -113,7 +112,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `[name].css`,
     }),
@@ -124,12 +122,6 @@ module.exports = {
       'window.jQuery': 'jquery',
       'window.$': 'jquery',
     }),
-    new CopyWebpackPlugin([
-      {
-        from: `${PATHS.src}/fonts`,
-        to: `${PATHS.assets}fonts`,
-      },
-    ]),
     ...PAGES.map(
       page =>
         new HtmlWebpackPlugin({

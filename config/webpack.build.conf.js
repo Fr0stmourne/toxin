@@ -1,10 +1,16 @@
 const merge = require('webpack-merge');
 const TinyPngWebpackPlugin = require('tinypng-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const baseWebpackConfig = require('./webpack.base.conf');
 
-const buildWebpackConfig = merge(baseWebpackConfig, {
-  // BUILD config
+const build = merge.strategy({
+  plugins: 'prepend',
+})(baseWebpackConfig, {
+  plugins: [new CleanWebpackPlugin()],
+});
+
+const buildWebpackConfig = merge(build, {
   mode: 'production',
   output: {
     publicPath: './',
