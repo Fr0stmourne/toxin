@@ -1,3 +1,5 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 import 'jquery/dist/jquery';
 import 'normalize.css';
 

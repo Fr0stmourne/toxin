@@ -4,7 +4,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const glob = require('glob');
 
 const PATHS = {
@@ -21,12 +20,21 @@ module.exports = {
     paths: PATHS,
   },
   entry: {
-    app: ['@babel/polyfill', PATHS.src],
+    app: PATHS.src,
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
     path: PATHS.dist,
     publicPath: '/',
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
+  stats: {
+    entrypoints: false,
+    children: false,
   },
   mode: 'base',
   module: {
@@ -42,9 +50,10 @@ module.exports = {
         test: /\.js$/,
         loader: this.mode === 'development' ? ['babel-loader', 'eslint-loader'] : 'babel-loader',
         exclude: '/node_modules/',
+        include: path.resolve(__dirname, '../src'),
       },
       {
-        test: /\.(jpeg|jpg|png|gif)$/,
+        test: /\.(jpeg|jpg|png|gif|svg)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
@@ -54,17 +63,11 @@ module.exports = {
         },
       },
       {
-        test: /\.svg$/,
-        loader: 'url-loader',
-        options: {
-          name: '[name].[ext]',
-        },
-      },
-      {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
+          esModule: false,
         },
       },
       {
@@ -108,9 +111,6 @@ module.exports = {
         ],
       },
     ],
-  },
-  resolve: {
-    extensions: ['.js', '.jsx', '.scss', '.pug'],
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -180,6 +180,5 @@ module.exports = {
     //   template: `./src/pages/signin-page/signin-page.pug`,
     //   filename: `signin-page.html`,
     // }),
-    new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
   ],
 };
