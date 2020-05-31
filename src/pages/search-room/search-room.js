@@ -2,6 +2,7 @@ import DateFilter from '../../components/date-filter/DateFilter';
 import Dropdown from '../../components/dropdown/Dropdown';
 import ExpandableList from '../../components/expandable-list/ExpandableList';
 import Slider from '../../components/range-slider/Slider';
+import '../../components/room/room';
 
 $(() => {
   $('.js-slider').each(

@@ -1,6 +1,7 @@
 import { RangeDatepicker, defaultOptions, inlineOptions } from '../../components/datepicker/DatePicker';
 import Dropdown from '../../components/dropdown/Dropdown';
 import MaskedField from '../../components/masked-text-field/MaskedField';
+import '../../components/room/room';
 
 $('.js-date').each((_, el) => new MaskedField(el));
 

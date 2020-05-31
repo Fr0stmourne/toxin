@@ -11,7 +11,21 @@ const PATHS = {
 };
 
 const PAGES = glob.sync(`${__dirname}/../src/pages/**/*.pug`);
-// const PAGE_SCRIPTS = glob.sync(`${__dirname}/../src/pages/**/*.js`);
+const PAGE_SCRIPTS = glob.sync(`${__dirname}/../src/pages/**/*.js`);
+
+function getEntrypoints(scripts) {
+  const result = {};
+  scripts.forEach(scriptPath => {
+    result[
+      `${scriptPath
+        .split('/')
+        .slice(-1)[0]
+        .replace(/\.js/, '')}`
+    ] = `${__dirname}/..${scriptPath.split('..')[1]}`;
+  });
+
+  return result;
+}
 
 module.exports = {
   // BASE config
@@ -20,6 +34,7 @@ module.exports = {
   },
   entry: {
     app: PATHS.src,
+    ...getEntrypoints(PAGE_SCRIPTS),
   },
   output: {
     filename: `[name].js`,
@@ -123,10 +138,11 @@ module.exports = {
       'window.$': 'jquery',
     }),
     ...PAGES.map(
-      page =>
+      pagePath =>
         new HtmlWebpackPlugin({
-          template: `.${page.split('..')[1]}`,
-          filename: `${page
+          template: `${__dirname}/..${pagePath.split('..')[1]}`,
+          inject: false,
+          filename: `${pagePath
             .split('/')
             .slice(-1)[0]
             .replace(/\.pug/, '.html')}`,
