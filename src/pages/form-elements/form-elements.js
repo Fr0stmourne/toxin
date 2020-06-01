@@ -6,6 +6,29 @@ import LikeBtn from '../../components/like-btn/LikeBtn';
 import MaskedField from '../../components/masked-text-field/MaskedField';
 import Slider from '../../components/slider/Slider';
 
+import '../../components/checkbox/checkbox.scss';
+import '../../components/text-field/text-field.scss';
+import '../../components/radio-btn/radio-btn.scss';
+import '../../components/subscription/subscription.scss';
+import '../../components/btn/btn.scss';
+import '../../components/link/link.scss';
+import '../../components/like-btn/like-btn.scss';
+import '../../components/rate-btn/rate-btn.scss';
+import '../../components/toggle-btn/toggle-btn.scss';
+import '../../components/pagination/pagination.scss';
+import '../../components/comment/comment.scss';
+import '../../components/advantage/advantage.scss';
+import '../../components/bullet-list/bullet-list.scss';
+import '../../components/rich-checkbox/rich-checkbox.scss';
+import '../../components/slider/slider.scss';
+import '../../components/masked-text-field/masked-text-field.scss';
+import '../../components/expandable-list/expandable-list.scss';
+import '../../components/dropdown/dropdown.scss';
+import '../../components/range-datepicker/range-datepicker.scss';
+import '../../components/date-filter/date-filter.scss';
+import '../../components/find-room/find-room.scss';
+import './form-elements.scss';
+
 $(() => {
   $('.js-slider').each(
     (_, el) =>

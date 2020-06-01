@@ -1,5 +1,8 @@
 import { boundMethod } from 'autobind-decorator';
 
+import '../checkbox/checkbox';
+import './expandable-list.scss';
+
 export default class ExpandableList {
   constructor(listElement) {
     this.$container = $(listElement);

@@ -3,6 +3,17 @@ import Dropdown from '../../components/dropdown/Dropdown';
 import LikeBtn from '../../components/like-btn/LikeBtn';
 import DoughnutChart from '../../components/room-impression/DoughnutChart';
 
+import '../../components/toxin-header/toxin-header';
+import '../../components/toxin-footer/toxin-footer';
+import '../../components/comment/comment';
+import '../../components/booking/booking';
+import '../../components/advantage/advantage.scss';
+import '../../components/bullet-list/bullet-list.scss';
+import '../../components/room-info/room-info.scss';
+import '../../components/room-impression/room-impression.scss';
+import '../../components/room-reviews/room-reviews.scss';
+import '../../components/room-restrictions/room-restrictions.scss';
+
 const setup = [
   ['rgb(255, 227, 156)', 'rgb(255, 186, 156)'],
   ['rgb(111, 207, 151)', 'rgb(102, 210, 234)'],

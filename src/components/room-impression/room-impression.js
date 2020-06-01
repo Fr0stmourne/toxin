@@ -1,0 +1,1 @@
+import './room-impression.scss';

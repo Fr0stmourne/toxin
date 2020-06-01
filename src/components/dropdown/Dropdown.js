@@ -1,7 +1,9 @@
 import { boundMethod } from 'autobind-decorator';
 
-import '../../vendors/dropdown/dropdown';
 import getCorrectWordForm from '../../utils/js/getCorrectWordForm';
+import '../../vendors/dropdown/dropdown';
+import '../../vendors/dropdown/dropdown.scss';
+import './dropdown.scss';
 
 const DEFAULT_VALUE = 0;
 const OPENED_DRODPOWN_CLASS = 'dropdown__result_opened';

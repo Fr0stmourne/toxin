@@ -1,3 +1,5 @@
+import './like-btn.scss';
+
 const ACTIVE_CLASS = 'like-btn_active';
 
 export default class LikeBtn {

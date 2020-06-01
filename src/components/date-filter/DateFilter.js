@@ -1,6 +1,8 @@
 import 'air-datepicker/dist/js/datepicker';
 import 'air-datepicker/dist/css/datepicker.css';
+
 import '../../vendors/datepicker/datepicker.scss';
+import './date-filter.scss';
 
 export default class DateFilter {
   constructor(dateFilterElement) {

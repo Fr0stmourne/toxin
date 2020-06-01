@@ -2,6 +2,8 @@ import 'webpack-jquery-ui/slider';
 import 'jquery-ui-touch-punch';
 
 import formatNumber from '../../utils/js/formatNumber';
+import '../../vendors/ui-slider/ui-slider.scss';
+import './slider.scss';
 
 export default class Slider {
   constructor({ slider, min = 0, max = 1000, values = [0, 1000] }) {

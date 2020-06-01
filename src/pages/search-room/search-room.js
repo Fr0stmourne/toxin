@@ -2,7 +2,19 @@ import DateFilter from '../../components/date-filter/DateFilter';
 import Dropdown from '../../components/dropdown/Dropdown';
 import ExpandableList from '../../components/expandable-list/ExpandableList';
 import Slider from '../../components/slider/Slider';
+
 import '../../components/room/room';
+import '../../components/toxin-header/toxin-header';
+import '../../components/toxin-footer/toxin-footer';
+import '../../components/slider/slider.scss';
+import '../../components/expandable-list/expandable-list.scss';
+import '../../components/checkbox/checkbox.scss';
+import '../../components/rich-checkbox/rich-checkbox.scss';
+import '../../components/date-filter/date-filter.scss';
+import '../../components/dropdown/dropdown.scss';
+import '../../components/pagination/pagination.scss';
+import '../../components/filter/filter.scss';
+import '../../components/rooms-grid/rooms-grid.scss';
 
 $(() => {
   $('.js-slider').each(

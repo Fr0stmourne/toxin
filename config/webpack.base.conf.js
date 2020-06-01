@@ -16,12 +16,14 @@ const PAGE_SCRIPTS = glob.sync(`${PATHS.src}/pages/**/*.js`);
 function getEntrypoints(scripts) {
   const result = {};
   scripts.forEach(scriptPath => {
+    const scriptName = scriptPath.slice(scriptPath.indexOf('src/pages'));
+    const styleName = scriptName.replace(/\.js/, '.scss');
     result[
       `${scriptPath
         .split('/')
         .slice(-1)[0]
         .replace(/\.js/, '')}`
-    ] = `${__dirname}/../${scriptPath.slice(scriptPath.indexOf('src/pages'))}`;
+    ] = [`${__dirname}/../${scriptName}`, `${__dirname}/../${styleName}`];
   });
 
   return result;
@@ -33,7 +35,8 @@ module.exports = {
     paths: PATHS,
   },
   entry: {
-    app: PATHS.src,
+    // app: PATHS.src,
+    utils: [`${__dirname}/../src/utils/scss/scaffoldings.scss`],
     ...getEntrypoints(PAGE_SCRIPTS),
   },
   output: {
