@@ -13,6 +13,9 @@ import '../../components/room-info/room-info.scss';
 import '../../components/room-impression/room-impression.scss';
 import '../../components/room-reviews/room-reviews.scss';
 import '../../components/room-restrictions/room-restrictions.scss';
+import './img/details-1.jpg';
+import './img/details-2.jpg';
+import './img/details-3.jpg';
 
 const setup = [
   ['rgb(255, 227, 156)', 'rgb(255, 186, 156)'],

@@ -27,7 +27,7 @@ const buildWebpackConfig = merge(build, {
       }),
       new TerserPlugin({
         parallel: true,
-      })
+      }),
     ],
   },
   plugins: [

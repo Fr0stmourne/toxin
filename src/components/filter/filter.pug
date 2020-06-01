@@ -14,7 +14,6 @@ mixin filter()
       +dropdown({
         title: "гости",
         controls: true,
-        id: "search-room-dropdown",
         placeholder: "Сколько гостей",
         optionsList: [{
           text: "Взрослые",
@@ -31,8 +30,7 @@ mixin filter()
       })
     .filter__slider
       +range-slider({
-        title: "диапазон цены", 
-        id: "search-room-slider"
+        title: "диапазон цены"
       })
       .filter__slider-hint Стоимость за сутки пребывания в номере
     .filter__checkbox-group
@@ -60,7 +58,6 @@ mixin filter()
     .filter__comfort
       +dropdown({
         title: "Удобства номера",
-        id: "search-room-dropdown-1",
         placeholder: "Комнаты",
         optionsList: [{
           text: "Спальни",
@@ -75,8 +72,6 @@ mixin filter()
       })
     .filter__additional
       +expandable-list({
-        id: "expandable",
-        btnId: "expandable-btn",
         title: "дополнительные удобства",
         list: [{
           labelText: "Завтрак"

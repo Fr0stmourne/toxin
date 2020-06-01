@@ -1,4 +1,6 @@
 import './like-btn.scss';
+import './img/like-favorite.svg';
+import './img/like-favorite-border.svg';
 
 const ACTIVE_CLASS = 'like-btn_active';
 

@@ -35,8 +35,7 @@ module.exports = {
     paths: PATHS,
   },
   entry: {
-    // app: PATHS.src,
-    utils: [`${__dirname}/../src/utils/scss/scaffoldings.scss`],
+    utils: [`${__dirname}/../src/utils/scss/scaffoldings.scss`, `${__dirname}/../src/utils/scss/fonts.scss`],
     ...getEntrypoints(PAGE_SCRIPTS),
   },
   output: {
@@ -125,6 +124,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new CopyWebpackPlugin([{ from: `${PATHS.src}/images`, to: PATHS.dist }]),
     new MiniCssExtractPlugin({
       filename: `[name].css`,
     }),
