@@ -4,8 +4,8 @@ include ../../components/checkbox/checkbox.pug
 include ../../components/text-field/text-field.pug
 include ../../components/radio-buttons/radio-buttons.pug
 include ../../components/subscription/subscription.pug
-include ../../components/button/button.pug
-include ../../components/links/links.pug
+include ../../components/btn/btn.pug
+include ../../components/link/link.pug
 include ../../components/like-btn/like-btn.pug
 include ../../components/rate-btn/rate-btn.pug
 include ../../components/rate-btn/rate-btn.pug
@@ -146,19 +146,19 @@ block content
           .ui-kit__buttons
             .ui-kit__button-title Buttons
             .ui-kit__button-list
-              +button({
+              +btn({
                 type: "primary", 
                 btnText: "click me"
               })
-              +button({
+              +btn({
                 type: "primary", 
                 btnText: "click me"
               })
-              +button({
+              +btn({
                 type: "secondary", 
                 btnText: "click me"
               })
-              +button({
+              +btn({
                 type: "secondary", 
                 btnText: "click me"
               })
@@ -174,7 +174,7 @@ block content
                   linkText: "Click me"
                 })
             .ui-kit__proceed
-              +button({
+              +btn({
                 type: "proceed", 
                 btnText: "перейти к оплате"
               })

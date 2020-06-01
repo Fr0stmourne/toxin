@@ -1,7 +1,7 @@
-include ../button/button.pug
+include ../btn/btn.pug
 
 mixin note({btnText = "войти", noteText = "Нет аккаунта на Toxin", link = "./mock"})
   .note
     span.note__text=noteText
     .note__btn
-      +button({btnText, type: "secondary", link})
+      +btn({btnText, type: "secondary", link})

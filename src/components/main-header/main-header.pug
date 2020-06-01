@@ -1,4 +1,4 @@
-include ../button/button.pug
+include ../btn/btn.pug
 include ../header-nav/header-nav.pug
 
 mixin main-header({items = [], unlogged = false, loginText = "Войти", regText = "Зарегистрироваться", username = "Иван Иванов", logoLink = "landing-page.html"} = {})
@@ -17,9 +17,9 @@ mixin main-header({items = [], unlogged = false, loginText = "Войти", regTe
           .main-header__login
             .main-header__login-menu
               .main-header__login-btn
-                +button({btnText: loginText, type: "secondary", slim: true, link: "signin-page.html"})
+                +btn({btnText: loginText, type: "secondary", slim: true, link: "signin-page.html"})
               .main-header__register-btn
-                +button({btnText: regText, slim: true, link: "registration-page.html"})
+                +btn({btnText: regText, slim: true, link: "registration-page.html"})
         else
           .main-header__login
             .main-header__login-menu.main-header__login-menu_logged
