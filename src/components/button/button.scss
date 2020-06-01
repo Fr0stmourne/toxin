@@ -33,6 +33,7 @@
 
   &_type_secondary {
     color: $purple;
+    background-color: $white;
     z-index: 1;
 
     &::before {
@@ -43,9 +44,9 @@
       border-radius: 22px;
       transform: translate(-50%, -50%);
       z-index: -1;
-      height: calc(100%-4px);
+      height: calc(100% - 4px);
       background-color: $white;
-      width: calc(100%-4px);
+      width: calc(100% - 4px);
     }
   }
 
