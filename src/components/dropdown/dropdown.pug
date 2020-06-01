@@ -1,6 +1,3 @@
-mixin plus-minus({min = 0, max = 5, id, name} = {})
-  .js-plus-minus.plus-minus(min=min max=max id=id name=name)
-
 mixin dropdown({title, placeholder = "Список", optionsList = ["There are no values"], min = 0, max = 5, id, name, controls = false} = {})
   .dropdown.js-dropdown
     if title
@@ -11,7 +8,7 @@ mixin dropdown({title, placeholder = "Список", optionsList = ["There are n
         each option in optionsList
           li.dropdown__item.js-dropdown-item
             .dropdown__option.js-dropdown-option(selected=option.selected data-forms=option.wordForms data-group=option.group)=option.text
-            +plus-minus({min: min , max: max, id: option.id, name: option.name})
+            .js-plus-minus.plus-minus(min=(min || 0) max=(max || 5) id=option.id name=option.name)
       if controls
         .dropdown__controls
           button.dropdown__reset.js-reset.dropdown__reset_hidden Очистить
