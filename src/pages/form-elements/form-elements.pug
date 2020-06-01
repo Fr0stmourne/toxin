@@ -2,20 +2,20 @@ extends ../../components/template-page/template-page.pug
 
 include ../../components/checkbox/checkbox.pug
 include ../../components/text-field/text-field.pug
-include ../../components/radio-buttons/radio-buttons.pug
+include ../../components/radio-btn/radio-btn.pug
 include ../../components/subscription/subscription.pug
 include ../../components/btn/btn.pug
 include ../../components/link/link.pug
 include ../../components/like-btn/like-btn.pug
 include ../../components/rate-btn/rate-btn.pug
 include ../../components/rate-btn/rate-btn.pug
-include ../../components/toggle/toggle.pug
+include ../../components/toggle-btn/toggle-btn.pug
 include ../../components/pagination/pagination.pug
 include ../../components/comment/comment.pug
 include ../../components/advantage/advantage.pug
 include ../../components/bullet-list/bullet-list.pug
 include ../../components/rich-checkbox/rich-checkbox.pug
-include ../../components/range-slider/range-slider.pug
+include ../../components/slider/slider.pug
 include ../../components/masked-text-field/masked-text-field.pug
 include ../../components/expandable-list/expandable-list.pug
 include ../../components/dropdown/dropdown.pug
@@ -117,9 +117,9 @@ block content
           .ui-kit__togglers
             .ui-kit__toggle-title Toggle
             .ui-kit__toggle
-              +toggle({btnText: "Получать спецпредложения"})
+              +toggle-btn({btnText: "Получать спецпредложения"})
             .ui-kit__toggle
-              +toggle({btnText: "Получать спецпредложения"})
+              +toggle-btn({btnText: "Получать спецпредложения"})
           .ui-kit__like
             .ui-kit__like-title Like button
             .ui-kit__like-buttons

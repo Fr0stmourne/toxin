@@ -4,7 +4,7 @@ import Dropdown from '../../components/dropdown/Dropdown';
 import ExpandableList from '../../components/expandable-list/ExpandableList';
 import LikeBtn from '../../components/like-btn/LikeBtn';
 import MaskedField from '../../components/masked-text-field/MaskedField';
-import Slider from '../../components/range-slider/Slider';
+import Slider from '../../components/slider/Slider';
 
 $(() => {
   $('.js-slider').each(
