@@ -1,6 +1,6 @@
 extends ../../components/template-page/template-page.pug
 
-include ../../components/headers/headers.pug
+include ../../components/main-header/main-header.pug
 include ../../components/main-footer/main-footer.pug
 
 block meta
@@ -13,7 +13,7 @@ block title
 block content
   body.headers-footers
     .headers-footers__unlogged-header
-      +header({
+      +main-header({
         unlogged: true,
         regText: "register",
         loginText: "login",
@@ -54,7 +54,7 @@ block content
         ]
       })
     .headers-footers__logged-header
-      +header({
+      +main-header({
         username: "Cosmin Negoita",
         items: [{
             text: "Home",
