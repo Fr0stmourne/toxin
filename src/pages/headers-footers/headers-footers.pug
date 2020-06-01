@@ -1,7 +1,7 @@
 extends ../../components/template-page/template-page.pug
 
 include ../../components/headers/headers.pug
-include ../../components/footer/footer.pug
+include ../../components/main-footer/main-footer.pug
 
 block meta
   meta(name="description", content="headers and footers")
@@ -93,7 +93,7 @@ block content
         ]
       })
     .headers-footers__extended-footer
-      +footer({
+      +main-footer({
         logoLink: "landing-page.html",
         extended: true,
         copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved.",
@@ -156,7 +156,7 @@ block content
         companyText: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
       })
     .headers-footers__non-extended-footer
-      +footer({
+      +main-footer({
         logoLink: "landing-page.html",
         socialList: [{
             name: "Twitter",
