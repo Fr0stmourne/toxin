@@ -1,5 +1,5 @@
 import DateFilter from '../../components/date-filter/DateFilter';
-import { RangeDatepicker, defaultOptions } from '../../components/datepicker/DatePicker';
+import { RangeDatepicker, defaultOptions } from '../../components/range-datepicker/RangeDatePicker';
 import Dropdown from '../../components/dropdown/Dropdown';
 import ExpandableList from '../../components/expandable-list/ExpandableList';
 import LikeBtn from '../../components/like-btn/LikeBtn';

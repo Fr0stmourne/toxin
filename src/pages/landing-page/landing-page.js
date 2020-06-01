@@ -1,5 +1,5 @@
 import Dropdown from '../../components/dropdown/Dropdown';
-import { RangeDatepicker, defaultOptions } from '../../components/datepicker/DatePicker';
+import { RangeDatepicker, defaultOptions } from '../../components/range-datepicker/RangeDatePicker';
 
 $('.js-dropdown').each((_, el) => new Dropdown(el));
 

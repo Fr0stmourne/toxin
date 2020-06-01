@@ -1,4 +1,4 @@
-include ../datepicker/datepicker.pug
+include ../range-datepicker/range-datepicker.pug
 include ../dropdown/dropdown.pug
 include ../button/button.pug
 
@@ -6,7 +6,7 @@ mixin find-room({title, action = "search-room.html"} = {})
   form(action=action).find-room
     h2.find-room__title=title
     .find-room__datepicker
-      +datepicker-double({
+      +range-datepicker({
         startLabel: "Прибытие",
         endLabel: "Выезд"
       })

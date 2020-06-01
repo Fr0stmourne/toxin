@@ -1,4 +1,4 @@
-import { RangeDatepicker, defaultOptions, inlineOptions } from '../../components/datepicker/DatePicker';
+import { RangeDatepicker, defaultOptions, inlineOptions } from '../../components/range-datepicker/RangeDatePicker';
 import Dropdown from '../../components/dropdown/Dropdown';
 import MaskedField from '../../components/masked-text-field/MaskedField';
 import '../../components/room/room';

@@ -1,4 +1,4 @@
-.datepicker-double {
+.range-datepicker {
   display: flex;
 
   @media (max-width: 400px) {
@@ -65,12 +65,12 @@
   }
 
   &_inlined {
-    .datepicker-double__label {
+    .range-datepicker__label {
       display: none;
     }
 
-    .datepicker-double__input,
-    .datepicker-double__box::before {
+    .range-datepicker__input,
+    .range-datepicker__box::before {
       display: none;
     }
   }

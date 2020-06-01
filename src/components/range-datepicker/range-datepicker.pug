@@ -1,0 +1,12 @@
+mixin range-datepicker({ inline = false, startLabel = "Приезд", endLabel = "Выезд" } = {})
+  .range-datepicker.js-range-datepicker(class = inline ? "range-datepicker_inlined js-range-datepicker-inline" : "")
+    .range-datepicker__start
+      label.range-datepicker__label=startLabel
+      .range-datepicker__box
+        input.range-datepicker__input.js-range-datepicker-start(type="text" data-range="true" readonly name=name data-multiple-dates-separator=" - " class="datepicker-here" placeholder="ДД.ММ.ГГГГ")
+    .range-datepicker__end
+      label.range-datepicker__label=endLabel
+      .range-datepicker__box
+        input.range-datepicker__input.js-range-datepicker-end(type="text" data-range="true" readonly name=name data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ")
+  
+

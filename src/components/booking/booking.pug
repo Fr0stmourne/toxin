@@ -1,4 +1,4 @@
-include ../datepicker/datepicker.pug
+include ../range-datepicker/range-datepicker.pug
 include ../dropdown/dropdown.pug
 include ../button/button.pug
 include ../calc/calc.pug
@@ -14,7 +14,7 @@ mixin booking({num = 1, type = "", price = "0", calc = ["There are no values"], 
         span.booking__price=price
         span.booking__measurement  в сутки
     .booking__datepicker
-      +datepicker-double({
+      +range-datepicker({
         startLabel: "Прибытие",
         endLabel: "Выезд"
       })

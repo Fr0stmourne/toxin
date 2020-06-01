@@ -19,7 +19,7 @@ include ../../components/range-slider/range-slider.pug
 include ../../components/masked-text-field/masked-text-field.pug
 include ../../components/expandable-list/expandable-list.pug
 include ../../components/dropdown/dropdown.pug
-include ../../components/datepicker/datepicker.pug
+include ../../components/range-datepicker/range-datepicker.pug
 include ../../components/date-filter/date-filter.pug
 include ../../components/find-room/find-room.pug
 
@@ -74,7 +74,7 @@ block content
               title: "masked text field"
             })
           .ui-kit__date-dropdowns
-            +datepicker-double({
+            +range-datepicker({
               startLabel: "date dropdown",
               endLabel: "date dropdown",
               controls: true

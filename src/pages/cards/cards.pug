@@ -5,7 +5,7 @@ include ../../components/registration/registration.pug
 include ../../components/booking/booking.pug
 include ../../components/room/room.pug
 include ../../components/login/login.pug
-include ../../components/datepicker/datepicker.pug
+include ../../components/range-datepicker/range-datepicker.pug
 
 block meta
   meta(name="description", content="cards")
@@ -44,7 +44,7 @@ block content
           +login({noteText: "Нет аккаунта на Toxin?"})
       .cards__datepicker-rooms
         .cards__datepicker
-          +datepicker-double({
+          +range-datepicker({
             startLabel: "Прибытие",
             endLabel: "Выезд",
             controls: true,

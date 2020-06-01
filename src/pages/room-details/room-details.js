@@ -1,4 +1,4 @@
-import { RangeDatepicker, defaultOptions, inlineOptions } from '../../components/datepicker/DatePicker';
+import { RangeDatepicker, defaultOptions, inlineOptions } from '../../components/range-datepicker/RangeDatePicker';
 import Dropdown from '../../components/dropdown/Dropdown';
 import LikeBtn from '../../components/like-btn/LikeBtn';
 import DoughnutChart from '../../components/room-impression/DoughnutChart';
