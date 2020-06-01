@@ -63,6 +63,10 @@
     }
   }
 
+  .bx-pager {
+    z-index: 20;
+  }
+
   .bx-pager.bx-default-pager a {
     box-sizing: border-box;
     height: 7px;
