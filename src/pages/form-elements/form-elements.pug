@@ -144,20 +144,24 @@ block content
             .ui-kit__button-title Buttons
             .ui-kit__button-list
               +btn({
-                type: "primary", 
-                btnText: "click me"
+                styleType: "primary", 
+                btnText: "click me",
+                type: "button"
               })
               +btn({
-                type: "primary", 
-                btnText: "click me"
+                styleType: "primary", 
+                btnText: "click me",
+                type: "button"
               })
               +btn({
-                type: "secondary", 
-                btnText: "click me"
+                styleType: "secondary", 
+                btnText: "click me",
+                type: "button"
               })
               +btn({
-                type: "secondary", 
-                btnText: "click me"
+                styleType: "secondary", 
+                btnText: "click me",
+                type: "button"
               })
             .ui-kit__links
               .ui-kit__link
@@ -172,8 +176,9 @@ block content
                 })
             .ui-kit__proceed
               +btn({
-                type: "proceed", 
-                btnText: "перейти к оплате"
+                styleType: "proceed", 
+                btnText: "перейти к оплате",
+                type: "button"
               })
             .ui-kit__pagination
               +pagination({

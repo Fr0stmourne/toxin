@@ -1,5 +1,12 @@
-mixin btn({type = "", btnText = "Кнопка", link = "", slim = false} = {})
+mixin btn({styleType = "", type = "submit", btnText = "Кнопка", link = "", slim = false} = {})
   case type
+    when "button"
+      - var type = "button"
+    when "reset"
+      - var type = "reset"
+    default
+      - var type = "submit"
+  case styleType
     when "secondary"
       - var btnClass = "btn_type_secondary"
     when "proceed"
@@ -9,4 +16,4 @@ mixin btn({type = "", btnText = "Кнопка", link = "", slim = false} = {})
   if link
     a(href=link class=`btn ${btnClass} ${slim ? "btn_size_slim" : "" }`)=btnText
   else
-    button(class=`btn ${btnClass} ${slim ? "btn_size_slim" : "" }`)=btnText
+    button(class=`btn ${btnClass} ${slim ? "btn_size_slim" : "" }` type=type)=btnText

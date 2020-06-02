@@ -30,6 +30,7 @@ export default class Dropdown {
     this.$minusBtns = this.$dropdown.parent().find('.js-dropdown-item .js-minus-btn');
     this.$plusBtns = this.$dropdown.parent().find('.js-dropdown-item .js-plus-btn');
     this.$input = this.$dropdown.parent().find('.js-dropdown-item input');
+    this.$plusMinusBtns.removeAttr('type').attr('type', 'button');
   }
 
   disableBtn($btn) {

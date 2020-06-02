@@ -11,5 +11,5 @@ mixin dropdown({title, placeholder = "Список", optionsList = ["There are n
             .js-plus-minus.plus-minus(min=(min || 0) max=(max || 5) id=option.id name=option.name)
       if controls
         .dropdown__controls
-          button.dropdown__reset.js-reset.dropdown__reset_hidden Очистить
-          button.dropdown__apply.js-apply Применить
+          button(type="button").dropdown__reset.js-reset.dropdown__reset_hidden Очистить
+          button(type="button").dropdown__apply.js-apply Применить

@@ -17,7 +17,7 @@ mixin main-header({items = [], unlogged = false, loginText = "Войти", regTe
           .main-header__login
             .main-header__login-menu
               .main-header__login-btn
-                +btn({btnText: loginText, type: "secondary", slim: true, link: "signin-page.html"})
+                +btn({btnText: loginText, styleType: "secondary", slim: true, link: "signin-page.html"})
               .main-header__register-btn
                 +btn({btnText: regText, slim: true, link: "registration-page.html"})
         else
