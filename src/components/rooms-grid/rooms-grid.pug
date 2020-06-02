@@ -2,13 +2,13 @@ include ../room/room.pug
 include ../pagination/pagination.pug
 
 mixin rooms-grid({ rooms = [] } = {})  
-  section.rooms
-    h2.rooms__title Номера, которые мы для вас подобрали
-    ul.rooms__list
+  section.rooms-grid
+    h2.rooms-grid__title Номера, которые мы для вас подобрали
+    ul.rooms-grid__list
       each room in rooms
-        li.rooms__room-item
+        li.rooms-grid__room-item
           +room(room)
-    .rooms__pagination
+    .rooms-grid__pagination
       +pagination({
         num: 15, 
         description: "1 – 12 из 100+ вариантов аренды"
