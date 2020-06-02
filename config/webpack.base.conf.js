@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackTagsPlugin = require('html-webpack-tags-plugin');
 const glob = require('glob');
 
 const PATHS = {
@@ -69,9 +70,9 @@ module.exports = {
       {
         test: /\.pug$/,
         loader: 'pug-loader',
-        options: {
-          root: './',
-        },
+        // options: {
+        //   root: './',
+        // },
       },
       {
         test: /\.js$/,
@@ -151,16 +152,14 @@ module.exports = {
       'window.jQuery': 'jquery',
       'window.$': 'jquery',
     }),
-    ...PAGES.map(
-      pagePath =>
-        new HtmlWebpackPlugin({
-          template: `${__dirname}/../${pagePath.slice(pagePath.indexOf('src/pages'))}`,
-          inject: false,
-          filename: `${pagePath
-            .split('/')
-            .slice(-1)[0]
-            .replace(/\.pug/, '.html')}`,
-        }),
-    ),
+    ...PAGES.map(pagePath => {
+      const pugPageName = pagePath.split('/').slice(-1)[0];
+      return new HtmlWebpackPlugin({
+        template: `${__dirname}/../${pagePath.slice(pagePath.indexOf('src/pages'))}`,
+        hash: true,
+        chunks: ['common', pugPageName.replace(/\.pug/, '')],
+        filename: pugPageName.replace(/\.pug/, '.html'),
+      });
+    }),
   ],
 };
