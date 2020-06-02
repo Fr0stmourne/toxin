@@ -47,6 +47,22 @@ module.exports = {
     entrypoints: false,
     children: false,
   },
+  optimization: {
+    minimize: true,
+    runtimeChunk: { name: 'common' },
+    splitChunks: {
+      cacheGroups: {
+        default: false,
+        commons: {
+          test: /\.jsx?$/,
+          chunks: 'all',
+          minChunks: 2,
+          name: 'common',
+          enforce: true,
+        },
+      },
+    },
+  },
   mode: 'base',
   module: {
     rules: [
