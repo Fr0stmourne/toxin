@@ -1,2 +1,7 @@
-mixin link({link = "./mock", linkText = "Ссылка"} = {})
+mixin link(options = {})
+  -
+    var {
+      link="./mock",
+      linkText="Ссылка"
+    } = options
   a.link(href=link)=linkText

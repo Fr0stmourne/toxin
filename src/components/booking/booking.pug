@@ -3,7 +3,16 @@ include ../dropdown/dropdown.pug
 include ../btn/btn.pug
 include ../calc/calc.pug
 
-mixin booking({num = 1, type = "", price = "0", calc = ["There are no values"], fullPrice = 0, action = "./mock"} = {})
+mixin booking(options = {})
+  -
+    var {
+      num=1,
+      type="",
+      price="0",
+      calc=["There are no values"],
+      fullPrice=0,
+      action="./mock"
+    } = options
   form(action=action).booking
     .booking__room-info
       h3.booking__room

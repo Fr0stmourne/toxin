@@ -1,4 +1,9 @@
-mixin toggle-btn({name, btnText = "Переключатель"} = {})
+mixin toggle-btn(options = {})
+  -
+    var {
+      name,
+      btnText="Переключатель"
+    } = options
   label.toggle-btn
     input.toggle-btn__input(type="checkbox" name=name)
     span.toggle-btn__box

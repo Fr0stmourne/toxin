@@ -1,4 +1,9 @@
-mixin bullet-list({title, items = ["There are no items"]} = {}) 
+mixin bullet-list(options = {})
+  - 
+    var {
+      title,
+      items=["There are no items"]
+    } = options
   .bullet-list
     if title
       .bullet-list__title=title

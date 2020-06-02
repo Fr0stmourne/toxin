@@ -1,9 +1,21 @@
-mixin page({ active = false, link = "./mock", linkText = "Текст" } = {})
+mixin page(options = {})
+  -
+    var {
+      active=false,
+      link="./mock",
+      linkText="Текст"
+    } = options
   li.pagination__page(class=active ? "pagination__page_active" : "" )
     a.pagination__page-link(href=link)=linkText
 
-mixin pagination({title, num = 10, description = "Описание пагинации"} = {})
- .pagination__container
+mixin pagination(options = {})
+  -
+    var {
+      title,
+      num=10,
+      description="Описание пагинации"
+    } = options
+  .pagination__container
     if title
       .pagination__title=title
     ul.pagination

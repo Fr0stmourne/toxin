@@ -1,4 +1,11 @@
-mixin advantage({imgLink = "./mock", alt = "Преимущество", title = "Преимущество", description = "Описание преимущества"} = {})
+mixin advantage(options = {})
+  -
+    var {
+      imgLink="./mock",
+      alt="Преимущество",
+      title="Преимущество",
+      description="Описание преимущества"
+    } = options
   .advantage
     img.advantage__img(src=imgLink, alt=alt)
     span.advantage__title=title

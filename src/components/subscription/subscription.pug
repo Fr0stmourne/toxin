@@ -1,4 +1,10 @@
-mixin subscription({title, name, placeholder = "Введите почту"} = {})
+mixin subscription(options = {})
+  -
+    var {
+      title,
+      name,
+      placeholder="Введите почту"
+    } = options
   .subscription
     if title
       .subscription__title=title

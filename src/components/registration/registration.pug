@@ -5,7 +5,14 @@ include ../toggle-btn/toggle-btn.pug
 include ../btn/btn.pug
 include ../note/note.pug
 
-mixin registration({title = "Регистрация", noteText = "Уже зарегистрированы?", action = "./mock", noteAction = "signin-page.html"} = {})
+mixin registration(options = {})
+  -
+    var {
+      title="Регистрация",
+      noteText="Уже зарегистрированы?",
+      action="./mock",
+      noteAction="signin-page.html"
+    } = options
   .registration
     form(action=action).registration__main-form
       h2.registration__title=title

@@ -1,4 +1,11 @@
-mixin checkbox({title, inputName, checked = false, labelText = "Поставьте галочку"} = {})
+mixin checkbox(options = {})
+  -
+    var {
+      title,
+      inputName,
+      checked=false,
+      labelText="Поставьте галочку"
+    } = options
   if title
     .checkbox__title=title
   label.checkbox

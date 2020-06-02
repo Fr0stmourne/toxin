@@ -1,4 +1,9 @@
-mixin slider({ title = "Слайдер", name } = {})
+mixin slider(options = {})
+  -
+    var {
+      title="Слайдер",
+      name
+    } = options
   .slider
     .slider__info
       label.slider__title=title

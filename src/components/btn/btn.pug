@@ -1,4 +1,12 @@
-mixin btn({styleType = "", type = "submit", btnText = "Кнопка", link = "", slim = false} = {})
+mixin btn(options = {})
+  -
+    var {
+      styleType="",
+      type="submit",
+      btnText="Кнопка",
+      link="",
+      slim=false
+    } = options
   case type
     when "button"
       - var type = "button"

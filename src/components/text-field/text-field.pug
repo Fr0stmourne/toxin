@@ -1,4 +1,12 @@
-mixin text-field({title, placeholder = "Введите что-то...", className = "", type = "text", arialabel} = {})
+mixin text-field(options = {})
+  -
+    var {
+      title,
+      placeholder="Введите что-то...",
+      className="",
+      type="text",
+      arialabel
+    } = options
   .text-field
     if title
       .text-field__title=title

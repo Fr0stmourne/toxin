@@ -2,7 +2,12 @@ include ../range-datepicker/range-datepicker.pug
 include ../dropdown/dropdown.pug
 include ../btn/btn.pug
 
-mixin find-room({title, action = "search-room.html"} = {})
+mixin find-room(options = {})
+  -
+    var {
+      title,
+      action="search-room.html"
+    } = options
   form(action=action).find-room
     h2.find-room__title=title
     .find-room__datepicker

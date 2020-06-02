@@ -1,4 +1,10 @@
-mixin range-datepicker({ inline = false, startLabel = "Приезд", endLabel = "Выезд" } = {})
+mixin range-datepicker(options = {})
+  -
+    var {
+      inline=false,
+      startLabel="Приезд",
+      endLabel="Выезд"
+    } = options
   .range-datepicker.js-range-datepicker(class = inline ? "range-datepicker_inlined js-range-datepicker-inline" : "")
     .range-datepicker__start
       label.range-datepicker__label=startLabel

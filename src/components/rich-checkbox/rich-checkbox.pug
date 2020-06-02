@@ -1,4 +1,11 @@
-mixin rich-checkbox({inputName, labelText = "Заголовок", description = "Описание пункта", wide = false} = {})
+mixin rich-checkbox(options = {})
+  -
+    var {
+      inputName,
+      labelText="Заголовок",
+      description="Описание пункта",
+      wide=false
+    } = options
   label.rich-checkbox(class = wide ? "rich-checkbox_size_wide" : "")
     input.rich-checkbox__input(type="checkbox", name=inputName)
     span.rich-checkbox__checkmark

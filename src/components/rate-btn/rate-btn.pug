@@ -1,4 +1,10 @@
-mixin rate-btn({name, disabled = false, checkedRating = 3 } = {}) 
+mixin rate-btn(options = {}) 
+  -
+    var {
+      name,
+      disabled=false,
+      checkedRating=3
+    } = options
   fieldset.rate-btn
     each val in [1, 2, 3, 4, 5]
       input.rate-btn__star(type="radio", name=name, value=val disabled=disabled checked=checkedRating==val)

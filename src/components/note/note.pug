@@ -1,6 +1,12 @@
 include ../btn/btn.pug
 
-mixin note({btnText = "войти", noteText = "Нет аккаунта на Toxin", link = "./mock"})
+mixin note(options = {})
+  -
+    var {
+      btnText="войти",
+      noteText="Нет аккаунта на Toxin",
+      link="./mock"
+    } = options
   .note
     span.note__text=noteText
     .note__btn
