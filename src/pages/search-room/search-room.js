@@ -6,15 +6,11 @@ import Slider from '../../components/slider/Slider';
 import '../../components/room/room';
 import '../../components/toxin-header/toxin-header';
 import '../../components/toxin-footer/toxin-footer';
-import '../../components/slider/slider.scss';
-import '../../components/expandable-list/expandable-list.scss';
-import '../../components/checkbox/checkbox.scss';
-import '../../components/rich-checkbox/rich-checkbox.scss';
-import '../../components/date-filter/date-filter.scss';
-import '../../components/dropdown/dropdown.scss';
-import '../../components/pagination/pagination.scss';
-import '../../components/filter/filter.scss';
-import '../../components/rooms-grid/rooms-grid.scss';
+import '../../components/checkbox/checkbox';
+import '../../components/rich-checkbox/rich-checkbox';
+import '../../components/pagination/pagination';
+import '../../components/filter/filter';
+import '../../components/rooms-grid/rooms-grid';
 
 $(() => {
   $('.js-slider').each(

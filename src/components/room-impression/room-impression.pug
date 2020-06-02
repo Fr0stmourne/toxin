@@ -1,9 +1,11 @@
+include ../doughnut-chart/doughnut-chart.pug
+
 mixin room-impression()
   section.room-impression
     h2.room-impression__title Впечатления от номера
     .room-impression__diagram
       .room-impression__canvas-box
-        canvas.js-doughnut-chart(width="120" height="120") 
+        +doughnut-chart()
         span.room-impression__canvas-text 260 
           span.room-impression__canvas-text_highlighted голосов
       ol.room-impression__diagram-legend
