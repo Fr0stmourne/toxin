@@ -1,6 +1,4 @@
 .type {
-  margin-right: 48px;
-
   &__list {
     display: table;
   }
@@ -11,61 +9,14 @@
     &:not(:last-child) .type__text {
       padding-bottom: 50px;
     }
-
-    &_type_h1 {
-      font: $h1-font;
-
-      .type__title {
-        text-transform: uppercase;
-        font: inherit;
-        font-family: 'Montserrat';
-        font-weight: 400;
-      }
-    }
-
-    &_type_h2 {
-      font: $h2-font;
-
-      .type__title {
-        font: inherit;
-        text-transform: uppercase;
-        font-weight: 400;
-      }
-    }
-
-    &_type_h3 {
-      font: $btn-font;
-      text-transform: uppercase;
-
-      .type__title {
-        font: inherit;
-        font-weight: 400;
-      }
-
-      &:not(:last-child) .type__text {
-        padding-bottom: 48px;
-      }
-    }
-
-    &_type_body {
-      font: $default-font;
-
-      .type__title {
-        text-transform: capitalize;
-      }
-
-      .type__text {
-        box-sizing: border-box;
-        padding-right: 39px;
-        line-height: 24px;
-      }
-    }
   }
 
   &__title {
     display: table-cell;
     color: $dark-25;
-    font: $default-font;
+    font: inherit;
+    font-weight: 400;
+    text-transform: capitalize;
     text-align: right;
     padding-right: 30px;
   }
@@ -73,5 +24,6 @@
   &__text {
     max-width: 340px;
     display: table-cell;
+    line-height: 24px;
   }
 }

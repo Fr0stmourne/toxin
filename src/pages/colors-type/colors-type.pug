@@ -14,5 +14,65 @@ block title
 block content
   body.colors-type
     .colors-type__container
-      +colors()
-      +type()
+      +colors({
+        colors: [{
+            title: "Dark Shade 100%",
+            text: "#1F2041",
+            class: "colors-type__sample_dark-100"
+          },
+          {
+            title: "Dark Shade 75%",
+            text: "#1F2041",
+            class: "colors-type__sample_dark-75"
+          },
+          {
+            title: "Dark Shade 50%",
+            text: "#1F2041",
+            class: "colors-type__sample_dark-50"
+          },
+          {
+            title: "Dark Shade 25%",
+            text: "#1F2041",
+            class: "colors-type__sample_dark-25"
+          },
+          {
+            title: "Dark Shade 5%",
+            text: "#1F2041",
+            class: "colors-type__sample_dark-5"
+          },
+          {
+            title: "Purple",
+            text: "#BC9CFF",
+            class: "colors-type__sample_purple"
+          },
+          {
+            title: "Green",
+            text: "#6FCF97",
+            class: "colors-type__sample_green"
+          }
+        ]
+      })
+      .colors-type__type
+        +type({
+          types: [{
+              type: "h1",
+              text: "This one is the sub-section or widget title",
+              class: "colors-type__type-item_type_h1"
+            },
+            {
+              type: "h2",
+              text: "Next one is the item title inside widgets",
+              class: "colors-type__type-item_type_h2"
+            },
+            {
+              type: "h3",
+              text: "This is a label or CTA text",
+              class: "colors-type__type-item_type_h3"
+            },
+            {
+              type: "body",
+              text: "This is the body text which is used for most of the design, like paragraphs, lists, etc.",
+              class: "colors-type__type-item_type_body"
+            }
+          ]
+        })

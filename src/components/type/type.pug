@@ -1,29 +1,7 @@
-mixin type(options = {})
+mixin type({ types = [] } = {})
   section.type
     ul.type__list
-      -
-        var { types = [{
-            type: "h1",
-            text: "This one is the sub-section or widget title",
-            class: "h1"
-          },
-          {
-            type: "h2",
-            text: "Next one is the item title inside widgets",
-            class: "h2"
-          },
-          {
-            type: "h3",
-            text: "This is a label or CTA text",
-            class: "h3"
-          },
-          {
-            type: "body",
-            text: "This is the body text which is used for most of the design, like paragraphs, lists, etc.",
-            class: "body"
-          }
-        ]} = options
       each val in types 
-        li.type__item(class=`type__item_type_${val.type}`)
+        li.type__item(class=`${val.class}`)
           span.type__title=val.type
           span.type__text=val.text
