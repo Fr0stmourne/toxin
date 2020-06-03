@@ -6,6 +6,6 @@ mixin room-reviews(comments = [])
       h2.room-reviews__title Отзывы посетителей номера
       .room-reviews__reviews-num=`${comments.length} отзыва`
     .room-reviews__grid
-      .room-reviews__room-review
-        each comment in comments
+      each comment in comments
+        .room-reviews__room-review
           +comment(comment)
