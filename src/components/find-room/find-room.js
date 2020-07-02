@@ -1,4 +1,4 @@
 import '../dropdown/Dropdown';
-import '../btn/btn';
+import '../button/button';
 import '../range-datepicker/RangeDatePicker';
 import './find-room.scss';

@@ -1,12 +1,12 @@
 mixin advantage(options = {})
   -
     var {
-      imgLink="./mock",
+      imageLink="./mock",
       alt="Преимущество",
       title="Преимущество",
       description="Описание преимущества"
     } = options
   .advantage
-    img.advantage__img(src=imgLink, alt=alt)
+    img.advantage__image(src=imageLink, alt=alt)
     span.advantage__title=title
     span.advantage__description=description

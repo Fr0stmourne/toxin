@@ -1,6 +1,6 @@
 include ../range-datepicker/range-datepicker.pug
 include ../dropdown/dropdown.pug
-include ../btn/btn.pug
+include ../button/button.pug
 
 mixin find-room(options = {})
   -
@@ -33,4 +33,4 @@ mixin find-room(options = {})
           wordForms: "младенец младенца младенцев"
         }]
       })
-    +btn({btnText: "подобрать номер", styleType: "proceed"})
+    +button({buttonText: "подобрать номер", styleType: "proceed"})

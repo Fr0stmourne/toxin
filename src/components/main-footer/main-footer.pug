@@ -39,7 +39,7 @@ mixin main-footer(options = {})
                 each social in socialList
                   li.main-footer__social-item
                     a.main-footer__social-link(href=social.link target="_blank" rel="noopener noreferrer")
-                      img.main-footer__social-img(src=social.imgLink, alt=social.name)
+                      img.main-footer__social-img(src=social.imageLink, alt=social.name)
                       span.main-footer__social-name=social.name
     else
       .main-footer__container
@@ -54,6 +54,6 @@ mixin main-footer(options = {})
             each social in socialList
               li.main-footer__social-item
                 a.main-footer__social-link(href=social.link target="_blank" rel="noopener noreferrer")
-                  img.main-footer__social-img(src=social.imgLink, alt=social.name)
+                  img.main-footer__social-img(src=social.imageLink, alt=social.name)
                   span.main-footer__social-name=social.name
 

@@ -1,4 +1,4 @@
-include ../btn/btn.pug
+include ../button/button.pug
 include ../header-nav/header-nav.pug
 
 mixin main-header(options = {})
@@ -26,9 +26,9 @@ mixin main-header(options = {})
           .main-header__login
             .main-header__login-menu
               .main-header__login-btn
-                +btn({btnText: loginText, styleType: "secondary", slim: true, link: "signin-page.html"})
+                +button({buttonText: loginText, styleType: "secondary", slim: true, link: "signin-page.html"})
               .main-header__register-btn
-                +btn({btnText: regText, slim: true, link: "registration-page.html"})
+                +button({buttonText: regText, slim: true, link: "registration-page.html"})
         else
           .main-header__login
             .main-header__login-menu.main-header__login-menu_logged

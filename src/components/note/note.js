@@ -1,2 +1,2 @@
-import '../btn/btn';
+import '../button/button';
 import './note.scss';

@@ -17,6 +17,6 @@ mixin login(options = {})
         .login__password
           +text-field({placeholder: "Пароль", name: "password", type: "password", arialabel: "Пароль"})
       .login__proceed
-        +btn({btnText: "войти", styleType: "proceed"})
+        +button({buttonText: "войти", styleType: "proceed"})
     .login__note
-      +note({noteText: "Нет аккаунта на Toxin?", btnText: "Создать", link: "registration-page.html"})
+      +note({noteText: "Нет аккаунта на Toxin?", buttonText: "Создать", link: "registration-page.html"})

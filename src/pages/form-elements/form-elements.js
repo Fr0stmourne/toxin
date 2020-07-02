@@ -10,7 +10,7 @@ import '../../components/checkbox/checkbox';
 import '../../components/text-field/text-field';
 import '../../components/radio-btn/radio-btn';
 import '../../components/subscription/subscription';
-import '../../components/btn/btn';
+import '../../components/button/button';
 import '../../components/link/link';
 import '../../components/rate-btn/rate-btn';
 import '../../components/toggle-btn/toggle-btn';

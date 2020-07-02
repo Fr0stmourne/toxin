@@ -1,0 +1,27 @@
+mixin button(options = {})
+  -
+    var {
+      styleType="",
+      type="submit",
+      buttonText="Кнопка",
+      link="",
+      slim=false
+    } = options
+  case type
+    when "button"
+      - var type = "button"
+    when "reset"
+      - var type = "reset"
+    default
+      - var type = "submit"
+  case styleType
+    when "secondary"
+      - var buttonClass = "btn_type_secondary"
+    when "proceed"
+      - var buttonClass = "btn_type_proceed"
+    default
+      - var buttonClass = "btn_type_primary"
+  if link
+    a(href=link class=`btn ${buttonClass} ${slim ? "btn_size_slim" : "" }`)=buttonText
+  else
+    button(class=`btn ${buttonClass} ${slim ? "btn_size_slim" : "" }` type=type)=buttonText

@@ -1,7 +1,7 @@
 include ../range-datepicker/range-datepicker.pug
 include ../dropdown/dropdown.pug
-include ../btn/btn.pug
-include ../calc/calc.pug
+include ../button/button.pug
+include ../calculation/calculation.pug
 
 mixin booking(options = {})
   -
@@ -45,9 +45,9 @@ mixin booking(options = {})
           wordForms: "младенец младенца младенцев"
         }]
       })
-    .booking__calc
+    .booking__calculation
       +calc({calc})
     .booking__result Итого
       .booking__dots
       .booking__price=fullPrice
-    +btn({btnText: "забронировать", styleType: "proceed"})
+    +button({buttonText: "забронировать", styleType: "proceed"})

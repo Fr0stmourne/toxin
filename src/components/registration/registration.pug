@@ -2,7 +2,7 @@ include ../text-field/text-field.pug
 include ../radio-btn/radio-btn.pug
 include ../masked-text-field/masked-text-field.pug
 include ../toggle-btn/toggle-btn.pug
-include ../btn/btn.pug
+include ../button/button.pug
 include ../note/note.pug
 
 mixin registration(options = {})
@@ -33,8 +33,8 @@ mixin registration(options = {})
           .registration__password
             +text-field({placeholder: "Пароль", name: "registration-password", type: "password", arialabel: "Пароль"})
       .registration__offers-btn
-        +toggle-btn({name: "registration-offers", btnText: "Получать спецпредложения"})
+        +toggle-btn({name: "registration-offers", buttonText: "Получать спецпредложения"})
       .registration__proceed
-        +btn({btnText: "перейти к оплате", styleType: "proceed"})
+        +button({buttonText: "перейти к оплате", styleType: "proceed"})
     .registration__note
-      +note({noteText: "Уже есть аккаунт на Toxin", btnText: "Войти", link: "signin-page.html"})
+      +note({noteText: "Уже есть аккаунт на Toxin", buttonText: "Войти", link: "signin-page.html"})

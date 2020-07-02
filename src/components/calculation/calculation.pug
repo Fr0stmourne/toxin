@@ -1,0 +1,11 @@
+mixin calc ({calc = ["no values"]})
+  .calculation
+    each value in calc
+      .calculation__item
+        .calculation__position
+          .calculation__item-description=value[0]
+          if value[2]
+            .calculation__button-box
+              .calculation__button
+              .calculation__tooltip=value[2]
+        .calculation__price=value[1]
