@@ -1,9 +1,9 @@
 mixin colors({ colors = [] } = {}) 
   section.colors
     ul.colors__list
-      each val in colors
+      each value in colors
         li.colors__color
-          .colors__sample(class=val.class)
-          .colors__info
-            .colors__title=val.title
-            .colors__text=val.text
+          .colors__sample(class=value.class)
+          .colors__information
+            .colors__title=value.title
+            .colors__text=value.text

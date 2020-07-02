@@ -10,18 +10,18 @@ export default class DateFilter {
     this.init();
   }
 
-  appendBtn(el) {
+  appendButton(el) {
     $(el).append('<span class="datepicker--button js-datepicker-apply" data-action="today">применить</span>');
   }
 
-  findBtnContainer() {
-    this.$btnContainers = $('.datepicker--buttons');
+  findButtonContainer() {
+    this.$buttonContainers = $('.datepicker--buttons');
   }
 
-  addApplyBtn() {
-    this.$btnContainers.each((_, btnContainer) => {
-      if (!$(btnContainer).find('.js-datepicker-apply').length) {
-        this.appendBtn(btnContainer);
+  addApplyButton() {
+    this.$buttonContainers.each((_, buttonContainer) => {
+      if (!$(buttonContainer).find('.js-datepicker-apply').length) {
+        this.appendButton(buttonContainer);
       }
     });
   }
@@ -51,7 +51,7 @@ export default class DateFilter {
       .data('datepicker')
       .selectDate([now, weekLater]);
 
-    this.findBtnContainer();
-    this.addApplyBtn();
+    this.findButtonContainer();
+    this.addApplyButton();
   }
 }

@@ -2,7 +2,7 @@
   font: $default-font;
   line-height: 24px;
 
-  &__info {
+  &__information {
     display: grid;
     column-gap: 12px;
     grid-template-rows: repeat(2, min-content);
