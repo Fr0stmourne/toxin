@@ -44,4 +44,4 @@ $('.js-dropdown').each((_, el) => new Dropdown(el));
 
 $('.js-range-datepicker').each((_, el) => new RangeDatepicker(el, defaultOptions));
 
-$('.js-date-filter-range .js-date-filter-input').each((_, el) => new DateFilter(el));
+$('.js-date-filter-range .date-filter-input').each((_, el) => new DateFilter(el));

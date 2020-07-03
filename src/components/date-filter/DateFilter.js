@@ -11,7 +11,7 @@ export default class DateFilter {
   }
 
   appendButton(el) {
-    $(el).append('<span class="datepicker--button js-datepicker-apply" data-action="today">применить</span>');
+    $(el).append('<span class="datepicker--button datepicker-apply" data-action="today">применить</span>');
   }
 
   findButtonContainer() {
@@ -20,14 +20,14 @@ export default class DateFilter {
 
   addApplyButton() {
     this.$buttonContainers.each((_, buttonContainer) => {
-      if (!$(buttonContainer).find('.js-datepicker-apply').length) {
+      if (!$(buttonContainer).find('.datepicker-apply').length) {
         this.appendButton(buttonContainer);
       }
     });
   }
 
   bindApplyListener(datepicker) {
-    datepicker.$datepicker.find('.js-datepicker-apply').click(() => {
+    datepicker.$datepicker.find('.datepicker-apply').click(() => {
       datepicker.hide();
     });
   }

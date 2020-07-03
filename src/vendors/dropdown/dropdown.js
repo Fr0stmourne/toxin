@@ -4,7 +4,7 @@
   $.fn.htmlNumberSpinner = function() {
     /* creating the counter buttons */
     $(this).append(
-      "<button class='plus-minus__btn js-plus-minus-btn plus-minus__btn_minus js-minus-btn'>-</button> <input class='plus-minus__input js-plus-minus-input' type='number'/> <button class='plus-minus__btn js-plus-minus-btn plus-minus__btn_plus js-plus-btn'>+</button>",
+      "<button class='plus-minus__btn plus-minus-btn plus-minus__btn_minus minus-btn'>-</button> <input class='plus-minus__input plus-minus-input' type='number'/> <button class='plus-minus__btn plus-minus-btn plus-minus__btn_plus plus-btn'>+</button>",
     );
 
     /* default value and variables and jquery elements */

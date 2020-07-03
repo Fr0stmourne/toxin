@@ -28,6 +28,6 @@ $('.js-expandable').each((_, el) => new ExpandableList(el));
 
 $('.js-dropdown').each((_, el) => new Dropdown(el));
 
-$('.js-date-filter-range .js-date-filter-input').each((_, el) => new DateFilter(el));
+$('.js-date-filter-range .date-filter-input').each((_, el) => new DateFilter(el));
 
 $('.js-room-slider').bxSlider();

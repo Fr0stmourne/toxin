@@ -17,20 +17,20 @@ export default class Dropdown {
   }
 
   findElements() {
-    this.$dropdown = this.$container.find('.js-dropdown-result');
+    this.$dropdown = this.$container.find('.dropdown-result');
     this.$dropdownList = this.$dropdown.next();
-    this.$plusMinus = this.$dropdown.parent().find('.js-plus-minus');
-    this.$applyButton = this.$dropdown.parent().find('.js-apply');
-    this.$resetButton = this.$dropdown.parent().find('.js-reset');
+    this.$plusMinus = this.$dropdown.parent().find('.plus-minus-block');
+    this.$applyButton = this.$dropdown.parent().find('.apply');
+    this.$resetButton = this.$dropdown.parent().find('.reset');
     this.initialText = this.$dropdown.text();
   }
 
   createInput() {
     this.$plusMinus.htmlNumberSpinner();
-    this.$plusMinusButtons = this.$dropdown.parent().find('.js-dropdown-item .js-plus-minus-btn');
-    this.$minusButtons = this.$dropdown.parent().find('.js-dropdown-item .js-minus-btn');
-    this.$plusButtons = this.$dropdown.parent().find('.js-dropdown-item .js-plus-btn');
-    this.$input = this.$dropdown.parent().find('.js-dropdown-item input');
+    this.$plusMinusButtons = this.$dropdown.parent().find('.dropdown-item .plus-minus-btn');
+    this.$minusButtons = this.$dropdown.parent().find('.dropdown-item .minus-btn');
+    this.$plusButtons = this.$dropdown.parent().find('.dropdown-item .plus-btn');
+    this.$input = this.$dropdown.parent().find('.dropdown-item input');
     this.$plusMinusButtons.removeAttr('type').attr('type', 'button');
   }
 
@@ -56,7 +56,7 @@ export default class Dropdown {
       $(el).val(0);
       $(el)
         .parent()
-        .find('.js-minus-btn')
+        .find('.minus-btn')
         .click();
     });
   }
@@ -73,15 +73,15 @@ export default class Dropdown {
     e.preventDefault();
 
     const $target = $(e.target);
-    const $currentItem = $target.closest('.js-dropdown-item');
-    const $minusButton = $currentItem.find('.js-minus-btn');
-    const $plusButton = $currentItem.find('.js-plus-btn');
-    const $currentInput = $currentItem.find('.js-plus-minus-input');
+    const $currentItem = $target.closest('.dropdown-item');
+    const $minusButton = $currentItem.find('.minus-btn');
+    const $plusButton = $currentItem.find('.plus-btn');
+    const $currentInput = $currentItem.find('.plus-minus-input');
     const $dropdown = $target.closest('.js-dropdown');
-    $dropdown.find('.js-reset').removeClass('dropdown__reset_hidden');
+    $dropdown.find('.reset').removeClass('dropdown__reset_hidden');
 
     const resultArray = [];
-    const $allOptions = $dropdown.find('.js-dropdown-option');
+    const $allOptions = $dropdown.find('.dropdown-option');
 
     $allOptions
       .filter((_, el) => $(el).data('forms'))
@@ -98,13 +98,13 @@ export default class Dropdown {
           $filtered.each((_, option) => {
             currentValue += +$(option)
               .parent()
-              .find('.js-plus-minus-input')
+              .find('.plus-minus-input')
               .val();
           });
         } else {
           currentValue = $(el)
             .parent()
-            .find('.js-plus-minus-input')
+            .find('.plus-minus-input')
             .val();
         }
 

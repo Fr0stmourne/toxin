@@ -15,14 +15,14 @@ mixin dropdown(options = {})
   .dropdown.js-dropdown
     if title
       label.dropdown__title=title
-    button(type="button").dropdown__result.js-dropdown-result=placeholder
+    button(type="button").dropdown__result.dropdown-result=placeholder
     .dropdown__content
       ul.dropdown__list
         each option in optionsList
-          li.dropdown__item.js-dropdown-item
-            .dropdown__option.js-dropdown-option(selected=option.selected data-forms=option.wordForms data-group=option.group)=option.text
-            .js-plus-minus.plus-minus(min=(minimum || 0) max=(maximum || 5) id=option.id name=option.name)
+          li.dropdown__item.dropdown-item
+            .dropdown__option.dropdown-option(selected=option.selected data-forms=option.wordForms data-group=option.group)=option.text
+            .plus-minus.plus-minus-block(min=(minimum || 0) max=(maximum || 5) id=option.id name=option.name)
       if controls
         .dropdown__controls
-          button(type="button").dropdown__reset.js-reset.dropdown__reset_hidden=resetText
-          button(type="button").dropdown__apply.js-apply=applyText
+          button(type="button").dropdown__reset.reset.dropdown__reset_hidden=resetText
+          button(type="button").dropdown__apply.apply=applyText

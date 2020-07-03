@@ -57,7 +57,6 @@ export default class DoughnutChart {
         labels: this.labels,
         datasets: [
           {
-            label: 'Population (millions)',
             backgroundColor: this.colors,
             data: this.dataSet,
           },
