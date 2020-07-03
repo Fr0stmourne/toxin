@@ -9,6 +9,10 @@
     padding: 12px 15px;
     transition: $transition;
 
+    &::placeholder {
+      letter-spacing: -0.015em;
+    }
+
     &:hover,
     &:focus {
       outline: none;

@@ -44,21 +44,27 @@
     &_type_h1 {
       font: $h1-font;
       font-weight: 700;
+      line-height: 30px;
+      width: 340px;
     }
 
     &_type_h2 {
       font: $h2-font;
       font-weight: 700;
+      max-width: 340px;
     }
 
     &_type_h3 {
       font: $button-font;
       text-transform: uppercase;
       font-weight: 700;
+      max-width: 340px;
     }
 
     &_type_body {
       font: $default-font;
+      line-height: 22px;
+      width: 315px;
     }
   }
 }

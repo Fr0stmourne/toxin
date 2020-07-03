@@ -14,7 +14,7 @@
   &__title {
     display: table-cell;
     color: $dark-25;
-    font: inherit;
+    font-family: "Montserrat", Arial, sans-serif;
     font-weight: 400;
     text-transform: capitalize;
     text-align: right;
@@ -22,8 +22,8 @@
   }
 
   &__text {
-    max-width: 340px;
+    width: inherit;
+    max-width: inherit;
     display: table-cell;
-    line-height: 24px;
   }
 }
