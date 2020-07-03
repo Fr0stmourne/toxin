@@ -4,14 +4,7 @@ import 'chart.js/dist/Chart.bundle';
 
 export default class DoughnutChart {
   constructor({ chartElement, colorsSetup, dataSet, labels }) {
-    this.chart = chartElement;
-    this.setup = colorsSetup;
-    this.dataSet = dataSet;
-    this.labels = labels;
-    this.colors = [];
-
-    this.createColorsArray();
-    this.init();
+    this.init({ chartElement, colorsSetup, dataSet, labels });
   }
 
   createColorsArray() {
@@ -50,7 +43,14 @@ export default class DoughnutChart {
     }
   }
 
-  init() {
+  init({ chartElement, colorsSetup, dataSet, labels }) {
+    this.chart = chartElement;
+    this.setup = colorsSetup;
+    this.dataSet = dataSet;
+    this.labels = labels;
+    this.colors = [];
+
+    this.createColorsArray();
     new Chart(this.chart, {
       type: 'doughnut',
       data: {
