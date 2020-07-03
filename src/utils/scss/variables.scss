@@ -10,9 +10,9 @@ $white: rgba(#ffffff, 1);
 
 $border: #e5e5e5;
 
-$btn-gradient-light: linear-gradient(180deg, rgba(#bc9cff, 0.5) 0%, rgba(#8ba4f9, 0.5) 100%);
-$btn-gradient-ultralight: linear-gradient(180deg, rgba(#bc9cff, 0.25) 0%, rgba(#8ba4f9, 0.25) 100%);
-$btn-gradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+$button-gradient-light: linear-gradient(180deg, rgba(#bc9cff, 0.5) 0%, rgba(#8ba4f9, 0.5) 100%);
+$button-gradient-ultralight: linear-gradient(180deg, rgba(#bc9cff, 0.25) 0%, rgba(#8ba4f9, 0.25) 100%);
+$button-gradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 
 $room-shadow: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
 
@@ -21,7 +21,7 @@ $datepicker-today: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 $default-font: 400 14px 'Montserrat',
 Arial,
 sans-serif;
-$btn-font: 700 12px 'Montserrat',
+$button-font: 700 12px 'Montserrat',
 Arial,
 sans-serif;
 $datepicker-switch: 700 19px 'Quicksand',

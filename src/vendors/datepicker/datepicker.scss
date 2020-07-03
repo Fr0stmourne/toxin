@@ -36,7 +36,7 @@
     }
 
     &.-selected-.-current- {
-      background: $btn-gradient;
+      background: $button-gradient;
     }
   }
 
@@ -52,7 +52,7 @@
 
   &--day-name {
     color: $purple;
-    font: $btn-font;
+    font: $button-font;
     text-transform: none;
     height: 40px;
   }
@@ -108,7 +108,7 @@
   .-range-from- {
     position: relative;
     border-radius: 50%;
-    background-image: $btn-gradient;
+    background-image: $button-gradient;
     background-color: transparent;
     color: $white;
     font-weight: 700;
@@ -121,18 +121,18 @@
       z-index: 5;
       width: 40px;
       height: 40px;
-      background: $btn-gradient-ultralight;
+      background: $button-gradient-ultralight;
       border-radius: 50% 0 0 50%;
     }
 
     &:hover {
-      background-image: $btn-gradient;
+      background-image: $button-gradient;
     }
   }
 
   .-range-to- {
     position: relative;
-    background-image: $btn-gradient;
+    background-image: $button-gradient;
     background-color: transparent;
     color: $white;
     border-radius: 50%;
@@ -140,7 +140,7 @@
 
     &::before {
       content: '';
-      background: $btn-gradient-ultralight;
+      background: $button-gradient-ultralight;
       width: 40px;
       height: 40px;
       position: absolute;
@@ -150,12 +150,12 @@
     }
 
     &:hover {
-      background-image: $btn-gradient;
+      background-image: $button-gradient;
     }
   }
 
   .-in-range- {
-    background: $btn-gradient-ultralight;
+    background: $button-gradient-ultralight;
   }
 
   &--cell-day {
@@ -168,7 +168,7 @@
     justify-content: space-between;
     border-top: 0;
     padding: 12px 20px 0;
-    font: $btn-font;
+    font: $button-font;
     text-transform: uppercase;
   }
 

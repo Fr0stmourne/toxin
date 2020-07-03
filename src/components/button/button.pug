@@ -16,12 +16,12 @@ mixin button(options = {})
       - var type = "submit"
   case styleType
     when "secondary"
-      - var buttonClass = "btn_type_secondary"
+      - var buttonClass = "button_type_secondary"
     when "proceed"
-      - var buttonClass = "btn_type_proceed"
+      - var buttonClass = "button_type_proceed"
     default
-      - var buttonClass = "btn_type_primary"
+      - var buttonClass = "button_type_primary"
   if link
-    a(href=link class=`btn ${buttonClass} ${slim ? "btn_size_slim" : "" }`)=buttonText
+    a(href=link class=`button ${buttonClass} ${slim ? "button_size_slim" : "" }`)=buttonText
   else
-    button(class=`btn ${buttonClass} ${slim ? "btn_size_slim" : "" }` type=type)=buttonText
+    button(class=`button ${buttonClass} ${slim ? "button_size_slim" : "" }` type=type)=buttonText

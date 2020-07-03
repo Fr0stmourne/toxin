@@ -2,6 +2,7 @@ extends ../../components/template-page/template-page.pug
 
 include ../../components/main-header/main-header.pug
 include ../../components/main-footer/main-footer.pug
+include ../../components/toxin-footer/toxin-footer.pug
 
 block meta
   meta(name="description", content="headers and footers")
@@ -19,6 +20,7 @@ block content
         loginText: "войти",
         items: [{
             text: "О нас",
+            active: true,
             link: "./mock"
           }, {
             text: "Услуги",
@@ -59,106 +61,50 @@ block content
       })
     .headers-footers__logged-header
       +main-header({
-        username: "Cosmin Negoita",
+        username: "Юлий Цезарь",
         items: [{
-            text: "Home",
+            text: "О нас",
             active: true,
             link: "./mock"
-          },
-          {
-            text: "About Us",
-            link: "./mock"
-          },
-          {
-            text: "Services",
+          }, {
+            text: "Услуги",
             link: "./mock",
             dropdown: [{
-                text: "Service",
-                link: "./mock"
-              },
-              {
-                text: "Service",
-                link: "./mock"
-              }
-            ]
+              text: "Услуга",
+              link: "./mock"
+            }, {
+              text: "Услуга 2",
+              link: "./mock"
+            }, {
+              text: "Услуга 2",
+              link: "./mock"
+            }]
           },
           {
-            text: "Careers",
+            text: "Вакансии",
+            link: "./mock"
+          }, {
+            text: "Новости",
             link: "./mock"
           },
           {
-            text: "News",
-            link: "./mock"
-          },
-          {
-            text: "Documentation",
-            link: "./mock"
+            text: "Соглашения",
+            link: "./mock",
+            dropdown: [{
+              text: "Услуга",
+              link: "./mock"
+            }, {
+              text: "Услуга 2",
+              link: "./mock"
+            }, {
+              text: "Услуга 2",
+              link: "./mock"
+            }]
           }
         ]
       })
     .headers-footers__extended-footer
-      +main-footer({
-        logoLink: "landing-page.html",
-        extended: true,
-        copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved.",
-        socialList: [{
-            name: "Twitter",
-            link: "https://twitter.com/",
-            imageLink: "twitter.svg"
-          },
-          {
-            name: "Facebook",
-            link: "https://www.facebook.com/",
-            imageLink: "facebook.svg"
-          }, 
-          {
-            name: "Insta",
-            link: "https://www.instagram.com/",
-            imageLink: "insta.svg"
-          }
-        ],
-        subscription: {
-          title: "Subscribe to our newsletter",
-          text: "Receive our latest news and promotions in your inbox!",
-          placeholder: "Your email address"
-        },
-        navigationLists: [{
-            title: "Navigation",
-            items: [{
-              text: "About Us"
-            }, {
-              text: "News"
-            }, {
-              text: "Support"
-            }, {
-              text: "Products"
-            }]
-          },
-          {
-            title: "ABOUT US",
-            items: [{
-              text: "Who we are"
-            }, {
-              text: "Our team"
-            }, {
-              text: "Careers"
-            }, {
-              text: "Investors"
-            }]
-          },
-          {
-            title: "Support",
-            items: [{
-              text: "Documentation"
-            }, {
-              text: "Community"
-            }, {
-              text: "Get in Touch"
-            }]
-          }
-        ],
-        companyText: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
-      })
+      +toxin-footer()
     .headers-footers__non-extended-footer
       +main-footer({
         logoLink: "landing-page.html",
@@ -178,5 +124,5 @@ block content
             imageLink: "insta.svg"
           }
         ],
-        companyText: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
+        companyText: "Copyright © 2018 Toxin отель. Все права зачищены."
       })

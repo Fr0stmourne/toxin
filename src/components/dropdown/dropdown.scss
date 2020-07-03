@@ -51,7 +51,7 @@
   &__list {
     box-sizing: border-box;
     padding-bottom: 5px;
-    font: $btn-font;
+    font: $button-font;
   }
 
   &__item {
@@ -78,7 +78,7 @@
     .dropdown__reset {
       border: 0;
       background-color: transparent;
-      font: $btn-font;
+      font: $button-font;
       text-transform: uppercase;
     }
   }
