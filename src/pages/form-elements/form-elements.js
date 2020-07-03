@@ -23,7 +23,7 @@ import '../../components/find-room/find-room';
 import './form-elements.scss';
 
 $(() => {
-  $('.js-slider').each(
+  $('.js-slider .slider-bar').each(
     (_, el) =>
       new Slider({
         slider: el,

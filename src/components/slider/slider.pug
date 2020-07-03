@@ -4,8 +4,8 @@ mixin slider(options = {})
       title="Слайдер",
       name
     } = options
-  .slider
+  .slider.js-slider
     .slider__information
       label.slider__title=title
-      input.slider__input.js-slider-input(type="text" name=name readonly)
-    .js-slider
+      input.slider__input.slider-input(type="text" name=name readonly)
+    .slider-bar

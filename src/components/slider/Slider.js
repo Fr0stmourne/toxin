@@ -17,7 +17,7 @@ export default class Slider {
   }
 
   findElements() {
-    this.$input = this.$slider.parent().find('.js-slider-input');
+    this.$input = this.$slider.parent().find('.slider-input');
   }
 
   updateInitialValue() {
