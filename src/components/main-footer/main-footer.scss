@@ -126,12 +126,13 @@
   }
 
   &__bottom {
-    padding: 25px 0 19px;
+    padding: 23px 0 19px;
     display: flex;
     justify-content: space-between;
   }
 
   &__copyright {
+    margin-top: 2px;
     font: $default-font;
     color: $dark-75;
   }
