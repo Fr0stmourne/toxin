@@ -12,7 +12,9 @@ $('.js-date').each((_, el) => new MaskedField(el));
 
 $('.js-dropdown').each((_, el) => new Dropdown(el));
 
-$('.js-range-datepicker').each((_, el) => new RangeDatepicker(el, defaultOptions));
-$('.js-range-datepicker-inline').each((_, el) => new RangeDatepicker(el, inlineOptions));
+$('.js-range-datepicker').each((_, el) => new RangeDatepicker({ datepickerContainer: el, options: defaultOptions }));
+$('.js-range-datepicker-inline').each(
+  (_, el) => new RangeDatepicker({ datepickerContainer: el, options: inlineOptions }),
+);
 
 $('.js-room-slider').bxSlider();

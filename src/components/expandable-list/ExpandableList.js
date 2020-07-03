@@ -5,9 +5,7 @@ import './expandable-list.scss';
 
 export default class ExpandableList {
   constructor(listElement) {
-    this.$container = $(listElement);
-    this.findElements();
-    this.init();
+    this.init(listElement);
   }
 
   findElements() {
@@ -27,7 +25,9 @@ export default class ExpandableList {
     this.$label.click(this.handleToggle);
   }
 
-  init() {
+  init(listElement) {
+    this.$container = $(listElement);
+    this.findElements();
     this.bindListeners();
   }
 }

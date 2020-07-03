@@ -4,11 +4,12 @@ import './masked-text-field.scss';
 
 export default class MaskedField {
   constructor(maskedField) {
-    this.$field = $(maskedField);
-    this.init();
+    this.init(maskedField);
   }
 
-  init() {
+  init(maskedField) {
+    this.$field = $(maskedField);
+
     const today = new Date();
     const dd = today.getDate() < 10 ? `0${today.getDate()}` : today.getDate();
     const mm = today.getMonth() < 9 ? `0${today.getMonth() + 1}` : today.getMonth() + 1;

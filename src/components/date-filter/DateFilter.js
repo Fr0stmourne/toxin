@@ -6,8 +6,7 @@ import './date-filter.scss';
 
 export default class DateFilter {
   constructor(dateFilterElement) {
-    this.$container = $(dateFilterElement);
-    this.init();
+    this.init(dateFilterElement);
   }
 
   appendButton(el) {
@@ -32,7 +31,9 @@ export default class DateFilter {
     });
   }
 
-  init() {
+  init(dateFilterElement) {
+    this.$container = $(dateFilterElement);
+
     const now = new Date();
     const weekLater = new Date(new Date().setDate(new Date().getDate() + 7));
 

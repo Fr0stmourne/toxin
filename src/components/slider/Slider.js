@@ -7,13 +7,7 @@ import './slider.scss';
 
 export default class Slider {
   constructor({ slider, min = 0, max = 1000, values = [0, 1000] }) {
-    this.min = min;
-    this.max = max;
-    this.values = values;
-    this.$slider = $(slider);
-
-    this.findElements();
-    this.init();
+    this.init({ slider, min, max, values });
   }
 
   findElements() {
@@ -25,7 +19,13 @@ export default class Slider {
     $input.val(`${formatNumber($slider.slider('values', 0))}₽ - ${formatNumber($slider.slider('values', 1))}₽`);
   }
 
-  init() {
+  init({ slider, min: initialMin, max: initialMax, values: initialValues }) {
+    this.$slider = $(slider);
+    this.min = initialMin;
+    this.max = initialMax;
+    this.values = initialValues;
+    this.findElements();
+
     const { min, max, values, $input, $slider } = this;
 
     $slider.slider({

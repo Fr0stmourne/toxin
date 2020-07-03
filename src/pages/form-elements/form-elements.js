@@ -42,6 +42,6 @@ $('.js-expandable').each((_, el) => new ExpandableList(el));
 
 $('.js-dropdown').each((_, el) => new Dropdown(el));
 
-$('.js-range-datepicker').each((_, el) => new RangeDatepicker(el, defaultOptions));
+$('.js-range-datepicker').each((_, el) => new RangeDatepicker({ datepickerContainer: el, options: defaultOptions }));
 
 $('.js-date-filter-range .date-filter-input').each((_, el) => new DateFilter(el));

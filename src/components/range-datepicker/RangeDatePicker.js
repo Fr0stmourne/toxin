@@ -20,11 +20,8 @@ export const inlineOptions = {
 };
 
 export class RangeDatepicker {
-  constructor(datepickerContainer, options) {
-    this.options = options;
-    this.$container = $(datepickerContainer);
-    this.findElements();
-    this.init();
+  constructor({ datepickerContainer, options }) {
+    this.init({ datepickerContainer, options });
   }
 
   findElements() {
@@ -54,8 +51,12 @@ export class RangeDatepicker {
     });
   }
 
-  init() {
-    const { options, $startInput, $endInput } = this;
+  init({ datepickerContainer, options }) {
+    this.options = options;
+    this.$container = $(datepickerContainer);
+    this.findElements();
+
+    const { $startInput, $endInput } = this;
     $startInput.datepicker({
       ...options,
       minDate: new Date(),

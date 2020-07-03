@@ -6,8 +6,7 @@ const ACTIVE_CLASS = 'like-button_active';
 
 export default class LikeButton {
   constructor(likeButton) {
-    this.$like = $(likeButton);
-    this.init();
+    this.init(likeButton);
   }
 
   bindListeners() {
@@ -18,7 +17,8 @@ export default class LikeButton {
     });
   }
 
-  init() {
+  init(likeButton) {
+    this.$like = $(likeButton);
     this.bindListeners();
   }
 }

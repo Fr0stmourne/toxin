@@ -22,5 +22,5 @@ $('.js-like-btn').each((_, el) => new LikeButton(el));
 
 $('.js-dropdown').each((_, el) => new Dropdown(el));
 
-$('.js-range-datepicker').each((_, el) => new RangeDatepicker(el, defaultOptions));
+$('.js-range-datepicker').each((_, el) => new RangeDatepicker({ datepickerContainer: el, options: defaultOptions }));
 $('.js-range-datepicker-inline').each((_, el) => new RangeDatepicker(el, inlineOptions));
