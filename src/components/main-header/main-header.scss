@@ -11,7 +11,7 @@
     justify-content: space-between;
     align-items: center;
     color: $dark-50;
-    padding: 12px 139px 11px;
+    padding: 12px 140px 11px;
 
     @media (max-width: 1200px) {
       padding: 13px 20px;
@@ -27,7 +27,7 @@
   }
 
   &__logo {
-    margin-right: 13px;
+    margin-right: 12px;
   }
 
   &__logo-link {
@@ -73,7 +73,7 @@
       min-height: 30px;
       border-left: 1px solid rgba($dark-100, 0.1);
       font: $default-font;
-      padding-left: 21px;
+      padding-left: 20px;
       margin-left: 0;
     }
 
