@@ -1,6 +1,6 @@
 import { RangeDatepicker, defaultOptions, inlineOptions } from '../../components/range-datepicker/RangeDatePicker';
 import Dropdown from '../../components/dropdown/Dropdown';
-import LikeBtn from '../../components/like-btn/LikeBtn';
+import LikeButton from '../../components/like-button/LikeButton';
 
 import '../../components/toxin-header/toxin-header';
 import '../../components/toxin-footer/toxin-footer';
@@ -18,7 +18,7 @@ import './img/details-1.jpg';
 import './img/details-2.jpg';
 import './img/details-3.jpg';
 
-$('.js-like-btn').each((_, el) => new LikeBtn(el));
+$('.js-like-btn').each((_, el) => new LikeButton(el));
 
 $('.js-dropdown').each((_, el) => new Dropdown(el));
 

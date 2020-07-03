@@ -2,7 +2,7 @@ import DateFilter from '../../components/date-filter/DateFilter';
 import { RangeDatepicker, defaultOptions } from '../../components/range-datepicker/RangeDatePicker';
 import Dropdown from '../../components/dropdown/Dropdown';
 import ExpandableList from '../../components/expandable-list/ExpandableList';
-import LikeBtn from '../../components/like-btn/LikeBtn';
+import LikeButton from '../../components/like-button/LikeButton';
 import MaskedField from '../../components/masked-text-field/MaskedField';
 import Slider from '../../components/slider/Slider';
 
@@ -36,7 +36,7 @@ $(() => {
 
 $('.js-date').each((_, el) => new MaskedField(el));
 
-$('.js-like-btn').each((_, el) => new LikeBtn(el));
+$('.js-like-button').each((_, el) => new LikeButton(el));
 
 $('.js-expandable').each((_, el) => new ExpandableList(el));
 

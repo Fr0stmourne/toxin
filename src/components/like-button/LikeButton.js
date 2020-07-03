@@ -1,12 +1,12 @@
-import './like-btn.scss';
+import './like-button.scss';
 import './img/like-favorite.svg';
 import './img/like-favorite-border.svg';
 
-const ACTIVE_CLASS = 'like-btn_active';
+const ACTIVE_CLASS = 'like-button_active';
 
-export default class LikeBtn {
-  constructor(likeBtnElement) {
-    this.$like = $(likeBtnElement);
+export default class LikeButton {
+  constructor(likeButton) {
+    this.$like = $(likeButton);
     this.init();
   }
 

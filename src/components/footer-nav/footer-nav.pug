@@ -1,7 +1,7 @@
-mixin footer-nav({ navList = [] })  
+mixin footer-nav({ navigation = {} } = {})  
   .footer-nav
-    h3.footer-nav__title=navList.title
+    h3.footer-nav__title=navigation.title
     ul.footer-nav__list
-      each val in navList.items
+      each value in navigation.items
         li.footer-nav__item
-          a.footer-nav__link(href=val.link)=val.text
+          a.footer-nav__link(href=value.link)=value.text

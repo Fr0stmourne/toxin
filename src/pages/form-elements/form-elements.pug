@@ -6,7 +6,7 @@ include ../../components/radio-btn/radio-btn.pug
 include ../../components/subscription/subscription.pug
 include ../../components/button/button.pug
 include ../../components/link/link.pug
-include ../../components/like-btn/like-btn.pug
+include ../../components/like-button/like-button.pug
 include ../../components/rate-btn/rate-btn.pug
 include ../../components/toggle-btn/toggle-btn.pug
 include ../../components/pagination/pagination.pug
@@ -121,9 +121,9 @@ block content
             .ui-kit__like-title Like button
             .ui-kit__like-buttons
               .ui-kit__like-button
-                +like-btn({likes: 2})
+                +like-button({likes: 2})
               .ui-kit__like-button
-                +like-btn({
+                +like-button({
                   likes: 12, 
                   active: true
                 })

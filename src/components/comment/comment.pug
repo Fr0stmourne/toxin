@@ -1,4 +1,4 @@
-include ../like-btn/like-btn.pug
+include ../like-button/like-button.pug
 
 mixin comment(options = {})
   -
@@ -17,7 +17,7 @@ mixin comment(options = {})
       .comment__date=date
     .comment__box
       .comment__like
-        +like-btn({likes: likes, active: activeLike})
+        +like-button({likes: likes, active: activeLike})
       blockquote.comment__text=comment
 
 

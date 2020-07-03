@@ -1,0 +1,7 @@
+mixin like-button(options = {})
+  -
+    var {
+      active=false,
+      likes=5
+    } = options
+  button.like-button.js-like-button(type="button" class=active? "like-button_active" : "")=likes
