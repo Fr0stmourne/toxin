@@ -1,7 +1,7 @@
 mixin type({ types = [] } = {})
   section.type
     ul.type__list
-      each val in types 
-        li.type__item(class=`${val.class}`)
-          span.type__title=val.type
-          span.type__text=val.text
+      each value in types 
+        li.type__item(class=`${value.class}`)
+          span.type__title=value.type
+          span.type__text=value.text

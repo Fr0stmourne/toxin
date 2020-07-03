@@ -4,7 +4,7 @@ mixin room-reviews(comments = [])
   section.room-reviews
     .room-reviews__box
       h2.room-reviews__title Отзывы посетителей номера
-      .room-reviews__reviews-num=`${comments.length} отзыва`
+      .room-reviews__reviews-number=`${comments.length} отзыва`
     .room-reviews__grid
       each comment in comments
         .room-reviews__room-review

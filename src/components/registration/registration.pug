@@ -1,7 +1,7 @@
 include ../text-field/text-field.pug
 include ../radio-button/radio-button.pug
 include ../masked-text-field/masked-text-field.pug
-include ../toggle-btn/toggle-btn.pug
+include ../toggle-button/toggle-button.pug
 include ../button/button.pug
 include ../note/note.pug
 
@@ -33,7 +33,7 @@ mixin registration(options = {})
           .registration__password
             +text-field({placeholder: "Пароль", name: "registration-password", type: "password", arialabel: "Пароль"})
       .registration__offers-button
-        +toggle-btn({name: "registration-offers", buttonText: "Получать спецпредложения"})
+        +toggle-button({name: "registration-offers", buttonText: "Получать спецпредложения"})
       .registration__proceed
         +button({buttonText: "перейти к оплате", styleType: "proceed"})
     .registration__note

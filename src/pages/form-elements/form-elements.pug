@@ -8,7 +8,7 @@ include ../../components/button/button.pug
 include ../../components/link/link.pug
 include ../../components/like-button/like-button.pug
 include ../../components/rate-button/rate-button.pug
-include ../../components/toggle-btn/toggle-btn.pug
+include ../../components/toggle-button/toggle-button.pug
 include ../../components/pagination/pagination.pug
 include ../../components/comment/comment.pug
 include ../../components/advantage/advantage.pug
@@ -114,9 +114,9 @@ block content
           .ui-kit__togglers
             .ui-kit__toggle-title Toggle
             .ui-kit__toggle
-              +toggle-btn({buttonText: "Получать спецпредложения"})
+              +toggle-button({buttonText: "Получать спецпредложения"})
             .ui-kit__toggle
-              +toggle-btn({buttonText: "Получать спецпредложения"})
+              +toggle-button({buttonText: "Получать спецпредложения"})
           .ui-kit__like
             .ui-kit__like-title Like button
             .ui-kit__like-buttons

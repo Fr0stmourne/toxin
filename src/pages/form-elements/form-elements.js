@@ -13,7 +13,7 @@ import '../../components/subscription/subscription';
 import '../../components/button/button';
 import '../../components/link/link';
 import '../../components/rate-button/rate-button';
-import '../../components/toggle-btn/toggle-btn';
+import '../../components/toggle-button/toggle-button';
 import '../../components/pagination/pagination';
 import '../../components/comment/comment';
 import '../../components/advantage/advantage';
