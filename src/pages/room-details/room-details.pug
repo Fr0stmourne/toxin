@@ -34,7 +34,7 @@ block content
           .room-details__main-block
             .room-details__room-information
               .room-details__information
-                +room-information([{
+                +room-information({advantages: [{
                     title: "Комфорт",
                     description: "Шумопоглощающие стены",
                     alt: "Дом",
@@ -50,11 +50,11 @@ block content
                     alt: "Камин",
                     imageLink: "whatshot.svg"
                   }
-                ])
+                ]})
               .room-details__impression
                 +room-impression()
             .room-details__room-reviews
-              +room-reviews([
+              +room-reviews({comments: [
                 {
                   src: "comment.jpg",
                   activeLike: true,
@@ -69,7 +69,7 @@ block content
                   date: "Неделю назад",
                   comment: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
                 }
-              ])
+              ]})
             .room-details__room-restrictions
               +room-restrictions()
           .room-details__booking

@@ -1,9 +1,14 @@
 include ../comment/comment.pug
 
-mixin room-reviews(comments = [])  
+mixin room-reviews(options = {})
+  -
+    var {
+      title = "Отзывы посетителей номера",
+      comments = []
+    } = options
   section.room-reviews
     .room-reviews__box
-      h2.room-reviews__title Отзывы посетителей номера
+      h2.room-reviews__title=title
       .room-reviews__reviews-number=`${comments.length} отзыва`
     .room-reviews__grid
       each comment in comments

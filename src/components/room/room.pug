@@ -5,7 +5,8 @@ mixin room(options = {})
     var {
       number = 1, 
       sliderImgs = ["There are no values"], 
-      link = "./mock", 
+      link = "./mock",
+      alt="Slider image",
       type = "", 
       price = "0", 
       name, 
@@ -18,7 +19,7 @@ mixin room(options = {})
     ul.room__slider.js-room-slider
       each link in sliderImgs
         li.room__slider-item
-          img(src=link, alt="slider image")
+          img(src=link, alt=alt)
     .room__information
       .room__room-information
         a.room__room(href=link)

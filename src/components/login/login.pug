@@ -6,10 +6,11 @@ mixin login(options = {})
     var {
       action="./mock",
       noteText="Подсказка",
-      noteAction="registration-page.html"
+      noteAction="registration-page.html",
+      title="Войти"
     } = options
   .login
-    h2.login__title Войти
+    h2.login__title=title
     form(action=action).login__form
       .login__login-data
         .login__email

@@ -1,15 +1,22 @@
 include ../room/room.pug
 include ../pagination/pagination.pug
 
-mixin rooms-grid({ rooms = [] } = {})  
+mixin rooms-grid(options = {})  
+  -
+    var {
+      title = "Номера, которые мы для вас подобрали",
+      rooms = [],
+      number = 15,
+      description = "1 – 12 из 100+ вариантов аренды"
+    } = options
   section.rooms-grid
-    h2.rooms-grid__title Номера, которые мы для вас подобрали
+    h2.rooms-grid__title=title
     ul.rooms-grid__list
       each room in rooms
         li.rooms-grid__room-item
           +room(room)
     .rooms-grid__pagination
       +pagination({
-        number: 15, 
-        description: "1 – 12 из 100+ вариантов аренды"
+        number, 
+        description 
       })

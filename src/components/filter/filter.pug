@@ -5,9 +5,16 @@ include ../checkbox/checkbox.pug
 include ../rich-checkbox/rich-checkbox.pug
 include ../expandable-list/expandable-list.pug
 
-mixin filter()  
+mixin filter(options = {})  
+  -
+    var {
+      title="Фильтр комнат",
+      sliderHint="Стоимость за сутки пребывания в номере",
+      checkboxTitle="Checkbox Buttons",
+      accessibilityTitle="доступность",
+    } = options
   section.filter
-    h2.filter__main-title Фильтр комнат
+    h2.filter__main-title=title
     .filter__date-filter
       +date-filter({title: "даты пребывания в отеле"})
     .filter__guests
@@ -32,9 +39,9 @@ mixin filter()
       +slider({
         title: "диапазон цены"
       })
-      .filter__slider-hint Стоимость за сутки пребывания в номере
+      .filter__slider-hint=sliderHint
     .filter__checkbox-group
-      .filter__checkbox-title Checkbox Buttons
+      .filter__checkbox-title=checkboxTitle
       .filter__checkbox
         +checkbox({labelText: "Можно курить"})
       .filter__checkbox
@@ -42,7 +49,7 @@ mixin filter()
       .filter__checkbox
         +checkbox({labelText: "Можно пригласить гостей (до 10 человек)"})
     .filter__accessibility
-      .filter__accessibility-title доступность
+      .filter__accessibility-title=accessibilityTitle
       .filter__rich-checkboxes 
         .filter__rich-checkbox
           +rich-checkbox({

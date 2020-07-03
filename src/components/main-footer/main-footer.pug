@@ -3,7 +3,8 @@ include ../footer-nav/footer-nav.pug
 
 mixin main-footer(options = {})
   -
-    var { extended = false, 
+    var { extended = false,
+    title = "Page footer",
     logoLink = "landing-page.html", 
     companyText = "Текст о компании", 
     navigationLists = ["There are no values"], 
@@ -11,7 +12,7 @@ mixin main-footer(options = {})
     socialList = ["None"], 
     subscription = {title:"Подписка", text: "Текст подписки", placeholder: "Заглушка"} } = options
   footer.main-footer
-    h2.main-footer__title Page footer
+    h2.main-footer__title=title
     if extended
       .main-footer__container
         .main-footer__main

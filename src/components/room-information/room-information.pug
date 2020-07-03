@@ -1,8 +1,13 @@
 include ../advantage/advantage.pug
 
-mixin room-information(advantages = [])  
+mixin room-information(options={})
+  -
+    var {
+      title = "Сведения о номере",
+      advantages = []
+    } = options
   section.room-information
-    h2.room-information__title Сведения о номере
+    h2.room-information__title 
     .room-information__advantages
       each advantage in advantages
         .room-information__advantage

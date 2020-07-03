@@ -4,6 +4,7 @@ include ../header-nav/header-nav.pug
 mixin main-header(options = {})
   -
     var {
+      title="Toxin Бронирование отелей",
       items=[],
       unlogged=false,
       loginText="Войти",
@@ -13,7 +14,7 @@ mixin main-header(options = {})
     } = options
   header.main-header
     .main-header__container
-      h1.main-header__title Toxin Бронирование отелей
+      h1.main-header__title=title 
       a(href=logoLink).main-header__logo-link
         .main-header__logo
           img(src="logo.svg", alt="Logo")
