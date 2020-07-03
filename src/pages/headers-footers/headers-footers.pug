@@ -15,41 +15,45 @@ block content
     .headers-footers__unlogged-header
       +main-header({
         unlogged: true,
-        registrationText: "register",
-        loginText: "login",
+        registrationText: "зарегистрироваться",
+        loginText: "войти",
         items: [{
-            text: "Home",
-            active: true,
+            text: "О нас",
             link: "./mock"
-          },
-          {
-            text: "About Us",
-            link: "./mock"
-          },
-          {
-            text: "Services",
+          }, {
+            text: "Услуги",
             link: "./mock",
             dropdown: [{
-                text: "Service",
-                link: "./mock"
-              },
-              {
-                text: "Service",
-                link: "./mock"
-              }
-            ]
+              text: "Услуга",
+              link: "./mock"
+            }, {
+              text: "Услуга 2",
+              link: "./mock"
+            }, {
+              text: "Услуга 2",
+              link: "./mock"
+            }]
           },
           {
-            text: "Careers",
+            text: "Вакансии",
+            link: "./mock"
+          }, {
+            text: "Новости",
             link: "./mock"
           },
           {
-            text: "News",
-            link: "./mock"
-          },
-          {
-            text: "Documentation",
-            link: "./mock"
+            text: "Соглашения",
+            link: "./mock",
+            dropdown: [{
+              text: "Услуга",
+              link: "./mock"
+            }, {
+              text: "Услуга 2",
+              link: "./mock"
+            }, {
+              text: "Услуга 2",
+              link: "./mock"
+            }]
           }
         ]
       })

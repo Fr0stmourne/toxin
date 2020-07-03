@@ -7,7 +7,7 @@ mixin room-information(options={})
       advantages = []
     } = options
   section.room-information
-    h2.room-information__title 
+    h2.room-information__title=title
     .room-information__advantages
       each advantage in advantages
         .room-information__advantage
