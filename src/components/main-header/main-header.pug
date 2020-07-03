@@ -7,7 +7,7 @@ mixin main-header(options = {})
       items=[],
       unlogged=false,
       loginText="Войти",
-      regText="Зарегистрироваться",
+      registrationText="Зарегистрироваться",
       username="Иван Иванов",
       logoLink="landing-page.html"
     } = options
@@ -25,10 +25,10 @@ mixin main-header(options = {})
         if unlogged
           .main-header__login
             .main-header__login-menu
-              .main-header__login-btn
+              .main-header__login-button
                 +button({buttonText: loginText, styleType: "secondary", slim: true, link: "signin-page.html"})
-              .main-header__register-btn
-                +button({buttonText: regText, slim: true, link: "registration-page.html"})
+              .main-header__register-button
+                +button({buttonText: registrationText, slim: true, link: "registration-page.html"})
         else
           .main-header__login
             .main-header__login-menu.main-header__login-menu_logged

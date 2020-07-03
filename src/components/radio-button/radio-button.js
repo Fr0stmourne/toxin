@@ -1,2 +1,2 @@
-import './radio-btn.scss';
+import './radio-button.scss';
 import './img/radio-pin.svg';

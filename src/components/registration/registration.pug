@@ -1,5 +1,5 @@
 include ../text-field/text-field.pug
-include ../radio-btn/radio-btn.pug
+include ../radio-button/radio-button.pug
 include ../masked-text-field/masked-text-field.pug
 include ../toggle-btn/toggle-btn.pug
 include ../button/button.pug
@@ -22,9 +22,9 @@ mixin registration(options = {})
         +text-field({placeholder: "Фамилия", name:"registration-surname", arialabel: "Фамилия"})
       .registration__sex
           .registration__man
-            +radio-btn({name: "registration-sex", labelText: "Мужчина"})
+            +radio-button({name: "registration-sex", labelText: "Мужчина"})
           .registration__woman
-            +radio-btn({name: "registration-sex", labelText: "Женщина"})
+            +radio-button({name: "registration-sex", labelText: "Женщина"})
       .registration__birthday
         +masked-text-field({placeholder: "ДД.ММ.ГГГГ", title: "Дата рождения", name:"registration-birthday"})
       .registration__login-data
@@ -32,7 +32,7 @@ mixin registration(options = {})
             +text-field({placeholder: "Email", name: "registration-email", type: "email", title: "данные для входа в сервис", arialabel: "Почта"})
           .registration__password
             +text-field({placeholder: "Пароль", name: "registration-password", type: "password", arialabel: "Пароль"})
-      .registration__offers-btn
+      .registration__offers-button
         +toggle-btn({name: "registration-offers", buttonText: "Получать спецпредложения"})
       .registration__proceed
         +button({buttonText: "перейти к оплате", styleType: "proceed"})

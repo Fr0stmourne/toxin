@@ -2,12 +2,12 @@ extends ../../components/template-page/template-page.pug
 
 include ../../components/checkbox/checkbox.pug
 include ../../components/text-field/text-field.pug
-include ../../components/radio-btn/radio-btn.pug
+include ../../components/radio-button/radio-button.pug
 include ../../components/subscription/subscription.pug
 include ../../components/button/button.pug
 include ../../components/link/link.pug
 include ../../components/like-button/like-button.pug
-include ../../components/rate-btn/rate-btn.pug
+include ../../components/rate-button/rate-button.pug
 include ../../components/toggle-btn/toggle-btn.pug
 include ../../components/pagination/pagination.pug
 include ../../components/comment/comment.pug
@@ -102,12 +102,12 @@ block content
             .ui-kit__radio-title Radio Buttons
             .ui-kit__radio-buttons
               .ui-kit__radio-button
-                +radio-btn({
+                +radio-button({
                   labelText: "Мужчина", 
                   name: "gender"
                 })
               .ui-kit__radio-button
-                +radio-btn({
+                +radio-button({
                   labelText: "Женщина", 
                   name: "gender"
                 })
@@ -131,9 +131,9 @@ block content
             .ui-kit__rate-title Rate button
             .ui-kit__rate-buttons
               .ui-kit__rate-button
-                +rate-btn({name: "test", checkedRating: 4})
+                +rate-button({name: "test", checkedRating: 4})
               .ui-kit__rate-button
-                +rate-btn({name: "test1", checkedRating: 5})
+                +rate-button({name: "test1", checkedRating: 5})
         .ui-kit__buttons-slider
           .ui-kit__slider-range
             +slider({
@@ -181,7 +181,7 @@ block content
               })
             .ui-kit__pagination
               +pagination({
-                num: 15, 
+                number: 15, 
                 title: "pagination", 
                 description: "1 – 12 из 100+ вариантов аренды"
               })

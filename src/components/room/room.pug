@@ -1,9 +1,9 @@
-include ../rate-btn/rate-btn.pug
+include ../rate-button/rate-button.pug
 
 mixin room(options = {})
   -
     var {
-      num = 1, 
+      number = 1, 
       sliderImgs = ["There are no values"], 
       link = "./mock", 
       type = "", 
@@ -11,7 +11,7 @@ mixin room(options = {})
       name, 
       checkedRating = 4, 
       isRatingDisabled = true, 
-      reviewNum = 10, 
+      reviewNumber = 10, 
       reviewsLink = "./mock"
     } = options
   .room
@@ -19,17 +19,17 @@ mixin room(options = {})
       each link in sliderImgs
         li.room__slider-item
           img(src=link, alt="slider image")
-    .room__info
-      .room__room-info
+    .room__information
+      .room__room-information
         a.room__room(href=link)
-          h3.room__num №
-            span.room__digit=num
+          h3.room__number №
+            span.room__digit=number
           span.room__type=type
         .room__per-day
           span.room__price=price
           span.room__measurement  в сутки
       .room__rating
-        +rate-btn({name: name, checkedRating: checkedRating, disabled: isRatingDisabled})
+        +rate-button({name, checkedRating, disabled: isRatingDisabled})
         a.room__reviews-link(href=reviewsLink)
-          =reviewNum
+          =reviewNumber
           span.room__measurement  Отзывов

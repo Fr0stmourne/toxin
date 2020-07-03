@@ -6,7 +6,7 @@ include ../../components/advantage/advantage.pug
 include ../../components/comment/comment.pug
 include ../../components/bullet-list/bullet-list.pug
 include ../../components/booking/booking.pug
-include ../../components/room-info/room-info.pug
+include ../../components/room-information/room-information.pug
 include ../../components/room-impression/room-impression.pug
 include ../../components/room-reviews/room-reviews.pug
 include ../../components/room-restrictions/room-restrictions.pug
@@ -32,9 +32,9 @@ block content
               img.room-details__photo(src="details-3.jpg", alt="room-photo")
         .room-details__container
           .room-details__main-block
-            .room-details__room-info
-              .room-details__info
-                +room-info([{
+            .room-details__room-information
+              .room-details__information
+                +room-information([{
                     title: "Комфорт",
                     description: "Шумопоглощающие стены",
                     alt: "Дом",

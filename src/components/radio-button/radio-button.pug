@@ -1,0 +1,11 @@
+mixin radio-button(options = {})
+  -
+    var {
+      name,
+      labelText="Радио кнопка"
+    } = options
+  label.radio-button
+    input.radio-button__input(type="radio", name=name)
+    span.radio-button__checkmark
+    span.radio-button__label=labelText
+

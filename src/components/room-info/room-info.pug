@@ -1,9 +1,0 @@
-include ../advantage/advantage.pug
-
-mixin room-info(advantages = [])  
-  section.room-info
-    h2.room-info__title Сведения о номере
-    .room-info__advantages
-      each advantage in advantages
-        .room-info__advantage
-          +advantage(advantage)

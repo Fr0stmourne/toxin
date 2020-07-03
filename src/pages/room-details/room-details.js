@@ -8,7 +8,7 @@ import '../../components/comment/comment';
 import '../../components/booking/booking';
 import '../../components/advantage/advantage';
 import '../../components/bullet-list/bullet-list';
-import '../../components/room-info/room-info';
+import '../../components/room-information/room-information';
 import '../../components/room-impression/room-impression';
 import '../../components/room-reviews/room-reviews';
 import '../../components/room-restrictions/room-restrictions';

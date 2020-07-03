@@ -12,7 +12,7 @@ mixin pagination(options = {})
   -
     var {
       title,
-      num=10,
+      number=10,
       description="Описание пагинации"
     } = options
   .pagination__container
@@ -23,7 +23,7 @@ mixin pagination(options = {})
       +page({active: false , link: "./mock", linkText: 2})
       +page({active: false , link: "./mock", linkText: 3})
       li.pagination__hidden-pages ... 
-      +page({active: false , link: "./mock", linkText: num})
+      +page({active: false , link: "./mock", linkText: number})
       li.pagination__next
         a(href="./mock").pagination__next-page
           span.pagination__next-page-text Next page

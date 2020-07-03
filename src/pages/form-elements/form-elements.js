@@ -8,11 +8,11 @@ import Slider from '../../components/slider/Slider';
 
 import '../../components/checkbox/checkbox';
 import '../../components/text-field/text-field';
-import '../../components/radio-btn/radio-btn';
+import '../../components/radio-button/radio-button';
 import '../../components/subscription/subscription';
 import '../../components/button/button';
 import '../../components/link/link';
-import '../../components/rate-btn/rate-btn';
+import '../../components/rate-button/rate-button';
 import '../../components/toggle-btn/toggle-btn';
 import '../../components/pagination/pagination';
 import '../../components/comment/comment';

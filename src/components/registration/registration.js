@@ -1,5 +1,5 @@
 import '../text-field/text-field';
-import '../radio-btn/radio-btn';
+import '../radio-button/radio-button';
 import '../masked-text-field/MaskedField';
 import '../toggle-btn/toggle-btn';
 import '../button/button';

@@ -3,8 +3,8 @@ import 'inputmask/dist/jquery.inputmask';
 import './masked-text-field.scss';
 
 export default class MaskedField {
-  constructor(maskFieldEl) {
-    this.$field = $(maskFieldEl);
+  constructor(maskedField) {
+    this.$field = $(maskedField);
     this.init();
   }
 
