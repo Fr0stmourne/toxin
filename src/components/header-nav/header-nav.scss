@@ -7,12 +7,25 @@
     flex-wrap: wrap;
     font: $default-font;
 
+    @media (max-width: 950px) {
+      display: block;
+    }
+
     @media (max-width: 800px) {
       justify-content: space-evenly;
     }
   }
 
   &__item {
+
+    @media (max-width: 950px) {
+      margin: 0 0 15px 30px;
+    }
+
+    @media (max-width: 400px) {
+      margin: 0 0 10px 20px;
+    }
+
     &_with-dropdown {
       position: relative;
       padding-right: 26px;
@@ -28,6 +41,10 @@
         background-image: url('../../images/arrow-down.svg');
         background-repeat: no-repeat;
         background-size: 100%;
+
+        @media (max-width: 950px) {
+          display: none;
+        }
       }
 
       &:hover .header-nav__dropdown-content {
