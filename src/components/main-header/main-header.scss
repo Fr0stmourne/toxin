@@ -69,6 +69,7 @@
     display: flex;
 
     &_logged {
+      flex-direction: row;
       align-items: center;
       min-height: 30px;
       border-left: 1px solid rgba($dark-100, 0.1);
@@ -84,6 +85,8 @@
     @media (max-width: 600px) {
       flex-direction: row;
       justify-content: space-evenly;
+      border: 0;
+      padding-left: 0;
     }
   }
 
