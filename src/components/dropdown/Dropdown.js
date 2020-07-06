@@ -7,8 +7,13 @@ import '../../vendors/dropdown/dropdown.scss';
 import './dropdown.scss';
 
 const DEFAULT_VALUE = 0;
-const OPENED_DRODPOWN_CLASS = 'dropdown__result_opened';
-const HIDDEN_RESET_CLASS = 'dropdown__reset_hidden';
+const classnames = {
+  OPENED_DROPDOWN: 'dropdown__result_opened',
+  HIDDEN_RESET: 'dropdown__reset_hidden',
+  INPUT: 'plus-minus__input',
+  MINUS_BUTTON: 'plus-minus__btn_minus',
+  PLUS_BUTTON: 'plus-minus__btn_plus',
+};
 
 export default class Dropdown {
   constructor(dropdownElement) {
@@ -18,20 +23,20 @@ export default class Dropdown {
   }
 
   findElements() {
-    this.$dropdown = this.$container.find('.dropdown-result');
+    this.$dropdown = this.$container.find('.dropdown__result');
     this.$dropdownList = this.$dropdown.next();
-    this.$plusMinus = this.$dropdown.parent().find('.plus-minus-block');
-    this.$applyButton = this.$dropdown.parent().find('.apply');
-    this.$resetButton = this.$dropdown.parent().find('.reset');
+    this.$plusMinus = this.$dropdown.parent().find('.plus-minus');
+    this.$applyButton = this.$dropdown.parent().find('.dropdown__apply');
+    this.$resetButton = this.$dropdown.parent().find('.dropdown__reset');
     this.initialText = this.$dropdown.text();
   }
 
   createInput() {
     this.$plusMinus.htmlNumberSpinner();
-    this.$plusMinusButtons = this.$dropdown.parent().find('.dropdown-item .plus-minus-btn');
-    this.$minusButtons = this.$dropdown.parent().find('.dropdown-item .minus-btn');
-    this.$plusButtons = this.$dropdown.parent().find('.dropdown-item .plus-btn');
-    this.$input = this.$dropdown.parent().find('.dropdown-item input');
+    this.$plusMinusButtons = this.$dropdown.parent().find('.dropdown__item .plus-minus__btn');
+    this.$minusButtons = this.$dropdown.parent().find(`.dropdown__item .${classnames.MINUS_BUTTON}`);
+    this.$plusButtons = this.$dropdown.parent().find(`.dropdown__item .${classnames.PLUS_BUTTON}`);
+    this.$input = this.$dropdown.parent().find(`.dropdown__item .${classnames.INPUT}`);
     this.$plusMinusButtons.removeAttr('type').attr('type', 'button');
   }
 
@@ -47,7 +52,7 @@ export default class Dropdown {
   toggle(e) {
     e.preventDefault();
     this.$dropdownList.slideToggle();
-    this.$dropdown.toggleClass(OPENED_DRODPOWN_CLASS);
+    this.$dropdown.toggleClass(classnames.OPENED_DROPDOWN);
   }
 
   @boundMethod
@@ -58,16 +63,16 @@ export default class Dropdown {
       $(el).val(0);
       $(el)
         .parent()
-        .find('.minus-btn')
+        .find(`.${classnames.MINUS_BUTTON}`)
         .click();
     });
 
-    $resetButton.addClass(HIDDEN_RESET_CLASS);
+    $resetButton.addClass(classnames.HIDDEN_RESET);
   }
 
   @boundMethod
   handleDocumentClick() {
-    if (this.$dropdown.hasClass(OPENED_DRODPOWN_CLASS)) {
+    if (this.$dropdown.hasClass(classnames.OPENED_DROPDOWN)) {
       this.$dropdown.click();
     }
   }
@@ -78,14 +83,14 @@ export default class Dropdown {
 
     const { $resetButton } = this;
     const $target = $(e.target);
-    const $currentItem = $target.closest('.dropdown-item');
-    const $minusButton = $currentItem.find('.minus-btn');
-    const $plusButton = $currentItem.find('.plus-btn');
-    const $currentInput = $currentItem.find('.plus-minus-input');
+    const $currentItem = $target.closest('.dropdown__item');
+    const $minusButton = $currentItem.find(`.${classnames.MINUS_BUTTON}`);
+    const $plusButton = $currentItem.find(`.${classnames.PLUS_BUTTON}`);
+    const $currentInput = $currentItem.find(`.${classnames.INPUT}`);
     const $dropdown = $target.closest('.js-dropdown');
 
     const resultArray = [];
-    const $allOptions = $dropdown.find('.dropdown-option');
+    const $allOptions = $dropdown.find('.dropdown__option');
 
     $allOptions
       .filter((_, el) => $(el).data('forms'))
@@ -102,13 +107,13 @@ export default class Dropdown {
           $filtered.each((_, option) => {
             currentValue += +$(option)
               .parent()
-              .find('.plus-minus-input')
+              .find(`.${classnames.INPUT}`)
               .val();
           });
         } else {
           currentValue = $(el)
             .parent()
-            .find('.plus-minus-input')
+            .find(`.${classnames.INPUT}`)
             .val();
         }
 
@@ -141,9 +146,9 @@ export default class Dropdown {
     }
 
     if (!resultArray.length) {
-      $resetButton.addClass(HIDDEN_RESET_CLASS);
+      $resetButton.addClass(classnames.HIDDEN_RESET);
     } else {
-      $resetButton.removeClass(HIDDEN_RESET_CLASS);
+      $resetButton.removeClass(classnames.HIDDEN_RESET);
     }
     const resultText = `${resultArray.length ? [...new Set(resultArray)].join(', ') : this.initialText}`;
     this.$dropdown.text(resultText);
