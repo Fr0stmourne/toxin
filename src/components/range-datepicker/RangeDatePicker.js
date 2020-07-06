@@ -29,7 +29,7 @@ export class RangeDatepicker {
     this.$endInput = this.$container.find('.range-datepicker-end');
   }
 
-  appendBtn(el) {
+  appendButton(el) {
     $(el).append('<span class="datepicker--button datepicker-apply" data-action="today">применить</span>');
   }
 
@@ -37,10 +37,10 @@ export class RangeDatepicker {
     this.$buttonContainers = $('.datepicker--buttons');
   }
 
-  addApplyBtn() {
+  addApplyButton() {
     this.$buttonContainers.each((_, buttonContainer) => {
       if (!$(buttonContainer).find('.datepicker-apply').length) {
-        this.appendBtn(buttonContainer);
+        this.appendButton(buttonContainer);
       }
     });
   }
@@ -88,6 +88,6 @@ export class RangeDatepicker {
     });
 
     this.findButtonContainer();
-    this.addApplyBtn();
+    this.addApplyButton();
   }
 }

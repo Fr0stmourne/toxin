@@ -4,15 +4,15 @@
   $.fn.htmlNumberSpinner = function() {
     /* creating the counter buttons */
     $(this).append(
-      "<button class='plus-minus__btn plus-minus-btn plus-minus__btn_minus minus-btn'>-</button> <input class='plus-minus__input plus-minus-input' type='number'/> <button class='plus-minus__btn plus-minus-btn plus-minus__btn_plus plus-btn'>+</button>",
+      "<button class='plus-minus__button plus-minus__button_minus'>-</button> <input class='plus-minus__input plus-minus-input' type='number'/> <button class='plus-minus__button plus-minus__button_plus'>+</button>",
     );
 
     /* default value and variables and jquery elements */
     const defaultValue = 0;
     let inputValue;
     const numberInput$ = $(this).find('.plus-minus__input');
-    const incrementerEl$ = $(this).find('.plus-minus__btn_plus');
-    const decrementerEl$ = $(this).find('.plus-minus__btn_minus');
+    const incrementerEl$ = $(this).find('.plus-minus__button_plus');
+    const decrementerEl$ = $(this).find('.plus-minus__button_minus');
 
     /* hide the default number input spinner */
     $(this).append(

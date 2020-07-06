@@ -18,7 +18,7 @@ import './img/details-1.jpg';
 import './img/details-2.jpg';
 import './img/details-3.jpg';
 
-$('.js-like-btn').each((_, el) => new LikeButton(el));
+$('.js-like-button').each((_, el) => new LikeButton(el));
 
 $('.js-dropdown').each((_, el) => new Dropdown(el));
 

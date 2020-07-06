@@ -2,8 +2,7 @@
 import { boundMethod } from 'autobind-decorator';
 
 import getCorrectWordForm from '../../utils/js/getCorrectWordForm';
-import '../../vendors/dropdown/dropdown';
-import '../../vendors/dropdown/dropdown.scss';
+import '../plus-minus/plus-minus';
 import './dropdown.scss';
 
 const DEFAULT_VALUE = 0;
@@ -11,8 +10,8 @@ const classnames = {
   OPENED_DROPDOWN: 'dropdown__result_opened',
   HIDDEN_RESET: 'dropdown__reset_hidden',
   INPUT: 'plus-minus__input',
-  MINUS_BUTTON: 'plus-minus__btn_minus',
-  PLUS_BUTTON: 'plus-minus__btn_plus',
+  MINUS_BUTTON: 'plus-minus__button_minus',
+  PLUS_BUTTON: 'plus-minus__button_plus',
 };
 
 export default class Dropdown {
@@ -33,7 +32,7 @@ export default class Dropdown {
 
   createInput() {
     this.$plusMinus.htmlNumberSpinner();
-    this.$plusMinusButtons = this.$dropdown.parent().find('.dropdown__item .plus-minus__btn');
+    this.$plusMinusButtons = this.$dropdown.parent().find('.dropdown__item .plus-minus__button');
     this.$minusButtons = this.$dropdown.parent().find(`.dropdown__item .${classnames.MINUS_BUTTON}`);
     this.$plusButtons = this.$dropdown.parent().find(`.dropdown__item .${classnames.PLUS_BUTTON}`);
     this.$input = this.$dropdown.parent().find(`.dropdown__item .${classnames.INPUT}`);
