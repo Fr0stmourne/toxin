@@ -52,6 +52,7 @@
   &__room-information {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 12px;
 
     @media (max-width: 1150px) {
       justify-content: space-evenly;
@@ -65,7 +66,7 @@
   }
 
   &__room-photos {
-    margin: 0 auto 71px;
+    margin: 0 auto 69px;
     max-width: 1440px;
     width: 100%;
     max-height: 485px;
@@ -165,7 +166,7 @@
   }
 
   &__impression {
-    margin-right: 37px;
+    margin-right: 38px;
 
     @media (max-width: 1150px) {
       margin-right: 0;

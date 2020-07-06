@@ -8,17 +8,13 @@
   }
 
   &__title {
-    margin: 0 0 18px;
+    margin: 1px 0 19px;
     font: $h2-font;
     letter-spacing: 0.03em;
   }
 
-  &__advantages {
-    margin-bottom: 10px;
-  }
-
   &__advantage {
-    margin-bottom: 17px;
+    margin-bottom: 19px;
 
     &:last-child {
       margin-bottom: 0;

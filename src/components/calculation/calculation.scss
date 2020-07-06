@@ -4,7 +4,7 @@
     justify-content: space-between;
     font: $default-font;
     color: $dark-75;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
 
     &:last-child {
       margin-bottom: 0;
@@ -36,13 +36,20 @@
     &:hover~.calculation__tooltip {
       background-color: $white;
       display: block;
-      left: -100px;
+
+      left: 30px;
       top: 30px;
+
+      @media (max-width: 400px) {
+        left: -50px;
+        top: 30px;
+      }
     }
   }
 
   &__tooltip {
     position: absolute;
     display: none;
+    border: 1px solid $dark-25;
   }
 }

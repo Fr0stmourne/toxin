@@ -1,6 +1,6 @@
 .room-impression {
   &__title {
-    margin: 0 0 18px;
+    margin: 1px 0 19px;
     font: $h2-font;
     letter-spacing: 0.04em;
   }
@@ -52,7 +52,7 @@
       content: '';
       position: absolute;
       left: 0;
-      top: 8px;
+      top: 6px;
       width: 10px;
       height: 10px;
       border-radius: 50%;

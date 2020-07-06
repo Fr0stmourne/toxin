@@ -8,5 +8,6 @@ mixin advantage(options = {})
     } = options
   .advantage
     img.advantage__image(src=imageLink, alt=alt)
-    span.advantage__title=title
-    span.advantage__description=description
+    .advantage__text
+      span.advantage__title=title
+      span.advantage__description=description

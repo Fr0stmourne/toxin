@@ -4,6 +4,7 @@
   padding: 40px 30px 30px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
 
   @media (max-width: 500px) {
     padding: 20px 10px 15px;
@@ -58,7 +59,7 @@
   }
 
   &__calculation {
-    margin-bottom: 28px;
+    margin-bottom: 30px;
   }
 
   &__result {
