@@ -2,9 +2,9 @@ include ../checkbox/checkbox.pug
 
 mixin expandable-list({title, list = []} = {})
   .expandable-list.js-expandable
-    label.expandable-list__title.expandable-label=title
-    button.expandable-list__expand-button.expandable-list__expand-button_hidden.expandable-button(type="button")
-    ul.expandable-list__list.expandable-list__list_hidden.expandable-options
+    label.expandable-list__title=title
+    button.expandable-list__expand-button.expandable-list__expand-button_hidden(type="button")
+    ul.expandable-list__list.expandable-list__list_hidden
       each value in list ? list : ["There are no values"]
         li.expandable-list__checkbox
           +checkbox({labelText: value.labelText, checked: value.checked})

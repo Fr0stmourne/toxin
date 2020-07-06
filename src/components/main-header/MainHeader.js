@@ -10,8 +10,8 @@ class MainHeader {
   }
 
   findElements() {
-    this.$button = $(this.$container).find('.menu-button');
-    this.$menu = $(this.$container).find('.header-menu');
+    this.$button = $(this.$container).find('.main-header__menu-button');
+    this.$menu = $(this.$container).find('.main-header__menu');
   }
 
   @boundMethod

@@ -80,10 +80,19 @@
       font: $default-font;
       padding-left: 20px;
       margin-left: 0;
+
+      @media (max-width: 950px) {
+        border-left: 0;
+        border-top: 1px solid rgba($dark-100, 0.1);
+        padding-left: 0;
+        padding-top: 20px;
+        align-items: flex-start;
+      }
     }
 
     @media (max-width: 950px) and (min-width: 401px) {
       flex-direction: column;
+      padding-left: 0;
       margin: 0 30px;
     }
 

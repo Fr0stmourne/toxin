@@ -1,4 +1,4 @@
-import MainHeader from '../../components/main-header/main-header';
+import MainHeader from '../../components/main-header/MainHeader';
 import '../../components/main-footer/main-footer';
 import './headers-footers.scss';
 

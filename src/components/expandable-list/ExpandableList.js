@@ -9,9 +9,9 @@ export default class ExpandableList {
   }
 
   findElements() {
-    this.$list = this.$container.find('.expandable-options');
-    this.$button = this.$container.find('.expandable-button');
-    this.$label = this.$container.find('.expandable-label');
+    this.$list = this.$container.find('.expandable-list__list');
+    this.$button = this.$container.find('.expandable-list__expand-button');
+    this.$label = this.$container.find('.expandable-list__title');
   }
 
   @boundMethod

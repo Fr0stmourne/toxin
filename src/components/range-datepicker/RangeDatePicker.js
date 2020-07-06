@@ -25,8 +25,8 @@ export class RangeDatepicker {
   }
 
   findElements() {
-    this.$startInput = this.$container.find('.range-datepicker-start');
-    this.$endInput = this.$container.find('.range-datepicker-end');
+    this.$startInput = this.$container.find('.range-datepicker__input_start');
+    this.$endInput = this.$container.find('.range-datepicker__input_end');
   }
 
   appendButton(el) {

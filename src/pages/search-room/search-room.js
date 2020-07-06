@@ -13,7 +13,7 @@ import '../../components/filter/filter';
 import '../../components/rooms-grid/rooms-grid';
 
 $(() => {
-  $('.js-slider .slider-bar').each(
+  $('.js-slider .slider__bar').each(
     (_, el) =>
       new Slider({
         slider: el,
