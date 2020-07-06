@@ -14,8 +14,11 @@
     margin: 0 auto 1px;
     background-image: url('../../images/registration-bg.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
     background-position-y: -70px;
+
+    @media (max-width: 400px) {
+      padding: 0 10px;
+    }
   }
 
   &__card {
@@ -23,5 +26,9 @@
     display: flex;
     justify-content: center;
     margin-left: 6px;
+
+    @media (max-width: 1400px) {
+      margin-left: 0;
+    }
   }
 }
