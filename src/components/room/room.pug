@@ -23,7 +23,8 @@ mixin room(options = {})
     .room__information
       .room__room-information
         a.room__room(href=link)
-          h3.room__number №
+          h3.room__number
+            span.room__number-sign №
             span.room__digit=number
           span.room__type=type
         .room__per-day
