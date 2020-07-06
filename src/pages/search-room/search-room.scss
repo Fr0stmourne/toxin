@@ -11,7 +11,12 @@
     padding-top: 12px;
     padding-right: 135px;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1439px) {
+      padding: 12px 60px;
+      grid-column-gap: 30px;
+    }
+
+    @media (max-width: 1250px) {
       padding: 12px 30px;
       grid-column-gap: 30px;
     }

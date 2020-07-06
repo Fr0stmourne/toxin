@@ -1,8 +1,14 @@
 .rooms-grid {
+  display: grid;
+
   &__title {
     font: $h1-font;
     margin-top: 19px;
     letter-spacing: 0.03em;
+
+    @media (max-width: 1439px) {
+      text-align: right;
+    }
 
     @media (max-width: 850px) {
       text-align: center;
@@ -12,9 +18,13 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 270px);
+    grid-template-columns: repeat(auto-fit, 270px);
     grid-gap: 20px 12px;
     margin-bottom: 42px;
+
+    @media (max-width: 1439px) {
+      justify-content: end;
+    }
 
     @media (max-width: 850px) {
       grid-template-columns: 1fr;
@@ -27,5 +37,9 @@
     justify-content: center;
     margin-right: 20px;
     margin-bottom: 70px;
+
+    @media (max-width: 1439px) {
+      margin-right: 0;
+    }
   }
 }
