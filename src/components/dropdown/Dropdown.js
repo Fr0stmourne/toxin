@@ -8,6 +8,7 @@ import './dropdown.scss';
 
 const DEFAULT_VALUE = 0;
 const OPENED_DRODPOWN_CLASS = 'dropdown__result_opened';
+const HIDDEN_RESET_CLASS = 'dropdown__reset_hidden';
 
 export default class Dropdown {
   constructor(dropdownElement) {
@@ -52,13 +53,16 @@ export default class Dropdown {
   @boundMethod
   reset(e) {
     e.preventDefault();
-    this.$input.each((_, el) => {
+    const { $input, $resetButton } = this;
+    $input.each((_, el) => {
       $(el).val(0);
       $(el)
         .parent()
         .find('.minus-btn')
         .click();
     });
+
+    $resetButton.addClass(HIDDEN_RESET_CLASS);
   }
 
   @boundMethod
@@ -72,13 +76,13 @@ export default class Dropdown {
   changeValue(e) {
     e.preventDefault();
 
+    const { $resetButton } = this;
     const $target = $(e.target);
     const $currentItem = $target.closest('.dropdown-item');
     const $minusButton = $currentItem.find('.minus-btn');
     const $plusButton = $currentItem.find('.plus-btn');
     const $currentInput = $currentItem.find('.plus-minus-input');
     const $dropdown = $target.closest('.js-dropdown');
-    $dropdown.find('.reset').removeClass('dropdown__reset_hidden');
 
     const resultArray = [];
     const $allOptions = $dropdown.find('.dropdown-option');
@@ -136,6 +140,11 @@ export default class Dropdown {
       this.enableButton($plusButton);
     }
 
+    if (!resultArray.length) {
+      $resetButton.addClass(HIDDEN_RESET_CLASS);
+    } else {
+      $resetButton.removeClass(HIDDEN_RESET_CLASS);
+    }
     const resultText = `${resultArray.length ? [...new Set(resultArray)].join(', ') : this.initialText}`;
     this.$dropdown.text(resultText);
   }
