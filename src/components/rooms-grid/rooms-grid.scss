@@ -14,7 +14,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, 270px);
     grid-gap: 20px 12px;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
 
     @media (max-width: 850px) {
       grid-template-columns: 1fr;

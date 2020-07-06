@@ -3,7 +3,7 @@
   max-width: 380px;
   width: 100%;
   background-color: $white;
-  padding: 35px 30px 30px;
+  padding: 35px 29px 30px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -17,7 +17,7 @@
   }
 
   &__login-data {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
   }
 
   &__email {
@@ -25,6 +25,10 @@
   }
 
   &__proceed {
-    margin-bottom: 31px;
+    margin-bottom: 29px;
+  }
+
+  &__note {
+    margin-bottom: 2px;
   }
 }
