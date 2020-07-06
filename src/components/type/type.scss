@@ -1,29 +1,16 @@
 .type {
-  &__list {
-    display: table;
-  }
-
   &__item {
-    display: table-row;
-
-    &:not(:last-child) .type__text {
-      padding-bottom: 50px;
-    }
+    display: grid;
+    gap: 0 30px;
+    margin-bottom: 50px;
   }
 
   &__title {
-    display: table-cell;
+    justify-self: right;
     color: $dark-25;
     font-family: "Montserrat", Arial, sans-serif;
     font-weight: 400;
     text-transform: capitalize;
     text-align: right;
-    padding-right: 30px;
-  }
-
-  &__text {
-    width: inherit;
-    max-width: inherit;
-    display: table-cell;
   }
 }

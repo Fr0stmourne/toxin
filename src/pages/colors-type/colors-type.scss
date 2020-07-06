@@ -37,34 +37,40 @@
   }
 
   &__type {
-    margin-right: 48px;
+    margin-right: 47px;
   }
 
   &__type-item {
     &_type_h1 {
+      grid-template-columns: max-content 340px;
       font: $h1-font;
       font-weight: 700;
       line-height: 30px;
-      width: 340px;
+      padding-left: 10px;
     }
 
     &_type_h2 {
+      grid-template-columns: max-content 340px;
+      padding-left: 12px;
       font: $h2-font;
       font-weight: 700;
-      max-width: 340px;
     }
 
     &_type_h3 {
+      grid-template-columns: max-content 340px;
       font: $button-font;
       text-transform: uppercase;
       font-weight: 700;
-      max-width: 340px;
+      padding-left: 22px;
+      margin-bottom: 49px;
     }
 
     &_type_body {
+      grid-template-columns: max-content 310px;
       font: $default-font;
-      line-height: 22px;
-      width: 315px;
+      line-height: 23px;
+      padding-left: 2px;
+      margin-bottom: 0;
     }
   }
 }
