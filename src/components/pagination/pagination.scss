@@ -70,6 +70,10 @@
       background-image: $button-gradient;
       color: $white;
       font-weight: 700;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
     }
   }
 
@@ -90,7 +94,15 @@
     line-height: 24px;
   }
 
-  &__next-page-text {
-    @include visually-hidden;
+  &__next-page {
+    transition: 0.3s;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+
+    &-text {
+      @include visually-hidden;
+    }
   }
 }

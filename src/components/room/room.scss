@@ -10,6 +10,14 @@
     font-size: 14px;
     text-decoration: none;
     color: inherit;
+
+    &:hover {
+      color: $dark-50;
+
+      .room__type {
+        color: rgba($purple, 0.7)
+      }
+    }
   }
 
   &__information {
@@ -72,5 +80,9 @@
     font: $button-font;
     font-size: 14px;
     text-decoration: none;
+
+    &:hover {
+      color: $dark-25;
+    }
   }
 }

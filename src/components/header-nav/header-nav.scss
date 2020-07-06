@@ -18,6 +18,10 @@
 
   &__item {
 
+    &:hover {
+      color: $dark-100;
+    }
+
     @media (max-width: 950px) {
       margin: 0 0 15px 30px;
     }

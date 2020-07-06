@@ -33,5 +33,9 @@
     font: inherit;
     text-decoration: none;
     color: inherit;
+
+    &:hover {
+      color: $dark-100;
+    }
   }
 }
