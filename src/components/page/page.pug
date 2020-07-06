@@ -1,0 +1,9 @@
+mixin page(options = {})
+  -
+    var {
+      active=false,
+      link="./mock",
+      linkText="Текст"
+    } = options
+  li.page(class=active ? "page_active" : "" )
+    a.page__link(href=link)=linkText

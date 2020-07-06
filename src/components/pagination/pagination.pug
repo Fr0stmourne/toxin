@@ -1,12 +1,4 @@
-mixin page(options = {})
-  -
-    var {
-      active=false,
-      link="./mock",
-      linkText="Текст"
-    } = options
-  li.pagination__page(class=active ? "pagination__page_active" : "" )
-    a.pagination__page-link(href=link)=linkText
+include ../page/page.pug
 
 mixin pagination(options = {})
   -
@@ -15,10 +7,10 @@ mixin pagination(options = {})
       number=10,
       description="Описание пагинации"
     } = options
-  .pagination__container
+  .pagination
     if title
       .pagination__title=title
-    ul.pagination
+    ul.pagination__container
       +page({active: true , link: "./mock", linkText: 1})
       +page({active: false , link: "./mock", linkText: 2})
       +page({active: false , link: "./mock", linkText: 3})
