@@ -4,15 +4,17 @@ mixin room-impression(options = {})
   -
     var {
       title="Впечатления от номера",
-      impressions=["Великолепно", "Хорошо", "Удовлетворительно", "Разочарован"]
+      impressions=["Великолепно", "Хорошо", "Удовлетворительно", "Разочарован"],
+      reviewsNumber=260,
+      measure="голосов"
     } = options
   section.room-impression
     h2.room-impression__title=title 
     .room-impression__diagram
       .room-impression__canvas-box
         +doughnut-chart()
-        span.room-impression__canvas-text 260 
-          span.room-impression__canvas-text_highlighted голосов
+        span.room-impression__canvas-text=reviewsNumber 
+          span.room-impression__canvas-text_highlighted=` ${measure}`
       ol.room-impression__diagram-legend
         each impression in impressions
           li.room-impression__diagram-item=impression

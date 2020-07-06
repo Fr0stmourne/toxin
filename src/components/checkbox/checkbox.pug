@@ -6,8 +6,6 @@ mixin checkbox(options = {})
       checked=false,
       labelText="Поставьте галочку"
     } = options
-  if title
-    .checkbox__title=title
   label.checkbox
     input.checkbox__input(type="checkbox", name=inputName, checked=checked)
     span.checkbox__checkmark

@@ -5,7 +5,9 @@ mixin pagination(options = {})
     var {
       title,
       number=10,
-      description="Описание пагинации"
+      description="Описание пагинации",
+      hiddenPages="...",
+      nextPageLabel="Next page"
     } = options
   .pagination
     if title
@@ -14,11 +16,11 @@ mixin pagination(options = {})
       +page({active: true , link: "./mock", linkText: 1})
       +page({active: false , link: "./mock", linkText: 2})
       +page({active: false , link: "./mock", linkText: 3})
-      li.pagination__hidden-pages ... 
+      li.pagination__hidden-pages=hiddenPages
       +page({active: false , link: "./mock", linkText: number})
       li.pagination__next
         a(href="./mock").pagination__next-page
-          span.pagination__next-page-text Next page
+          span.pagination__next-page-text=nextPageLabel
     p.pagination__description=description
 
 

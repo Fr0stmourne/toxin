@@ -4,12 +4,13 @@ mixin room-reviews(options = {})
   -
     var {
       title = "Отзывы посетителей номера",
-      comments = []
+      comments = [],
+      measure="отзыва"
     } = options
   section.room-reviews
     .room-reviews__box
       h2.room-reviews__title=title
-      .room-reviews__reviews-number=`${comments.length} отзыва`
+      .room-reviews__reviews-number=`${comments.length} ${measure}`
     .room-reviews__grid
       each comment in comments
         .room-reviews__room-review

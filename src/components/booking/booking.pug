@@ -11,17 +11,20 @@ mixin booking(options = {})
       price="0",
       calculation=["There are no values"],
       fullPrice=0,
+      measure="в сутки",
+      sum="Итого",
+      numberSign="№",
       action="./mock"
     } = options
   form(action=action).booking
     .booking__room-information
       h3.booking__room
-        span.booking__number №
+        span.booking__number=numberSign
           span.booking__digit=number
         span.booking__type=type
       .booking__per-day
         span.booking__price=price
-        span.booking__measurement  в сутки
+        span.booking__measurement=` ${measure}`
     .booking__datepicker
       +range-datepicker({
         startLabel: "Прибытие",
@@ -47,7 +50,7 @@ mixin booking(options = {})
       })
     .booking__calculation
       +calculation({calculation})
-    .booking__result Итого
+    .booking__result=sum
       .booking__dots
       .booking__price=fullPrice
     +button({buttonText: "забронировать", styleType: "proceed"})

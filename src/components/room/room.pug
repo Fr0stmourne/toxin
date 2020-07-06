@@ -12,7 +12,10 @@ mixin room(options = {})
       name, 
       checkedRating = 4, 
       isRatingDisabled = true, 
-      reviewNumber = 10, 
+      numberSign="№",
+      reviewNumber = 10,
+      measure="в сутки",
+      reviewMeasure="отзывов",
       reviewsLink = "./mock"
     } = options
   .room
@@ -24,14 +27,14 @@ mixin room(options = {})
       .room__room-information
         a.room__room(href=link)
           h3.room__number
-            span.room__number-sign №
+            span.room__number-sign=numberSign
             span.room__digit=number
           span.room__type=type
         .room__per-day
           span.room__price=price
-          span.room__measurement  в сутки
+          span.room__measurement=` ${measure}` 
       .room__rating
         +rate-button({name, checkedRating, disabled: isRatingDisabled})
         a.room__reviews-link(href=reviewsLink)
           =reviewNumber
-          span.room__measurement  Отзывов
+          span.room__measurement=` ${reviewMeasure}`

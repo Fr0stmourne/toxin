@@ -3,11 +3,12 @@ mixin subscription(options = {})
     var {
       title,
       name,
-      placeholder="Введите почту"
+      placeholder="Введите почту",
+      buttonText="Submit"
     } = options
   .subscription
     if title
       .subscription__title=title
     input.subscription__input(type="email" name=name placeholder=placeholder)
     button.subscription__submit-button(type="submit")
-      span.subscription__button-text Submit
+      span.subscription__button-text=buttonText

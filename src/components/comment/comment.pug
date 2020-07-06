@@ -8,11 +8,12 @@ mixin comment(options = {})
       date="31.12.2020",
       likes=5,
       activeLike=false,
-      comment="Комментарий"
+      comment="Комментарий",
+      alt="Фото автора комментария"
     } = options
   .comment
     .comment__information
-      img.comment__photo(src=src, alt="Фото автора комментария")
+      img.comment__photo(src=src, alt=alt)
       .comment__author=author
       .comment__date=date
     .comment__box
