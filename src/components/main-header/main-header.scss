@@ -18,8 +18,8 @@
       padding: 13px 60px;
     }
 
-    @media (max-width: 1200px) {
-      padding: 13px 20px;
+    @media (max-width: 1250px) {
+      padding: 13px 30px;
     }
 
     @media (max-width: 400px) {
@@ -57,7 +57,7 @@
         background-color: $white;
         bottom: 0;
         left: 0;
-        z-index: 5;
+        z-index: 25;
         flex-direction: column;
         transform: translate(0%, 100%);
       }
