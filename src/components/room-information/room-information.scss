@@ -1,11 +1,6 @@
 .room-information {
   max-width: 291px;
 
-  @media (max-width: 750px) {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
   &__title {
     margin: 1px 0 19px;
     font: $h2-font;
