@@ -8,7 +8,11 @@ mixin landing-page(options = {})
     var {
       description = "Landing page",
       keywords = "Landing page",
-      title = "Landing page"
+      title = "Landing page",
+      note = {
+        title: "Найдём номера под ваши пожелания"
+      },
+      noteText = "Лучшие номера для вашей работы, отдыха и просто вдохновения",
     } = options
   <!DOCTYPE html>
   html(lang="ru")
@@ -19,10 +23,6 @@ mixin landing-page(options = {})
       main.landing-page__main
         section.landing-page__room-booking
           .landing-page__form
-            +find-room({
-              title: "Найдём номера под ваши пожелания"
-            })
-          .landing-page__note Лучшие номера для вашей работы, отдыха и просто вдохновения
+            +find-room(note)
+          .landing-page__note=noteText
       +toxin-footer()
-  
-    

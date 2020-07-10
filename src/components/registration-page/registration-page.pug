@@ -8,7 +8,12 @@ mixin registration-page(options = {})
     var {
       description = "registration page",
       keywords = "registration page",
-      title = "Registration page"
+      title = "Registration page",
+      registration = {
+        title: "Регистрация аккаунта",
+        noteText: "Уже есть аккаунт на Toxin",
+        link: "signin-page.html"
+      },
     } = options
   <!DOCTYPE html>
   html(lang="ru")
@@ -18,9 +23,5 @@ mixin registration-page(options = {})
         +toxin-header()
         main.registration-page__main
           .registration-page__card
-              +registration({
-                title: "Регистрация аккаунта",
-                noteText: "Уже есть аккаунт на Toxin",
-                link: "signin-page.html"
-              })
+              +registration(registration)
         +toxin-footer()       
