@@ -1,0 +1,112 @@
+include ../../components/meta/meta.pug
+include ../../components/main-header/main-header.pug
+include ../../components/main-footer/main-footer.pug
+include ../../components/toxin-footer/toxin-footer.pug
+
+mixin headers-footers(options = {})
+  -
+    var {
+      description = "headers footers",
+      keywords = "headers footers",
+      title = "Headers footers",
+      headers = [
+        {
+          unlogged: true,
+          registrationText: "зарегистрироваться",
+          loginText: "войти",
+          items: [{
+              text: "О нас",
+              active: true,
+              link: "./mock"
+            }, {
+              text: "Услуги",
+              link: "./mock",
+              dropdown: [{
+                text: "Услуга",
+                link: "./mock"
+              }, {
+                text: "Услуга 2",
+                link: "./mock"
+              }, {
+                text: "Услуга 2",
+                link: "./mock"
+              }]
+            },
+            {
+              text: "Вакансии",
+              link: "./mock"
+            }, {
+              text: "Новости",
+              link: "./mock"
+            },
+            {
+              text: "Соглашения",
+              link: "./mock",
+              dropdown: [{
+                text: "Услуга",
+                link: "./mock"
+              }, {
+                text: "Услуга 2",
+                link: "./mock"
+              }, {
+                text: "Услуга 2",
+                link: "./mock"
+              }]
+            }
+          ]
+        },
+        {
+          username: "Юлий Цезарь",
+          items: [{
+              text: "О нас",
+              active: true,
+              link: "./mock"
+            }, {
+              text: "Услуги",
+              link: "./mock",
+              dropdown: [{
+                text: "Услуга",
+                link: "./mock"
+              }, {
+                text: "Услуга 2",
+                link: "./mock"
+              }, {
+                text: "Услуга 2",
+                link: "./mock"
+              }]
+            },
+            {
+              text: "Вакансии",
+              link: "./mock"
+            }, {
+              text: "Новости",
+              link: "./mock"
+            },
+            {
+              text: "Соглашения",
+              link: "./mock",
+              dropdown: [{
+                text: "Услуга",
+                link: "./mock"
+              }, {
+                text: "Услуга 2",
+                link: "./mock"
+              }, {
+                text: "Услуга 2",
+                link: "./mock"
+              }]
+            }
+          ]
+        }
+      ]
+    } = options
+  <!DOCTYPE html>
+  html(lang="ru")
+    +meta({description, keywords, title})
+    body.headers-footers
+      .headers-footers__unlogged-header
+        +main-header(headers[0])
+      .headers-footers__logged-header
+        +main-header(headers[1])
+      .headers-footers__extended-footer
+        +toxin-footer()
