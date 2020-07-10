@@ -17,13 +17,12 @@ function getEntrypoints(scripts) {
   const result = {};
   scripts.forEach(scriptPath => {
     const scriptName = scriptPath.slice(scriptPath.indexOf('src/pages'));
-    const styleName = scriptName.replace(/\.js/, '.scss');
     result[
       `${scriptPath
         .split('/')
         .slice(-1)[0]
         .replace(/\.js/, '')}`
-    ] = [`${__dirname}/../${scriptName}`, `${__dirname}/../${styleName}`];
+    ] = [`${__dirname}/../${scriptName}`];
   });
 
   return result;

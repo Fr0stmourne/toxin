@@ -1,0 +1,14 @@
+mixin meta(options = {})
+  -
+    var {
+      description="template",
+      keywords="template",
+      title="title"
+    } = options
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(name="description", content=description) 
+  meta(name="keywords", content=keywords)
+  link(rel="shortcut icon", href="favicon.png", type="image/png")
+  link(rel="stylesheet", href="utils.css")
+  title=title

@@ -1,3 +1,1 @@
-import '../../components/colors/colors';
-import '../../components/type/type';
-import './colors-type.scss';
+import '../../components/colors-type/colors-type';
