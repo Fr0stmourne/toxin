@@ -7,17 +7,23 @@ mixin login(options = {})
       action="./mock",
       noteText="Подсказка",
       noteAction="registration-page.html",
-      title="Войти"
+      title="Войти",
+      fields={
+        email: {placeholder: "Email", name: "email", type: "email", arialabel: "Почта"},
+        password: {placeholder: "Пароль", name: "password", type: "password", arialabel: "Пароль"},
+      },
+      proceedButton={buttonText: "войти", styleType: "proceed"},
+      note={noteText: "Нет аккаунта на Toxin?", buttonText: "Создать", link: "registration-page.html"}
     } = options
   .login
     h2.login__title=title
     form(action=action).login__form
       .login__login-data
         .login__email
-          +text-field({placeholder: "Email", name: "email", type: "email", arialabel: "Почта"})
+          +text-field(fields.email)
         .login__password
-          +text-field({placeholder: "Пароль", name: "password", type: "password", arialabel: "Пароль"})
+          +text-field(fields.password)
       .login__proceed
-        +button({buttonText: "войти", styleType: "proceed"})
+        +button(proceedButton)
     .login__note
-      +note({noteText: "Нет аккаунта на Toxin?", buttonText: "Создать", link: "registration-page.html"})
+      +note(note)

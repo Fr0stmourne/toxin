@@ -10,6 +10,28 @@ mixin registration(options = {})
     var {
       title="Регистрация",
       noteText="Уже зарегистрированы?",
+      fields={
+        name: {
+          placeholder: "Имя",
+          name: "registration-name",
+          arialabel: "Имя"
+        },
+        surname: {
+          placeholder: "Фамилия",
+          name: "registration-surname",
+          arialabel: "Фамилия"
+        },
+        sex: {
+          man: {name: "registration-sex", labelText: "Мужчина"},
+          woman: {name: "registration-sex", labelText: "Женщина"}
+        },
+        birthday: {placeholder: "ДД.ММ.ГГГГ", title: "Дата рождения", name:"registration-birthday"},
+        email: {placeholder: "Email", name: "registration-email", type: "email", title: "данные для входа в сервис", arialabel: "Почта"},
+        password: {placeholder: "Пароль", name: "registration-password", type: "password", arialabel: "Пароль"}
+      },
+      toggle={name: "registration-offers", buttonText: "Получать спецпредложения"},
+      proceenButton={buttonText: "перейти к оплате", styleType: "proceed"},
+      note={noteText: "Уже есть аккаунт на Toxin", buttonText: "Войти", link: "signin-page.html"},
       action="./mock",
       noteAction="signin-page.html"
     } = options
@@ -17,24 +39,24 @@ mixin registration(options = {})
     form(action=action).registration__main-form
       h2.registration__title=title
       .registration__name
-        +text-field({placeholder: "Имя", name:"registration-name", arialabel: "Имя"})
+        +text-field(fields.name)
       .registration__surname
-        +text-field({placeholder: "Фамилия", name:"registration-surname", arialabel: "Фамилия"})
+        +text-field(fields.surname)
       .registration__sex
           .registration__man
-            +radio-button({name: "registration-sex", labelText: "Мужчина"})
+            +radio-button(fields.sex.man)
           .registration__woman
-            +radio-button({name: "registration-sex", labelText: "Женщина"})
+            +radio-button(fields.sex.woman)
       .registration__birthday
-        +masked-text-field({placeholder: "ДД.ММ.ГГГГ", title: "Дата рождения", name:"registration-birthday"})
+        +masked-text-field(fields.birthday)
       .registration__login-data
           .registration__email
-            +text-field({placeholder: "Email", name: "registration-email", type: "email", title: "данные для входа в сервис", arialabel: "Почта"})
+            +text-field(fields.email)
           .registration__password
-            +text-field({placeholder: "Пароль", name: "registration-password", type: "password", arialabel: "Пароль"})
+            +text-field(fields.password)
       .registration__offers-button
-        +toggle-button({name: "registration-offers", buttonText: "Получать спецпредложения"})
+        +toggle-button(toggle)
       .registration__proceed
-        +button({buttonText: "перейти к оплате", styleType: "proceed"})
+        +button(proceenButton)
     .registration__note
-      +note({noteText: "Уже есть аккаунт на Toxin", buttonText: "Войти", link: "signin-page.html"})
+      +note(note)

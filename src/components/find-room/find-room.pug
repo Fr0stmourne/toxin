@@ -6,17 +6,10 @@ mixin find-room(options = {})
   -
     var {
       title,
-      action="search-room.html"
-    } = options
-  form(action=action).find-room
-    h2.find-room__title=title
-    .find-room__datepicker
-      +range-datepicker({
-        startLabel: "Прибытие",
-        endLabel: "Выезд"
-      })
-    .find-room__dropdown
-      +dropdown({
+      action="search-room.html",
+      startLabel = "Прибытие",
+      endLabel = "Выезд",
+      dropdown = {
         title: "гости",
         controls: true,
         placeholder: "Сколько гостей",
@@ -32,5 +25,16 @@ mixin find-room(options = {})
           text: "Младенцы",
           wordForms: "младенец младенца младенцев"
         }]
+      },
+      button = {buttonText: "подобрать номер", styleType: "proceed"}
+    } = options
+  form(action=action).find-room
+    h2.find-room__title=title
+    .find-room__datepicker
+      +range-datepicker({
+        startLabel,
+        endLabel
       })
-    +button({buttonText: "подобрать номер", styleType: "proceed"})
+    .find-room__dropdown
+      +dropdown(dropdown)
+    +button(button)

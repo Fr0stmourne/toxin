@@ -12,14 +12,14 @@ mixin cards(options = {})
       description = "cards",
         keywords = "cards",
         title = "Cards",
-        findRooms = [{
+        findRooms = {
           title: "Найдём номера под ваши пожелания"
-        }],
-        registration = [{
+        },
+        registration = {
           title: "Регистрация аккаунта",
           noteText: "Уже есть аккаунт на Toxin"
-        }],
-        booking = [{
+        },
+        booking = {
           number: "888",
           type: "люкс",
           fullPrice: "38 081₽",
@@ -29,14 +29,14 @@ mixin cards(options = {})
             ["Сбор за услуги: скидка 2 179₽", "0₽", "Инфо"],
             ["Сбор за дополнительные услуги", "300₽", "Информация"]
           ]
-        }],
-        login = [{
+        },
+        login = {
           noteText: "Нет аккаунта на Toxin?"
-        }],
-        datepicker = [{
+        },
+        datepicker = {
           controls: true,
           inline: true
-        }],
+        },
         rooms = [{
             number: "888",
             checkedRating: 3,
@@ -67,17 +67,17 @@ mixin cards(options = {})
       .cards__container
         .cards__find-register
           .cards__find-room
-            +find-room(findRooms[0])
+            +find-room(findRooms)
           .cards__registration
-            +registration(registration[0])
+            +registration(registration)
         .cards__booking-login
           .cards__booking
-            +booking(booking[0])
+            +booking(booking)
           .cards__login
-            +login(login[0])
+            +login(login)
         .cards__datepicker-rooms
           .cards__datepicker
-            +range-datepicker(datepicker[0])
+            +range-datepicker(datepicker)
           .cards__rooms
             .cards__room
               +room(rooms[0])
