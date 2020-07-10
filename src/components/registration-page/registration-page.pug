@@ -6,22 +6,14 @@ include ../../components/registration/registration.pug
 mixin registration-page(options = {})
   -
     var {
-      description = "registration page",
-      keywords = "registration page",
-      title = "Registration page",
       registration = {
         title: "Регистрация аккаунта",
         noteText: "Уже есть аккаунт на Toxin",
         link: "signin-page.html"
       },
     } = options
-  <!DOCTYPE html>
-  html(lang="ru")
-    +meta({description, keywords, title})
-    body.registration-page
-      .registration-page__wrapper
-        +toxin-header()
-        main.registration-page__main
-          .registration-page__card
-              +registration(registration)
-        +toxin-footer()       
+  body.registration-page
+    .registration-page__wrapper
+      main.registration-page__main
+        .registration-page__card
+            +registration(registration)     

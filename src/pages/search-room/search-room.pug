@@ -1,3 +1,13 @@
+extends ../../components/template-page/template-page.pug
+
 include ../../components/search-room/search-room.pug
 
-+search-room()
+block meta
+  meta(name="description", content="search room") 
+  meta(name="keywords", content="search room")
+  
+block title
+  title Search room
+
+block content
+  +search-room()

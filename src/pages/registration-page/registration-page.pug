@@ -1,3 +1,14 @@
+extends ../../components/template-page/template-page.pug
+
 include ../../components/registration-page/registration-page.pug
 
-+registration-page()
+block meta
+  meta(name="description", content="registration") 
+  meta(name="keywords", content="registration")
+  
+block title
+  title Registration page
+
+block content
+  +registration-page()
+

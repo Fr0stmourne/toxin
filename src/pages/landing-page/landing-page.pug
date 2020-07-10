@@ -1,3 +1,13 @@
+extends ../../components/template-page/template-page.pug
+
 include ../../components/landing-page/landing-page.pug
 
-+landing-page()
+block meta
+  meta(name="description", content="landing") 
+  meta(name="keywords", content="landing")
+  
+block title
+  title Landing page
+
+block content
+  +landing-page()

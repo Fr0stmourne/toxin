@@ -6,23 +6,15 @@ include ../../components/find-room/find-room.pug
 mixin landing-page(options = {})
   -
     var {
-      description = "Landing page",
-      keywords = "Landing page",
-      title = "Landing page",
       note = {
         title: "Найдём номера под ваши пожелания"
       },
       noteText = "Лучшие номера для вашей работы, отдыха и просто вдохновения",
     } = options
-  <!DOCTYPE html>
-  html(lang="ru")
-    +meta({description, keywords, title})
-    body.landing-page
+  body.landing-page
     .landing-page__wrapper
-      +toxin-header()
       main.landing-page__main
         section.landing-page__room-booking
           .landing-page__form
             +find-room(note)
           .landing-page__note=noteText
-      +toxin-footer()

@@ -1,3 +1,13 @@
+extends ../../components/template-page/template-page.pug
+
 include ../../components/signin-page/signin-page.pug
 
-+signin-page()
+block meta
+  meta(name="description", content="sign in") 
+  meta(name="keywords", content="sign in")
+  
+block title
+  title Sign in
+
+block content
+  +signin-page()

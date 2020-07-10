@@ -1,3 +1,6 @@
+include ../toxin-header/toxin-header.pug
+include ../toxin-footer/toxin-footer.pug
+
 <!DOCTYPE html>
 html(lang="ru")
   head
@@ -10,5 +13,7 @@ html(lang="ru")
       meta(name="keywords", content="page, template")
     block title
       title Template page
-  block content
-    body
+  body
+    +toxin-header()
+    block content
+    +toxin-footer()

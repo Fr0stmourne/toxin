@@ -61,31 +61,26 @@ mixin room-details(options = {})
         restrictions,
         impression
     } = options
-  <!DOCTYPE html>
-  html(lang="ru")
-    +meta({description, keywords, title})
-    body.room-details
-      .room-details__wrapper
-        +toxin-header()
-        main.room-details__main
-          .room-details__room-photos
-              .room-details__photo-box
-                img.room-details__photo(src=roomPhotos[0], alt="room-photo")
-              .room-details__photo-box
-                img.room-details__photo(src=roomPhotos[1], alt="room-photo")
-              .room-details__photo-box
-                img.room-details__photo(src=roomPhotos[2], alt="room-photo")
-          .room-details__container
-            .room-details__main-block
-              .room-details__room-information
-                .room-details__information
-                  +room-information({ advantages })
-                .room-details__impression
-                  +room-impression(impression)
-              .room-details__room-reviews
-                +room-reviews({ comments })
-              .room-details__room-restrictions
-                +room-restrictions(restrictions)
-            .room-details__booking
-              +booking(booking)
-        +toxin-footer()
+  body.room-details
+    .room-details__wrapper
+      main.room-details__main
+        .room-details__room-photos
+            .room-details__photo-box
+              img.room-details__photo(src=roomPhotos[0], alt="room-photo")
+            .room-details__photo-box
+              img.room-details__photo(src=roomPhotos[1], alt="room-photo")
+            .room-details__photo-box
+              img.room-details__photo(src=roomPhotos[2], alt="room-photo")
+        .room-details__container
+          .room-details__main-block
+            .room-details__room-information
+              .room-details__information
+                +room-information({ advantages })
+              .room-details__impression
+                +room-impression(impression)
+            .room-details__room-reviews
+              +room-reviews({ comments })
+            .room-details__room-restrictions
+              +room-restrictions(restrictions)
+          .room-details__booking
+            +booking(booking)

@@ -1,3 +1,13 @@
+extends ../../components/template-page/template-page.pug
+
 include ../../components/room-details/room-details.pug
 
-+room-details()
+block meta
+  meta(name="description", content="room details") 
+  meta(name="keywords", content="room details")
+  
+block title
+  title Room details
+
+block content
+  +room-details()
