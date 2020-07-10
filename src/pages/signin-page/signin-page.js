@@ -1,3 +1,1 @@
-import '../../components/toxin-header/toxin-header';
-import '../../components/toxin-footer/toxin-footer';
-import '../../components/login/login';
+import '../../components/signin-page/signin-page';

@@ -1,0 +1,90 @@
+include ../../components/meta/meta.pug
+include ../../components/toxin-header/toxin-header.pug
+include ../../components/toxin-footer/toxin-footer.pug
+include ../../components/advantage/advantage.pug
+include ../../components/comment/comment.pug
+include ../../components/bullet-list/bullet-list.pug
+include ../../components/booking/booking.pug
+include ../../components/room-information/room-information.pug
+include ../../components/room-impression/room-impression.pug
+include ../../components/room-reviews/room-reviews.pug
+include ../../components/room-restrictions/room-restrictions.pug
+
+mixin room-details(options = {})
+  -
+    var {
+      description = "room details",
+        keywords = "room details",
+        title = "Room details",
+        roomPhotos = ["details-1.jpg", "details-2.jpg", "details-3.jpg"],
+        advantages = [{
+          title: "Комфорт",
+          description: "Шумопоглощающие стены",
+          alt: "Дом",
+          imageLink: "advantage-house.svg"
+        }, {
+          title: "Удобство",
+          description: "Окно в каждой из спален",
+          alt: "Город",
+          imageLink: "advantage-city.svg"
+        }, {
+          title: "Уют",
+          description: "Номер оснащён камином",
+          alt: "Камин",
+          imageLink: "whatshot.svg"
+        }],
+        comments = [{
+          src: "comment.jpg",
+          activeLike: true,
+          likes: 12,
+          author: "Мурад Сарафанов",
+          date: "5 дней назад",
+          comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+        }, {
+          src: "comment-1.jpg",
+          likes: 2,
+          author: "Патрисия Стёклышкова",
+          date: "Неделю назад",
+          comment: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
+        }],
+        booking = {
+          number: "888",
+          type: "люкс",
+          fullPrice: "38 081₽",
+          price: "9 990₽",
+          calculation: [
+            ["9 990₽ х 4 суток", "39 960₽"],
+            ["Сбор за услуги: скидка 2 179₽", "0₽", "Инфо"],
+            ["Сбор за дополнительные услуги", "300₽", "Информация"]
+          ]
+        },
+        restrictions,
+    } = options
+  <!DOCTYPE html>
+  html(lang="ru")
+    +meta({description, keywords, title})
+    body.room-details
+      .room-details__wrapper
+        +toxin-header()
+        main.room-details__main
+          .room-details__room-photos
+              .room-details__photo-box
+                img.room-details__photo(src=roomPhotos[0], alt="room-photo")
+              .room-details__photo-box
+                img.room-details__photo(src=roomPhotos[1], alt="room-photo")
+              .room-details__photo-box
+                img.room-details__photo(src=roomPhotos[2], alt="room-photo")
+          .room-details__container
+            .room-details__main-block
+              .room-details__room-information
+                .room-details__information
+                  +room-information({ advantages})
+                .room-details__impression
+                  +room-impression()
+              .room-details__room-reviews
+                +room-reviews({ comments })
+              .room-details__room-restrictions
+                +room-restrictions(restrictions)
+            .room-details__booking
+              +booking(booking)
+        +toxin-footer()

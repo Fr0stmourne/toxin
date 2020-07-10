@@ -1,22 +1,3 @@
-extends ../../components/template-page/template-page.pug
+include ../../components/signin-page/signin-page.pug
 
-include ../../components/toxin-header/toxin-header.pug
-include ../../components/toxin-footer/toxin-footer.pug
-include ../../components/login/login.pug
-
-block meta
-  meta(name="description", content="login")
-  meta(name="keywords", content="login, sign in")
-
-block title
-  title Sign in
-
-block content
-  body.signin-page
-    .signin-page__wrapper
-      +toxin-header()
-      main.signin-page__main
-        .signin-page__login-card
-          +login({noteText: "Нет аккаунта на Toxin?"})
-      +toxin-footer()
-                
++signin-page()

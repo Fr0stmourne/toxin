@@ -1,0 +1,24 @@
+include ../../components/meta/meta.pug
+include ../../components/toxin-header/toxin-header.pug
+include ../../components/toxin-footer/toxin-footer.pug
+include ../../components/login/login.pug
+
+mixin signin-page(options = {})
+  -
+    var {
+      description = "Sign in",
+        keywords = "Sign in, login",
+        title = "Sign in",
+        login = {noteText: "Нет аккаунта на Toxin?"}
+    } = options
+  <!DOCTYPE html>
+  html(lang="ru")
+    +meta({description, keywords, title})
+    body.signin-page
+      .signin-page__wrapper
+        +toxin-header()
+        main.signin-page__main
+          .signin-page__login-card
+            +login(login)
+        +toxin-footer()
+                
