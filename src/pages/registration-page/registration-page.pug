@@ -1,28 +1,3 @@
-extends ../../components/template-page/template-page.pug
+include ../../components/registration-page/registration-page.pug
 
-include ../../components/toxin-header/toxin-header.pug
-include ../../components/toxin-footer/toxin-footer.pug
-include ../../components/registration/registration.pug
-
-block meta
-  meta(name="description", content="registration")
-  meta(name="keywords", content="registration")
-
-block title
-  title Registration
-
-block content
-  body.registration-page
-    .registration-page__wrapper
-      +toxin-header()
-      main.registration-page__main
-        .registration-page__card
-            +registration({
-              title: "Регистрация аккаунта",
-              noteText: "Уже есть аккаунт на Toxin",
-              link: "signin-page.html"
-            })
-      +toxin-footer()
-                
-      
-
++registration-page()

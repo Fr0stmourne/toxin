@@ -1,0 +1,28 @@
+include ../../components/meta/meta.pug
+include ../../components/toxin-header/toxin-header.pug
+include ../../components/toxin-footer/toxin-footer.pug
+include ../../components/find-room/find-room.pug
+
+mixin landing-page(options = {})
+  -
+    var {
+      description = "Landing page",
+      keywords = "Landing page",
+      title = "Landing page"
+    } = options
+  <!DOCTYPE html>
+  html(lang="ru")
+    +meta({description, keywords, title})
+    body.landing-page
+    .landing-page__wrapper
+      +toxin-header()
+      main.landing-page__main
+        section.landing-page__room-booking
+          .landing-page__form
+            +find-room({
+              title: "Найдём номера под ваши пожелания"
+            })
+          .landing-page__note Лучшие номера для вашей работы, отдыха и просто вдохновения
+      +toxin-footer()
+  
+    

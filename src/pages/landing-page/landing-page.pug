@@ -1,26 +1,3 @@
-extends ../../components/template-page/template-page.pug
+include ../../components/landing-page/landing-page.pug
 
-include ../../components/toxin-header/toxin-header.pug
-include ../../components/toxin-footer/toxin-footer.pug
-include ../../components/find-room/find-room.pug
-
-block meta
-  meta(name="description", content="landing page")
-  meta(name="keywords", content="landing, toxin, company")
-  
-block title
-  title Landing page
-
-block content
-  body.landing-page
-    .landing-page__wrapper
-      +toxin-header()
-      main.landing-page__main
-        section.landing-page__room-booking
-          .landing-page__form
-            +find-room({
-              title: "Найдём номера под ваши пожелания"
-            })
-          .landing-page__note Лучшие номера для вашей работы, отдыха и просто вдохновения
-      +toxin-footer()
-    
++landing-page()
