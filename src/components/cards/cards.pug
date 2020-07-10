@@ -79,7 +79,6 @@ mixin cards(options = {})
           .cards__datepicker
             +range-datepicker(datepicker)
           .cards__rooms
-            .cards__room
-              +room(rooms[0])
-            .cards__room
-              +room(rooms[1])
+            each room in rooms
+              .cards__room
+                +room(room)

@@ -12,73 +12,59 @@ mixin filter(options = {})
       sliderHint="Стоимость за сутки пребывания в номере",
       checkboxTitle="Checkbox Buttons",
       accessibilityTitle="доступность",
-    } = options
-  section.filter
-    h2.filter__main-title=title
-    .filter__date-filter
-      +date-filter({title: "даты пребывания в отеле"})
-    .filter__guests
-      +dropdown({
-        title: "гости",
-        controls: true,
-        placeholder: "Сколько гостей",
-        optionsList: [{
-          text: "Взрослые",
-          wordForms: "гость гостя гостей",
-          group: 1
-        }, {
-          text: "Дети",
-          wordForms: "гость гостя гостей",
-          group: 1
-        }, {
-          text: "Младенцы",
-          wordForms: "младенец младенца младенцев"
-        }]
-      })
-    .filter__slider
-      +slider({
+      datefilter={title: "даты пребывания в отеле"},
+      dropdowns=[{
+          title: "гости",
+          controls: true,
+          placeholder: "Сколько гостей",
+          optionsList: [{
+            text: "Взрослые",
+            wordForms: "гость гостя гостей",
+            group: 1
+          }, {
+            text: "Дети",
+            wordForms: "гость гостя гостей",
+            group: 1
+          }, {
+            text: "Младенцы",
+            wordForms: "младенец младенца младенцев"
+          }]
+        },
+        {
+          title: "Удобства номера",
+          placeholder: "Комнаты",
+          optionsList: [{
+            text: "Спальни",
+            wordForms: "спальня спальни спален"
+          }, {
+            text: "Кровати",
+            wordForms: "кровать кровати кроватей"
+          }, {
+            text: "Ванные комнаты",
+            wordForms: "ванная ванные ванных"
+          }]
+        }
+      ],
+      slider={
         title: "диапазон цены"
-      })
-      .filter__slider-hint=sliderHint
-    .filter__checkbox-group
-      .filter__checkbox-title=checkboxTitle
-      .filter__checkbox
-        +checkbox({labelText: "Можно курить"})
-      .filter__checkbox
-        +checkbox({labelText: "Можно с питомцами"})
-      .filter__checkbox
-        +checkbox({labelText: "Можно пригласить гостей (до 10 человек)"})
-    .filter__accessibility
-      .filter__accessibility-title=accessibilityTitle
-      .filter__rich-checkboxes 
-        .filter__rich-checkbox
-          +rich-checkbox({
-            labelText: "Широкий коридор", 
-            description: "Ширина коридоров в номере не менее 91 см."
-          })
-        .filter__rich-checkbox
-          +rich-checkbox({
-            labelText: "Помощник для инвалидов", 
-            description: "На 1 этаже вас встретит специалист  и проводит до номера.",
-            wide: true
-          })
-    .filter__comfort
-      +dropdown({
-        title: "Удобства номера",
-        placeholder: "Комнаты",
-        optionsList: [{
-          text: "Спальни",
-          wordForms: "спальня спальни спален"
-        }, {
-          text: "Кровати",
-          wordForms: "кровать кровати кроватей"
-        }, {
-          text: "Ванные комнаты",
-          wordForms: "ванная ванные ванных"
-        }]
-      })
-    .filter__additional
-      +expandable-list({
+      },
+      checkboxes=[
+        {labelText: "Можно курить"},
+        {labelText: "Можно с питомцами"},
+        {labelText: "Можно пригласить гостей (до 10 человек)"}
+      ],
+      richCheckboxes=[
+        {
+          labelText: "Широкий коридор", 
+          description: "Ширина коридоров в номере не менее 91 см."
+        },
+        {
+          labelText: "Помощник для инвалидов", 
+          description: "На 1 этаже вас встретит специалист  и проводит до номера.",
+          wide: true
+        }
+      ],
+      list={
         title: "дополнительные удобства",
         list: [{
           labelText: "Завтрак"
@@ -100,4 +86,29 @@ mixin filter(options = {})
         }, {
           labelText: "Шампунь"
         }]
-      })
+      }
+    } = options
+  section.filter
+    h2.filter__main-title=title
+    .filter__date-filter
+      +date-filter(datefilter)
+    .filter__guests
+      +dropdown(dropdowns[0])
+    .filter__slider
+      +slider(slider)
+      .filter__slider-hint=sliderHint
+    .filter__checkbox-group
+      .filter__checkbox-title=checkboxTitle
+      each checkbox in checkboxes
+        .filter__checkbox
+          +checkbox(checkbox)
+    .filter__accessibility
+      .filter__accessibility-title=accessibilityTitle
+      .filter__rich-checkboxes
+        each checkbox in checkboxes
+          .filter__rich-checkbox
+            +rich-checkbox(checkbox)
+    .filter__comfort
+      +dropdown(dropdowns[1])
+    .filter__additional
+      +expandable-list(list)

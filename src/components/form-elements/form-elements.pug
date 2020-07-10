@@ -374,10 +374,9 @@ mixin form-elements(options = {})
       .ui-kit__container
         .ui-kit__interactive
           .ui-kit__inputs
-            .ui-kit__text-field
-              +text-field(textFields[0])
-            .ui-kit__text-field
-              +text-field(textFields[1])
+            each field in textFields
+              .ui-kit__text-field
+                +text-field(field)
             .ui-kit__dropdown
               +dropdown(dropdowns[0])
             .ui-kit__masked-field
@@ -390,40 +389,33 @@ mixin form-elements(options = {})
               +subscription(subscriptions[0])
           .ui-kit__checkers
             .ui-kit__checkboxes
-              .ui-kit__checkbox
-                .ui-kit__checkbox-title=checkboxes.title
-                +checkbox(checkboxes.items[0])
-              .ui-kit__checkbox
-                +checkbox(checkboxes.items[1])
-              .ui-kit__checkbox
-                +checkbox(checkboxes.items[2])
+              .ui-kit__checkbox-title=checkboxes.title
+              each checkbox in checkboxes.items
+                .ui-kit__checkbox
+                  +checkbox(checkbox)
             .ui-kit__radio
               .ui-kit__radio-title=radio.title
               .ui-kit__radio-buttons
-                .ui-kit__radio-button
-                  +radio-button(radio.items[0])
-                .ui-kit__radio-button
-                  +radio-button(radio.items[1])
+                each radioButton in radio.items
+                  .ui-kit__radio-button
+                    +radio-button(radioButton)
             .ui-kit__togglers
               .ui-kit__toggle-title=toggle.title
-              .ui-kit__toggle
-                +toggle-button(toggle.items[0])
-              .ui-kit__toggle
-                +toggle-button(toggle.items[1])
+              each toggleButton in toggle.items
+                .ui-kit__toggle
+                  +toggle-button(toggleButton)
             .ui-kit__like
               .ui-kit__like-title 
               .ui-kit__like-buttons
-                .ui-kit__like-button
-                  +like-button(like.items[0])
-                .ui-kit__like-button
-                  +like-button(like.items[1])
+                each likeButton in like.items
+                  .ui-kit__like-button
+                    +like-button(likeButton)
             .ui-kit__rate
               .ui-kit__rate-title 
               .ui-kit__rate-buttons
-                .ui-kit__rate-button
-                  +rate-button(rate.items[0])
-                .ui-kit__rate-button
-                  +rate-button(rate.items[1])
+                each rateButton in rate.items
+                  .ui-kit__rate-button
+                    +rate-button(rateButton)
           .ui-kit__buttons-slider
             .ui-kit__slider-range
               +slider(slider.items[0])
@@ -435,10 +427,9 @@ mixin form-elements(options = {})
                 +button(buttons.items[2])
                 +button(buttons.items[3])
               .ui-kit__links
-                .ui-kit__link
-                  +link(links.items[0])
-                .ui-kit__link
-                  +link(links.items[1])
+                each linkItem in links.items
+                  .ui-kit__link
+                    +link(linkItem)
               .ui-kit__proceed
                 +button(buttons.items[4])
               .ui-kit__pagination
@@ -451,15 +442,13 @@ mixin form-elements(options = {})
               .ui-kit__dropdown-item
                 +dropdown(dropdowns[2])
             .ui-kit__expand-lists
-              .ui-kit__expand-list
-                +expandable-list(expandableLists.items[0])
-              .ui-kit__expand-list
-                +expandable-list(expandableLists.items[1])
+              each expandableList in expandableLists.items
+                .ui-kit__expand-list
+                  +expandable-list(expandableList)
             .ui-kit__advantages
-              .ui-kit__advantage
-                +advantage(advantages[0])
-              .ui-kit__advantage
-                +advantage(advantages[1])
+              each advantageItem in advantages
+                .ui-kit__advantage
+                  +advantage(advantageItem)
           .ui-kit__extended-dropdowns
             .ui-kit__controls-dropdowns
               .ui-kit__controls-dropdown
@@ -469,10 +458,9 @@ mixin form-elements(options = {})
             .ui-kit__checkboxes-bullet
               .ui-kit__rich-checkboxes
                 .ui-kit__rich-checkboxes-title=richCheckboxes.title
-                .ui-kit__rich-checkbox
-                  +rich-checkbox(richCheckboxes.items[0])
-                .ui-kit__rich-checkbox
-                  +rich-checkbox(richCheckboxes.items[1])
+                each richCheckbox in richCheckboxes.items
+                  .ui-kit__rich-checkbox
+                    +rich-checkbox(richCheckbox)
               .ui-kit__bullet
                 +bullet-list(bulletLists[0])
             .ui-kit__comment
