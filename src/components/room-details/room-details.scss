@@ -83,6 +83,11 @@
     grid-template-columns: max-content max-content;
     grid-template-rows: max-content max-content;
 
+    @media (min-width: 1440px) {
+      grid-template-columns: 68% 32%;
+      max-width: none;
+    }
+
     @media (max-width: 1400px) {
       max-height: none;
       grid-template-columns: 1fr max-content;
@@ -101,6 +106,11 @@
   &__photo {
     @media (max-width: 1400px) {
       height: 100%;
+    }
+
+    @media (min-width: 1440px) {
+      object-fit: cover;
+      width: 100%;
     }
   }
 

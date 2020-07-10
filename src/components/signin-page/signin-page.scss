@@ -11,13 +11,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1440px;
     min-height: 683px;
     width: 100%;
     margin: 0 auto 1px;
     background-image: url('../../images/registration-bg.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: -70px;
+    background-position-y: 80%;
   }
 
   &__login-card {

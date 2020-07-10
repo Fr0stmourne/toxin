@@ -8,13 +8,13 @@
     flex: 1 0 auto;
     align-items: center;
     justify-content: center;
-    max-width: 1440px;
     min-height: 683px;
     width: 100%;
     margin: 0 auto 1px;
     background-image: url('../../images/registration-bg.jpg');
     background-repeat: no-repeat;
-    background-position-y: -70px;
+    background-size: cover;
+    background-position-y: 80%;
 
     @media (max-width: 400px) {
       padding: 0 10px;
