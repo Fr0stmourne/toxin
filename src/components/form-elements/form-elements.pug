@@ -24,363 +24,457 @@ include ../../components/find-room/find-room.pug
 mixin form-elements(options = {})
   -
     var {
-      description="form elements",
-      keywords="form elements",
-      title="UI Kit"
+      description = "form elements",
+        keywords = "form elements",
+        title = "UI Kit",
+        textFields = [{
+            placeholder: "Email",
+            name: "test",
+            title: "text field",
+            type: "email",
+          },
+          {
+            placeholder: "This is pretty awesome",
+            name: "test",
+            title: "text field"
+          },
+        ],
+        dropdowns = [{
+            title: "dropdown",
+            placeholder: "Сколько гостей",
+            optionsList: [{
+                text: "Спальни",
+                wordForms: "спальня спальни спален"
+              },
+              {
+                text: "Кровати",
+                wordForms: "кровать кровати кроватей"
+              },
+              {
+                text: "Ванные комнаты",
+                wordForms: "ванная ванные ванных"
+              }
+            ]
+          },
+          {
+            title: "dropdown",
+            placeholder: "Комнаты",
+            optionsList: [{
+                text: "Спальни",
+                wordForms: "спальня спальни спален"
+              },
+              {
+                text: "Кровати",
+                wordForms: "кровать кровати кроватей"
+              },
+              {
+                text: "Ванные комнаты",
+                wordForms: "ванная ванные ванных"
+              }
+            ]
+          },
+          {
+            title: "dropdown",
+            placeholder: "Комнаты",
+            optionsList: [{
+                text: "Спальни",
+                wordForms: "спальня спальни спален"
+              },
+              {
+                text: "Кровати",
+                wordForms: "кровать кровати кроватей"
+              },
+              {
+                text: "Ванные комнаты",
+                wordForms: "ванная ванные ванных"
+              }
+            ]
+          },
+          {
+            title: "dropdown",
+            controls: true,
+            placeholder: "Сколько гостей",
+            optionsList: [{
+                text: "Взрослые",
+                wordForms: "гость гостя гостей",
+                group: 1
+              },
+              {
+                text: "Дети",
+                wordForms: "гость гостя гостей",
+                group: 1
+              },
+              {
+                text: "Младенцы",
+                wordForms: "младенец младенца младенцев"
+              }
+            ]
+          },
+          {
+            title: "dropdown",
+            controls: true,
+            placeholder: "Сколько гостей",
+            optionsList: [{
+                text: "Взрослые",
+                wordForms: "гость гостя гостей",
+                group: 1
+              },
+              {
+                text: "Дети",
+                wordForms: "гость гостя гостей",
+                group: 1
+              },
+              {
+                text: "Младенцы",
+                wordForms: "младенец младенца младенцев"
+              }
+            ]
+          }
+        ],
+        maskedFields = [{
+          placeholder: "ДД.ММ.ГГГГ",
+          title: "masked text field"
+        }],
+        datepickers = [{
+          startLabel: "date dropdown",
+          endLabel: "date dropdown",
+          controls: true
+        }],
+        datefilters = [{
+          title: "filter date dropdown"
+        }],
+        subscriptions = [{
+          placeholder: "Email",
+          title: "subscription text field"
+        }],
+        checkboxes = {
+          title: "Checkbox Buttons",
+          items: [{
+              labelText: "Можно курить"
+            },
+            {
+              labelText: "Можно с питомцами",
+              checked: true
+            },
+            {
+              labelText: "Можно пригласить гостей (до 10 человек)",
+              checked: true
+            }
+          ]
+        },
+        radio = {
+          title: "Radio Buttons",
+          items: [{
+              labelText: "Мужчина",
+              name: "gender"
+            },
+            {
+              labelText: "Женщина",
+              name: "gender"
+            }
+          ]
+        },
+        toggle = {
+          title: "Toggle",
+          items: [{
+              buttonText: "Получать спецпредложения"
+            },
+            {
+              buttonText: "Получать спецпредложения"
+            }
+          ]
+        },
+        like = {
+          title: "Like button",
+          items: [{
+              likes: 2
+            },
+            {
+              likes: 12,
+              active: true
+            }
+          ]
+        },
+        rate = {
+          title: "Rate button",
+          items: [{
+              name: "test",
+              checkedRating: 4
+            },
+            {
+              name: "test1",
+              checkedRating: 5
+            }
+          ]
+        },
+        slider = {
+          items: [{
+            title: "range slider",
+          }]
+        },
+        buttons = {
+          title: "Buttons",
+          items: [{
+              styleType: "primary",
+              buttonText: "click me",
+              type: "button"
+            },
+            {
+              styleType: "primary",
+              buttonText: "click me",
+              type: "button"
+            },
+            {
+              styleType: "secondary",
+              buttonText: "click me",
+              type: "button"
+            },
+            {
+              styleType: "secondary",
+              buttonText: "click me",
+              type: "button"
+            },
+            {
+              styleType: "proceed",
+              buttonText: "перейти к оплате",
+              type: "button"
+            }
+          ]
+        },
+        links = {
+          items: [{
+              link: "#",
+              linkText: "Click me"
+            },
+            {
+              link: "#",
+              linkText: "Click me"
+            }
+          ]
+        },
+        pagination = {
+          items: [{
+            number: 15,
+            title: "pagination",
+            description: "1 – 12 из 100+ вариантов аренды"
+          }]
+        },
+        expandableLists = {
+          items: [{
+              title: "expandable checkbox list",
+              list: [{
+                  labelText: "Завтрак"
+                },
+                {
+                  labelText: "Письменный стол",
+                  checked: true
+                },
+                {
+                  labelText: "Стул для кормления",
+                  checked: true
+                },
+                {
+                  labelText: "Кроватка",
+                  checked: true
+                },
+                {
+                  labelText: "Телевизор"
+                },
+                {
+                  labelText: "Шампунь"
+                },
+                {
+                  labelText: "Телевизор"
+                },
+                {
+                  labelText: "Шампунь"
+                }
+              ]
+            },
+            {
+              title: "expandable checkbox list",
+              list: [{
+                  labelText: "Завтрак"
+                },
+                {
+                  labelText: "Письменный стол",
+                  checked: true
+                },
+                {
+                  labelText: "Стул для кормления",
+                  checked: true
+                },
+                {
+                  labelText: "Кроватка",
+                  checked: true
+                },
+                {
+                  labelText: "Телевизор"
+                },
+                {
+                  labelText: "Шампунь"
+                },
+                {
+                  labelText: "Телевизор"
+                },
+                {
+                  labelText: "Шампунь"
+                }
+              ]
+            }
+          ]
+        },
+        advantages = [{
+            title: "Комфорт",
+            description: "Шумопоглощающие стены",
+            alt: "Дом",
+            imageLink: "advantage-house.svg"
+          },
+          {
+            title: "Удобство",
+            description: "Окно в каждой из спален",
+            alt: "Город",
+            imageLink: "advantage-city.svg"
+          }
+        ],
+        richCheckboxes = {
+          title: "rich Checkbox Buttons",
+          items: [{
+              labelText: "Широкий коридор",
+              description: "Ширина коридоров в номере не менее 91 см."
+            },
+            {
+              labelText: "Помощник для инвалидов",
+              description: "На 1 этаже вас встретит специалист  и проводит до номера.",
+              wide: true
+            }
+          ]
+        },
+        bulletLists = [{
+          title: "bullet list",
+          items: ["Нельзя с питомцами",
+            "Без вечеринок и мероприятий",
+            "Время прибытия — после 13:00, а выезд до 12:00"
+          ]
+        }],
+        comments = [{
+          src: "comment.jpg",
+          likes: 12,
+          activeLike: true,
+          author: "Мурад Сарафанов",
+          date: "5 дней назад",
+          comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+        }]
     } = options
   <!DOCTYPE html>
   html(lang="en")
     head
-      meta(charset="UTF-8")
-      meta(name="viewport", content="width=device-width, initial-scale=1.0")
       +meta({description, keywords, title})
     body.ui-kit
       .ui-kit__container
         .ui-kit__interactive
           .ui-kit__inputs
             .ui-kit__text-field
-              +text-field({
-                placeholder: "Email",
-                name: "test",
-                title: "text field",
-                type: "email",
-              })
+              +text-field(textFields[0])
             .ui-kit__text-field
-              +text-field({
-                placeholder: "This is pretty awesome",
-                name: "test",
-                title: "text field"
-              })
+              +text-field(textFields[1])
             .ui-kit__dropdown
-              +dropdown({
-                title: "dropdown",
-                placeholder: "Сколько гостей",
-                optionsList: [{
-                    text: "Спальни",
-                    wordForms: "спальня спальни спален"
-                  },
-                  {
-                    text: "Кровати",
-                    wordForms: "кровать кровати кроватей"
-                  },
-                  {
-                    text: "Ванные комнаты",
-                    wordForms: "ванная ванные ванных"
-                  }
-                ]
-              })
+              +dropdown(dropdowns[0])
             .ui-kit__masked-field
-              +masked-text-field({
-                placeholder: "ДД.ММ.ГГГГ",
-                title: "masked text field"
-              })
+              +masked-text-field(maskedFields[0])
             .ui-kit__date-dropdowns
-              +range-datepicker({
-                startLabel: "date dropdown",
-                endLabel: "date dropdown",
-                controls: true
-              })
+              +range-datepicker(datepickers[0])
             .ui-kit__date-filter
-              +date-filter({title: "filter date dropdown"})
+              +date-filter(datefilters[0])
             .ui-kit__sub
-              +subscription({
-                placeholder: "Email",
-                title: "subscription text field"
-              })
+              +subscription(subscriptions[0])
           .ui-kit__checkers
             .ui-kit__checkboxes
               .ui-kit__checkbox
-                .ui-kit__checkbox-title Checkbox Buttons
-                +checkbox({labelText: "Можно курить"})
+                .ui-kit__checkbox-title=checkboxes.title
+                +checkbox(checkboxes.items[0])
               .ui-kit__checkbox
-                +checkbox({
-                  labelText:"Можно с питомцами", 
-                  checked: true
-                })
+                +checkbox(checkboxes.items[1])
               .ui-kit__checkbox
-                +checkbox({
-                  labelText:"Можно пригласить гостей (до 10 человек)", 
-                  checked: true
-                })
+                +checkbox(checkboxes.items[2])
             .ui-kit__radio
-              .ui-kit__radio-title Radio Buttons
+              .ui-kit__radio-title=radio.title
               .ui-kit__radio-buttons
                 .ui-kit__radio-button
-                  +radio-button({
-                    labelText: "Мужчина", 
-                    name: "gender"
-                  })
+                  +radio-button(radio.items[0])
                 .ui-kit__radio-button
-                  +radio-button({
-                    labelText: "Женщина", 
-                    name: "gender"
-                  })
+                  +radio-button(radio.items[1])
             .ui-kit__togglers
-              .ui-kit__toggle-title Toggle
+              .ui-kit__toggle-title=toggle.title
               .ui-kit__toggle
-                +toggle-button({buttonText: "Получать спецпредложения"})
+                +toggle-button(toggle.items[0])
               .ui-kit__toggle
-                +toggle-button({buttonText: "Получать спецпредложения"})
+                +toggle-button(toggle.items[1])
             .ui-kit__like
-              .ui-kit__like-title Like button
+              .ui-kit__like-title 
               .ui-kit__like-buttons
                 .ui-kit__like-button
-                  +like-button({likes: 2})
+                  +like-button(like.items[0])
                 .ui-kit__like-button
-                  +like-button({
-                    likes: 12, 
-                    active: true
-                  })
+                  +like-button(like.items[1])
             .ui-kit__rate
-              .ui-kit__rate-title Rate button
+              .ui-kit__rate-title 
               .ui-kit__rate-buttons
                 .ui-kit__rate-button
-                  +rate-button({name: "test", checkedRating: 4})
+                  +rate-button(rate.items[0])
                 .ui-kit__rate-button
-                  +rate-button({name: "test1", checkedRating: 5})
+                  +rate-button(rate.items[1])
           .ui-kit__buttons-slider
             .ui-kit__slider-range
-              +slider({
-                title: "range slider", 
-              })
+              +slider(slider.items[0])
             .ui-kit__buttons
-              .ui-kit__button-title Buttons
+              .ui-kit__button-title=buttons.title
               .ui-kit__button-list
-                +button({
-                  styleType: "primary", 
-                  buttonText: "click me",
-                  type: "button"
-                })
-                +button({
-                  styleType: "primary", 
-                  buttonText: "click me",
-                  type: "button"
-                })
-                +button({
-                  styleType: "secondary", 
-                  buttonText: "click me",
-                  type: "button"
-                })
-                +button({
-                  styleType: "secondary", 
-                  buttonText: "click me",
-                  type: "button"
-                })
+                +button(buttons.items[0])
+                +button(buttons.items[1])
+                +button(buttons.items[2])
+                +button(buttons.items[3])
               .ui-kit__links
                 .ui-kit__link
-                  +link({
-                    link: "#", 
-                    linkText: "Click me"
-                  })
+                  +link(links.items[0])
                 .ui-kit__link
-                  +link({
-                    link: "#", 
-                    linkText: "Click me"
-                  })
+                  +link(links.items[1])
               .ui-kit__proceed
-                +button({
-                  styleType: "proceed", 
-                  buttonText: "перейти к оплате",
-                  type: "button"
-                })
+                +button(buttons.items[4])
               .ui-kit__pagination
-                +pagination({
-                  number: 15, 
-                  title: "pagination", 
-                  description: "1 – 12 из 100+ вариантов аренды"
-                })
+                +pagination(pagination.items[0])
         .ui-kit__dropdowns
           .ui-kit__dropdown-set
             .ui-kit__dropdowns-list
               .ui-kit__dropdown-item
-                +dropdown({
-                  title: "dropdown",
-                  placeholder: "Комнаты",
-                  optionsList: [{
-                      text: "Спальни",
-                      wordForms: "спальня спальни спален"
-                    },
-                    {
-                      text: "Кровати",
-                      wordForms: "кровать кровати кроватей"
-                    },
-                    {
-                      text: "Ванные комнаты",
-                      wordForms: "ванная ванные ванных"
-                    }
-                  ]
-                })
+                +dropdown(dropdowns[1])
               .ui-kit__dropdown-item
-                +dropdown({
-                  title: "dropdown",
-                  placeholder: "Комнаты",
-                  optionsList: [{
-                      text: "Спальни",
-                      wordForms: "спальня спальни спален"
-                    },
-                    {
-                      text: "Кровати",
-                      wordForms: "кровать кровати кроватей"
-                    },
-                    {
-                      text: "Ванные комнаты",
-                      wordForms: "ванная ванные ванных"
-                    }
-                  ]
-                })
+                +dropdown(dropdowns[2])
             .ui-kit__expand-lists
               .ui-kit__expand-list
-                +expandable-list({
-                  title: "expandable checkbox list",
-                  list: [{
-                      labelText: "Завтрак"
-                    },
-                    {
-                      labelText: "Письменный стол",
-                      checked: true
-                    },
-                    {
-                      labelText: "Стул для кормления",
-                      checked: true
-                    },
-                    {
-                      labelText: "Кроватка",
-                      checked: true
-                    },
-                    {
-                      labelText: "Телевизор"
-                    },
-                    {
-                      labelText: "Шампунь"
-                    },
-                    {
-                      labelText: "Телевизор"
-                    },
-                    {
-                      labelText: "Шампунь"
-                    }
-                  ]
-                })
+                +expandable-list(expandableLists.items[0])
               .ui-kit__expand-list
-                +expandable-list({
-                  title: "expandable checkbox list",
-                  list: [{
-                      labelText: "Завтрак"
-                    },
-                    {
-                      labelText: "Письменный стол",
-                      checked: true
-                    },
-                    {
-                      labelText: "Стул для кормления",
-                      checked: true
-                    },
-                    {
-                      labelText: "Кроватка",
-                      checked: true
-                    },
-                    {
-                      labelText: "Телевизор"
-                    },
-                    {
-                      labelText: "Шампунь"
-                    },
-                    {
-                      labelText: "Телевизор"
-                    },
-                    {
-                      labelText: "Шампунь"
-                    }
-                  ]
-                })
+                +expandable-list(expandableLists.items[1])
             .ui-kit__advantages
               .ui-kit__advantage
-                +advantage({
-                  title: "Комфорт",
-                  description: "Шумопоглощающие стены",
-                  alt: "Дом",
-                  imageLink: "advantage-house.svg"
-                })
+                +advantage(advantages[0])
               .ui-kit__advantage
-                +advantage({
-                  title: "Удобство",
-                  description: "Окно в каждой из спален",
-                  alt: "Город",
-                  imageLink: "advantage-city.svg"
-                })
+                +advantage(advantages[1])
           .ui-kit__extended-dropdowns
             .ui-kit__controls-dropdowns
               .ui-kit__controls-dropdown
-                +dropdown({
-                  title: "dropdown",
-                  controls: true,
-                  placeholder: "Сколько гостей",
-                  optionsList: [{
-                      text: "Взрослые",
-                      wordForms: "гость гостя гостей",
-                      group: 1
-                    },
-                    {
-                      text: "Дети",
-                      wordForms: "гость гостя гостей",
-                      group: 1
-                    },
-                    {
-                      text: "Младенцы",
-                      wordForms: "младенец младенца младенцев"
-                    }
-                  ]
-                })
+                +dropdown(dropdowns[3])
               .ui-kit__controls-dropdown
-                +dropdown({
-                  title: "dropdown",
-                  controls: true,
-                  placeholder: "Сколько гостей",
-                  optionsList: [{
-                      text: "Взрослые",
-                      wordForms: "гость гостя гостей",
-                      group: 1
-                    },
-                    {
-                      text: "Дети",
-                      wordForms: "гость гостя гостей",
-                      group: 1
-                    },
-                    {
-                      text: "Младенцы",
-                      wordForms: "младенец младенца младенцев"
-                    }
-                  ]
-                })
+                +dropdown(dropdowns[4])
             .ui-kit__checkboxes-bullet
               .ui-kit__rich-checkboxes
-                .ui-kit__rich-checkboxes-title rich Checkbox Buttons
+                .ui-kit__rich-checkboxes-title=richCheckboxes.title
                 .ui-kit__rich-checkbox
-                  +rich-checkbox({
-                    labelText: "Широкий коридор", 
-                    description: "Ширина коридоров в номере не менее 91 см."
-                  })
+                  +rich-checkbox(richCheckboxes.items[0])
                 .ui-kit__rich-checkbox
-                  +rich-checkbox({
-                    labelText: "Помощник для инвалидов", 
-                    description: "На 1 этаже вас встретит специалист  и проводит до номера.",
-                    wide: true
-                  })
+                  +rich-checkbox(richCheckboxes.items[1])
               .ui-kit__bullet
-                +bullet-list({
-                  title: "bullet list",
-                  items: ["Нельзя с питомцами",
-                    "Без вечеринок и мероприятий",
-                    "Время прибытия — после 13:00, а выезд до 12:00"
-                  ]
-                })
+                +bullet-list(bulletLists[0])
             .ui-kit__comment
-              +comment({
-                src: "comment.jpg",
-                likes: 12,
-                activeLike: true,
-                author: "Мурад Сарафанов",
-                date: "5 дней назад",
-                comment: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
-              })
+              +comment(comments[0])
     
