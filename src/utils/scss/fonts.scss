@@ -29,3 +29,19 @@
   src: url('../../fonts/quicksand-bold/quicksand-bold.woff2') format('woff2'),
     url('../../fonts/quicksand-bold/quicksand-bold.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-display: swap;
+  src: url('../../fonts/open-sans-bold/open-sans-bold.woff2') format('woff2'),
+    url('../../fonts/open-sans-bold/open-sans-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../fonts/open-sans-regular/open-sans-regular.woff2') format('woff2'),
+    url('../../fonts/open-sans-regular/open-sans-regular.woff') format('woff');
+}
