@@ -52,7 +52,7 @@
   &__room-information {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 12px;
+    margin-bottom: 11px;
 
     @media (max-width: 1150px) {
       justify-content: space-evenly;
@@ -83,7 +83,7 @@
     grid-template-columns: max-content max-content;
     grid-template-rows: max-content max-content;
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1441px) {
       grid-template-columns: 68% 32%;
       max-width: none;
     }
@@ -108,7 +108,7 @@
       height: 100%;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1441px) {
       object-fit: cover;
       width: 100%;
     }
@@ -181,7 +181,7 @@
   }
 
   &__room-reviews {
-    margin-bottom: 33px;
+    margin-bottom: 31px;
   }
 
   &__impression {

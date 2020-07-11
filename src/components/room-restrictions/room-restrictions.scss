@@ -12,7 +12,6 @@
   &__title {
     margin: 0 0 17px;
     font: $h2-font;
-    letter-spacing: 0.03em;
     padding-left: 20px;
 
     @media (max-width: 700px) {
@@ -43,7 +42,6 @@
   &__cancel-title {
     margin: 0 0 17px;
     font: $h2-font;
-    letter-spacing: 0.03em;
   }
 
   &__text {

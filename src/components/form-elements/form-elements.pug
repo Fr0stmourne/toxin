@@ -405,13 +405,13 @@ mixin form-elements(options = {})
                 .ui-kit__toggle
                   +toggle-button(toggleButton)
             .ui-kit__like
-              .ui-kit__like-title 
+              .ui-kit__like-title=like.title
               .ui-kit__like-buttons
                 each likeButton in like.items
                   .ui-kit__like-button
                     +like-button(likeButton)
             .ui-kit__rate
-              .ui-kit__rate-title 
+              .ui-kit__rate-title=rate.title
               .ui-kit__rate-buttons
                 each rateButton in rate.items
                   .ui-kit__rate-button
