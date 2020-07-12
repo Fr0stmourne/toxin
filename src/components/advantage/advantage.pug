@@ -4,10 +4,11 @@ mixin advantage(options = {})
       imageLink="./mock",
       alt="Преимущество",
       title="Преимущество",
-      description="Описание преимущества"
+      description="Описание преимущества",
+      imageType=""
     } = options
   .advantage
-    img.advantage__image(src=imageLink, alt=alt)
+    img.advantage__image(src=imageLink, alt=alt, class=`advantage__image_type_${imageType}`)
     .advantage__text
       span.advantage__title=title
       span.advantage__description=description

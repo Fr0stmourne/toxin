@@ -12,6 +12,16 @@
     margin-right: 10px;
     width: 48px;
     height: 48px;
+
+    &_type {
+      &_house {
+        padding: 4px 5px 6px 5px;
+      }
+
+      &_fire {
+        padding: 1px 5px 4px 5px;
+      }
+    }
   }
 
   &__text {
