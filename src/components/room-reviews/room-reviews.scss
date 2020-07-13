@@ -25,12 +25,8 @@
   }
 
   &__title {
-    margin: 0 0 19px;
+    margin: 0 10px 19px 0;
     font: $h2-font;
-
-    @media (max-width: 450px) {
-      font-size: 16px;
-    }
   }
 
   &__box {

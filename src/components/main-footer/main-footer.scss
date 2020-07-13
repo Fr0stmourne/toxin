@@ -88,11 +88,13 @@
 
   &__nav {
     &:nth-child(2) {
-      margin: 0px 40px 0 4px;
-
-      @media (max-width: 1300px) {
-        margin: 0;
+      @media (min-width: 1400px) {
+        margin: 0px 40px 0 4px;
       }
+    }
+
+    @media (max-width: 1300px) {
+      margin: 0 15px;
     }
   }
 
