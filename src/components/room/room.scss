@@ -20,6 +20,11 @@
     }
   }
 
+  &__number-sign {
+    font: $default-font;
+    font-weight: 700;
+  }
+
   &__information {
     padding: 19px 15px 17px 20px;
   }
@@ -58,7 +63,7 @@
 
   &__digit {
     font-size: 19px;
-    margin: 0 5px 0 3px;
+    margin: 0 5px 0 4px;
   }
 
   &__rating {

@@ -1,7 +1,7 @@
 .booking {
   box-sizing: border-box;
   max-width: 380px;
-  padding: 40px 30px 29px;
+  padding: 39px 29px 29px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -14,6 +14,11 @@
     font: $h1-font;
     font-size: 14px;
     margin: 0 20px 0 0;
+  }
+
+  &__number-sign {
+    font: $default-font;
+    font-weight: 700;
   }
 
   &__room-information {
