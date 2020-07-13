@@ -16,8 +16,8 @@
     background-size: cover;
     background-position-y: 80%;
 
-    @media (max-width: 400px) {
-      padding: 0 10px;
+    @media (max-width: 768px) {
+      min-height: 0;
     }
   }
 
@@ -29,6 +29,10 @@
 
     @media (max-width: 1400px) {
       margin-left: 0;
+    }
+
+    @media (max-width: 768px) {
+      padding: 60px 10px;
     }
   }
 }
