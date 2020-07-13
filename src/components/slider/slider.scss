@@ -12,6 +12,7 @@
   &__title {
     font: $button-font;
     text-transform: uppercase;
+    width: max-content;
   }
 
   &__input {
@@ -22,6 +23,5 @@
     font: $default-font;
     font-size: 12px;
     color: $dark-50;
-    max-width: 130px;
   }
 }
