@@ -12,9 +12,8 @@ mixin landing-page(options = {})
       noteText = "Лучшие номера для вашей работы, отдыха и просто вдохновения",
     } = options
   body.landing-page
-    .landing-page__wrapper
-      main.landing-page__main
-        section.landing-page__room-booking
-          .landing-page__form
-            +find-room(note)
-          .landing-page__note=noteText
+    main.landing-page__main
+      section.landing-page__room-booking
+        .landing-page__form
+          +find-room(note)
+        .landing-page__note=noteText

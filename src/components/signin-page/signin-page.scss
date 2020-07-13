@@ -1,10 +1,8 @@
 .signin-page {
+  @include wrapper;
+
   &__main {
     flex: 1 0 auto;
-  }
-
-  &__wrapper {
-    @include wrapper;
   }
 
   &__main {

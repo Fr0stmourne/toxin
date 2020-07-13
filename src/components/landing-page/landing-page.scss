@@ -1,13 +1,11 @@
 .landing-page {
+  @include wrapper;
+
   &__main {
     flex: 1 0 auto;
     background-image: url('./img/landing.jpg');
     background-size: cover;
     background-position-y: 100%;
-  }
-
-  &__wrapper {
-    @include wrapper;
   }
 
   &__room-booking {

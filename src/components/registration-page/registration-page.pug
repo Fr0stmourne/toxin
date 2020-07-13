@@ -13,7 +13,6 @@ mixin registration-page(options = {})
       },
     } = options
   body.registration-page
-    .registration-page__wrapper
-      main.registration-page__main
-        .registration-page__card
-            +registration(registration)     
+    main.registration-page__main
+      .registration-page__card
+          +registration(registration)     

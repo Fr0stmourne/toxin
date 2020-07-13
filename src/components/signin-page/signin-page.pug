@@ -9,8 +9,7 @@ mixin signin-page(options = {})
       login = {noteText: "Нет аккаунта на Toxin?"}
     } = options
   body.signin-page
-    .signin-page__wrapper
-      main.signin-page__main
-        .signin-page__login-card
-          +login(login)
+    main.signin-page__main
+      .signin-page__login-card
+        +login(login)
                 

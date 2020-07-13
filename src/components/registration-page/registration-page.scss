@@ -1,7 +1,5 @@
 .registration-page {
-  &__wrapper {
-    @include wrapper;
-  }
+  @include wrapper;
 
   &__main {
     display: flex;
