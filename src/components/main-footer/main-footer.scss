@@ -18,7 +18,11 @@
   &__container {
     @include container;
 
-    @media (max-width: 1300px) {
+    @media (max-width: 1439px) {
+      padding: 0 60px;
+    }
+
+    @media (max-width: 1250px) {
       padding: 0 30px;
     }
   }
