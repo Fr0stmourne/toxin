@@ -12,11 +12,14 @@ export default class Slider {
 
   findElements() {
     this.$input = this.$slider.parent().find('.slider__input');
+    this.$text = this.$slider.parent().find('.slider__text');
   }
 
   updateInitialValue() {
-    const { $input, $slider } = this;
-    $input.val(`${formatNumber($slider.slider('values', 0))}₽ - ${formatNumber($slider.slider('values', 1))}₽`);
+    const { $text, $input, $slider } = this;
+    const textTemplate = `${formatNumber($slider.slider('values', 0))}₽ - ${formatNumber($slider.slider('values', 1))}₽`
+    $input.val(textTemplate);
+    $text.text(textTemplate);
   }
 
   init({ slider, min: initialMin, max: initialMax, values: initialValues }) {
@@ -26,7 +29,7 @@ export default class Slider {
     this.values = initialValues;
     this.findElements();
 
-    const { min, max, values, $input, $slider } = this;
+    const { min, max, values, $input, $text, $slider } = this;
 
     $slider.slider({
       range: true,
@@ -34,7 +37,9 @@ export default class Slider {
       max,
       values,
       slide(event, ui) {
-        $input.val(`${formatNumber(ui.values[0])}₽ - ${formatNumber(ui.values[1])}₽`);
+        const textTemplate = `${formatNumber(ui.values[0])}₽ - ${formatNumber(ui.values[1])}₽`
+        $input.val(textTemplate);
+        $text.text(textTemplate);
       },
     });
 
