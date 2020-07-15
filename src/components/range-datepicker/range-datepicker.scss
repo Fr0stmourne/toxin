@@ -50,6 +50,11 @@
       text-transform: none;
     }
 
+    @media (max-width: 700px) and (min-width: 601px) {
+      padding: 12px 30px 12px 5px;
+      font-size: 13px;
+    }
+
     @media (max-width: 600px) {
       padding: 10px 20px 10px 5px;
     }
