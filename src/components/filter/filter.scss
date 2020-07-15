@@ -1,7 +1,7 @@
 .filter {
   max-width: 266px;
 
-  @media (max-width: 550px) {
+  @media (max-width: 600px) {
     max-width: none;
     display: grid;
     grid-template-columns: repeat(2, auto);
