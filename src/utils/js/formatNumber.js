@@ -11,5 +11,5 @@ export default function formatNumber(num) {
         .reverse()
         .join(''),
     )
-    .join(' ');
+    .join('\u00A0');
 }

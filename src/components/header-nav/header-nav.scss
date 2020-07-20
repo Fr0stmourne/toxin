@@ -45,14 +45,15 @@
         background-image: url('../../images/arrow-down.svg');
         background-repeat: no-repeat;
         background-size: 100%;
-
-        @media (max-width: 950px) {
-          display: none;
-        }
       }
 
       &:hover .header-nav__dropdown-content {
         display: block;
+      }
+
+      .header-nav__link {
+        pointer-events: none;
+        touch-action: none;
       }
     }
   }
@@ -90,10 +91,6 @@
   &__link {
     color: inherit;
     text-decoration: none;
-
-    @media (min-width: 950px) {
-      pointer-events: none;
-    }
 
     &_active {
       font-weight: 700;
